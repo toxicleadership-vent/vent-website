@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { Col, Container, Row, Image as BootstrapImage } from '@/components/bootstrap/bootstrap'
 
 export default function Home() {
   return (
@@ -22,7 +23,6 @@ export default function Home() {
               className={styles.vercelLogo}
               width={100}
               height={24}
-              priority
             />
           </a>
         </div>
@@ -89,7 +89,46 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+
       </div>
+              <Container>
+          <Row style={{border:  '1px solid red'}}>
+            <Col style={{border:  '1px solid red'}} >
+              <BootstrapImage src="/next.svg" alt="" fluid/>
+            </Col>
+            <Col style={{border:  '1px solid red'}}>
+              <h2>Title</h2>
+              <p>text text text</p>
+            </Col>
+        </Row>
+         <Row style={{border:  '1px solid red'}}>
+        <Col xs={12} md={8} style={{border:  '1px solid red'}}>
+          xs=12 md=8
+        </Col>
+        <Col xs={6} md={4}  style={{border:  '1px solid red'}}>
+          xs=6 md=4
+        </Col>
+      </Row>
+
+      {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
+      <Row style={{border:  '1px solid red'}}>
+        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
+          xs=6 md=4
+        </Col>
+        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
+          xs=6 md=4
+        </Col>
+        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
+          xs=6 md=4
+        </Col>
+      </Row>
+
+      {/* Columns are always 50% wide, on mobile and desktop */}
+      <Row style={{border:  '1px solid red'}}>
+        <Col xs={6} style={{border:  '1px solid red'}}>xs=6</Col>
+        <Col xs={6} style={{border:  '1px solid red'}}>xs=6</Col>
+      </Row>
+        </Container>
     </main>
   )
 }
