@@ -1,0 +1,11 @@
+{
+  "general": {
+    "navbar": [
+      { "href": "/getting-informed", "link": "Getting Informed" },
+      { "href": "/experiences", "link": "Experiences" },
+      { "href": "/support", "link": "Help & Support" },
+      { "href": "/about", "link": "About the project" },
+      { "href": "/contact", "link": "Contact" }
+    ]
+  }
+}

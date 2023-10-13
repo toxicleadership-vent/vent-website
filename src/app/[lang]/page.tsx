@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import { Col, Container, Row, Image as BootstrapImage } from '@/components/bootstrap/bootstrap'
+import { Header } from '@/components/header/header'
+import { PageProps } from './layout'
 
-export default function Home() {
+export default async function Home({ params: { lang } }: PageProps) {
   return (
     <main className={styles.main}>
+      <Header language={lang}/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -16,7 +19,6 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
