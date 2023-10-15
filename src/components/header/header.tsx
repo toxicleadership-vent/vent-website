@@ -1,4 +1,3 @@
-
 import { getTranslation } from './../../localization/i18n'
 import {
   Container,
