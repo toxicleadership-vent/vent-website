@@ -1,0 +1,68 @@
+{
+  "title": "Personal Experiences of toxic leadership",
+  "abstract":  "Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus.",
+  "categories": [
+    {
+      "title": "Toxic traits",
+      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus.",
+      "articles": [
+        {
+          "title": "From Zero to Hero",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_01",
+            "name": "weiterlesen"
+          }
+        },
+        {
+          "title": "Headline 1",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_02",
+            "name": "weiterlesen"
+          }
+        },
+        {
+          "title": "From Zero to Hero",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_03",
+            "name": "weiterlesen"
+          }
+        },
+        {
+          "title": "Headline 1",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_04",
+            "name": "weiterlesen"
+          }
+        },
+        {
+          "title": "From Zero to Hero",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_05",
+            "name": "weiterlesen"
+          }
+        },
+        {
+          "title": "Headline 1",
+          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "link": {
+            "href": "./experiences/experience_06",
+            "name": "weiterlesen"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Impact",
+      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus."
+    },
+    {
+      "title": "Getting out",
+      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus."
+    }
+  ]
+}

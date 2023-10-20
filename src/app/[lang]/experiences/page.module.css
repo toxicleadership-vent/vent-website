@@ -1,0 +1,45 @@
+:export {
+  background: --background-green;
+}
+
+.page {
+  background-color: var(--background-green);
+}
+
+.main {
+  padding: 50px 50px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 180px;
+}
+
+.section {
+  background-color: var(--background-light-green);
+  border-radius: 15px;
+  padding: 50px 100px;
+}
+
+.experience {
+  background-color: var(--background-light-green);
+}
+
+.articlesWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+}
+
+.wrapper {
+  grid-column: span 2;
+  background: red;
+}
+.wrapper:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.background-light {
+  background-color: var(--background-light-green);
+}
