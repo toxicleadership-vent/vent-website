@@ -1,11 +1,5 @@
 { 
   "home": {
-    "navbar": [
-      { "href": "/getting-informed", "link": " DE Getting Informed" },
-      { "href": "/experiences", "link": " DE Experiences" },
-      { "href": "/support", "link": "H DE elp & Support" },
-      { "href": "/about", "link": "A DE bout the project" },
-      { "href": "/contact", "link": " DE Contact" }
-    ]
+    "title": "Information and research hub reducing the impact of toxic leadership"
   }
 }

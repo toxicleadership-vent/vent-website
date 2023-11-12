@@ -1,12 +1,41 @@
-{ 
+{
   "home": {
-    "test": "test2",
-    "navbar": [
-      { "href": "/getting-informed", "link": "Getting Informed" },
-      { "href": "/experiences", "link": "Experiences" },
-      { "href": "/support", "link": "Help & Support" },
-      { "href": "/about", "link": "About the project" },
-      { "href": "/contact", "link": "Contact" }
-    ]
+    "title": "Information and research hub reducing the impact of toxic leadership",
+    "what_we_do": {
+      "title": "What we do",
+      "image": "/images/home/what_we_do.svg",
+      "sections": [
+        {
+          "title": "Your dignity at work",
+          "text": "The mission of VENT is to reduce the fear, shame and lack of awareness that prevent people from recognizing and addressing their experiences of toxic leadership. Our vision is that everyone feels empowered to exercise their right to dignity and respect at work."
+        },
+        {
+          "title": "We hear you",
+          "text": "VENT is home to people's stories about experiences of toxic leadership. Here you can gather insights from peers and professionals, and become a contributor to research supporting development of solutions to this world-wide problem."
+        }
+      ]
+    },
+    "what_guides_us": {
+      "title": "What guides us",
+      "sections": [
+        {
+          "title": "Courage",
+          "text": "Every and any step you take away from accepting and normalizing bad treatment at work shows courage. It is brave to consider change, to take a break, to reach out for help, to tell family and friends, to educate yourself and others, go public or to anonymously contribute to research.",
+          "image": "/images/home/courage.svg"
+        },
+        {
+          "title": "Inclusion",
+          "text": "There is no sustainability without diversity and no diversity without inclusion. At VENT individuals of all backgrounds, ages, sexual identities and abilities are welcomed and valued as equal contributors, bringing to light diverse perspectives and experiences of dysfunctionality in a workplace.",
+          "image": "/images/home/inclusion.svg"
+        },
+        {
+          "title": "Collaborations",
+          "text": "Together, as survivors, researchers, and professionals, we stand united to raise awareness about toxic leadership. Our collaborative efforts foster solidarity and empowerment to prevent misuse of power, combat its aftermath and champion ethical leadership across workplaces.",
+          "image": "/images/home/collaboration.svg"
+
+        }
+      ],
+      "button": {"text": "LEARN MORE ABOUT THE PROJECT", "href": "/about"}
+    }
   }
 }

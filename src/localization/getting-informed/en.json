@@ -1,0 +1,32 @@
+{
+  "getting-informed": {
+    "title": "Getting informed",
+    "description": "Toxic leadership, often kept secret, affects millions globally. Get informed to protect yourself and others, reducing the normalization and acceptance of workplace dysfunction and abuse.",
+    "sections": [
+      {
+        "title": "What is toxic leadership?",
+        "description": "In recent years, the term \"toxic\" has gained tremendous popularity, and it's often used to describe a wide range of behaviors and situations, to which it doesn’t apply. This increased usage made it more challenging for individuals to recognize when they are truly facing toxic leadership.",
+        "link": {"href": "/getting-informed/1", "text": "Read article"},
+        "image": "/images/home/courage.svg"
+      },
+      {
+        "title": "How to spot a toxic leader?",
+        "link": {"href": "/getting-informed/2", "text": "Read article"},
+        "image": "/images/home/courage.svg"
+      },
+      {
+        "title": "What is toxic leadership?",
+        "link": {"href": "/getting-informed/3", "text": "Read article"},
+        "image": "/images/home/courage.svg"
+      },
+      {
+        "title": "How to spot a toxic leader?",
+        "link": {"href": "/getting-informed/4", "text": "Read article"},
+        "image": "/images/home/courage.svg"
+      }
+    ],
+    "button": {"text": "READ ALL ARTICLES", "href": "/getting-informed"}
+
+
+  }
+}

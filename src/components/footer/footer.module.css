@@ -1,0 +1,22 @@
+.container {
+  padding: 50px 100px;
+  background-color: #408CFF;
+}
+
+.title { 
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.link { 
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  list-style: none;
+
+}
+
+.link  a { 
+  color: black;
+}

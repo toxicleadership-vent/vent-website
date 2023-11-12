@@ -24,3 +24,5 @@ export async function getTranslation(lng = 'en', ns = 'translation', options = {
     i18n: i18nextInstance
   }
 }
+
+

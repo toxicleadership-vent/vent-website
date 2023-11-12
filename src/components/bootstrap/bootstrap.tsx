@@ -1,9 +1,10 @@
 'use client'
-import { Card, Navbar, Nav } from 'react-bootstrap'
+import { Card, Navbar, Nav, Offcanvas } from 'react-bootstrap'
 
 const { Img, Body, Link: CardLink, Text, Title } = Card
-const { Brand, Toggle, Collapse } = Navbar
+const { Brand, Toggle, Collapse, Offcanvas: NavbarOffcanvas } = Navbar
 const { Link: NavLink, Item: NavItem } = Nav
+const {Header: OffcanvasHeader, Title: OffcanvasTitle, Body: OffcanvasBody} = Offcanvas
 
 export {
   Container,
@@ -14,6 +15,7 @@ export {
   Stack,
   Navbar,
   Nav,
+  Offcanvas,
 } from 'react-bootstrap'
 export {
   Img as CardImg,
@@ -26,4 +28,8 @@ export {
   Toggle as NavbarToggle,
   Collapse as NavbarCollapse,
   NavItem,
+  OffcanvasHeader,
+  OffcanvasTitle,
+  OffcanvasBody,
+  NavbarOffcanvas,
 }

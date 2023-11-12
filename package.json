@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.1",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
+    "googleapis": "^128.0.0",
     "i18next": "^23.5.1",
     "i18next-resources-to-backend": "^1.1.4",
     "next": "^13.5.4",
@@ -28,6 +29,7 @@
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.47.0",
     "react-i18next": "^13.2.2",
     "typescript": "5.1.6"
   },

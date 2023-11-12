@@ -1,0 +1,43 @@
+.myCard {
+  background-color: var(--background-light-blue);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  cursor: pointer;
+}
+
+.myCardTitle {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sectionOrange {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+    text-align: center;
+    background-color: var(--background-orange);
+    padding: 100px 100px;
+}
+
+.subsection {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.heading1 {
+  font-family: var(--font-poppins);
+  font-weight: 600; 
+  padding-bottom: 100px;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 15px 50px;
+  border: 1px solid black;
+}
