@@ -1,0 +1,37 @@
+.page {
+  background-color: var(--background-orange);
+  font-family: var(--font-poppins);
+}
+
+.main {
+  margin-top: 50px;
+  padding: 100px 50px 50px;
+}
+
+.text {
+  padding: 15px;
+}
+
+.title {
+  text-align: center;
+  margin-left: 85px;
+  margin-bottom: 50px;
+}
+
+.gettingInformed {
+  border-radius: 200px;
+  padding: 30px 80px;
+  /* margin-top: 0; */
+  border: 1px solid red;
+  align-items: center;
+  background-color: var(--background-light-blue);
+}
+
+.link {
+  color: black;
+  text-transform: uppercase;
+}
+
+.sectionDescription {
+  font-size: 16px;
+}

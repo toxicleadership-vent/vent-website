@@ -1,0 +1,41 @@
+.input {
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border-style: solid;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+}
+
+.textarea {
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  font-size: 12px;
+  border: none;
+}
+
+.submit {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: solid 1px black;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 10px;
+}
+
+.errorList {
+  padding: 20px 40px;
+  background-color: var(--background-light-orange);
+  list-style: none;
+  border-radius: var(--border-radius);
+}
+
+.disabled {
+  background-color: red;
+}

@@ -1,11 +1,25 @@
 {
   "general": {
+    "title": "Vent",
+    "subtitle": "about the toxic boss",
     "navbar": [
       { "href": "/getting-informed", "link": "Getting Informed" },
       { "href": "/experiences", "link": "Experiences" },
       { "href": "/support", "link": "Help & Support" },
       { "href": "/about", "link": "About the project" },
       { "href": "/contact", "link": "Contact" }
+    ]
+  },
+  "footer": {
+    "description": "about the toxic boss",
+    "links": [
+      { "href": "/getting-informed", "link": "Getting Informed" },
+      { "href": "/experiences", "link": "Experiences" },
+      { "href": "/support", "link": "Help & Support" },
+      { "href": "/about", "link": "About the project" },
+      { "href": "/contact", "link": "Contact" },
+      { "href": "/data-privacy", "link": "Data Privacy" },
+      { "href": "/imprint", "link": "imprint" }
     ]
   }
 }

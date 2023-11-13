@@ -1,0 +1,13 @@
+{
+  "contact": {
+    "title": "Contact us!",
+    "description": "Any comments or questions? What are your experiences with toxic leadership? We would love to hear from you!",
+    "form": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "E-mail",
+      "subject": "subject",
+      "message": "message"
+    }
+  }
+}

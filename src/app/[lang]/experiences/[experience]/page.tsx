@@ -1,13 +1,11 @@
-import Image from 'next/image'
 import styles from '../page.module.css'
-import Experience1 from './experience_01.mdx'
-import { useCallback, useEffect } from 'react'
+
 import dynamic from 'next/dynamic'
 
 export default function Experience({
   params,
 }: {
-  params: { experience: string, lang: string }
+  params: { experience: string; lang: string }
 }) {
   const ExperienceMdx = dynamic(
     () => {

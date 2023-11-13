@@ -1,4 +1,30 @@
 :root {
   --background-green: #3aa99c;
   --background-light-green: #a2e4dd;
+  --background-blue: #408cff;
+  --background-light-blue: #98c1ff;
+  --background-orange: #ff9472;
+  --background-light-orange: #f7b7a3;
+  --color-light-blue: #ecf6ff;
+  --border-radius: 50px;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+
+h1 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 20px;
 }

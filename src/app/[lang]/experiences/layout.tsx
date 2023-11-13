@@ -4,14 +4,14 @@ import styles from './page.module.css'
 
 export default function ExperienceLayout({
   children, // will be a page or nested layout
-  params
+  params,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode
   params: PageParams
 }) {
   return (
-  <>
-    <Header language={params.lang} color='#3aa99c' />
+    <>
+      <Header language={params.lang} color="#3aa99c" />
       <section className={styles.page}>
         {/* Include shared UI here e.g. a header or sidebar */}
         {children}

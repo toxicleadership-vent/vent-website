@@ -1,136 +1,79 @@
-import Image from 'next/image'
 import styles from './page.module.css'
-import { Col, Container, Row, Image as BootstrapImage } from '@/components/bootstrap/bootstrap'
+import {
+  Col,
+  Container,
+  Row,
+  Image as BootstrapImage,
+  Stack,
+} from '@/components/bootstrap/bootstrap'
 import { Header } from '@/components/header/header'
 import { PageProps } from './layout'
+import { getTranslation } from '@/localization/i18n'
+import copy from '@/localization/home/en.json'
+import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 
 export default async function Home({ params: { lang } }: PageProps) {
+  const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
+
   return (
     <main className={styles.main}>
-      <Header language={lang}/>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-
-      </div>
-              <Container>
-          <Row style={{border:  '1px solid red'}}>
-            <Col style={{border:  '1px solid red'}} >
-              <BootstrapImage src="/next.svg" alt="" fluid/>
+      <Header language={lang} color="#408CFF" lightColor="#98C1FF" />
+      <Stack>
+        <Container fluid>
+          <Row className={`align-items-center ${styles.hero}`}>
+            <Col>
+              <h1 className={styles.heroText}>{t('title')}</h1>
             </Col>
-            <Col style={{border:  '1px solid red'}}>
-              <h2>Title</h2>
-              <p>text text text</p>
+            <Col>
+              <BootstrapImage src="/images/hero.png" fluid />
             </Col>
-        </Row>
-         <Row style={{border:  '1px solid red'}}>
-        <Col xs={12} md={8} style={{border:  '1px solid red'}}>
-          xs=12 md=8
-        </Col>
-        <Col xs={6} md={4}  style={{border:  '1px solid red'}}>
-          xs=6 md=4
-        </Col>
-      </Row>
-
-      {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
-      <Row style={{border:  '1px solid red'}}>
-        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
-          xs=6 md=4
-        </Col>
-        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
-          xs=6 md=4
-        </Col>
-        <Col xs={6} md={4} style={{border:  '1px solid red'}}>
-          xs=6 md=4
-        </Col>
-      </Row>
-
-      {/* Columns are always 50% wide, on mobile and desktop */}
-      <Row style={{border:  '1px solid red'}}>
-        <Col xs={6} style={{border:  '1px solid red'}}>xs=6</Col>
-        <Col xs={6} style={{border:  '1px solid red'}}>xs=6</Col>
-      </Row>
+          </Row>
         </Container>
+        <Container fluid className={styles.section}>
+          <h1 className={styles.heading1}> {t('what_we_do.title')}</h1>
+          <div className={styles.subsection}>
+            <h3 className={styles.heading3}>
+              {t('what_we_do.sections.0.title')}
+            </h3>
+            <p className={styles.paragraph}>
+              {t('what_we_do.sections.0.text')}
+            </p>
+          </div>
+          <BootstrapImage
+            src={t('what_we_do.image')}
+            height={100}
+            width={100}
+          />
+        </Container>
+        <Container fluid className={styles.section}>
+          <h1 className={styles.heading1}> {t('what_guides_us.title')}</h1>
+          <div className={styles.subsection}>
+            <Row>
+              {copy.home.what_guides_us.sections.map((_section, index) => (
+                <Col key={index}>
+                  <div className={styles.principleImage}>
+                    <BootstrapImage
+                      src={t(`what_guides_us.sections.${index}.image`)}
+                      height={100}
+                      width={100}
+                    />
+                  </div>
+                  <h3 className={styles.heading3}>
+                    {t(`what_guides_us.sections.${index}.title`)}
+                  </h3>
+                  <p className={styles.paragraph}>
+                    {t(`what_guides_us.sections.${index}.text`)}
+                  </p>
+                </Col>
+              ))}
+            </Row>
+          </div>
+          <button className={styles.button}>
+            {t('what_guides_us.button.text')}
+          </button>
+        </Container>
+        <GettingInformedOverview lang={lang} />
+      </Stack>
     </main>
   )
 }
