@@ -15,7 +15,7 @@ export default function Error({
     console.error(error)
   }, [error])
 
-  console.log(error,rest)
+  console.log(error, rest)
   return (
     <div>
       <h2>Something went wrong!</h2>

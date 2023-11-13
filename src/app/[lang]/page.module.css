@@ -23,11 +23,10 @@
 .section {
   font-family: var(--font-poppins);
   font-weight: 600;
-    text-align: center;
-    background-color: var(--background-light-blue);
-    padding: 100px 100px;
+  text-align: center;
+  background-color: var(--background-light-blue);
+  padding: 100px 100px;
 }
-
 
 .subsection {
   font-family: var(--font-poppins);
@@ -38,19 +37,19 @@
 
 .heading1 {
   font-family: var(--font-poppins);
-  font-weight: 600; 
+  font-weight: 600;
   padding-bottom: 80px;
 }
 
 .heading3 {
   font-family: var(--font-poppins);
-  font-weight: 600; 
+  font-weight: 600;
   padding-bottom: 10px;
 }
 
 .paragraph {
   font-family: var(--font-poppins);
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .principleImage {

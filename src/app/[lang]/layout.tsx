@@ -3,15 +3,13 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import { Footer } from '@/components/footer/footer'
 
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   display: 'swap',
-  weight: ['400', '600']
+  weight: ['400', '600'],
 })
-
 
 export type PageParams = {
   lang: string
@@ -35,12 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body
-        className={`${poppins.variable}`}
-      >
-        {children}
-        <Footer language={params.lang}/>
-      </body>
+      <body className={`${poppins.variable}`}>{children}</body>
     </html>
   )
 }

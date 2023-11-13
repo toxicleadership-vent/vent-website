@@ -5,7 +5,7 @@ import styles from './page.module.css'
 export default function GettingInformedArticle({
   params,
 }: {
-  params: { id: string, lang: string }
+  params: { id: string; lang: string }
 }) {
   const ExperienceMdx = dynamic(
     () => {
@@ -23,5 +23,5 @@ export default function GettingInformedArticle({
 }
 
 export async function generateStaticParams() {
-  return [{ id: '01' }, { id: '02' }]
+  return [{ id: '1' }, { id: '2' }]
 }

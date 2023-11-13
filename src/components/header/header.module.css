@@ -1,36 +1,34 @@
 .link > a {
-    color: black;
-
+  color: black;
 }
 
 .container {
-    display: flex;
-    width: 100%;
-    padding: 0 50px;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-poppins);
-    font-weight: 600;
-
+  display: flex;
+  width: 100%;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-poppins);
+  font-weight: 600;
 }
 
 .image {
-    display: flex;
-    flex-direction: row
+  display: flex;
+  flex-direction: row;
 }
 
 .subtitle {
-    margin: 0 10px;
-    font-size: 26px;
-    text-transform: uppercase;
+  margin: 0 10px;
+  font-size: 26px;
+  text-transform: uppercase;
 }
 
 .offcanvas {
-    padding: 20px;
+  padding: 20px;
 }
 
 .link {
-    border-radius: var(--border-radius);
-    padding: 5px 15px;
-    margin: 10px 0;
+  border-radius: var(--border-radius);
+  padding: 5px 15px;
+  margin: 10px 0;
 }

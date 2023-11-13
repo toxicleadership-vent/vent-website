@@ -17,8 +17,8 @@ import { PageParams } from '../layout'
 import { getTranslation } from '@/localization/i18n'
 import copy from '@/localization/experiences/en.json'
 
-export default async function Articles({params}: {params: PageParams}) {
-  const {t} = await getTranslation(params.lang, 'experiences')
+export default async function Articles({ params }: { params: PageParams }) {
+  const { t } = await getTranslation(params.lang, 'experiences')
 
   return (
     <main className={styles.main}>
@@ -36,7 +36,7 @@ export default async function Articles({params}: {params: PageParams}) {
                   {category?.articles?.map((article, articleIndex) => {
                     return (
                       <Container key={articleIndex}>
-                        <Row> 
+                        <Row>
                           <Col md={6}>
                             <Image src="/next.svg" rounded alt="" />
                           </Col>
@@ -47,10 +47,20 @@ export default async function Articles({params}: {params: PageParams}) {
                               className="border-0"
                             >
                               <CardBody>
-                                <CardTitle>{t(`categories.${index}.articles.${articleIndex}.title`)}</CardTitle>
-                                <CardText>{t(`categories.${index}.articles.${articleIndex}.abstract`)}</CardText>
+                                <CardTitle>
+                                  {t(
+                                    `categories.${index}.articles.${articleIndex}.title`
+                                  )}
+                                </CardTitle>
+                                <CardText>
+                                  {t(
+                                    `categories.${index}.articles.${articleIndex}.abstract`
+                                  )}
+                                </CardText>
                                 <CardLink href={article.link.href}>
-                                {t(`categories.${index}.articles.${articleIndex}.link.name`)}
+                                  {t(
+                                    `categories.${index}.articles.${articleIndex}.link.name`
+                                  )}
                                 </CardLink>
                               </CardBody>
                             </Card>

@@ -1,9 +1,10 @@
 import { Header } from '@/components/header/header'
 import styles from './page.module.css'
+import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 
 export type PageParams = {
-  lang: string,
-  id?: string,
+  lang: string
+  id?: string
 }
 
 export default function GettingInformedLayout({
@@ -13,13 +14,15 @@ export default function GettingInformedLayout({
   children: React.ReactNode
   params: PageParams
 }) {
-
   return (
     <>
-      <Header language={params.lang} color={!params?.id ? '#FF9472' : '#98C1FF'} lightColor={'#f7b7a3'} />
-      <section className={`${styles.page}`}>
-        {children}
-      </section>
+      <Header
+        language={params.lang}
+        color={!params?.id ? '#FF9472' : '#98C1FF'}
+        lightColor={!params?.id ? '#f7b7a3' : '#408CFF'}
+      />
+      <section className={`${styles.page}`}>{children}</section>
+      <GettingInformedOverview lang={params.lang} />
     </>
   )
 }

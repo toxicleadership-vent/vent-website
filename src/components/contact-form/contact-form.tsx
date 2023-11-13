@@ -1,7 +1,6 @@
 'use client'
-import { useTranslation } from '@/app/hooks/contact/contact-translation'
-import { getTranslation } from '@/localization/i18n'
-import { useEffect, useCallback, useState } from 'react'
+
+import { useCallback, useState } from 'react'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
@@ -14,6 +13,7 @@ type Inputs = {
   message: string
 }
 
+// TODO: USE i18n
 
 export const ContactForm = ({ lang }: { lang: string }) => {
   const {

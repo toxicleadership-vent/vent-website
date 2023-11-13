@@ -32,10 +32,9 @@
           "title": "Collaborations",
           "text": "Together, as survivors, researchers, and professionals, we stand united to raise awareness about toxic leadership. Our collaborative efforts foster solidarity and empowerment to prevent misuse of power, combat its aftermath and champion ethical leadership across workplaces.",
           "image": "/images/home/collaboration.svg"
-
         }
       ],
-      "button": {"text": "LEARN MORE ABOUT THE PROJECT", "href": "/about"}
+      "button": { "text": "LEARN MORE ABOUT THE PROJECT", "href": "/about" }
     }
   }
 }

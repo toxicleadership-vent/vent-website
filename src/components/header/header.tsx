@@ -12,7 +12,7 @@ import {
   OffcanvasHeader,
   OffcanvasBody,
   OffcanvasTitle,
-  NavbarOffcanvas
+  NavbarOffcanvas,
 } from '../bootstrap/bootstrap'
 import copy from '@/localization/general/en.json'
 import styles from './header.module.css'
@@ -22,10 +22,14 @@ import Link from 'next/link'
   scrolling remove subtitle
 */
 export const Header = async (
-  { language, color, lightColor }: { language: string; color?: string, lightColor?: string } = {
+  {
+    language,
+    color,
+    lightColor,
+  }: { language: string; color?: string; lightColor?: string } = {
     language: 'en',
     color: 'transparent',
-    lightColor: 'transparent'
+    lightColor: 'transparent',
   }
 ) => {
   const { t } = await getTranslation(language, 'general', {
@@ -57,31 +61,40 @@ export const Header = async (
           className="border-0"
         />
         <NavbarOffcanvas
-          id='offcanvasNavbar'
-          aria-labelledby='offcanvasNavbar'
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbar"
           placement="end"
           scroll
           backdrop
           className={styles.offcanvas}
-          style={{backgroundColor: color}}
+          style={{ backgroundColor: color }}
         >
           <OffcanvasHeader closeButton>
-            <OffcanvasTitle id='offcanvasNavbarLabel'>
+            <OffcanvasTitle id="offcanvasNavbarLabel">
               <Link href="/">
-                <img alt="vent logo" src="/images/logo_black.png" height="35px" />
-            </Link>
+                <img
+                  alt="vent logo"
+                  src="/images/logo_black.png"
+                  height="35px"
+                />
+              </Link>
             </OffcanvasTitle>
           </OffcanvasHeader>
           <OffcanvasBody>
-          <Nav>
-            {copy.general.navbar.map((navitem, index) => (
-              <NavItem as="li" key={index} className={styles.link} style={{backgroundColor: lightColor}}>
-                <NavLink href={navitem.href}>
-                  {t(`navbar.${index}.link`)}
-                </NavLink>
-              </NavItem>
-            ))}
-          </Nav>
+            <Nav>
+              {copy.general.navbar.map((navitem, index) => (
+                <NavItem
+                  as="li"
+                  key={index}
+                  className={styles.link}
+                  style={{ backgroundColor: lightColor }}
+                >
+                  <NavLink href={navitem.href}>
+                    {t(`navbar.${index}.link`)}
+                  </NavLink>
+                </NavItem>
+              ))}
+            </Nav>
           </OffcanvasBody>
         </NavbarOffcanvas>
       </div>

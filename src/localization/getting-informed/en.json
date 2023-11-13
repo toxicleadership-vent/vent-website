@@ -6,27 +6,25 @@
       {
         "title": "What is toxic leadership?",
         "description": "In recent years, the term \"toxic\" has gained tremendous popularity, and it's often used to describe a wide range of behaviors and situations, to which it doesn’t apply. This increased usage made it more challenging for individuals to recognize when they are truly facing toxic leadership.",
-        "link": {"href": "/getting-informed/1", "text": "Read article"},
-        "image": "/images/home/courage.svg"
+        "link": { "href": "/getting-informed/1", "text": "Read article" },
+        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       },
       {
         "title": "How to spot a toxic leader?",
-        "link": {"href": "/getting-informed/2", "text": "Read article"},
-        "image": "/images/home/courage.svg"
+        "link": { "href": "/getting-informed/2", "text": "Read article" },
+        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       },
       {
         "title": "What is toxic leadership?",
-        "link": {"href": "/getting-informed/3", "text": "Read article"},
-        "image": "/images/home/courage.svg"
+        "link": { "href": "/getting-informed/3", "text": "Read article" },
+        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       },
       {
         "title": "How to spot a toxic leader?",
-        "link": {"href": "/getting-informed/4", "text": "Read article"},
-        "image": "/images/home/courage.svg"
+        "link": { "href": "/getting-informed/4", "text": "Read article" },
+        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       }
     ],
-    "button": {"text": "READ ALL ARTICLES", "href": "/getting-informed"}
-
-
+    "button": { "text": "READ ALL ARTICLES", "href": "/getting-informed" }
   }
 }

@@ -17,9 +17,9 @@
 .sectionOrange {
   font-family: var(--font-poppins);
   font-weight: 600;
-    text-align: center;
-    background-color: var(--background-orange);
-    padding: 100px 100px;
+  text-align: center;
+  background-color: var(--background-orange);
+  padding: 100px 100px;
 }
 
 .subsection {
@@ -31,7 +31,7 @@
 
 .heading1 {
   font-family: var(--font-poppins);
-  font-weight: 600; 
+  font-weight: 600;
   padding-bottom: 100px;
 }
 
