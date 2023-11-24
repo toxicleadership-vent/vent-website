@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
+import { mapContactForm } from '@/utils/mapContactForm'
 
 type Inputs = {
   firstName: string
@@ -13,33 +14,56 @@ type Inputs = {
   message: string
 }
 
+
+
 // TODO: USE i18n
 
 export const ContactForm = ({ lang }: { lang: string }) => {
   const {
     control,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
       firstName: '',
       lastName: '',
       email: '',
-      subject: '',
+      subject: 'Collaborate',
       message: '',
     },
   })
   const [loading, setLoading] = useState(false)
   const updateContactFormData = useCallback(async (data: Inputs) => {
-    setLoading(true)
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log(data)
-        setLoading(false)
-        resolve(true)
-      }, 22000)
-    })
+    setLoading(true);
+     await handleOnSubmit(data);
+     setLoading(false)
   }, [])
+
+  const handleOnSubmit = async (data: any) => {
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(mapContactForm(getValues())),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data.data.success) {
+          console.log('Data submitted successfully!');
+        } else {
+          console.error('Error submitting data:', data.error);
+        }
+      } else {
+        console.error('Failed to submit data. Server returned:', response.status);
+      }
+    } catch (error) {
+      console.error('Error submitting data:', error);
+    }
+  };
 
   const onSubmit: SubmitHandler<Inputs> = async (data) =>
     await updateContactFormData(data)

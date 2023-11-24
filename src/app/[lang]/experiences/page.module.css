@@ -4,11 +4,19 @@
 
 .page {
   background-color: var(--background-green);
+  font-family: var(--font-poppins);
+
 }
 
 .main {
-  padding: 50px 50px;
+  margin-top: 50px;
+  padding: 100px 50px 50px;
 }
+
+.text {
+  padding: 15px;
+}
+
 
 .title {
   text-align: center;
@@ -16,10 +24,25 @@
   padding: 0 180px;
 }
 
+.category {
+  padding: 0 0 50px;
+
+}
+
 .section {
   background-color: var(--background-light-green);
-  border-radius: 15px;
-  padding: 50px 100px;
+  border-radius: 25px;
+  padding: 50px 50px;
+}
+
+.link {
+  color: black;
+  text-transform: uppercase;
+}
+
+.myCard { 
+  padding: 0;
+  border: 1px solid red;
 }
 
 .experience {

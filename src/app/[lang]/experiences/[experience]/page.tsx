@@ -17,12 +17,11 @@ export default function Experience({
   )
   return (
     <main className={styles.main}>
-      <div>{params.experience}</div>
       <ExperienceMdx />
     </main>
   )
 }
 
 export async function generateStaticParams() {
-  return [{ id: 'experience_01' }, { id: 'experience_01' }]
+  return [{ id: 'experience_1' }, { id: 'experience_1' }]
 }
