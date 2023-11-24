@@ -3,66 +3,78 @@
   "abstract": "Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus.",
   "categories": [
     {
-      "title": "Toxic traits",
-      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus.",
+      "title": "In small to medium companies and NGOs",
+      "image": {
+        "href": "/images/experiences/category1.png",
+        "alt": "image"
+      },
       "articles": [
         {
-          "title": "From Zero to Hero",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
           "link": {
-            "href": "./experiences/experience_01",
-            "name": "weiterlesen"
+            "href": "./experiences/experience_1",
+            "name": "Read article"
           }
         },
         {
-          "title": "Headline 1",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
           "link": {
-            "href": "./experiences/experience_02",
-            "name": "weiterlesen"
-          }
-        },
-        {
-          "title": "From Zero to Hero",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
-          "link": {
-            "href": "./experiences/experience_03",
-            "name": "weiterlesen"
-          }
-        },
-        {
-          "title": "Headline 1",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
-          "link": {
-            "href": "./experiences/experience_04",
-            "name": "weiterlesen"
-          }
-        },
-        {
-          "title": "From Zero to Hero",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
-          "link": {
-            "href": "./experiences/experience_05",
-            "name": "weiterlesen"
-          }
-        },
-        {
-          "title": "Headline 1",
-          "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus.",
-          "link": {
-            "href": "./experiences/experience_06",
-            "name": "weiterlesen"
+            "href": "./experiences/experience_1",
+            "name": "Read article"
           }
         }
       ]
     },
     {
-      "title": "Impact",
-      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus."
-    },
-    {
-      "title": "Getting out",
-      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh ut ultrices suscipit, elit ante convallis lacus, et suscipit ex neque quis sem. Nullam viverra dapibus congue. Fusce non felis efficitur lectus volutpat aliquam. Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus."
+      "title": "In large (trans)national prestigious organizations",
+      "image": {
+        "href": "/images/experiences/category1.png",
+        "alt": "image"
+      },
+      "articles": [
+        {
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "link": {
+            "href": "./experiences/experience_1",
+            "name": "Read article"
+          }
+        },
+        {
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "link": {
+            "href": "./experiences/experience_1",
+            "name": "Read article"
+          }
+        }
+      ]
+    }, {
+      "title": "In medium to large corporations",
+      "image": {
+        "href": "/images/experiences/category1.png",
+        "alt": "image"
+      },
+      "articles": [
+        {
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "link": {
+            "href": "./experiences/experience_1",
+            "name": "Read article"
+          }
+        },
+        {
+          "title": "HR & Recruitment at a startup",
+          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "link": {
+            "href": "./experiences/experience_1",
+            "name": "Read article"
+          }
+        }
+      ]
     }
   ]
 }

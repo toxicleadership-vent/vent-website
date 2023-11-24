@@ -11,7 +11,7 @@ export default function ExperienceLayout({
 }) {
   return (
     <>
-      <Header language={params.lang} color="#3aa99c" />
+      <Header language={params.lang} color="#3aa99c" lightColor='#a2e4dd'/>
       <section className={styles.page}>
         {/* Include shared UI here e.g. a header or sidebar */}
         {children}

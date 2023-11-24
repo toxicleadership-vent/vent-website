@@ -1,7 +1,6 @@
 import { Header } from '@/components/header/header'
 import rootStyles from '../page.module.css'
 import styles from './page.module.css'
-import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 
 export type PageParams = {
   lang: string
