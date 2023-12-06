@@ -15,13 +15,18 @@
         "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       },
       {
-        "title": "What is toxic leadership?",
+        "title": "What impact does it have?",
         "link": { "href": "/getting-informed/3", "text": "Read article" },
         "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       },
       {
-        "title": "How to spot a toxic leader?",
+        "title": "Why is toxicity normalized?",
         "link": { "href": "/getting-informed/4", "text": "Read article" },
+        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+      },
+      {
+        "title": "Why should we talk about it?",
+        "link": { "href": "/getting-informed/5", "text": "Read article" },
         "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
       }
     ],

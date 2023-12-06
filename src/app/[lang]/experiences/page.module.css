@@ -5,7 +5,6 @@
 .page {
   background-color: var(--background-green);
   font-family: var(--font-poppins);
-
 }
 
 .main {
@@ -17,7 +16,6 @@
   padding: 15px;
 }
 
-
 .title {
   text-align: center;
   margin-bottom: 50px;
@@ -26,7 +24,6 @@
 
 .category {
   padding: 0 0 50px;
-
 }
 
 .section {
@@ -40,7 +37,7 @@
   text-transform: uppercase;
 }
 
-.myCard { 
+.myCard {
   padding: 0;
   border: 1px solid red;
 }

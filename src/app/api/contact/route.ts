@@ -23,7 +23,6 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     values: [enteredValues],
   }
 
-
   try {
     sheets.spreadsheets.values.append(
       {
@@ -36,7 +35,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
       (err: Error | null, res?: GaxiosResponse | null) => {
         if (err) {
           console.error(`The API returned an error: ${err}`)
-          return;
+          return
         }
         console.log('Row added successfully.', res)
       }
@@ -51,5 +50,5 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
 export async function POST(request: Request) {
   const data = await request.json()
   await appendGoogleSheetsData(Object.values(data))
-  return NextResponse.json({ status: 'ok', data: {success: true} })
+  return NextResponse.json({ status: 'ok', data: { success: true } })
 }

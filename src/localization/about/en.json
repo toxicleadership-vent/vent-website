@@ -1,0 +1,48 @@
+{
+  "about": {
+    "title": "About the project",
+    "description": "There is a lot of fear and shame surrounding experiences of toxicity at a workplace. Because it is still more shameful and stigmatized to be the person experiencing abuse than the one inflicting harm on others, only few people have enough privilege to speak out and take the risk of losing reputation and future career prospects. This is why, according to the International Labor Organization’s 2022 Global Survey, out of 750 million people experiencing psychological violence and harassment at work, half never tell anyone about it, suffering in silence.",
+    "team": {
+      "title": "The team",
+      "members": [
+        {
+          "name": "Kasia Musur",
+          "position": "Founder",
+          "image": "/images/about/team/kasia.jpeg",
+          "cv": "Kasia started VENT in the summer of 2022. After experiencing three different toxic workplaces in the past, she decided to put her University of Edinburgh master degrees in Social Anthropology (2011) and Global Crime, Justice and Security (2014) and 15 years of diverse, international work experience (incl. leadership development and HR) into good use, and focus on bringing more awareness to experiences of toxic leadership. Apart from VENT Kasia also leads lightup Germany e.V., an NGO focusing on human trafficking prevention."
+        },
+        {
+          "name": "Dr. Eva Hoffmann",
+          "position": "CTO",
+          "image": "/images/about/team/kasia.jpeg",
+          "cv": "Eva is an experienced software engineer with extensive expertise in developing innovative applications for prominent tech companies such as Klarna, DAZN and Beamery. With a Ph.D. in Science and Technology Studies, she also has a particular interest in the broader societal implications of technology. While studying at the University of Edinburgh, Eva connected with Kasia and is excited to work with her on developing technical solutions to empower individuals facing adversity in toxic workplaces."
+        }
+      ]
+    },
+    "collaborators": {
+      "title": "Consulting experts and collaborators",
+      "members": [
+        {
+          "name": "Cynthia Mathieu, PhD",
+          "image": "/images/about/team/kasia.jpeg",
+          "cv": "Cynthia is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being. At VENT, Cynthia's consulting role focuses on research and development of tools supporting those who experience toxicity at work."
+        },
+        {
+          "name": "Nathalie Martinek, PhD",
+          "image": "/images/about/team/kasia.jpeg",
+          "cv": "Nathalie Martinek PhD is an ex-systems biology researcher turned Narcissism Hacker, interpersonal conflict analyst, coach and consultant. She specializes in helping individuals and teams navigate professional relationships that feature narcissistic behaviors and hostility. Her clients develop skills and strategies to successfully navigate power imbalanced and narcissistic relationships to prevent psychological, financial or reputational harm."
+        },
+        {
+          "name": "Heliana Ramirez, PhD",
+          "image": "/images/about/team/kasia.jpeg",
+          "cv": "Heliana is a researcher and social work clinician addressing racial and LGBTQ-related workplace trauma with civilian and military personnel. She has designed and evaluated anti-racist and LGBTQ+ Affirming workforce wellness interventions at the Veterans Affairs, governmental health departments, and community-based organizations. Heliana applies culturally-informed Somatic interventions for post-traumatic growth. Her publications address discrimination, institutional betrayal, and suicide prevention on healthcare and DEI workforce nervous systems, life span, and career trajectories."
+        }
+      ]
+    },
+    "media": {
+      "title": "Vent in the media"
+    },
+    "contact": "Do you wish to tell your story and contribute to growing awareness of toxic leadership to make it less acceptable?",
+    "contactButton": { "href": "/contact", "text": "Contact us" }
+  }
+}

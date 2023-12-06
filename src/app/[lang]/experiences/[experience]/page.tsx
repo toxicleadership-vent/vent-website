@@ -23,5 +23,12 @@ export default function Experience({
 }
 
 export async function generateStaticParams() {
-  return [{ id: 'experience_1' }, { id: 'experience_1' }]
+  return [
+    { id: 'experience_1' },
+    { id: 'experience_2' },
+    { id: 'experience_3' },
+    // { id: 'experience_4' },
+    { id: 'experience_5' },
+    // { id: 'experience_6' },
+  ]
 }

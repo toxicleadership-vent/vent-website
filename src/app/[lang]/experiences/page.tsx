@@ -24,11 +24,13 @@ export default async function Articles({ params }: { params: PageParams }) {
         {copy.categories.map((category, index) => {
           return (
             <Container key={index} className={styles.section}>
-              <h3 className={styles.category}>{t(`categories.${index}.title`)}</h3>
+              <h3 className={styles.category}>
+                {t(`categories.${index}.title`)}
+              </h3>
               <div key={index}>
                 <Row className={'align-items-start'}>
                   {category?.articles?.map((article, articleIndex) => (
-                    <Col  key={articleIndex} md={4}>
+                    <Col key={articleIndex} md={4}>
                       <h4>
                         {' '}
                         {t(

@@ -29,6 +29,7 @@
     "next-i18n-router": "^4.1.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
+    "react-cookie": "^6.1.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
     "react-i18next": "^13.2.2",

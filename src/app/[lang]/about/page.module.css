@@ -1,0 +1,40 @@
+.page {
+  background-color: var(--background-light-blue);
+  font-family: var(--font-poppins);
+  white-space: initial;
+}
+
+.main {
+  margin-top: 50px;
+  padding: 100px 100px 50px;
+}
+
+.container {
+  margin-bottom: 50px;
+}
+
+.myCard {
+  margin-bottom: 20px;
+}
+
+.cardImg {
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 15px 50px;
+  border: 1px solid black;
+}
+
+.target {
+  width: 340px;
+  height: 240px;
+  overflow-y: auto;
+  overflow-x: auto;
+  resize: both;
+  position: relative;
+  z-index: 2;
+}

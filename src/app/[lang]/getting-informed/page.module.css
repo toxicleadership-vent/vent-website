@@ -1,6 +1,7 @@
 .page {
   background-color: var(--background-orange);
   font-family: var(--font-poppins);
+  /* white-space: initial; */
 }
 
 .main {
@@ -21,8 +22,6 @@
 .gettingInformed {
   border-radius: 200px;
   padding: 30px 80px;
-  /* margin-top: 0; */
-  border: 1px solid red;
   align-items: center;
   background-color: var(--background-light-blue);
 }

@@ -18,10 +18,10 @@
           }
         },
         {
-          "title": "HR & Recruitment at a startup",
+          "title": "Private Company",
           "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/experience_2",
             "name": "Read article"
           }
         }
@@ -35,10 +35,10 @@
       },
       "articles": [
         {
-          "title": "HR & Recruitment at a startup",
+          "title": "HR at a governmental organization",
           "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/experience_3",
             "name": "Read article"
           }
         },
@@ -51,7 +51,8 @@
           }
         }
       ]
-    }, {
+    },
+    {
       "title": "In medium to large corporations",
       "image": {
         "href": "/images/experiences/category1.png",
@@ -59,10 +60,10 @@
       },
       "articles": [
         {
-          "title": "HR & Recruitment at a startup",
+          "title": "Project Management at a Consultancy",
           "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/experience_5",
             "name": "Read article"
           }
         },

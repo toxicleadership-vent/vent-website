@@ -21,6 +21,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Code style
 
 to use prettier run
+
 ```bash
 npm run prettier
 ```
