@@ -23,5 +23,12 @@ export default function Experience({
 }
 
 export async function generateStaticParams() {
-  return [{ id: 'experience_1' }, { id: 'experience_1' }]
+  return [
+    { id: 'failed_by_the_system' },
+    { id: 'fake_investigation' },
+    { id: 'friend_to_foes' },
+    { id: 'growth_over_culture' },
+    { id: 'just_move_him' },
+    { id: 'squeezed_to_the_last_drop' },
+  ]
 }

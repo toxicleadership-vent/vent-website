@@ -3,11 +3,55 @@
     "title": "Contact us!",
     "description": "Any comments or questions? What are your experiences with toxic leadership? We would love to hear from you!",
     "form": {
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "email": "E-mail",
-      "subject": "subject",
-      "message": "message"
+      "first_name": {
+        "name": "First Name",
+        "rules": {
+          "required": "Please provide first name.",
+          "minLength": "Please provide at least 3 characters."
+        }
+      },
+      "last_name": {
+        "name": "Last Name",
+        "rules": {
+          "required": "Please provide last name.",
+          "minLength": "Please provide at least 3 characters."
+        }
+      },
+      "email": {
+        "name": "E-mail",
+        "rules": {
+          "required": "Please provide valid email.",
+          "message": "Entered value does not match email format."
+        }
+      },
+      "subject": {
+        "name": "subject",
+        "options": ["collaborate", "interview", "workshop", "feedback", "other"]
+      },
+      "message": {
+        "name": "message",
+        "rules": { "required": "Please provide a message." },
+        "collaborate": {
+          "subtitle": "Collaborate",
+          "text": "Are you interested in collaborating with us to reduce the impact of toxic leadership? Whether you are a researcher or a professional with an idea, we would love to hear from you. Please use this space to introduce yourself and your collaboration idea. We will get back to you asap!"
+        },
+        "interview": {
+          "subtitle": "Schedule an interview",
+          "text": "We collect people’s experiences of toxic leadership, and share selected, anonymised parts to showcase patterns of abuse. This helps create awareness and build solidarity. Please use this space to tell us about yourself and your experiences. We will get back to you asap!"
+        },
+        "workshop": {
+          "subtitle": "Enquire about a talk/workshop",
+          "text": "Please use this space to write your message. We will get back to you asap!"
+        },
+        "feedback": {
+          "subtitle": "Feedback",
+          "text": "If you have any feedback on the work we do or your user experience of this website, we would love to hear from you!"
+        },
+        "other": {
+          "subtitle": "Other",
+          "text": ""
+        }
+      }
     }
   }
 }

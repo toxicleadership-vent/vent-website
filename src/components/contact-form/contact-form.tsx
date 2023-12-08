@@ -1,10 +1,11 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
+import { useTranslation } from '@/localization/i18n-client'
 
 type Inputs = {
   firstName: string
@@ -14,11 +15,9 @@ type Inputs = {
   message: string
 }
 
-
-
-// TODO: USE i18n
-
 export const ContactForm = ({ lang }: { lang: string }) => {
+  const { t } = useTranslation(lang, 'contact')
+
   const {
     control,
     handleSubmit,
@@ -29,19 +28,16 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       firstName: '',
       lastName: '',
       email: '',
-      subject: 'Collaborate',
+      subject: t(``),
       message: '',
     },
   })
   const [loading, setLoading] = useState(false)
-  const updateContactFormData = useCallback(async (data: Inputs) => {
-    setLoading(true);
-     await handleOnSubmit(data);
-     setLoading(false)
-  }, [])
 
-  const handleOnSubmit = async (data: any) => {
+  const [subject, setSubject] = useState<string>()
 
+  const updateContactFormData = useCallback(async () => {
+    setLoading(true)
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -49,24 +45,34 @@ export const ContactForm = ({ lang }: { lang: string }) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(mapContactForm(getValues())),
-      });
+      })
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.json()
         if (data.data.success) {
-          console.log('Data submitted successfully!');
+          console.log('Data submitted successfully!')
         } else {
-          console.error('Error submitting data:', data.error);
+          console.error('Error submitting data:', data.error)
         }
       } else {
-        console.error('Failed to submit data. Server returned:', response.status);
+        console.error(
+          'Failed to submit data. Server returned:',
+          response.status
+        )
       }
     } catch (error) {
-      console.error('Error submitting data:', error);
+      console.error('Error submitting data:', error)
     }
-  };
+    setLoading(false)
+  }, [setLoading, getValues])
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) =>
-    await updateContactFormData(data)
+  const onSubmit: SubmitHandler<Inputs> = async () =>
+    await updateContactFormData()
+
+  if (!t) {
+    return null
+  }
+
+  console.log(getValues())
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -87,15 +93,15 @@ export const ContactForm = ({ lang }: { lang: string }) => {
               name="firstName"
               control={control}
               rules={{
-                required: 'Please provide first name',
+                required: t('contact.form.first_name.rules.required'),
                 minLength: {
                   value: 3,
-                  message: 'Please provide at least 3 characters',
+                  message: t('contact.form.first_name.rules.minLength'),
                 },
               }}
               render={({ field }) => (
                 <>
-                  <label hidden>{field.name}</label>
+                  <label hidden>{t('contact.form.first_name.name')}</label>
                   <input
                     {...field}
                     className={styles.input}
@@ -111,10 +117,10 @@ export const ContactForm = ({ lang }: { lang: string }) => {
               name="lastName"
               control={control}
               rules={{
-                required: 'Please provide last name',
+                required: t('contact.form.last_name.rules.required'),
                 minLength: {
                   value: 3,
-                  message: 'Please provide at least 3 characters',
+                  message: t('contact.form.last_name.rules.minLength'),
                 },
               }}
               render={({ field }) => (
@@ -134,10 +140,10 @@ export const ContactForm = ({ lang }: { lang: string }) => {
               name="email"
               control={control}
               rules={{
-                required: 'Please provide valid email',
+                required: t('contact.form.email.rules.required'),
                 pattern: {
                   value: /\S+@\S+\.\S+/,
-                  message: 'Entered value does not match email format',
+                  message: t('contact.form.email.rules.message'),
                 },
               }}
               render={({ field }) => (
@@ -154,12 +160,20 @@ export const ContactForm = ({ lang }: { lang: string }) => {
             <Controller
               name="subject"
               control={control}
-              render={({ field }) => (
-                <select {...field} className={styles.input}>
-                  <option>Collaborate</option>
-                  <option>Contribute to research</option>
-                  <option>Book a talk or workshop</option>
-                  <option>Other</option>
+              render={({ field: { onChange, ...rest } }) => (
+                <select
+                  {...rest}
+                  onChange={(e) => {
+                    setSubject(e.target.value)
+                    onChange(e)
+                  }}
+                  className={styles.input}
+                >
+                  <option>{t(`contact.form.subject.options.0`)}</option>
+                  <option>{t(`contact.form.subject.options.1`)}</option>
+                  <option>{t(`contact.form.subject.options.2`)}</option>
+                  <option>{t(`contact.form.subject.options.3`)}</option>
+                  <option>{t(`contact.form.subject.options.4`)}</option>
                 </select>
               )}
             />
@@ -170,13 +184,27 @@ export const ContactForm = ({ lang }: { lang: string }) => {
             <Controller
               name="message"
               control={control}
+              rules={{
+                required: t('contact.form.message.rules.required'),
+                maxLength: {
+                  value: 250,
+                  message: t('contact.form.message.rules.maxLength'),
+                },
+              }}
               render={({ field }) => (
-                <textarea
-                  {...field}
-                  className={styles.textarea}
-                  rows={10}
-                  placeholder={field.name}
-                />
+                <>
+                  <textarea
+                    {...field}
+                    className={styles.textarea}
+                    rows={10}
+                    placeholder={t(
+                      `contact.form.message.${subject ?? 'collaborate'}.text`
+                    )}
+                  />
+                  <small className={styles.textCounter}>
+                    <span>{field.value.length}/250</span>
+                  </small>
+                </>
               )}
             />
           </Col>

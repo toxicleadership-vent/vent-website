@@ -32,18 +32,8 @@ export default async function Home({ params: { lang } }: PageProps) {
         <Container fluid className={styles.section}>
           <h1 className={styles.heading1}> {t('what_we_do.title')}</h1>
           <div className={styles.subsection}>
-            <h3 className={styles.heading3}>
-              {t('what_we_do.sections.0.title')}
-            </h3>
-            <p className={styles.paragraph}>
-              {t('what_we_do.sections.0.text')}
-            </p>
+            <p className={styles.paragraph}>{t('what_we_do.text')}</p>
           </div>
-          <BootstrapImage
-            src={t('what_we_do.image')}
-            height={100}
-            width={100}
-          />
         </Container>
         <Container fluid className={styles.section}>
           <h1 className={styles.heading1}> {t('what_guides_us.title')}</h1>
@@ -54,8 +44,8 @@ export default async function Home({ params: { lang } }: PageProps) {
                   <div className={styles.principleImage}>
                     <BootstrapImage
                       src={t(`what_guides_us.sections.${index}.image`)}
-                      height={100}
-                      width={100}
+                      height="100%"
+                      width="100%"
                     />
                   </div>
                   <h3 className={styles.heading3}>

@@ -1,19 +1,10 @@
 {
   "home": {
-    "title": "Information and research hub reducing the impact of toxic leadership",
+    "title": "COLLABORATION HUB REDUCING THE IMPACT OF TOXIC LEADERSHIP ",
     "what_we_do": {
       "title": "What we do",
       "image": "/images/home/what_we_do.svg",
-      "sections": [
-        {
-          "title": "Your dignity at work",
-          "text": "The mission of VENT is to reduce the fear, shame and lack of awareness that prevent people from recognizing and addressing their experiences of toxic leadership. Our vision is that everyone feels empowered to exercise their right to dignity and respect at work."
-        },
-        {
-          "title": "We hear you",
-          "text": "VENT is home to people's stories about experiences of toxic leadership. Here you can gather insights from peers and professionals, and become a contributor to research supporting development of solutions to this world-wide problem."
-        }
-      ]
+      "text": "VENT brings together multidisciplinary collaborators, survivors and technology to co-create solutions reducing the impact of toxic leadership on individuals, communities, businesses and the environment. \n\nIt is home to people’s stories about experiences of toxic leadership where you can gather insights and become a contributor."
     },
     "what_guides_us": {
       "title": "What guides us",

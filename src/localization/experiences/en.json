@@ -1,77 +1,106 @@
 {
-  "title": "Personal Experiences of toxic leadership",
-  "abstract": "Nulla odio diam, lobortis eu venenatis at, pharetra sed nisi. Integer id nisi aliquam, pellentesque augue et, molestie nibh. Sed porta sagittis interdum. Ut id ipsum nibh. Ut sit amet varius justo. Aliquam nunc diam, maximus nec rutrum a, viverra eu est. Sed placerat molestie maximus. Ut auctor orci ex. In non leo iaculis, aliquam lacus quis, varius justo. Nullam id eros vel ipsum bibendum laoreet. Sed pharetra et erat at gravida. Phasellus sit amet ultrices augue. Aliquam erat volutpat. Sed ullamcorper elit eu erat lobortis, vitae blandit lorem finibus.",
+  "title": "Experiences of toxic leadership",
+  "abstract": "The stories told through VENT are a compilation of lived experiences from around the world. The stories are grouped by company sizes. The quotations are paraphrased and details changed or omitted. Any similarity of situations and persons is coincidental.\n\nAt VENT, we are continuously conducting interviews and this site is evolving. Don’t be a stranger! Visit us regularly to follow our research and stories.",
+  "note": "This content may be triggering to some readers due to recollections of traumatic events relating to, and as a consequence of, violence and harassment at work.",
   "categories": [
     {
-      "title": "In small to medium companies and NGOs",
-      "image": {
-        "href": "/images/experiences/category1.png",
-        "alt": "image"
-      },
+      "title": "In large (trans)national prestigious organizations",
+      "description": "Big organizations carry a lot of prestige. Most are hierarchical, slow in adapting to change and have a reputation for tolerating a lot of abuse. The larger and more prestigious, the less accountability for the people at the top. This combination of prestige, legacy, hierarchy and no accountability is the perfect environment for toxic leaders to prevail. Whether it’s the UN, EU, or government - once you’re in and things turn toxic, anonymously shared stories suggest that in these types of work environments very little is done to support targets of psychological violence and harassment.",
       "articles": [
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Failed by the system",
+          "tag_title": "Toxic pattern", 
+          "tags": ["neglecting employee needs", "lack of support", "communication silos"],
+          "abstract": "An unhealthy work environment takes a toll on your mental and physical health. You seek help and support but there is no one - not your employer, not your doctor nor a lawyer. Nobody takes your case seriously, no one makes it a priority.",
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/failed_by_the_system",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         },
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Just move him to another department",
+          "abstract": "You and your colleagues are bullied. You follow the process of filing a complaint but no action is taken until things escalate. What action is taken? The bully gets extra time off to “decompress” and then is moved to another department.",
+          "tag_title": "Toxic pattern", 
+          "tags" :["lack of accountability", "ignoring grievances", "favoritism"],
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/just_move_him",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         }
       ]
     },
     {
-      "title": "In large (trans)national prestigious organizations",
-      "image": {
-        "href": "/images/experiences/category1.png",
-        "alt": "image"
-      },
+      "title": "In medium to large corporations",
+      "description": "Medium to large corporations breed toxic leadership due to hierarchical structures fostering unchecked authority, disconnecting leaders from employees. Emphasis on profits often prioritizes results over ethics and well-being, incentivizing ruthless tactics for success. Bureaucracy and opaque management layers obscure transparency and accountability, enabling manipulation and blame-shifting.",
       "articles": [
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Squeezed to the last drop",
+          "abstract": "A foreign worker you work for a medium sized company, which does all it can to cut costs. You give them all you have out of fear of not having a job at all. You are overworked, exhausted and completely undervalued.",
+          "tag_title": "Toxic pattern", 
+          "tags" :["exploitation", "overworking", "lack of support"],
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/squeezed_to_the_last_drop",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         },
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Forced to run a fake investigation",
+          "abstract": "You are a respected professional with over 20 years experience. You’ve been a loyal and recognized employee for a decade. New leadership comes on board and suddenly the bullies run loose. You are sucked into an investigation designed to devalue, discard and humiliate you. All shortly before you can legally retire.",
+          "tag_title": "Toxic pattern", 
+          "tags" :["lack of accountability", "ignoring grievances", "favoritism"],
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/fake_investigation",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         }
       ]
-    }, {
-      "title": "In medium to large corporations",
-      "image": {
-        "href": "/images/experiences/category1.png",
-        "alt": "image"
-      },
+    },
+    {
+      "title": "In small to medium companies and NGOs",
+      "description": "Small companies, medium companies and NGOs, often struggle for resources. This means that short term gains sometimes take precedence over long-term sustainability. One of the most crucial aspects of a healthy, sustainable company are satisfied and fulfilled employees. Other times, a small company is doing very well until it starts growing. Suddenly, the wellbeing of employees takes the back seat as the chase after profitability clouds better judgment.",
       "articles": [
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Growth over culture",
+          "abstract": "You work at a promising startup with a vibrant culture. A shift in leadership priorities following rapid growth leads to new HR policies dismantling the inclusive environment, fostering racism and toxicity. Attempts to address the issues resulted in unfair treatment and ultimately, termination.",
+          "tag_title": "Toxic pattern", 
+          "tags" :["discrimination", "removing processes designed to support justice and diversity", "lack of accountability"],
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/growth_over_culture",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         },
         {
-          "title": "HR & Recruitment at a startup",
-          "abstract": "This is a teaser text providing a first idea what the text ist about. This is a teaser text providing a first idea what the text ist about.",
+          "title": "Friends to foes",
+          "abstract": "You join a new team, start a new life. You make a work friend who becomes a mentor and a friend only to one day turn on you and try to get you in big trouble. You become a target of threats, a topic of gossip. The leadership knows but doesn’t stop the bully. The HR tells you to “deal with it”.",
+          "tag_title": "Toxic pattern", 
+          "tags" :["sabotage", "threats", "harassment"],
           "link": {
-            "href": "./experiences/experience_1",
+            "href": "./experiences/friends_to_foes",
             "name": "Read article"
+          },
+          "image": {
+            "href": "/images/experiences/category1.png",
+            "alt": "image"
           }
         }
       ]

@@ -30,7 +30,7 @@ export default async function GettingInformed({
                 <Image
                   alt={tInformed(`sections.${index}.image.alt`)}
                   src={tInformed(`sections.${index}.image.src`)}
-                  width={100}
+                  width="100%"
                 />
               </Link>
             </Col>
