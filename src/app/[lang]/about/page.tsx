@@ -19,7 +19,11 @@ export default async function About({ params: { lang } }: PageProps) {
 
   return (
     <main className={styles.main}>
+      <h1 className={styles.title}>{t('title')}</h1>
+      <p>{t('description')}</p>
+      <div  className={styles.mdx}>
       <MdxText />
+      </div>
       <Container className={styles.container}>
         <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
           {t('team.title')}
@@ -52,7 +56,7 @@ export default async function About({ params: { lang } }: PageProps) {
         <Row>
           {copy.about.collaborators?.members.map((teamMember, index) => {
             return (
-              <Col md={6} key={index}>
+              <Col md={4} key={index}>
                 <Card bsPrefix="myCard" className={styles.myCard}>
                   <CardImg
                     className={styles.cardImg}
