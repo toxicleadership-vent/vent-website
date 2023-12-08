@@ -4,16 +4,7 @@
     "what_we_do": {
       "title": "What we do",
       "image": "/images/home/what_we_do.svg",
-      "sections": [
-        {
-          "title": "Your dignity at work",
-          "text": "VENT brings together multidisciplinary collaborators, survivors and technology to co-create solutions reducing the impact of toxic leadership on individuals, communities, businesses and the environment.\n \nIt is home to people’s stories about experiences of toxic leadership where you can gather insights and become a contributor."
-        },
-        {
-          "title": "We hear you",
-          "text": "VENT is home to people's stories about experiences of toxic leadership. Here you can gather insights from peers and professionals, and become a contributor to research supporting development of solutions to this world-wide problem."
-        }
-      ]
+      "text": "VENT brings together multidisciplinary collaborators, survivors and technology to co-create solutions reducing the impact of toxic leadership on individuals, communities, businesses and the environment. \n\nIt is home to people’s stories about experiences of toxic leadership where you can gather insights and become a contributor."
     },
     "what_guides_us": {
       "title": "What guides us",

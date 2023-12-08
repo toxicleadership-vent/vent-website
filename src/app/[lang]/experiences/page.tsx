@@ -19,6 +19,7 @@ export default async function Articles({ params }: { params: PageParams }) {
       <Stack className={styles.text}>
         <h1 className={styles.title}>{t('title')}</h1>
         <p>{t('abstract')}</p>
+        <small>{t('note')}</small>
       </Stack>
       <Stack gap={5}>
         {copy.categories.map((category, index) => {
@@ -27,10 +28,17 @@ export default async function Articles({ params }: { params: PageParams }) {
               <h3 className={styles.category}>
                 {t(`categories.${index}.title`)}
               </h3>
+              <p>{t(`categories.${index}.description`)}</p>
               <div key={index}>
                 <Row className={'align-items-start'}>
                   {category?.articles?.map((article, articleIndex) => (
-                    <Col key={articleIndex} md={4}>
+                    <Col key={articleIndex} md={6}>
+                                          <Image
+                      src={t(`categories.${index}.articles.${articleIndex}.image.href`)}
+                      alt={t(`categories.${index}.image.alt`)}
+                      rounded
+                      fluid
+                    />
                       <h4>
                         {' '}
                         {t(
@@ -50,14 +58,6 @@ export default async function Articles({ params }: { params: PageParams }) {
                       </Link>
                     </Col>
                   ))}
-                  <Col md={4}>
-                    <Image
-                      src={t(`categories.${index}.image.href`)}
-                      alt={t(`categories.${index}.image.alt`)}
-                      rounded
-                      fluid
-                    />
-                  </Col>
                 </Row>
               </div>
             </Container>

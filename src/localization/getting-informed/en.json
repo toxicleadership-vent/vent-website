@@ -1,33 +1,37 @@
 {
   "getting-informed": {
     "title": "Getting informed",
-    "description": "Toxic leadership, often kept secret, affects millions globally. Get informed to protect yourself and others, reducing the normalization and acceptance of workplace dysfunction and abuse.",
+    "description":"Toxic leadership, often kept secret, affects millions globally. Get informed to protect yourself and others, reducing the normalization and acceptance of workplace dysfunction and abuse.",
     "sections": [
       {
         "title": "What is toxic leadership?",
-        "description": "In recent years, the term \"toxic\" has gained tremendous popularity, and it's often used to describe a wide range of behaviors and situations, to which it doesn’t apply. This increased usage made it more challenging for individuals to recognize when they are truly facing toxic leadership.",
+        "description": "The issue of toxic leadership is a worldwide, cross-industry, cross-generational and cross-gender problem. Its consequent negative impact on mental and physical health, destroys individual lives and drains societies' capacities to support people unable to work or live healthy, balanced lives.",
         "link": { "href": "/getting-informed/1", "text": "Read article" },
-        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+        "image": { "src": "/images/getting_informed/What_is_toxic_leadership.svg", "alt": "What is toxic leadership?" }
       },
       {
         "title": "How to spot a toxic leader?",
+        "description": "When leadership takes a toxic turn, it can have far-reaching, damaging consequences for individuals, companies, communities, the environment, and the economy. Here are some common dysfunctional behaviors, which can help you identify whether you are dealing with a toxic leader.",
         "link": { "href": "/getting-informed/2", "text": "Read article" },
-        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+        "image": { "src": "/images/getting_informed/How_to_spot_a_toxic_leader.svg", "alt": "How to spot a toxic leader?" }
       },
       {
         "title": "What impact does it have?",
+        "description": "The longer you work in a toxic environment, the more time and money it will cost you to recover from psychological violence. The person(s), who caused the harm, either directly or by turning a blind eye, will not share in these expenses, even though you helped them build their careers and fortune.",
         "link": { "href": "/getting-informed/3", "text": "Read article" },
-        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+        "image": { "src": "/images/getting_informed/What_impact_does_it_have.svg", "alt": "What impact does it have?" }
       },
       {
         "title": "Why is toxicity normalized?",
+        "description": "Toxic leadership is normalized for many reasons, from the allure of short-term success to the fear of retaliation and the perpetuation of harmful behaviors. Negative practices persist, without much recognition of their harmful impact, within organizational cultures which encourage negative behaviors.",
         "link": { "href": "/getting-informed/4", "text": "Read article" },
-        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+        "image": { "src": "/images/getting_informed/Why_is_toxicity_normalized.svg", "alt": "Why is toxicity normalized?" }
       },
       {
         "title": "Why should we talk about it?",
+        "description": "By sharing our experiences of harassment and violence at work, we can expose the extent of this problem and pave the way for change. Talking about toxic leadership builds solidarity and reduces the number of people who feel alone with this problem. A problem, which is systemic - not individual!",
         "link": { "href": "/getting-informed/5", "text": "Read article" },
-        "image": { "src": "/images/home/courage.svg", "alt": "alt description" }
+        "image": { "src": "/images/getting_informed/Why_we_should_talk_about_it.svg", "alt": "Why should we talk about it?" }
       }
     ],
     "button": { "text": "READ ALL ARTICLES", "href": "/getting-informed" }

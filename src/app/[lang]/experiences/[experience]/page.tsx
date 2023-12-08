@@ -24,11 +24,11 @@ export default function Experience({
 
 export async function generateStaticParams() {
   return [
-    { id: 'experience_1' },
-    { id: 'experience_2' },
-    { id: 'experience_3' },
-    // { id: 'experience_4' },
-    { id: 'experience_5' },
-    // { id: 'experience_6' },
+    { id: 'failed_by_the_system' },
+    { id: 'fake_investigation' },
+    { id: 'friend_to_foes' },
+    { id: 'growth_over_culture' },
+    { id: 'just_move_him' },
+    { id: 'squeezed_to_the_last_drop' },
   ]
 }
