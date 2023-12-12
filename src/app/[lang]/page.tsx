@@ -5,6 +5,10 @@ import {
   Row,
   Image as BootstrapImage,
   Stack,
+  Card,
+  CardImg,
+  CardImageOverlay,
+  CardText,
 } from '@/components/bootstrap/bootstrap'
 import { Header } from '@/components/header/header'
 import { PageProps } from './layout'
@@ -25,7 +29,7 @@ export default async function Home({ params: { lang } }: PageProps) {
               <h1 className={styles.heroText}>{t('title')}</h1>
             </Col>
             <Col>
-              <BootstrapImage src="/images/hero.png" fluid />
+              <BootstrapImage src="/images/home/hero.svg" fluid />
             </Col>
           </Row>
         </Container>

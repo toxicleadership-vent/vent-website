@@ -1,7 +1,15 @@
 'use client'
 import { Card, Navbar, Nav, Offcanvas } from 'react-bootstrap'
 
-const { Img, Body, Link: CardLink, Text, Title, Header: CardHeader } = Card
+const {
+  Img,
+  Body,
+  Link: CardLink,
+  Text,
+  Title,
+  Header: CardHeader,
+  ImgOverlay,
+} = Card
 const { Brand, Toggle, Collapse, Offcanvas: NavbarOffcanvas } = Navbar
 const { Link: NavLink, Item: NavItem } = Nav
 const {
@@ -23,6 +31,7 @@ export {
 } from 'react-bootstrap'
 export {
   Img as CardImg,
+  ImgOverlay as CardImageOverlay,
   Body as CardBody,
   CardLink,
   Text as CardText,
