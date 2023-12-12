@@ -19,7 +19,11 @@
       { "href": "/about", "link": "About the project" },
       { "href": "/contact", "link": "Contact" },
       { "href": "/data-privacy", "link": "Data Privacy" },
-      { "href": "/imprint", "link": "imprint" }
+      { "href": "/imprint", "link": "Imprint" },
+      {
+        "href": "https://www.linkedin.com/in/katarzyna-kasia-musur/",
+        "link": "LinkedIn"
+      }
     ]
   }
 }
