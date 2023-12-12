@@ -25,7 +25,7 @@ export default async function GettingInformed({
       <Stack gap={5}>
         {copy['getting-informed'].sections.map((_section, index) => (
           <Row key={index} className={`${styles.gettingInformed}`}>
-            <Col md={3}>
+            <Col md={4}>
               <Link href={tInformed(`sections.${index}.link.href`)}>
                 <Image
                   alt={tInformed(`sections.${index}.image.alt`)}
@@ -34,7 +34,7 @@ export default async function GettingInformed({
                 />
               </Link>
             </Col>
-            <Col md={9}>
+            <Col md={8} style={{ paddingLeft: '3em' }}>
               <h3>{tInformed(`sections.${index}.title`)}</h3>
               <p className={styles.sectionDescription}>
                 {tInformed(`sections.${index}.description`, {

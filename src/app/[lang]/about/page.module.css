@@ -29,18 +29,16 @@
   border: 1px solid black;
 }
 
-.target {
-  width: 340px;
-  height: 240px;
-  overflow-y: auto;
-  overflow-x: auto;
-  resize: both;
-  position: relative;
-  z-index: 2;
+.row {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.col {
+  flex: 1;
 }
 
 .mdx {
-  padding: 50px 100px 0;
+  padding: 2rem 5rem 0;
 }
 
 .title {

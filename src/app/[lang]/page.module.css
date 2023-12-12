@@ -11,7 +11,7 @@
   font-family: var(--font-poppins);
   color: black;
   background-color: var(--background-blue);
-  padding-top: 6rem;
+  padding-top: 6rem 2rem 0;
 }
 
 .heroText {
@@ -33,12 +33,6 @@
   font-weight: 600;
   text-align: left;
   padding-bottom: 50px;
-}
-
-.heading1 {
-  font-family: var(--font-poppins);
-  font-weight: 600;
-  padding-bottom: 80px;
 }
 
 .heading3 {

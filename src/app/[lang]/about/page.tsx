@@ -13,6 +13,7 @@ import {
   Row,
 } from '@/components/bootstrap/bootstrap'
 import Link from 'next/link'
+import { Media } from '@/components/media/media'
 
 export default async function About({ params: { lang } }: PageProps) {
   const { t } = await getTranslation(lang, 'about', { keyPrefix: 'about' })
@@ -21,8 +22,8 @@ export default async function About({ params: { lang } }: PageProps) {
     <main className={styles.main}>
       <h1 className={styles.title}>{t('title')}</h1>
       <p>{t('description')}</p>
-      <div  className={styles.mdx}>
-      <MdxText />
+      <div className={styles.mdx}>
+        <MdxText />
       </div>
       <Container className={styles.container}>
         <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
@@ -78,48 +79,55 @@ export default async function About({ params: { lang } }: PageProps) {
           {t('media.title')}
         </h3>
       </Container>
-      <Row>
-        <Col md={6} className={styles.target}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/igXIN0lZMcE?si=lG9yRZJPOyzOLLqj"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+      <Row className={styles.row}>
+        <Col md={6} className={styles.col}>
+          <Media
+            iframeProps={{
+              src: t('media.video.0.src'),
+              title: t('media.video.0.title'),
+            }}
+            top={t('media.video.0.show')}
+            middle={t('media.video.0.episode')}
+            bottom={t('media.video.0.bottom')}
+          />
         </Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col md={6} className={styles.target}>
-          <iframe
-            width="640px"
-            height="360px"
-            src="https://www.youtube.com/embed/Z1G-OF6KMUM?si=bJ-bE4_UKiLHsISN"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col md={8} className={styles.target}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/sdsY8cLvB7E?si=ltNMjSDW14NUmm1H"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+        <Col md={6} className={styles.col}>
+          <Media
+            iframeProps={{
+              src: t('media.video.2.src'),
+              title: t('media.video.2.title'),
+            }}
+            top={t('media.video.2.show')}
+            middle={t('media.video.2.episode')}
+            bottom={t('media.video.2.bottom')}
+          />
         </Col>
       </Row>
-
+      <Row className={styles.row}>
+        <Col md={6} className={styles.col}>
+          <Media
+            iframeProps={{
+              src: t('media.video.1.src'),
+              title: t('media.video.1.title'),
+            }}
+            top={t('media.video.1.show')}
+            middle={t('media.video.1.episode')}
+            bottom={t('media.video.1.bottom')}
+          />
+        </Col>
+      </Row>
+      <Row className={styles.row}>
+        <Col>
+          <iframe
+            src="https://widget.spreaker.com/player?episode_id=56631452&amp;theme=light&amp;playlist=false&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=true&amp;hide-comments=true&amp;hide-sharing=false&amp;hide-logo=true&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false"
+            width="100%"
+            height="200px"
+            frameBorder="0"
+            className="spreaker-player"
+            id="spreaker-player-670167"
+          ></iframe>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <iframe
@@ -131,18 +139,6 @@ export default async function About({ params: { lang } }: PageProps) {
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
-          ></iframe>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <iframe
-            src="https://widget.spreaker.com/player?episode_id=56631452&amp;theme=light&amp;playlist=false&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=true&amp;hide-comments=true&amp;hide-sharing=false&amp;hide-logo=true&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false"
-            width="100%"
-            height="200px"
-            frameBorder="0"
-            className="spreaker-player"
-            id="spreaker-player-670167"
           ></iframe>
         </Col>
       </Row>

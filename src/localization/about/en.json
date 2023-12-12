@@ -14,7 +14,7 @@
         {
           "name": "Dr. Eva Hoffmann",
           "position": "CTO",
-          "image": "/images/about/team/kasia.jpeg",
+          "image": "/images/about/team/eva.jpg",
           "cv": "Eva is an experienced software engineer with extensive expertise in developing innovative applications for prominent tech companies such as Klarna, DAZN and Beamery. With a Ph.D. in Science and Technology Studies, she also has a particular interest in the broader societal implications of technology. While studying at the University of Edinburgh, Eva connected with Kasia and is excited to work with her on developing technical solutions to empower individuals facing adversity in toxic workplaces."
         }
       ]
@@ -40,7 +40,30 @@
       ]
     },
     "media": {
-      "title": "Vent in the media"
+      "title": "Vent in the media",
+      "video": [
+        {
+          "src": "https://www.youtube.com/embed/igXIN0lZMcE?si=lG9yRZJPOyzOLLqj?fs=0&modestbranding=1&playsinline=1&rel=0",
+          "title": "",
+          "show": "Unwind your mind",
+          "episode": "Toxic leadership - what's that?",
+          "bottom": ""
+        },
+        {
+          "src": "https://www.youtube.com/embed/Z1G-OF6KMUM?si=bJ-bE4_UKiLHsISN?fs=0&modestbranding=1&playsinline=1&rel=0",
+          "title": "",
+          "show": "D3M Labs - The data driven decision making blog",
+          "episode": "Experiences of Toxic Leadership in Data",
+          "bottom": ""
+        },
+        {
+          "src": "https://www.youtube.com/embed/sdsY8cLvB7E?si=ltNMjSDW14NUmm1H",
+          "title": "",
+          "show": "The Phillip Show",
+          "episode": "Surviving Toxic Leadership",
+          "bottom": ""
+        }
+      ]
     },
     "contact": "Do you wish to tell your story and contribute to growing awareness of toxic leadership to make it less acceptable?",
     "contactButton": { "href": "/contact", "text": "Contact us" }

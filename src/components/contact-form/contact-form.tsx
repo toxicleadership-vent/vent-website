@@ -28,7 +28,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       firstName: '',
       lastName: '',
       email: '',
-      subject: t(``),
+      subject: 'Collaborate',
       message: '',
     },
   })
@@ -71,8 +71,6 @@ export const ContactForm = ({ lang }: { lang: string }) => {
   if (!t) {
     return null
   }
-
-  console.log(getValues())
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -169,7 +167,9 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                   }}
                   className={styles.input}
                 >
-                  <option>{t(`contact.form.subject.options.0`)}</option>
+                  <option>
+                    {t(`contact.form.subject.options.0`) ?? 'Collaborate'}
+                  </option>
                   <option>{t(`contact.form.subject.options.1`)}</option>
                   <option>{t(`contact.form.subject.options.2`)}</option>
                   <option>{t(`contact.form.subject.options.3`)}</option>
