@@ -1,0 +1,66 @@
+.main {
+  background-color: var(--background-green);
+  font-family: var(--font-poppins);
+  padding: 100px 100px;
+}
+.text {
+  padding: 1em 5em 5em;
+}
+
+.title {
+  text-align: center;
+}
+
+.section {
+  background-color: var(--background-light-green);
+  border-radius: 25px;
+  padding: 50px 50px;
+}
+
+.link {
+  color: black;
+  text-transform: uppercase;
+}
+
+.myCard {
+  padding: 0;
+  border: 1px solid red;
+}
+
+.experience {
+  background-color: var(--background-light-green);
+}
+
+.articlesWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+}
+
+.wrapper {
+  grid-column: span 2;
+  background: red;
+}
+.wrapper:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.background-light {
+  background-color: var(--background-light-green);
+}
+
+.tags {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
+.button {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 15px 50px;
+  border: 1px solid black;
+}

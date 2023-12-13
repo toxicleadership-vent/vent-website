@@ -1,5 +1,6 @@
+import { ExperienceCategory } from '@/components/experiences/experiences-large'
 import styles from '../page.module.css'
-
+import { Container } from '@/components/bootstrap/bootstrap'
 import dynamic from 'next/dynamic'
 
 export default function Experience({

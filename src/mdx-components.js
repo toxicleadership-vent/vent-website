@@ -17,5 +17,7 @@ export function useMDXComponents(components) {
     img: ({ src, alt, ...rest }) => (
       <Image src={src} alt={alt ?? 'image'} {...rest} fluid />
     ),
+    ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
+    hr: () => <hr className={styles.mdxHr}></hr>,
   }
 }

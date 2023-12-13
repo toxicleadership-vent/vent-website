@@ -36,6 +36,11 @@ h4 {
   font-weight: 600;
 }
 
+h5 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+
 p {
   font-family: var(--font-poppins);
   font-weight: 400;

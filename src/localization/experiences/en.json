@@ -1,5 +1,6 @@
 {
   "title": "Experiences of toxic leadership",
+  "alternativeTitle": "More experiences of toxic leadership",
   "abstract": "The stories told through VENT are a compilation of lived experiences from around the world. The stories are grouped by company sizes. The quotations are paraphrased and details changed or omitted. Any similarity of situations and persons is coincidental.\n\nAt VENT, we are continuously conducting interviews and this site is evolving. Don’t be a stranger! Visit us regularly to follow our research and stories.",
   "note": "This content may be triggering to some readers due to recollections of traumatic events relating to, and as a consequence of, violence and harassment at work.",
   "categories": [
@@ -121,5 +122,9 @@
         }
       ]
     }
-  ]
+  ],
+  "button": {
+    "href": "/experiences",
+    "text": "Read all experiences"
+  }
 }

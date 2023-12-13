@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang={params.lang}>
       <body className={`${poppins.variable}`}>
         {children}
-        <Footer lang={params.lang}/>
+        <Footer lang={params.lang} />
       </body>
     </html>
   )
