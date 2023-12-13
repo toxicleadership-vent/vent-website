@@ -1,5 +1,12 @@
 'use client'
-import { Card, Navbar, Nav, Offcanvas, ListGroup } from 'react-bootstrap'
+import {
+  Card,
+  Navbar,
+  Nav,
+  Offcanvas,
+  ListGroup,
+  Carousel,
+} from 'react-bootstrap'
 
 const {
   Img,
@@ -19,6 +26,7 @@ const {
 } = Offcanvas
 
 const { Item: ListGroupItem } = ListGroup
+const { Item: CarouselItem, Caption: CarouselCaption } = Carousel
 
 export {
   Container,
@@ -31,6 +39,8 @@ export {
   Nav,
   Offcanvas,
   ListGroup,
+  ProgressBar,
+  Carousel,
 } from 'react-bootstrap'
 export {
   Img as CardImg,
@@ -50,4 +60,6 @@ export {
   OffcanvasBody,
   NavbarOffcanvas,
   ListGroupItem,
+  CarouselCaption,
+  CarouselItem,
 }

@@ -1,5 +1,5 @@
 export const fallbackLng = 'en'
-export const languages = [fallbackLng, 'de']
+export const languages = [fallbackLng]
 export const defaultNS = 'translation'
 export const cookieName = 'i18next'
 
@@ -11,9 +11,6 @@ export function getOptions(lng = fallbackLng, ns = defaultNS) {
     lng,
     defaultNS,
     ns,
-    //  interpolation: {
-    //   espaceValue: false,
-    // },
     detection: {
       order: ['navigator'],
     },

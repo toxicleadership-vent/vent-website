@@ -28,6 +28,20 @@
   padding: 100px 100px;
 }
 
+.sectionOrange {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--background-orange);
+  padding: 100px 100px;
+}
+
+.poll {
+  background-color: var(--background-light-blue);
+  padding: 2rem 5rem;
+  border-radius: 5rem;
+}
+
 .subsection {
   font-family: var(--font-poppins);
   font-weight: 600;

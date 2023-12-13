@@ -26,6 +26,57 @@
         }
       ],
       "button": { "text": "LEARN MORE ABOUT THE PROJECT", "href": "/about" }
+    },
+    "polls": {
+      "title": "How aware are you?",
+      "next": "NEXT",
+      "question": "Question {{no}}/{{count}}",
+      "questions": [
+        {
+          "question": "How many people woldwide experience violence and harassment at work?",
+          "answers": [
+            { "percentage": "50", "label": "Every second working person" },
+            { "percentage": "5", "label": "1 in 20 working people" },
+            {
+              "percentage": "20",
+              "label": "1 in 5 working people",
+              "correct": "true"
+            }
+          ],
+          "source": "Source: International Labour Organization (ILO) 2022"
+        },
+        {
+          "question": "How many hours of life does an average person spend working?",
+          "answers": [
+            { "percentage": "<5", "label": "30,673 hours" },
+            { "percentage": "29", "label": "200,771 hours" },
+            {
+              "percentage": "12",
+              "label": "81,396 hours",
+              "correct": "correct"
+            }
+          ],
+          "source": "Source: State of the Global Workplace: 2022 Report"
+        },
+        {
+          "question": "How many people woldwide experience violence and harassment at work?",
+          "answers": [
+            { "percentage": "10", "label": "" },
+            { "percentage": "35", "label": "" },
+            { "percentage": "60", "label": "", "correct": "correct" }
+          ],
+          "source": "Source: State of the Global Workplace: 2022 Report"
+        },
+        {
+          "question": "What % of workers are miserable?",
+          "answers": [
+            { "percentage": "80", "label": "" },
+            { "percentage": "5", "label": "" },
+            { "percentage": "19", "label": "", "correct": "correct" }
+          ],
+          "source": "Source: State of the Global Workplace: 2022 Report"
+        }
+      ]
     }
   }
 }

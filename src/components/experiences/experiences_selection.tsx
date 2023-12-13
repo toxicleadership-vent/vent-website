@@ -6,7 +6,7 @@ import {
   ListGroup,
   ListGroupItem,
   Row,
-  Image,
+  Image as BootstrapImage,
 } from '../bootstrap/bootstrap'
 import Link from 'next/link'
 
@@ -22,7 +22,7 @@ export const ExperienceSelection = async ({
   const { t } = await getTranslation(lang, 'experiences')
   return (
     <>
-      <Image
+      <BootstrapImage
         src={t(
           `categories.${categoryIndex}.articles.${articleIndex}.image.href`
         )}

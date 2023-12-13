@@ -1,0 +1,50 @@
+.progressBarWrapper {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  height: 61px;
+  overflow: hidden;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  background-color: var(--background-orange);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.progressBarActive {
+  display: flex;
+  background-color: var(--background-orange);
+}
+
+.progressBarRevealed {
+  background-color: var(--color-green);
+}
+
+.questionHeader {
+  font-weight: 400;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}

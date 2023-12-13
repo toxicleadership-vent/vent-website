@@ -12,6 +12,7 @@ import { getTranslation } from '@/localization/i18n'
 import copy from '@/localization/home/en.json'
 import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
+import { PollsContainer } from '@/components/polls/polls'
 
 export default async function Home({ params: { lang } }: PageProps) {
   const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
@@ -36,6 +37,12 @@ export default async function Home({ params: { lang } }: PageProps) {
             <p className={styles.paragraph}>{t('what_we_do.text')}</p>
           </div>
         </Container>
+        <Container fluid className={styles.sectionOrange}>
+          <h1 className={styles.heading1}> {t('polls.title')}</h1>
+          <Stack className={styles.poll}>
+            <PollsContainer lang={lang} />
+          </Stack>
+        </Container>
         <Container fluid className={styles.section}>
           <h1 className={styles.heading1}> {t('what_guides_us.title')}</h1>
           <div className={styles.subsection}>
@@ -45,8 +52,8 @@ export default async function Home({ params: { lang } }: PageProps) {
                   <div className={styles.principleImage}>
                     <BootstrapImage
                       src={t(`what_guides_us.sections.${index}.image`)}
-                      height="100%"
-                      width="100%"
+                      height="80%"
+                      width="80%"
                     />
                   </div>
                   <h3 className={styles.heading3}>
