@@ -86,7 +86,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
           )}
         </Row>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <Controller
               name="firstName"
               control={control}
@@ -110,7 +110,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
               )}
             />
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
             <Controller
               name="lastName"
               control={control}
@@ -133,7 +133,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <Controller
               name="email"
               control={control}
@@ -154,7 +154,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
               )}
             />
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
             <Controller
               name="subject"
               control={control}

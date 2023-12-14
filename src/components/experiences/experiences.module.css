@@ -64,3 +64,16 @@
   padding: 15px 50px;
   border: 1px solid black;
 }
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 32px;
+  }
+
+  .text {
+    padding: 0;
+  }
+  .experienceSelection {
+    padding-bottom: 32px;
+  }
+}

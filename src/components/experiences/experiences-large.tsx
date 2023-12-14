@@ -21,7 +21,11 @@ export const ExperienceCategory = async ({
         <Row className={'align-items-start'}>
           {copy.categories[categoryIndex].articles?.map(
             (article, articleIndex) => (
-              <Col key={articleIndex} md={6}>
+              <Col
+                className={styles.experienceSelection}
+                key={articleIndex}
+                md={6}
+              >
                 <ExperienceSelection
                   key={`${categoryIndex}-${articleIndex}`}
                   lang={lang}

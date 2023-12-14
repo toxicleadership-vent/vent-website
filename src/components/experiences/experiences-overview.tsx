@@ -15,10 +15,14 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
         <p>{t('abstract')}</p>
         <small>{t('note')}</small>
       </Stack>
-      <Row className={'align-items-start'}>
+      <Row className={`align-items-start`}>
         {copy.categories.map((category, categoryIndex) => {
           return (
-            <Col key={categoryIndex} md={4}>
+            <Col
+              className={styles.experienceSelection}
+              key={categoryIndex}
+              md={4}
+            >
               <ExperienceSelection
                 key={`${categoryIndex}-${1}`}
                 lang={lang}

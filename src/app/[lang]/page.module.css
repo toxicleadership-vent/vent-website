@@ -25,15 +25,11 @@
   font-weight: 600;
   text-align: center;
   background-color: var(--background-light-blue);
-  padding: 100px 100px;
+  padding: 100px;
 }
 
 .sectionOrange {
-  font-family: var(--font-poppins);
-  font-weight: 600;
-  text-align: center;
   background-color: var(--background-orange);
-  padding: 100px 100px;
 }
 
 .poll {
@@ -102,4 +98,14 @@
 .mdxHr {
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .heroText {
+    padding-left: 0;
+  }
+
+  .section {
+    padding: 32px;
+  }
 }

@@ -23,10 +23,10 @@ export default async function Home({ params: { lang } }: PageProps) {
       <Stack>
         <Container fluid>
           <Row className={`align-items-center ${styles.hero}`}>
-            <Col>
+            <Col sm={6} md={6}>
               <h1 className={styles.heroText}>{t('title')}</h1>
             </Col>
-            <Col>
+            <Col sm={6} md={6}>
               <BootstrapImage src="/images/home/hero.svg" fluid />
             </Col>
           </Row>
@@ -37,7 +37,10 @@ export default async function Home({ params: { lang } }: PageProps) {
             <p className={styles.paragraph}>{t('what_we_do.text')}</p>
           </div>
         </Container>
-        <Container fluid className={styles.sectionOrange}>
+        <Container
+          fluid
+          className={`${styles.section} ${styles.sectionOrange}`}
+        >
           <h1 className={styles.heading1}> {t('polls.title')}</h1>
           <Stack className={styles.poll}>
             <PollsContainer lang={lang} />
@@ -48,7 +51,7 @@ export default async function Home({ params: { lang } }: PageProps) {
           <div className={styles.subsection}>
             <Row>
               {copy.home.what_guides_us.sections.map((_section, index) => (
-                <Col key={index}>
+                <Col sm={12} md={4} key={index}>
                   <div className={styles.principleImage}>
                     <BootstrapImage
                       src={t(`what_guides_us.sections.${index}.image`)}

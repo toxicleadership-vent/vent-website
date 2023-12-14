@@ -57,3 +57,14 @@
 .background-light {
   background-color: var(--background-light-green);
 }
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .text {
+    padding: 0 0 32px;
+  }
+}

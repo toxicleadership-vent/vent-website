@@ -80,7 +80,7 @@ export default async function About({ params: { lang } }: PageProps) {
         </h3>
       </Container>
       <Row className={styles.row}>
-        <Col md={6} className={styles.col}>
+        <Col className={styles.col}>
           <Media
             iframeProps={{
               src: t('media.video.0.src'),
@@ -91,7 +91,7 @@ export default async function About({ params: { lang } }: PageProps) {
             bottom={t('media.video.0.bottom')}
           />
         </Col>
-        <Col md={6} className={styles.col}>
+        <Col className={styles.col}>
           <Media
             iframeProps={{
               src: t('media.video.2.src'),
@@ -104,7 +104,7 @@ export default async function About({ params: { lang } }: PageProps) {
         </Col>
       </Row>
       <Row className={styles.row}>
-        <Col md={6} className={styles.col}>
+        <Col className={styles.col}>
           <Media
             iframeProps={{
               src: t('media.video.1.src'),

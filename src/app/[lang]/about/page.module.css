@@ -44,5 +44,21 @@
 .title {
   text-align: center;
   margin-bottom: 50px;
-  padding: 0 180px;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 32px;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .mdx {
+    padding: 0;
+  }
+  .experienceSelection {
+    padding-bottom: 32px;
+  }
 }

@@ -19,7 +19,7 @@
   font-weight: 600;
   text-align: center;
   background-color: var(--background-orange);
-  padding: 100px 100px;
+  padding: 100px;
 }
 
 .subsection {
@@ -40,4 +40,14 @@
   border-radius: var(--border-radius);
   padding: 15px 50px;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionOrange {
+    padding: 32px;
+  }
+
+  .heading1 {
+    padding-bottom: 32px;
+  }
 }
