@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer/footer'
+import { getTranslation } from '@/localization/i18n'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -13,87 +14,135 @@ const poppins = Poppins({
 })
 
 export type PageParams = {
-  lang: string
+  lang: string,
 }
 
 export type PageProps = {
   params: PageParams
 }
 
-export const metadata: Metadata = {
-  title: 'Vent',
-  description:
-    'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
-  icons: {
-    icon: ['/images/favicon/favicon.ico'],
-    apple: ['/images/favicon/apple-touch-icon.png?v=4'],
-    shortcut: ['/images/favicons/apple-touch-icon.png'],
-  },
-  robots: 'index, follow',
-  openGraph: {
-    type: 'website',
-    url: 'https://www.toxicleadershipvent.com',
-    description:
-      'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
-    siteName: 'Vent about your boss',
-    images: [
-      {
-        url: '/images/favicon/2.png',
-      },
+export async function generateMetadata(
+  { params }: { params: {lang: string} },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+
+  const { lang } = params
+  const { t } = await getTranslation(lang, 'home', {
+    keyPrefix: 'home.metadata',
+  })
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    robots: 'index, follow',
+    icons: {
+      icon: ['/images/favicon/favicon.ico'],
+      apple: ['/images/favicon/apple-touch-icon.png?v=4'],
+      shortcut: ['/images/favicons/apple-touch-icon.png'],
+    },
+    openGraph: {
+      type: 'website',
+      url: 'https://www.toxicleadershipvent.com',
+      description: t('description'),
+      siteName: t('siteName'),
+      images: [t('image')],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@evandyou',
+      images: { url: t('image'), alt: t('siteName') },
+      title: t('siteName'),
+      description: t('description'),
+    },
+    keywords: [
+      'workplace',
+      'abuse',
+      'toxic',
+      'leadership',
+      'solution',
+      'mental',
+      'health',
+      'depression',
+      'struggle',
+      'HR',
+      'wellbeing',
+      'work',
+      'psychological',
+      'safety',
+      'psychopath',
+      'dark',
+      'triad',
+      'traits',
+      'tetrad',
+      'research',
+      'collaboration',
+      'sociopath',
+      'personality',
+      'disorder',
+      'new work',
+      'therapy',
+      'coaching',
+      'employment',
+      'hierarchy',
+      'unemployment',
+      'benefits',
+      'disability',
+      'change',
+      'support',
+      'workshops',
+      'training',
+      'stories',
+      'survivors',
+      'witness',
+      'bystander',
+      'victim',
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@evandyou',
-    images: { url: '/images/favicon/2.png', alt: 'vent - about the boss' },
-    title: 'Vent - about the boss',
-    description:
-      'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
-  },
-  keywords: [
-    'workplace',
-    'abuse',
-    'toxic',
-    'leadership',
-    'solution',
-    'mental',
-    'health',
-    'depression',
-    'struggle',
-    'HR',
-    'wellbeing',
-    'work',
-    'psychological',
-    'safety',
-    'psychopath',
-    'dark',
-    'triad',
-    'traits',
-    'tetrad',
-    'research',
-    'collaboration',
-    'sociopath',
-    'personality',
-    'disorder',
-    'new work',
-    'therapy',
-    'coaching',
-    'employment',
-    'hierarchy',
-    'unemployment',
-    'benefits',
-    'disability',
-    'change',
-    'support',
-    'workshops',
-    'training',
-    'stories',
-    'survivors',
-    'witness',
-    'bystander',
-    'victim',
-  ],
+  }
 }
+//     'workplace',
+//     'abuse',
+//     'toxic',
+//     'leadership',
+//     'solution',
+//     'mental',
+//     'health',
+//     'depression',
+//     'struggle',
+//     'HR',
+//     'wellbeing',
+//     'work',
+//     'psychological',
+//     'safety',
+//     'psychopath',
+//     'dark',
+//     'triad',
+//     'traits',
+//     'tetrad',
+//     'research',
+//     'collaboration',
+//     'sociopath',
+//     'personality',
+//     'disorder',
+//     'new work',
+//     'therapy',
+//     'coaching',
+//     'employment',
+//     'hierarchy',
+//     'unemployment',
+//     'benefits',
+//     'disability',
+//     'change',
+//     'support',
+//     'workshops',
+//     'training',
+//     'stories',
+//     'survivors',
+//     'witness',
+//     'bystander',
+//     'victim',
 
 export default function RootLayout({
   children,

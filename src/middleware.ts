@@ -11,7 +11,14 @@ export const config = {
 
 acceptLanguage.languages(languages)
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
+  const isProdReady = process.env.IS_PRODUCTION_READY
+
+  if (!isProdReady || isProdReady === 'false') {
+    req.nextUrl.pathname = `/en/under-construction`
+    return NextResponse.rewrite(req.nextUrl)
+  }
+
   let lng
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)

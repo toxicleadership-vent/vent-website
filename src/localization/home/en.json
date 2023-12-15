@@ -77,6 +77,12 @@
           "source": "Source: State of the Global Workplace: 2022 Report"
         }
       ]
+    },
+    "metadata": {
+      "title": "Vent",
+      "description": "VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.",
+      "siteName": "Vent - about the toxic boss",
+      "images": "/images/favicon/2.png"
     }
   }
 }

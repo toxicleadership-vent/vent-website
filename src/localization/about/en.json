@@ -73,5 +73,11 @@
     },
     "contact": "Do you wish to tell your story and contribute to growing awareness of toxic leadership to make it less acceptable?",
     "contactButton": { "href": "/contact", "text": "Contact us" }
+  },
+  "metadata": {
+    "title": "Vent",
+    "description": "VENT collects anonymous stories of people's experiences of incivility and exploitation in a work context. VENT brings together multidisciplinary experts to collaborate on developing solutions and tools, which help reduce the impact and normalization of toxic leadership.",
+    "siteName": "Vent - about the toxic boss - About the project",
+    "images": "/images/favicon/8.png"
   }
 }
