@@ -1,14 +1,24 @@
 .page {
   background-color: var(--background-light-blue);
   font-family: var(--font-poppins);
-  padding: 0 150px;
 }
 
 .page * > img {
-  padding: 0 200px 50px;
+  padding: 0 2rem;
+  width: 300px;
+}
+
+.page p:has(> img) {
+  text-align: center;
 }
 
 .main {
+  padding: 100px 100px 20px;
   margin-top: 50px;
-  padding: 100px 50px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 32px;
+  }
 }

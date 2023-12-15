@@ -84,6 +84,11 @@
   text-decoration: none;
 }
 
+.heading1Mdx {
+  margin: 0;
+  padding: 0;
+}
+
 .mdx {
   text-align: center;
 }
@@ -107,5 +112,10 @@
 
   .section {
     padding: 32px;
+  }
+
+  .poll {
+    padding: 20px;
+    border-radius: 2.5rem;
   }
 }

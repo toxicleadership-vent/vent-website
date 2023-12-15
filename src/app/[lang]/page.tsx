@@ -27,7 +27,11 @@ export default async function Home({ params: { lang } }: PageProps) {
               <h1 className={styles.heroText}>{t('title')}</h1>
             </Col>
             <Col sm={6} md={6}>
-              <BootstrapImage src="/images/home/hero.svg" fluid />
+              <BootstrapImage
+                src="/images/home/hero.svg"
+                fluid
+                alt="hero image"
+              />
             </Col>
           </Row>
         </Container>
@@ -55,6 +59,7 @@ export default async function Home({ params: { lang } }: PageProps) {
                   <div className={styles.principleImage}>
                     <BootstrapImage
                       src={t(`what_guides_us.sections.${index}.image`)}
+                      alt={t(`what_guides_us.sections.${index}.title`)}
                       height="80%"
                       width="80%"
                     />

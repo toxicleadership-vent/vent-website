@@ -22,7 +22,77 @@ export type PageProps = {
 
 export const metadata: Metadata = {
   title: 'Vent',
-  description: 'about the toxic boss',
+  description:
+    'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
+  icons: {
+    icon: ['/images/favicon/favicon.ico'],
+    apple: ['/images/favicon/apple-touch-icon.png?v=4'],
+    shortcut: ['/images/favicons/apple-touch-icon.png'],
+  },
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.toxicleadershipvent.com',
+    description:
+      'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
+    siteName: 'Vent about your boss',
+    images: [
+      {
+        url: '/images/favicon/2.png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@evandyou',
+    images: { url: '/images/favicon/2.png', alt: 'vent - about the boss' },
+    title: 'Vent - about the boss',
+    description:
+      'VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.',
+  },
+  keywords: [
+    'workplace',
+    'abuse',
+    'toxic',
+    'leadership',
+    'solution',
+    'mental',
+    'health',
+    'depression',
+    'struggle',
+    'HR',
+    'wellbeing',
+    'work',
+    'psychological',
+    'safety',
+    'psychopath',
+    'dark',
+    'triad',
+    'traits',
+    'tetrad',
+    'research',
+    'collaboration',
+    'sociopath',
+    'personality',
+    'disorder',
+    'new work',
+    'therapy',
+    'coaching',
+    'employment',
+    'hierarchy',
+    'unemployment',
+    'benefits',
+    'disability',
+    'change',
+    'support',
+    'workshops',
+    'training',
+    'stories',
+    'survivors',
+    'witness',
+    'bystander',
+    'victim',
+  ],
 }
 
 export default function RootLayout({

@@ -26,7 +26,8 @@ export const PollsContainer = ({ lang }: { lang: string }) => {
             className={style.button}
             onClick={() => setActiveIndex((activeIndex + 1) % 4)}
           >
-            {t('polls.next')} <Image src="/images/home/next-arrow.svg" />
+            {t('polls.next')}
+            <Image src="/images/home/next-arrow.svg" alt="next" />
           </button>
         </Col>
       </Row>

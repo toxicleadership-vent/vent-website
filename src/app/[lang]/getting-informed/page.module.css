@@ -1,7 +1,6 @@
 .page {
   background-color: var(--background-orange);
   font-family: var(--font-poppins);
-  /* white-space: initial; */
 }
 
 .main {

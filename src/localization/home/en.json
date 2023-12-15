@@ -33,7 +33,7 @@
       "question": "Question {{no}}/{{count}}",
       "questions": [
         {
-          "question": "How many people woldwide experience violence and harassment at work?",
+          "question": "How many people worldwide experience violence and harassment at work?",
           "answers": [
             { "percentage": "50", "label": "Every second working person" },
             { "percentage": "5", "label": "1 in 20 working people" },
@@ -48,10 +48,10 @@
         {
           "question": "How many hours of life does an average person spend working?",
           "answers": [
-            { "percentage": "<5", "label": "30,673 hours" },
-            { "percentage": "29", "label": "200,771 hours" },
+            { "percentage": "0", "label": "30,673 hours" },
+            { "percentage": "0", "label": "200,771 hours" },
             {
-              "percentage": "12",
+              "percentage": "0",
               "label": "81,396 hours",
               "correct": "correct"
             }
