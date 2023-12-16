@@ -13,8 +13,11 @@ acceptLanguage.languages(languages)
 
 export async function middleware(req: NextRequest) {
   const isProdReady = process.env.IS_PRODUCTION_READY
+  //TODO: take out
+  const allowedDomain =
+    req.url.includes('localhost') || req.url.includes('vercel')
 
-  if (!isProdReady || isProdReady === 'false') {
+  if (!allowedDomain || !isProdReady || isProdReady === 'false') {
     req.nextUrl.pathname = `/en/under-construction`
     return NextResponse.rewrite(req.nextUrl)
   }

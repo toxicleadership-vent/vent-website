@@ -14,7 +14,7 @@ const poppins = Poppins({
 })
 
 export type PageParams = {
-  lang: string,
+  lang: string
 }
 
 export type PageProps = {
@@ -22,10 +22,9 @@ export type PageProps = {
 }
 
 export async function generateMetadata(
-  { params }: { params: {lang: string} },
+  { params }: { params: { lang: string } },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-
   const { lang } = params
   const { t } = await getTranslation(lang, 'home', {
     keyPrefix: 'home.metadata',
@@ -33,7 +32,7 @@ export async function generateMetadata(
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || []
-  
+
   return {
     title: t('title'),
     description: t('description'),

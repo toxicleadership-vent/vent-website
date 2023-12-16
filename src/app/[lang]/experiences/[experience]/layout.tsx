@@ -14,8 +14,7 @@ export async function generateMetadata(
   { params }: { params: PageParams },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  console.log(params)
-  const { lang,  } = params
+  const { lang } = params
   const { t } = await getTranslation(lang, 'experiences', {
     keyPrefix: 'experiences.metadata',
   })
@@ -46,7 +45,6 @@ export async function generateMetadata(
     keywords,
   }
 }
-
 
 export default function ExperiencesArticle({
   children,

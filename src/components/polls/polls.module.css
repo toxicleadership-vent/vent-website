@@ -10,7 +10,7 @@
 }
 
 .progressBar {
-  background-color: var(--background-orange);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: flex-start;

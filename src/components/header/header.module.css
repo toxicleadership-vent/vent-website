@@ -37,4 +37,5 @@
   border-radius: var(--border-radius);
   padding: 5px 15px;
   margin: 10px 0;
+  transition: all 0.5s ease;
 }

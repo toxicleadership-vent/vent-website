@@ -5,11 +5,6 @@
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-  .footerContainer {
-    padding: unset;
-  }
-}
 
 .footerNavigation {
   display: flex;
@@ -25,15 +20,23 @@
 }
 
 .logotitle {
-  height: 100px;
   display: flex;
   justify-content: space-between;
-  padding: 9px;
+  padding: 10px;
   align-items: center;
 }
 
-.logotitle .subtitle {
-  font-size: 26px;
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -41,5 +44,42 @@
   color: black;
   font-size: 2rem;
 }
+
+@media screen and (max-width: 480px) {
+  .footerContainer {
+    padding: unset;
+  }
+  .footerNavigation {
+    flex-direction: column;
+  }
+  .logoContainer {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    padding: 32px;
+  }
+  .footerNavigation {
+    flex-direction: column;
+  }
+  .logoContainer {
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  .subtitle { 
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  .linkedin {
+    display: none;
+  }
+}
+
+
 
 /* for < 430 kein padding mehr */

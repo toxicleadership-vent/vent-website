@@ -1,7 +1,6 @@
 import { getTranslation } from './../../localization/i18n'
 import {
-  Container,
-  Navbar,
+    Navbar,
   NavbarBrand,
   Nav,
   NavLink,
@@ -84,8 +83,8 @@ export const Header = async (
                 <NavItem
                   as="li"
                   key={index}
-                  className={styles.link}
                   style={{ backgroundColor: lightColor }}
+                  className={styles.link}
                 >
                   <NavLink href={navitem.href}>
                     {t(`navbar.${index}.link`)}

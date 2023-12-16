@@ -43,37 +43,41 @@
               "correct": "true"
             }
           ],
+          "showPercentage": "true",
           "source": "Source: International Labour Organization (ILO) 2022"
         },
         {
           "question": "How many hours of life does an average person spend working?",
           "answers": [
-            { "percentage": "0", "label": "30,673 hours" },
-            { "percentage": "0", "label": "200,771 hours" },
+            { "percentage": "5", "label": "30,673 hours" },
+            { "percentage": "33", "label": "200,771 hours" },
             {
-              "percentage": "0",
+              "percentage": "13",
               "label": "81,396 hours",
               "correct": "correct"
             }
           ],
+          "showPercentage": "false",
           "source": "Source: State of the Global Workplace: 2022 Report"
         },
         {
           "question": "How many people woldwide experience violence and harassment at work?",
           "answers": [
-            { "percentage": "10", "label": "" },
-            { "percentage": "35", "label": "" },
-            { "percentage": "60", "label": "", "correct": "correct" }
+            { "percentage": "10", "label": "10%" },
+            { "percentage": "35", "label": "35%" },
+            { "percentage": "60", "label": "60%", "correct": "correct" }
           ],
+          "showPercentage": "false",
           "source": "Source: State of the Global Workplace: 2022 Report"
         },
         {
           "question": "What % of workers are miserable?",
           "answers": [
-            { "percentage": "80", "label": "" },
-            { "percentage": "5", "label": "" },
-            { "percentage": "19", "label": "", "correct": "correct" }
+            { "percentage": "80", "label": "80%" },
+            { "percentage": "5", "label": "5%" },
+            { "percentage": "19", "label": "19%", "correct": "correct" }
           ],
+          "showPercentage": "false",
           "source": "Source: State of the Global Workplace: 2022 Report"
         }
       ]

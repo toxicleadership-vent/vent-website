@@ -21,6 +21,9 @@
   color: black;
   text-transform: uppercase;
 }
+.link:hover {
+text-decoration: none;
+}
 
 .myCard {
   padding: 0;
@@ -63,6 +66,12 @@
   border-radius: var(--border-radius);
   padding: 15px 50px;
   border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
