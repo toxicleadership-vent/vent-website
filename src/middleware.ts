@@ -17,7 +17,7 @@ export async function middleware(req: NextRequest) {
   const allowedDomain =
     req.url.includes('localhost') || req.url.includes('vercel')
     
-  if (!allowedDomain || isProdReady === 'false') {
+  if (!allowedDomain && isProdReady === 'false') {
     req.nextUrl.pathname = `/en/under-construction`
     return NextResponse.rewrite(req.nextUrl)
   }
