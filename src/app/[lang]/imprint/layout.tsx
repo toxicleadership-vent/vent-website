@@ -1,21 +1,17 @@
 import { Header } from '@/components/header/header'
+import { PageParams } from '../layout'
 import rootStyles from '../page.module.css'
 import styles from './page.module.css'
-import { Metadata, ResolvingMetadata } from 'next'
 import { getTranslation } from '@/localization/i18n'
-
-export type PageParams = {
-  lang: string
-  id?: string
-}
+import { ResolvingMetadata, Metadata } from 'next'
 
 export async function generateMetadata(
   { params }: { params: PageParams },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { lang } = params
-  const { t } = await getTranslation(lang, 'getting-informed', {
-    keyPrefix: 'getting-informed.metadata',
+  const { t } = await getTranslation(lang, 'general', {
+    keyPrefix: 'general.metadata',
   })
 
   const robots = (await parent).robots?.basic
@@ -29,7 +25,7 @@ export async function generateMetadata(
     icons,
     openGraph: {
       type: 'website',
-      url: 'https://www.toxicleadershipvent.com/getting-informed',
+      url: 'https://www.toxicleadershipvent.com/imprint',
       description: t('description'),
       siteName: t('siteName'),
       images: t('image'),
@@ -45,7 +41,7 @@ export async function generateMetadata(
   }
 }
 
-export default function GettingInformedLayout({
+export default function ContactLayout({
   children,
   params,
 }: {
@@ -54,7 +50,7 @@ export default function GettingInformedLayout({
 }) {
   return (
     <>
-      <Header language={params.lang} color={'#FF9472'} lightColor={'#f7b7a3'} />
+      <Header language={params.lang} color={'#E1EEF9'} lightColor={'#98c1ff'} />
       <section className={`${rootStyles.page} ${styles.page}`}>
         {children}
       </section>

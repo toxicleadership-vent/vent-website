@@ -32,7 +32,7 @@ export async function generateMetadata(
       url: 'https://www.toxicleadershipvent.com/getting-informed',
       description: t('description'),
       siteName: t('siteName'),
-      images: [t('image')],
+      images: t('image'),
     },
     twitter: {
       card: 'summary_large_image',

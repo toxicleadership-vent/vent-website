@@ -1,0 +1,14 @@
+.page {
+  background-color: #e1eef9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--header-margin-top);
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 32px;
+  }
+}

@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
   font-family: var(--font-poppins);
 }
 
@@ -117,7 +116,7 @@
   }
 
   .section {
-    padding: 32px;
+    padding: var(--page-padding-small);
   }
 
   .poll {

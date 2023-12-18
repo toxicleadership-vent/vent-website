@@ -8,7 +8,13 @@
       { "href": "/support", "link": "Help & Support" },
       { "href": "/about", "link": "About the project" },
       { "href": "/contact", "link": "Contact" }
-    ]
+    ],
+    "metadata": {
+      "title": "VENT",
+      "description": "VENT is a collaboration hub reducing the impact of toxic leadership on individuals, communities, businesses and the environment.",
+      "siteName": "VENT - about the toxic boss - Impressum",
+      "images": "/images/favicon/2.png"
+    }
   },
   "footer": {
     "description": "about the toxic boss",
@@ -25,5 +31,10 @@
         "link": "LinkedIn"
       }
     ]
-  }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "contact": "Contact:\nhello@toxicleadershipvent.com\nVerantwortlich für den Inhalt nach § 5 TMG:\nKatarzyna Musur\nGerichtstrasse 25\n13347 Berlin\n"
+  },
+  "data-privacy": { "title": "Data Privacy" }
 }

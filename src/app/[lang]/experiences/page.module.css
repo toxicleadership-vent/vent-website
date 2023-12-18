@@ -8,7 +8,7 @@
 }
 
 .main {
-  margin-top: 50px;
+  margin-top: var(--header-margin-top);
   padding: 5em;
 }
 
@@ -66,5 +66,11 @@
 
   .text {
     padding: 0 0 32px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main {
+    padding: var(--page-padding-large);
   }
 }
