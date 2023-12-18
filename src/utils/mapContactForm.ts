@@ -4,4 +4,5 @@ export const mapContactForm = (data: Record<string, string>) => ({
   'e-mail': data.email,
   subject: data.subject,
   message: data.message,
+  date: new Date(Date.now()).toISOString(),
 })

@@ -3,6 +3,7 @@
   --background-light-green: #a2e4dd;
   --background-blue: #408cff;
   --background-light-blue: #98c1ff;
+  --background-light-light-blue: #e1eef9;
   --background-orange: #ff9472;
   --background-light-orange: #f7b7a3;
   --color-light-blue: #ecf6ff;
@@ -13,11 +14,18 @@
   --large: 992px;
   --xlarge: 1200px;
   --xxlarge: 1400px;
+  --header-margin-top: 61px;
+  --page-padding-large: 100px 200px 50px;
+  --page-padding-small: 32px;
+  --page-padding-medium: 100px 50px 50px;
 }
 
 body {
   font-family: var(--font-poppins);
   white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 h1 {

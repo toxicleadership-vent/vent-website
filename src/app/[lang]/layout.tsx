@@ -34,6 +34,13 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || []
 
   return {
+    metadataBase: new URL('https://www.toxicleadershipvent.com'),
+    alternates: {
+      canonical: '/',
+      languages: {
+        en: '/en',
+      },
+    },
     title: t('title'),
     description: t('description'),
     robots: 'index, follow',
@@ -47,7 +54,7 @@ export async function generateMetadata(
       url: 'https://www.toxicleadershipvent.com',
       description: t('description'),
       siteName: t('siteName'),
-      images: [t('image')],
+      images: t('image'),
     },
     twitter: {
       card: 'summary_large_image',

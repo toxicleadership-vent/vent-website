@@ -1,20 +1,12 @@
 .page {
-  background-color: var(--background-orange);
-  font-family: var(--font-poppins);
-}
-
-.main {
+  background-color: #e1eef9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: var(--header-margin-top);
+}
+.main {
   padding: var(--page-padding-medium);
-}
-
-.text {
-  padding: 15px;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 768px) {

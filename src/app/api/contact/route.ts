@@ -37,7 +37,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
           console.error(`The API returned an error: ${err}`)
           return
         }
-        console.log('Row added successfully.', res)
+        // console.log('Row added successfully.', res)
       }
     )
   } catch (err) {
@@ -48,7 +48,45 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
 }
 
 export async function POST(request: Request) {
+  // const secretKey = process?.env?.RECAPTCHA_SECRET_KEY
   const data = await request.json()
+  // console.log(secretKey, data)
+
+  // const formData = `secret=${secretKey}&response=${data.gRecaptchaToken}`
+  // try {
+  //   fetch('https://www.google.com/recaptcha/api/siteverify', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //     },
+  //     body: JSON.stringify(formData),
+  //   }).then((response) => {
+  //     console.log('TEST')
+  //     const res = response.json()
+  //     console.log(res)
+  //     if (res && res.data?.success && res.data?.score > 0.5) {
+  //       // Save data to the database from here
+  //       console.log('Saving data to the database:')
+  //       console.log('res.data?.score:', res.data?.score)
+
+  //       // return NextResponse.json({
+  //       //   success: true,
+  //       //   firstName,
+  //       //   lastName,
+  //       //   score: res.data?.score,
+  //       // })
+  //     } else {
+  //       console.log('fail: res.data?.score:', res.data?.score)
+  //       // return NextResponse.json({
+  //       //   success: false,
+  //       //   name,
+  //       //   score: res.data?.score,
+  //       // })
+  //     }
+  //   })
+  // } catch (e) {
+  //   console.log('recaptcha error:', e)
+  // }
   await appendGoogleSheetsData(Object.values(data))
   return NextResponse.json({ status: 'ok', data: { success: true } })
 }
