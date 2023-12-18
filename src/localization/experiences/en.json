@@ -19,7 +19,8 @@
           "abstract": "An unhealthy work environment takes a toll on your mental and physical health. You seek help and support but there is no one - not your employer, not your doctor nor a lawyer. Nobody takes your case seriously, no one makes it a priority.",
           "link": {
             "href": "./experiences/failed_by_the_system",
-            "name": "Read article"
+            "name": "Read article",
+            "state": "coming soon"
           },
           "image": {
             "href": "/images/experiences/failed_by_the_system.png",
@@ -37,7 +38,8 @@
           ],
           "link": {
             "href": "./experiences/just_move_him",
-            "name": "Read article"
+            "name": "Read article",
+            "state": "coming soon"
           },
           "image": {
             "href": "/images/experiences/just_move_him.png",

@@ -22,7 +22,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     majorDimension: 'ROWS',
     values: [enteredValues],
   }
-
+  console.log(auth, sheets, resource)
   try {
     sheets.spreadsheets.values.append(
       {
@@ -37,7 +37,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
           console.error(`The API returned an error: ${err}`)
           return
         }
-        // console.log('Row added successfully.', res)
+        console.log('Row added successfully.', res)
       }
     )
   } catch (err) {

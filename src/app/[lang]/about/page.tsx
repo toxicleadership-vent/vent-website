@@ -67,7 +67,16 @@ export default async function About({ params: { lang } }: PageProps) {
                   <CardHeader>
                     <h4>{t(`collaborators.members.${index}.name`)}</h4>
                   </CardHeader>
-                  <CardBody>{t(`collaborators.members.${index}.cv`)}</CardBody>
+                  <CardBody>
+                    <p>{t(`collaborators.members.${index}.cv`)}</p>
+
+                    <Link
+                      className={styles.link}
+                      href={t(`collaborators.members.${index}.linkedin.href`)}
+                    >
+                      {t(`collaborators.members.${index}.linkedin.title`)}
+                    </Link>
+                  </CardBody>
                 </Card>
               </Col>
             )
