@@ -15,14 +15,16 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     },
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   })
+  console.log('GOT AUTH',)
 
   const sheets = google.sheets({ version: 'v4', auth })
+  console.log('GOT SHEET',)
 
   const resource = {
     majorDimension: 'ROWS',
     values: [enteredValues],
   }
-  console.log(auth, sheets, resource)
+  console.log('GOT RESORUCE',)
   try {
     sheets.spreadsheets.values.append(
       {
@@ -33,6 +35,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
         auth,
       },
       (err: Error | null, res?: GaxiosResponse | null) => {
+        console.log('ERROR', err)
         if (err) {
           console.error(`The API returned an error: ${err}`)
           return
@@ -50,6 +53,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
 export async function POST(request: Request) {
   // const secretKey = process?.env?.RECAPTCHA_SECRET_KEY
   const data = await request.json()
+  console.log(data)
   // console.log(secretKey, data)
 
   // const formData = `secret=${secretKey}&response=${data.gRecaptchaToken}`
@@ -87,6 +91,12 @@ export async function POST(request: Request) {
   // } catch (e) {
   //   console.log('recaptcha error:', e)
   // }
+  try{
   await appendGoogleSheetsData(Object.values(data))
   return NextResponse.json({ status: 'ok', data: { success: true } })
+
+  }catch(err) {
+    console.log('erR', err)
+    return NextResponse.json({status: 'failed', data: {success: false}})
+  }
 }
