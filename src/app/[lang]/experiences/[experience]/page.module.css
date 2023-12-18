@@ -12,12 +12,18 @@
   text-align: center;
 }
 .main {
-  margin-top: 50px;
-  padding: 100px 100px 20px;
+  margin-top: var(--header-margin-top);
+  padding: var(--page-padding-medium);
 }
 
 @media screen and (max-width: 768px) {
   .page {
-    padding: 32px;
+    padding: var(--page-padding-small);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main {
+    padding: var(--page-padding-large);
   }
 }

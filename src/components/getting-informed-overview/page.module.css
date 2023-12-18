@@ -3,6 +3,11 @@
   border-radius: var(--border-radius);
   padding: 40px;
   cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.myCard:hover {
+  border-radius: 150px;
 }
 
 .myCardTitle {

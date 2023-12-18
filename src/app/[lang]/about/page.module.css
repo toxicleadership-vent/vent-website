@@ -5,8 +5,8 @@
 }
 
 .main {
-  margin-top: 50px;
-  padding: 100px 100px 50px;
+  margin-top: 61px;
+  padding: var(--page-padding-medium);
 }
 
 .container {
@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 768px) {
   .main {
-    padding: 32px;
+    padding: var(--page-padding-small);
   }
 
   .title {
@@ -66,5 +66,11 @@
   }
   .experienceSelection {
     padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main {
+    padding: var(--page-padding-large);
   }
 }

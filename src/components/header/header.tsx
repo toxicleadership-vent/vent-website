@@ -1,6 +1,6 @@
 import { getTranslation } from './../../localization/i18n'
 import {
-    Navbar,
+  Navbar,
   NavbarBrand,
   Nav,
   NavLink,
