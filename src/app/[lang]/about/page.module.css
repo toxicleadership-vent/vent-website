@@ -52,6 +52,15 @@
   margin-bottom: 50px;
 }
 
+.link {
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);

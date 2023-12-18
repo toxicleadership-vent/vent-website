@@ -53,14 +53,19 @@ export const ExperienceSelection = async ({
       <p>
         {t(`categories.${categoryIndex}.articles.${articleIndex}.abstract`)}
       </p>
-      <Link
-        className={styles.link}
-        href={t(
-          `categories.${categoryIndex}.articles.${articleIndex}.link.href`
-        )}
-      >
-        {t(`categories.${categoryIndex}.articles.${articleIndex}.link.name`)}
-      </Link>
+      {t(`categories.${categoryIndex}.articles.${articleIndex}.link.state`) ===
+      'coming soon' ? (
+        <p>Coming soon</p>
+      ) : (
+        <Link
+          className={styles.link}
+          href={t(
+            `categories.${categoryIndex}.articles.${articleIndex}.link.href`
+          )}
+        >
+          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.name`)}
+        </Link>
+      )}
     </>
   )
 }

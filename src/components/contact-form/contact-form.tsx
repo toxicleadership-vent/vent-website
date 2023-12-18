@@ -7,7 +7,6 @@ import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
-import GoogleCaptchaWrapper from '../recaptcha/google-captcha-wrapper'
 
 type Inputs = {
   firstName: string
@@ -17,13 +16,7 @@ type Inputs = {
   message: string
 }
 
-export const ContactForm = ({ lang }: { lang: string }) => (
-  <GoogleCaptchaWrapper>
-    <ContactFormWrapper lang={lang} />
-  </GoogleCaptchaWrapper>
-)
-
-export const ContactFormWrapper = ({ lang }: { lang: string }) => {
+export const ContactForm = ({ lang }: { lang: string }) => {
   const { t } = useTranslation(lang, 'contact')
 
   const {
@@ -43,10 +36,10 @@ export const ContactFormWrapper = ({ lang }: { lang: string }) => {
   })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-
+  const [failed, setFailed] = useState(false)
   const [subject, setSubject] = useState<string>()
-  const { executeRecaptcha } = useGoogleReCaptcha()
-  console.log('RECAPTCHA', executeRecaptcha)
+  // const { executeRecaptcha } = useGoogleReCaptcha()
+  // console.log('RECAPTCHA', executeRecaptcha)
   const updateContactFormData = useCallback(async () => {
     setLoading(true)
     try {
@@ -65,24 +58,30 @@ export const ContactFormWrapper = ({ lang }: { lang: string }) => {
         if (data.data.success) {
           console.log('Data submitted successfully!')
           setSuccess(true)
-          setTimeout(() => {
-            setSuccess(false)
-          }, 5000)
         } else {
           console.error('Error submitting data:', data.error)
+          setFailed(true)
         }
       } else {
         console.error(
           'Failed to submit data. Server returned:',
           response.status
         )
+        setFailed(true)
       }
     } catch (error) {
       console.error('Error submitting data:', error)
+      setFailed(true)
+    } finally {
+      setTimeout(() => {
+        setSuccess(false)
+        setFailed(false)
+      }, 10000)
+
+      setLoading(false)
+      reset()
     }
-    setLoading(false)
-    reset()
-  }, [setLoading, getValues])
+  }, [setLoading, getValues, reset])
 
   const onSubmit: SubmitHandler<Inputs> = async () =>
     await updateContactFormData()
@@ -94,6 +93,8 @@ export const ContactFormWrapper = ({ lang }: { lang: string }) => {
   return (
     <>
       {success && <p className={styles.errorList}>{t('contact.success')}</p>}
+      {failed && <p className={styles.errorList}>{t('contact.error')}</p>}
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack>
           <Row>

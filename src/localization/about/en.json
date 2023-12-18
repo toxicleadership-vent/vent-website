@@ -9,7 +9,11 @@
           "name": "Kasia Musur",
           "position": "Founder",
           "image": "/images/about/team/kasia.jpeg",
-          "cv": "Kasia started VENT in the summer of 2022. After experiencing three different toxic workplaces in the past, she decided to put her University of Edinburgh master degrees in Social Anthropology (2011) and Global Crime, Justice and Security (2014) and 15 years of diverse, international work experience (incl. leadership development and HR) into good use, and focus on bringing more awareness to experiences of toxic leadership. Apart from VENT Kasia also leads lightup Germany e.V., an NGO focusing on human trafficking prevention."
+          "cv": "Kasia started VENT in the summer of 2022. After experiencing three different toxic workplaces in the past, she decided to put her University of Edinburgh master degrees in Social Anthropology (2011) and Global Crime, Justice and Security (2014) and 15 years of diverse, international work experience (incl. leadership development and HR) into good use, and focus on bringing more awareness to experiences of toxic leadership. Apart from VENT Kasia also leads lightup Germany e.V., an NGO focusing on human trafficking prevention.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/katarzyna-kasia-musur/"
+          }
         },
         {
           "name": "Dr. Eva Hoffmann",
@@ -31,17 +35,29 @@
         {
           "name": "Cynthia Mathieu, PhD",
           "image": "/images/about/team/cynthia.png",
-          "cv": "Cynthia is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being. At VENT, Cynthia's consulting role focuses on research and development of tools supporting those who experience toxicity at work."
+          "cv": "Cynthia is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being. At VENT, Cynthia's consulting role focuses on research and development of tools supporting those who experience toxicity at work.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/cynthiamathieu/"
+          }
         },
         {
           "name": "Nathalie Martinek, PhD",
           "image": "/images/about/team/nathalie.jpg",
-          "cv": "Nathalie Martinek PhD is an ex-systems biology researcher turned Narcissism Hacker, interpersonal conflict analyst, coach and consultant. She specializes in helping individuals and teams navigate professional relationships that feature narcissistic behaviors and hostility. Her clients develop skills and strategies to successfully navigate power imbalanced and narcissistic relationships to prevent psychological, financial or reputational harm."
+          "cv": "Nathalie Martinek PhD is an ex-systems biology researcher turned Narcissism Hacker, interpersonal conflict analyst, coach and consultant. She specializes in helping individuals and teams navigate professional relationships that feature narcissistic behaviors and hostility. Her clients develop skills and strategies to successfully navigate power imbalanced and narcissistic relationships to prevent psychological, financial or reputational harm.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/nathalie-martinek"
+          }
         },
         {
           "name": "Heliana Ramirez, PhD",
           "image": "/images/about/team/heliana.jpeg",
-          "cv": "Heliana is a researcher and social work clinician addressing racial and LGBTQ-related workplace trauma with civilian and military personnel. She has designed and evaluated anti-racist and LGBTQ+ Affirming workforce wellness interventions at the Veterans Affairs, governmental health departments, and community-based organizations. Heliana applies culturally-informed Somatic interventions for post-traumatic growth. Her publications address discrimination, institutional betrayal, and suicide prevention on healthcare and DEI workforce nervous systems, life span, and career trajectories."
+          "cv": "Heliana is a researcher and social work clinician addressing racial and LGBTQ-related workplace trauma with civilian and military personnel. She has designed and evaluated anti-racist and LGBTQ+ Affirming workforce wellness interventions at the Veterans Affairs, governmental health departments, and community-based organizations. Heliana applies culturally-informed Somatic interventions for post-traumatic growth. Her publications address discrimination, institutional betrayal, and suicide prevention on healthcare and DEI workforce nervous systems, life span, and career trajectories.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/heliana-ramirez/"
+          }
         }
       ]
     },
