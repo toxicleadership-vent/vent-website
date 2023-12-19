@@ -13,6 +13,7 @@ import copy from '@/localization/home/en.json'
 import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
 import { PollsContainer } from '@/components/polls/polls'
+import Link from 'next/link'
 
 export default async function Home({ params: { lang } }: PageProps) {
   const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
@@ -74,9 +75,11 @@ export default async function Home({ params: { lang } }: PageProps) {
               ))}
             </Row>
           </div>
-          <button className={styles.button}>
-            {t('what_guides_us.button.text')}
-          </button>
+          <Link href={t('what_guides_us.button.href')}>
+            <button className={styles.button}>
+              {t('what_guides_us.button.text')}
+            </button>
+          </Link>
         </Container>
         <GettingInformedOverview lang={lang} />
         <ExperienceOverview lang={lang} />
