@@ -73,23 +73,20 @@ export const ExperienceOverviewArticle = async ({
   categories: number[]
 }) => {
   const { t } = await getTranslation(lang, 'experiences')
-
   return (
-    <>
-      <Stack gap={5} className={styles.main}>
-        <h1 className={styles.title}>{t('alternativeTitle')}</h1>
-        <Stack gap={5}>
-          {categories.map((category, categoryIndex) => {
-            return (
-              <ExperienceCategory
-                key={categoryIndex}
-                lang={lang}
-                categoryIndex={categoryIndex}
-              />
-            )
-          })}
-        </Stack>
+    <Stack gap={5} className={styles.main}>
+      <h1 className={styles.title}>{t('alternativeTitle')}</h1>
+      <Stack gap={5}>
+        {categories.map((category, categoryIndex) => {
+          return (
+            <ExperienceCategory
+              key={categoryIndex}
+              lang={lang}
+              categoryIndex={category}
+            />
+          )
+        })}
       </Stack>
-    </>
+    </Stack>
   )
 }

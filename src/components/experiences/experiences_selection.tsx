@@ -42,7 +42,7 @@ export const ExperienceSelection = async ({
               return (
                 <ListGroupItem key={`tag-${index}`}>
                   {t(
-                    `categories.${index}.articles.${articleIndex}.tags.${index}`
+                    `categories.${categoryIndex}.articles.${articleIndex}.tags.${index}`
                   )}
                 </ListGroupItem>
               )

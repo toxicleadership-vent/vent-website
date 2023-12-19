@@ -15,19 +15,19 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     },
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   })
-  console.log('GOT AUTH',)
+  console.log('GOT AUTH')
 
   const sheets = google.sheets({ version: 'v4', auth })
-  console.log('GOT SHEET',)
+  console.log('GOT SHEET')
 
   const resource = {
     majorDimension: 'ROWS',
     values: [enteredValues],
   }
-  console.log('GOT RESORUCE',)
+  console.log('GOT RESORUCE')
   try {
     console.log('function', sheets.spreadsheets.values.append)
-   const res = await sheets.spreadsheets.values.append(
+    const res = await sheets.spreadsheets.values.append(
       {
         spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
         range: 'Sheet1!A1:G1',
@@ -95,12 +95,11 @@ export async function POST(request: Request) {
   // } catch (e) {
   //   console.log('recaptcha error:', e)
   // }
-  try{
-  await appendGoogleSheetsData(Object.values(data))
-  return NextResponse.json({ status: 'ok', data: { success: true } })
-
-  }catch(err) {
+  try {
+    await appendGoogleSheetsData(Object.values(data))
+    return NextResponse.json({ status: 'ok', data: { success: true } })
+  } catch (err) {
     console.log('erR', err)
-    return NextResponse.json({status: 'failed', data: {success: false}})
+    return NextResponse.json({ status: 'failed', data: { success: false } })
   }
 }

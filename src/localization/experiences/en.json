@@ -18,7 +18,7 @@
           ],
           "abstract": "An unhealthy work environment takes a toll on your mental and physical health. You seek help and support but there is no one - not your employer, not your doctor nor a lawyer. Nobody takes your case seriously, no one makes it a priority.",
           "link": {
-            "href": "./experiences/failed_by_the_system",
+            "href": "/experiences/failed_by_the_system",
             "name": "Read article",
             "state": "coming soon"
           },
@@ -37,7 +37,7 @@
             "favoritism"
           ],
           "link": {
-            "href": "./experiences/just_move_him",
+            "href": "/experiences/just_move_him",
             "name": "Read article",
             "state": "coming soon"
           },
@@ -58,7 +58,7 @@
           "tag_title": "Toxic pattern",
           "tags": ["exploitation", "overworking", "lack of support"],
           "link": {
-            "href": "./experiences/squeezed_to_the_last_drop",
+            "href": "/experiences/squeezed_to_the_last_drop",
             "name": "Read article"
           },
           "image": {
@@ -72,7 +72,7 @@
           "tag_title": "Toxic pattern",
           "tags": ["gossip", "supporting bullying", "dishonesty"],
           "link": {
-            "href": "./experiences/fake_investigation",
+            "href": "/experiences/fake_investigation",
             "name": "Read article"
           },
           "image": {
@@ -96,7 +96,7 @@
             "lack of accountability"
           ],
           "link": {
-            "href": "./experiences/growth_over_culture",
+            "href": "/experiences/growth_over_culture",
             "name": "Read article"
           },
           "image": {
@@ -110,7 +110,7 @@
           "tag_title": "Toxic pattern",
           "tags": ["sabotage", "threats", "harassment"],
           "link": {
-            "href": "./experiences/friends_to_foes",
+            "href": "/experiences/friends_to_foes",
             "name": "Read article"
           },
           "image": {
