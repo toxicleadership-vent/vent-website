@@ -26,6 +26,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
   }
   console.log('GOT RESORUCE',)
   try {
+    console.log('function', sheets.spreadsheets.values.append)
     sheets.spreadsheets.values.append(
       {
         spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
@@ -45,9 +46,11 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     )
   } catch (err) {
     // TODO (developer) - Handle exception
+    console.log('ERROR, handle except', err)
     console.log('append', err)
     throw err
   }
+  console.log('no callback? - no error')
 }
 
 export async function POST(request: Request) {
