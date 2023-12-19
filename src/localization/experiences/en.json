@@ -70,11 +70,7 @@
           "title": "Forced to run a fake investigation",
           "abstract": "You are a respected professional with over 20 years experience. You’ve been a loyal and recognized employee for a decade. New leadership comes on board and suddenly the bullies run loose. You are sucked into an investigation designed to devalue, discard and humiliate you. All shortly before you can legally retire.",
           "tag_title": "Toxic pattern",
-          "tags": [
-            "lack of accountability",
-            "ignoring grievances",
-            "favoritism"
-          ],
+          "tags": ["gossip", "supporting bullying", "dishonesty"],
           "link": {
             "href": "./experiences/fake_investigation",
             "name": "Read article"
