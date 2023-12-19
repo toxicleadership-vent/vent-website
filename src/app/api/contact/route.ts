@@ -7,7 +7,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
     projectId: process.env.GOOGLE_PROJECT_ID,
     credentials: {
       type: 'service_account',
-      private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      private_key: process.env.GCP_PRIVATE_KEY,
       client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
       client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
       token_url: 'https://oauth2.googleapis.com/token',
@@ -27,7 +27,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
   console.log('GOT RESORUCE',)
   try {
     console.log('function', sheets.spreadsheets.values.append)
-    sheets.spreadsheets.values.append(
+   const res = await sheets.spreadsheets.values.append(
       {
         spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
         range: 'Sheet1!A1:G1',
@@ -44,6 +44,7 @@ async function appendGoogleSheetsData(enteredValues: string[]) {
         console.log('Row added successfully.', res)
       }
     )
+    console.log(res)
   } catch (err) {
     // TODO (developer) - Handle exception
     console.log('ERROR, handle except', err)
