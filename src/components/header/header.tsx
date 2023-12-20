@@ -56,6 +56,7 @@ export const Header = async (
         <NavbarToggle
           aria-controls="responsive-navbar-nav"
           className="border-0"
+          style={{ width: 100 }}
         />
         <NavbarOffcanvas
           id="offcanvasNavbar"

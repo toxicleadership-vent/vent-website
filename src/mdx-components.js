@@ -15,7 +15,13 @@ export function useMDXComponents(components) {
       <h1 className={`${styles.heading1Mdx} ${styles.mdx}`}>{children}</h1>
     ),
     img: ({ src, alt, ...rest }) => (
-      <Image src={src} alt={alt ?? 'image'} {...rest} fluid />
+      <Image
+        className={styles.mdxImage}
+        src={src}
+        alt={alt ?? 'image'}
+        {...rest}
+        fluid
+      />
     ),
     // ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
     hr: () => <hr className={styles.mdxHr}></hr>,

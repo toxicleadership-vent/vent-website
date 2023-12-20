@@ -12,6 +12,9 @@
 .container {
   margin-bottom: 50px;
 }
+.midWrapper {
+  padding: 0 80px;
+}
 
 .myCard {
   margin-bottom: 20px;
@@ -44,7 +47,7 @@
 }
 
 .mdx {
-  padding: 2rem 5rem 0;
+  padding: 2rem 0 0;
 }
 
 .title {
@@ -61,6 +64,15 @@
   font-weight: 600;
 }
 
+.topWrapper {
+  padding: 0 80px;
+}
+
+.contactWrapper {
+  text-align: center;
+  padding: 100px 0;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);
@@ -75,6 +87,16 @@
   }
   .experienceSelection {
     padding-bottom: 32px;
+  }
+  .topWrapper {
+    padding: 0;
+  }
+  .midWrapper {
+    padding: 0;
+  }
+  .contactWrapper {
+    text-align: center;
+    padding: 0;
   }
 }
 

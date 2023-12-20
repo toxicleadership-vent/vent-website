@@ -20,36 +20,40 @@ export default async function About({ params: { lang } }: PageProps) {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{t('title')}</h1>
-      <p>{t('description')}</p>
-      <div className={styles.mdx}>
-        <MdxText />
+      <div className={styles.topWrapper}>
+        <h1 className={styles.title}>{t('title')}</h1>
+        <p>{t('description')}</p>
+        <div className={styles.midWrapper}>
+          <div className={styles.mdx}>
+            <MdxText />
+          </div>
+          <Container className={styles.container}>
+            <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
+              {t('team.title')}
+            </h3>
+            <Row>
+              {copy.about.team?.members.map((teamMember, index) => {
+                return (
+                  <Col md={6} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`team.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`team.members.${index}.name`)}</h4>
+                        <h4>{t(`team.members.${index}.position`)}</h4>
+                      </CardHeader>
+                      <CardBody>{t(`team.members.${index}.cv`)}</CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
+        </div>
       </div>
-      <Container className={styles.container}>
-        <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
-          {t('team.title')}
-        </h3>
-        <Row>
-          {copy.about.team?.members.map((teamMember, index) => {
-            return (
-              <Col md={6} key={index}>
-                <Card bsPrefix="myCard" className={styles.myCard}>
-                  <CardImg
-                    className={styles.cardImg}
-                    variant="top"
-                    src={t(`team.members.${index}.image`)}
-                  />
-                  <CardHeader>
-                    <h4>{t(`team.members.${index}.name`)}</h4>
-                    <h4>{t(`team.members.${index}.position`)}</h4>
-                  </CardHeader>
-                  <CardBody>{t(`team.members.${index}.cv`)}</CardBody>
-                </Card>
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
       <Container className={styles.container}>
         <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
           {t('collaborators.title')}
@@ -151,7 +155,7 @@ export default async function About({ params: { lang } }: PageProps) {
           ></iframe>
         </Col>
       </Row>
-      <Container style={{ textAlign: 'center', padding: '100px 0px' }}>
+      <Container className={styles.contactWrapper}>
         <h3 style={{ marginBottom: 50 }}>{t('contact')}</h3>
         <Link href={t('contactButton.href')}>
           <button className={styles.button}>{t('contactButton.text')}</button>

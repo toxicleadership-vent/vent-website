@@ -110,6 +110,10 @@
   margin: 0;
 }
 
+.mdxImage {
+  border-radius: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .heroText {
     padding-left: 0;

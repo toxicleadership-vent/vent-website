@@ -8,7 +8,7 @@
         {
           "name": "Kasia Musur",
           "position": "Founder",
-          "image": "/images/about/team/kasia.jpeg",
+          "image": "/images/about/team/kasia.jpg",
           "cv": "Kasia started VENT in the summer of 2022. After experiencing three different toxic workplaces in the past, she decided to put her University of Edinburgh master degrees in Social Anthropology (2011) and Global Crime, Justice and Security (2014) and 15 years of diverse, international work experience (incl. leadership development and HR) into good use, and focus on bringing more awareness to experiences of toxic leadership. Apart from VENT Kasia also leads lightup Germany e.V., an NGO focusing on human trafficking prevention.",
           "linkedin": {
             "title": "Connect on LinkedIn",
@@ -26,6 +26,12 @@
           "position": "(Interim) Director of Data & Cybersecurity",
           "image": "/images/about/team/elizabeth.jpg",
           "cv": "Elizabeth has been Director of Data at prominent Berlin scaleups and an external consultant for the German Foreign Office and Rolls-Royce. She has consulted startups on cybersecurity and led analytics programs at Dell. Elizabeth started her career in Financial Risk Management and Strategy Consulting. She holds a MSc in International Economics and Business from the Stockholm School of Economics and a BA in International Relations from Tuft University."
+        },
+        {
+          "name": "Judith Lippold",
+          "position": "Developer",
+          "image": "/images/about/team/judith.jpg",
+          "cv": ""
         }
       ]
     },
@@ -52,7 +58,7 @@
         },
         {
           "name": "Heliana Ramirez, PhD",
-          "image": "/images/about/team/heliana.jpeg",
+          "image": "/images/about/team/heliana.jpg",
           "cv": "Heliana is a researcher and social work clinician addressing racial and LGBTQ-related workplace trauma with civilian and military personnel. She has designed and evaluated anti-racist and LGBTQ+ Affirming workforce wellness interventions at the Veterans Affairs, governmental health departments, and community-based organizations. Heliana applies culturally-informed Somatic interventions for post-traumatic growth. Her publications address discrimination, institutional betrayal, and suicide prevention on healthcare and DEI workforce nervous systems, life span, and career trajectories.",
           "linkedin": {
             "title": "Connect on LinkedIn",
