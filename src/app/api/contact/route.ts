@@ -3,13 +3,23 @@ import sgMail from '@sendgrid/mail'
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!)
 
+const formatData = (data: Record<string, string>) => {
+  console.log(data)
+  const formated = Object.keys(data).map(item => {
+    console.log(item)
+    return `${item}: ${data[item]}`
+  }).join('\n')
+return formated
+}
+
 export async function POST(request: Request) {
   const data = await request.json()
+  const formatedData = formatData(data)
   const msg = {
     to: 'kasia@toxicleadershipvent.com', // Change to your recipient
     from: 'kasia@toxicleadershipvent.com', // Change to your verified sender
     subject: 'a new form entry',
-    text: `The form contained\n ${JSON.stringify(data)}}`,
+    text: `The form contained\n ${formatedData}}}`,
   }
 
   try {
