@@ -27,7 +27,7 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
                 key={`${categoryIndex}-${1}`}
                 lang={lang}
                 categoryIndex={categoryIndex}
-                articleIndex={1}
+                articleIndex={categoryIndex === 0 ? 0 : 1}
               />
             </Col>
           )

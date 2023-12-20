@@ -38,8 +38,8 @@ export default async function Home({ params: { lang } }: PageProps) {
         </Container>
         <Container fluid className={styles.section}>
           <h1 className={styles.heading1}> {t('what_we_do.title')}</h1>
-          <div className={styles.subsection}>
-            <p className={styles.paragraph}>{t('what_we_do.text')}</p>
+          <div className={`${styles.subsection} `}>
+            <p className={`${styles.paragraph} ${styles.whatwedo}`}>{t('what_we_do.text')}</p>
           </div>
         </Container>
         <Container
