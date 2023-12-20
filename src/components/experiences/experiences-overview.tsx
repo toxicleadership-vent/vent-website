@@ -12,8 +12,8 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
     <Stack gap={5} className={styles.main}>
       <Stack className={styles.text}>
         <h1 className={styles.title}>{t('title')}</h1>
-        <p>{t('abstract')}</p>
-        <small>{t('note')}</small>
+        <p className={styles.paragraph}>{t('abstract')}</p>
+        <p className={styles.paragraphSmall}>{t('note')}</p>
       </Stack>
       <Row className={`align-items-start`}>
         {copy.categories.map((category, categoryIndex) => {

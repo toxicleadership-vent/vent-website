@@ -9,7 +9,7 @@
 }
 
 .text {
-  padding: 15px;
+  padding: var(--page-padding-medium);
 }
 
 .title {
@@ -37,9 +37,27 @@
   font-size: 16px;
 }
 
+.paragraph {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.cardText {
+  padding-left: 3em;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);
+  }
+  .paragraph {
+    font-size: 1.5rem;
+  }
+  .text {
+    padding: 0;
+  }
+  .cardText {
+    padding-left: 1em;
   }
 }
 

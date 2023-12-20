@@ -22,7 +22,7 @@ export default async function About({ params: { lang } }: PageProps) {
     <main className={styles.main}>
       <div className={styles.topWrapper}>
         <h1 className={styles.title}>{t('title')}</h1>
-        <p>{t('description')}</p>
+        <p className={styles.paragraph}>{t('description')}</p>
         <div className={styles.midWrapper}>
           <div className={styles.mdx}>
             <MdxText />

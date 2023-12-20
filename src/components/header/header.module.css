@@ -28,6 +28,9 @@
   .subtitle {
     display: none;
   }
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .offcanvas {

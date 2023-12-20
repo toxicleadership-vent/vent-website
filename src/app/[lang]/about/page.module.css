@@ -100,6 +100,18 @@
   }
 }
 
+.paragraph {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph {
+    font-size: 1.5rem;
+    padding-bottom: 32px;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .main {
     padding: var(--page-padding-large);

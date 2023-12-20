@@ -17,9 +17,17 @@
   margin-bottom: 50px;
 }
 
+.paragraph {
+  text-align: left;
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);
+  }
+  .paragraph {
+    font-size: 1.5rem;
   }
 }
 

@@ -20,7 +20,10 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
 
   return (
     <Container fluid className={styles.sectionOrange}>
-      <h1 className={styles.heading1}> {t('title')}</h1>
+      <div className={styles.text}>
+        <h1 className={styles.heading1}> {t('title')}</h1>
+        <p className={styles.paragraph}>{t('description')}</p>
+      </div>
       <div className={styles.subsection}>
         <Row className={`g-1 row-gap-4`} xs={1} sm={2} md={3}>
           {copyInformed['getting-informed'].sections.map((_section, index) => (

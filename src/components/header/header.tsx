@@ -53,11 +53,12 @@ export const Header = async (
         <div>
           <span className={styles.subtitle}>about the toxic boss</span>
         </div>
-        <NavbarToggle
-          aria-controls="responsive-navbar-nav"
-          className="border-0"
-          style={{ width: 100 }}
-        />
+        <div style={{ width: 100, textAlign: 'right' }}>
+          <NavbarToggle
+            aria-controls="responsive-navbar-nav"
+            className="border-0"
+          />
+        </div>
         <NavbarOffcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbar"

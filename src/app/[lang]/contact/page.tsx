@@ -11,7 +11,7 @@ export default async function Contact({ params }: { params: PageParams }) {
     <main className={styles.main}>
       <Stack className={styles.text}>
         <h1 className={styles.title}>{t('contact.title')}</h1>
-        <p>{t('contact.description')}</p>
+        <p className={styles.paragraph}>{t('contact.description')}</p>
       </Stack>
       <ContactForm lang={params.lang} />
     </main>

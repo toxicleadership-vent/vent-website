@@ -20,7 +20,7 @@ export default async function GettingInformed({
     <main className={styles.main}>
       <Stack className={styles.text}>
         <h1 className={styles.title}>{tInformed('title')}</h1>
-        <p>{tInformed('description')}</p>
+        <p className={styles.paragraph}>{tInformed('description')}</p>
       </Stack>
       <Stack gap={5}>
         {copy['getting-informed'].sections.map((_section, index) => (
@@ -34,7 +34,7 @@ export default async function GettingInformed({
                 />
               </Link>
             </Col>
-            <Col md={8} style={{ paddingLeft: '3em' }}>
+            <Col md={8} className={styles.cardText}>
               <h3>{tInformed(`sections.${index}.title`)}</h3>
               <p className={styles.sectionDescription}>
                 {tInformed(`sections.${index}.description`, {

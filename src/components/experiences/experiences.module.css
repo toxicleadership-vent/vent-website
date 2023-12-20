@@ -4,11 +4,20 @@
   padding: 100px 100px;
 }
 .text {
-  padding: 1em 5em 5em;
+  padding: var(--page-padding-medium);
 }
 
 .title {
   text-align: center;
+}
+
+.paragraph {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.paragraphSmall {
+  font-size: 1.5rem;
 }
 
 .section {
@@ -85,5 +94,16 @@
   }
   .experienceSelection {
     padding-bottom: 32px;
+  }
+  .paragraph {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .text {
+    padding: var(--page-padding-large);
   }
 }

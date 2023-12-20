@@ -6,7 +6,6 @@ import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 type Inputs = {
   firstName: string
@@ -56,7 +55,6 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       if (response.ok) {
         const data = await response.json()
         if (data.data.success) {
-          console.log('Data submitted successfully!')
           setSuccess(true)
         } else {
           console.error('Error submitting data:', data.error)
@@ -96,7 +94,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       {failed && <p className={styles.errorList}>{t('contact.error')}</p>}
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Stack>
+        <Stack style={{ paddingRight: 16 }}>
           <Row>
             {Object.keys(errors).length > 0 && (
               <ul className={styles.errorList}>

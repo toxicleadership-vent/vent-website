@@ -4,12 +4,12 @@ import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!)
 
 const formatData = (data: Record<string, string>) => {
-  console.log(data)
-  const formated = Object.keys(data).map(item => {
-    console.log(item)
-    return `${item}: ${data[item]}`
-  }).join('\n')
-return formated
+  const formated = Object.keys(data)
+    .map((item) => {
+      return `${item}: ${data[item]}`
+    })
+    .join('\n')
+  return formated
 }
 
 export async function POST(request: Request) {

@@ -17,6 +17,7 @@
   font-family: var(--font-poppins);
   padding-left: 5rem;
   font-weight: 600;
+  font-size: calc(1.75rem + 1.5vw);
 }
 
 .section {
@@ -130,5 +131,9 @@
   .poll {
     padding: 20px;
     border-radius: 2.5rem;
+  }
+  .whatwedo {
+    padding: 0;
+    font-size: 1.5rem;
   }
 }

@@ -10,6 +10,15 @@
   border-radius: 150px;
 }
 
+.text {
+  padding: var(--page-padding-medium);
+}
+
+.paragraph {
+  font-size: 2rem;
+  text-align: left;
+}
+
 .myCardTitle {
   font-family: var(--font-poppins);
   font-weight: 600;
@@ -60,5 +69,12 @@
 
   .heading1 {
     padding-bottom: 32px;
+  }
+  .text {
+    padding: 0;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
   }
 }

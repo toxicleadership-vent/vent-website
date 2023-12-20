@@ -13,7 +13,17 @@
 }
 
 .text {
-  padding: 1em 5em 5em;
+  padding: var(--page-padding-medium);
+}
+
+.paragraph {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.paragraphSmall {
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .title {
@@ -62,6 +72,14 @@
   .main {
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
+  }
+
+  .paragraphSmall {
+    font-size: 1.1rem;
   }
 
   .text {
