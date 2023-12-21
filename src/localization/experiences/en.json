@@ -135,9 +135,9 @@
     "text": "Read all experiences"
   },
   "metadata": {
-    "title": "VENT",
+    "title": "VENT - Experiences",
     "description": "The stories told through VENT are a compilation of lived experiences from around the world.",
     "siteName": "VENT - about the toxic boss - Experiences",
-    "images": "/images/favicon/5.png"
+    "image": "/images/favicon/5.png"
   }
 }

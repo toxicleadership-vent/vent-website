@@ -56,10 +56,10 @@
     "success": "Thanks for submitting! We will get back to you as soon as possible!",
     "error": "Something went wrong, please try again!",
     "metadata": {
-      "title": "VENT",
+      "title": "VENT - Contact",
       "description": "VENT - Would you like to reduce the impact of toxic leadership? We would love to hear from you!",
-      "siteName": "VENT - about the toxic boss - Contact",
-      "images": "/images/favicon/7.png"
+      "siteName": "VENT - about the toxic boss - Contactt",
+      "image": "/images/favicon/7.png"
     }
   }
 }

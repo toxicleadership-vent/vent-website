@@ -30,9 +30,6 @@ export async function generateMetadata(
     keyPrefix: 'home.metadata',
   })
 
-  // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || []
-
   return {
     metadataBase: new URL('https://www.toxicleadershipvent.com'),
     alternates: {

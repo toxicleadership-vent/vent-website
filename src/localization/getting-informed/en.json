@@ -52,9 +52,9 @@
     "button": { "text": "READ ALL ARTICLES", "href": "/getting-informed" }
   },
   "metadata": {
-    "title": "VENT",
+    "title": "VENT - Getting Informed",
     "description": "VENT - Toxic leadership affects 750 mln people globally. Get informed to protect yourself and others!",
     "siteName": "VENT - about the toxic boss - Getting Informed",
-    "images": "/images/favicon/4.png"
+    "image": "/images/favicon/4.png"
   }
 }

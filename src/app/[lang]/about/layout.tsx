@@ -11,7 +11,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { lang } = params
   const { t } = await getTranslation(lang, 'about', {
-    keyPrefix: 'about.metadata',
+    keyPrefix: 'metadata',
   })
 
   const robots = (await parent).robots?.basic

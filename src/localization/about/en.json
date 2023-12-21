@@ -64,7 +64,16 @@
             "title": "Connect on LinkedIn",
             "href": "https://www.linkedin.com/in/heliana-ramirez/"
           }
-        }
+        },
+        {
+          "name": "Cristina de la Fuente, BSN, RN, CV-BC",
+          "image": "/images/about/team/cristina.png",
+          "cv": "Cristina, a Registered Nurse in San Jose, CA, graduated magna cum laude from Chamberlain University’s Bachelor of Science in Nursing Program in 2018 and has a multifaceted understanding of Nursing Culture in the US. Cristina’s diverse experience encompasses Skilled Nursing Facilities, Outpatient Hemodialysis, Telemetry, and Progressive Care, providing her with insights into varying laws, workflows, and work cultures. At VENT, Cristina is contributing towards addressing workplace abuse in healthcare, with a special focus on Sadism, Psychopathy, Machiavellianism, and Narcissism.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/cristinadelafuente-bsnrn/"
+          }
+        } 
       ]
     },
     "media": {
@@ -97,9 +106,9 @@
     "contactButton": { "href": "/contact", "text": "Contact us" }
   },
   "metadata": {
-    "title": "Vent",
+    "title": "Vent - About the project",
     "description": "VENT collects anonymous stories of people's experiences of incivility and exploitation in a work context. VENT brings together multidisciplinary experts to collaborate on developing solutions and tools, which help reduce the impact and normalization of toxic leadership.",
     "siteName": "Vent - about the toxic boss - About the project",
-    "images": "/images/favicon/8.png"
+    "image": "/images/favicon/8.png"
   }
 }
