@@ -6,6 +6,7 @@ import {
   Offcanvas,
   ListGroup,
   Carousel,
+  Accordion,
 } from 'react-bootstrap'
 
 const {
@@ -17,6 +18,13 @@ const {
   Header: CardHeader,
   ImgOverlay,
 } = Card
+
+const {
+  Item: AccordionItem,
+  Header: AccordionHeader,
+  Body: AccordionBody,
+} = Accordion
+
 const { Brand, Toggle, Collapse, Offcanvas: NavbarOffcanvas } = Navbar
 const { Link: NavLink, Item: NavItem } = Nav
 const {
@@ -26,6 +34,7 @@ const {
 } = Offcanvas
 
 const { Item: ListGroupItem } = ListGroup
+
 const { Item: CarouselItem, Caption: CarouselCaption } = Carousel
 
 export {
@@ -41,7 +50,9 @@ export {
   ListGroup,
   ProgressBar,
   Carousel,
+  Accordion,
 } from 'react-bootstrap'
+
 export {
   Img as CardImg,
   ImgOverlay as CardImageOverlay,
@@ -62,4 +73,7 @@ export {
   ListGroupItem,
   CarouselCaption,
   CarouselItem,
+  AccordionItem,
+  AccordionHeader,
+  AccordionBody,
 }
