@@ -15,7 +15,6 @@ import {
 
 export default async function Contact({ params }: { params: PageParams }) {
   const { t } = await getTranslation(params.lang, 'support')
-                    {/* eslint-disable */}
 
   return (
     <main className={styles.main}>
@@ -125,7 +124,7 @@ export default async function Contact({ params }: { params: PageParams }) {
             </AccordionHeader>
             <AccordionBody className={styles.accordionBody}>
               {/* @ts-ignore */}
-              <Trans t={t} components={{ Link: <Link /> }}>
+              <Trans t={t} components={{ Link: <Link></Link> }}>
                 {t('support.accordion.4.first_text')}
               </Trans>
               {t('support.accordion.4.second_text')}
