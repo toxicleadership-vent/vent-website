@@ -55,6 +55,10 @@
     flex-direction: column;
     padding: 10px;
   }
+  .subtitle {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -72,7 +76,7 @@
   }
   .subtitle {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .linkedin {
     display: none;

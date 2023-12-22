@@ -4,6 +4,7 @@ import { getTranslation } from '@/localization/i18n'
 import Link from 'next/link'
 import Image from 'next/image'
 import plus from '../../../../public/images/plus_icon.png'
+import { Trans } from 'react-i18next/TransWithoutContext'
 
 import {
   Accordion,
@@ -14,6 +15,7 @@ import {
 
 export default async function Contact({ params }: { params: PageParams }) {
   const { t } = await getTranslation(params.lang, 'support')
+                    {/* eslint-disable */}
 
   return (
     <main className={styles.main}>
@@ -115,7 +117,6 @@ export default async function Contact({ params }: { params: PageParams }) {
           <AccordionItem className={styles.accordionItem} eventKey="4">
             <AccordionHeader className={styles.accordionHeader}>
               <div className={styles.accordionSubtitle}>
-                {' '}
                 {t('support.accordion.4.subtitle')}
               </div>
               <div className={styles.plusIcon}>
@@ -123,104 +124,111 @@ export default async function Contact({ params }: { params: PageParams }) {
               </div>
             </AccordionHeader>
             <AccordionBody className={styles.accordionBody}>
-              {t('support.accordion.4.first_text')}
+              {/* @ts-ignore */}
+              <Trans t={t} components={{ Link: <Link /> }}>
+                {t('support.accordion.4.first_text')}
+              </Trans>
               {t('support.accordion.4.second_text')}
             </AccordionBody>
           </AccordionItem>
         </Accordion>
-        <h3 className={styles.linksTitle}>{t('support.link-title')}</h3>
+        {/* <h3 className={styles.linksTitle}>{t('support.link-title')}</h3>
         <div className={styles.linkWrapper}>
-          <div className={styles.link}>
-            <h5>{t('support.links.0.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.0.href')}
-            >
-              {t('support.links.0.href')}
-            </Link>
+          <div className={styles.linkColumn}>
+            <div className={styles.link}>
+              <h5>{t('support.links.0.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.0.href')}
+              >
+                {t('support.links.0.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.1.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.1.href')}
+              >
+                {t('support.links.1.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.2.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.2.href')}
+              >
+                {t('support.links.2.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.3.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.3.href')}
+              >
+                {t('support.links.3.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.4.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.4.href')}
+              >
+                {t('support.links.4.href')}
+              </Link>
+            </div>
           </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.1.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.1.href')}
-            >
-              {t('support.links.1.href')}
-            </Link>
+          <div className={styles.linkColumn}>
+            <div className={styles.link}>
+              <h5>{t('support.links.5.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.5.href')}
+              >
+                {t('support.links.5.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.6.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.6.href')}
+              >
+                {t('support.links.6.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.7.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.7.href')}
+              >
+                {t('support.links.7.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.8.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.8.href')}
+              >
+                {t('support.links.8.href')}
+              </Link>
+            </div>
+            <div className={styles.link}>
+              <h5>{t('support.links.9.title')}</h5>
+              <Link
+                className={styles.hrefWrapper}
+                href={t('support.links.9.href')}
+              >
+                {t('support.links.9.href')}
+              </Link>
+            </div>
           </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.2.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.2.href')}
-            >
-              {t('support.links.2.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.3.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.3.href')}
-            >
-              {t('support.links.3.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.4.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.4.href')}
-            >
-              {t('support.links.4.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.5.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.5.href')}
-            >
-              {t('support.links.5.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.6.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.6.href')}
-            >
-              {t('support.links.6.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.7.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.7.href')}
-            >
-              {t('support.links.7.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.8.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.8.href')}
-            >
-              {t('support.links.8.href')}
-            </Link>
-          </div>
-          <div className={styles.link}>
-            <h5>{t('support.links.9.title')}</h5>
-            <Link
-              className={styles.hrefWrapper}
-              href={t('support.links.9.href')}
-            >
-              {t('support.links.9.href')}
-            </Link>
-          </div>
-        </div>
+        </div> */}
       </div>
     </main>
   )

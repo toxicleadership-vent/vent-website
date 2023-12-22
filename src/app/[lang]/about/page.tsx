@@ -52,41 +52,44 @@ export default async function About({ params: { lang } }: PageProps) {
               })}
             </Row>
           </Container>
+          <Container className={styles.container}>
+            <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
+              {t('collaborators.title')}
+            </h3>
+            <Row>
+              {copy.about.collaborators?.members.map((teamMember, index) => {
+                return (
+                  <Col md={6} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`collaborators.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`collaborators.members.${index}.name`)}</h4>
+                      </CardHeader>
+                      <CardBody>
+                        <p>{t(`collaborators.members.${index}.cv`)}</p>
+
+                        <Link
+                          className={styles.link}
+                          href={t(
+                            `collaborators.members.${index}.linkedin.href`
+                          )}
+                        >
+                          {t(`collaborators.members.${index}.linkedin.title`)}
+                        </Link>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
         </div>
       </div>
-      <Container className={styles.container}>
-        <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
-          {t('collaborators.title')}
-        </h3>
-        <Row>
-          {copy.about.collaborators?.members.map((teamMember, index) => {
-            return (
-              <Col md={4} key={index}>
-                <Card bsPrefix="myCard" className={styles.myCard}>
-                  <CardImg
-                    className={styles.cardImg}
-                    variant="top"
-                    src={t(`collaborators.members.${index}.image`)}
-                  />
-                  <CardHeader>
-                    <h4>{t(`collaborators.members.${index}.name`)}</h4>
-                  </CardHeader>
-                  <CardBody>
-                    <p>{t(`collaborators.members.${index}.cv`)}</p>
 
-                    <Link
-                      className={styles.link}
-                      href={t(`collaborators.members.${index}.linkedin.href`)}
-                    >
-                      {t(`collaborators.members.${index}.linkedin.title`)}
-                    </Link>
-                  </CardBody>
-                </Card>
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
       <Container className={styles.container}>
         <h3 style={{ textAlign: 'center', marginBottom: 50 }}>
           {t('media.title')}
