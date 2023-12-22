@@ -132,7 +132,7 @@ export default async function Contact({ params }: { params: PageParams }) {
             </AccordionBody>
           </AccordionItem>
         </Accordion>
-        {/* <h3 className={styles.linksTitle}>{t('support.link-title')}</h3>
+        <h3 className={styles.linksTitle}>{t('support.link-title')}</h3>
         <div className={styles.linkWrapper}>
           <div className={styles.linkColumn}>
             <div className={styles.link}>
@@ -228,7 +228,7 @@ export default async function Contact({ params }: { params: PageParams }) {
               </Link>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </main>
   )
