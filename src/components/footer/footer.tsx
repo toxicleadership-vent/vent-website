@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { getTranslation } from './../../localization/i18n'
 import styles from './footer.module.css'
 import { Nav, NavItem, NavLink } from '@/components/bootstrap/bootstrap'
-import { FaLinkedin } from 'react-icons/fa6'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 import Image from 'next/image'
 import logo from '../../../public/images/logo_black.png'
 
@@ -61,13 +61,29 @@ const Footer = async ({ lang }: { lang: string }) => {
           height={35}
         />
         <span className={styles.subtitle}>{t('description')}</span>
+        <div>
         <Link
-          className={styles.linkedin}
+          className={styles.social}
           href={t('links.7.href')}
           target="_blank"
         >
           <FaLinkedin />
         </Link>
+        <Link
+          className={styles.social}
+          href={t('links.8.href')}
+          target="_blank"
+        >
+          <FaInstagram />
+        </Link>
+        <Link
+          className={styles.social}
+          href={t('links.9.href')}
+          target="_blank"
+        >
+          <FaFacebook />
+        </Link>
+        </div>
       </div>
     </div>
   )
