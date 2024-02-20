@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
 
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer/footer'
