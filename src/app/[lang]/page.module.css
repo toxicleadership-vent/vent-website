@@ -138,3 +138,15 @@
     font-size: 1.5rem;
   }
 }
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 0 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

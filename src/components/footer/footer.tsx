@@ -62,27 +62,27 @@ const Footer = async ({ lang }: { lang: string }) => {
         />
         <span className={styles.subtitle}>{t('description')}</span>
         <div>
-        <Link
-          className={styles.social}
-          href={t('links.7.href')}
-          target="_blank"
-        >
-          <FaLinkedin />
-        </Link>
-        <Link
-          className={styles.social}
-          href={t('links.8.href')}
-          target="_blank"
-        >
-          <FaInstagram />
-        </Link>
-        <Link
-          className={styles.social}
-          href={t('links.9.href')}
-          target="_blank"
-        >
-          <FaFacebook />
-        </Link>
+          <Link
+            className={styles.social}
+            href={t('links.7.href')}
+            target="_blank"
+          >
+            <FaLinkedin />
+          </Link>
+          <Link
+            className={styles.social}
+            href={t('links.8.href')}
+            target="_blank"
+          >
+            <FaInstagram />
+          </Link>
+          <Link
+            className={styles.social}
+            href={t('links.9.href')}
+            target="_blank"
+          >
+            <FaFacebook />
+          </Link>
         </div>
       </div>
     </div>
