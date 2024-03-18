@@ -1,0 +1,33 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Survey {
+  id          String  @id @default(cuid())
+  q1          String
+  q2          String
+  q3          String
+  q4          String
+  q5          String
+  q6          String
+  q7          String
+  q8          String
+  q9          String
+  q10         String
+  summary     String
+  age         String?
+  education   String?
+  ethnic      String?
+  location    String?
+  migrant     String?
+  orientation String?
+  feedback    String?
+}
