@@ -135,6 +135,7 @@ export default async function About({ params: { lang } }: PageProps) {
       <Row className={styles.row}>
         <Col>
           <iframe
+            style={{ borderRadius: 12 }}
             src="https://widget.spreaker.com/player?episode_id=56631452&amp;theme=light&amp;playlist=false&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=true&amp;hide-comments=true&amp;hide-sharing=false&amp;hide-logo=true&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false"
             width="100%"
             height="200px"
@@ -144,7 +145,21 @@ export default async function About({ params: { lang } }: PageProps) {
           ></iframe>
         </Col>
       </Row>
-      <Row>
+      <Row className={styles.row}>
+        <Col>
+          <iframe
+            style={{ borderRadius: 12 }}
+            src="https://open.spotify.com/embed/episode/4z4pO13UWHszxn9QPvaKTT/video?utm_source=generator"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </Col>
+      </Row>
+      <Row className={styles.row}>
         <Col>
           <iframe
             style={{ borderRadius: 12 }}
