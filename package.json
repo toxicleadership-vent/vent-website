@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "npx prettier . --write",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
@@ -18,7 +20,6 @@
     "@prisma/client": "^5.11.0",
     "@sendgrid/mail": "^8.1.0",
     "@types/mdx": "^2.0.7",
-    "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "^1.1.1",
@@ -38,14 +39,27 @@
     "react-google-recaptcha-v3": "^1.10.1",
     "react-hook-form": "^7.47.0",
     "react-i18next": "^13.2.2",
-    "react-icons": "^4.12.0",
-    "typescript": "5.1.6"
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/nextjs": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@types/node": "^20.12.5",
     "encoding": "^0.1.13",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-storybook": "^0.8.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
-    "prisma": "^5.11.0"
+    "prisma": "^5.11.0",
+    "storybook": "^7.6.17",
+    "storybook-css-modules": "^1.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
   }
 }

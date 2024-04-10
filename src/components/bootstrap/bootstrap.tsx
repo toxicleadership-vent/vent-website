@@ -7,6 +7,7 @@ import {
   ListGroup,
   Carousel,
   Accordion,
+  Modal,
 } from 'react-bootstrap'
 
 const {
@@ -37,6 +38,8 @@ const { Item: ListGroupItem } = ListGroup
 
 const { Item: CarouselItem, Caption: CarouselCaption } = Carousel
 
+const { Body: ModalBody, Header: ModalHeader } = Modal
+
 export {
   Container,
   Row,
@@ -51,6 +54,11 @@ export {
   ProgressBar,
   Carousel,
   Accordion,
+  Modal,
+  Button,
+  Spinner,
+  ButtonGroup,
+  ToggleButton,
 } from 'react-bootstrap'
 
 export {
@@ -76,4 +84,6 @@ export {
   AccordionItem,
   AccordionHeader,
   AccordionBody,
+  ModalBody,
+  ModalHeader,
 }

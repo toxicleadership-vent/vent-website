@@ -25,3 +25,7 @@ to use prettier run
 ```bash
 npm run prettier
 ```
+
+## PRISMA
+
+to update schema do

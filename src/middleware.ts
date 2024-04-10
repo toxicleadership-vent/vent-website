@@ -22,6 +22,20 @@ export async function middleware(req: NextRequest) {
     return NextResponse.rewrite(req.nextUrl)
   }
 
+  const password = req.nextUrl.searchParams.get('password')
+  const hasCookie = req.cookies.has('password')
+  const url = req.nextUrl.clone()
+  const response = NextResponse.redirect(url)
+
+  if (req.url.includes('survey')) {
+    if (password === process.env.PAGE_PASSWORD && !hasCookie) {
+      response.cookies.set('survey', 'true')
+    } else {
+      req.nextUrl.pathname = `/en/404`
+      return NextResponse.rewrite(req.nextUrl)
+    }
+  }
+
   let lng
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)

@@ -32,6 +32,10 @@
   background-color: var(--background-orange);
 }
 
+.sectionYellow {
+  background-color: var(--background-yellow);
+}
+
 .poll {
   background-color: var(--background-light-blue);
   padding: 2rem 5rem;

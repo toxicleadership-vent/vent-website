@@ -1,4 +1,3 @@
-/* changes here copy to storybook */
 :root {
   --background-green: #3aa99c;
   --background-light-green: #a2e4dd;
@@ -6,9 +5,9 @@
   --background-light-blue: #98c1ff;
   --background-light-light-blue: #e1eef9;
   --background-orange: #ff9472;
+  --background-light-orange: #f7b7a3;
   --background-yellow: #f9ee8f;
   --background-light-yellow: #fdf9dd;
-  --background-light-orange: #f7b7a3;
   --color-light-blue: #ecf6ff;
   --border-radius: 50px;
   --color-green: #2abb90;
@@ -22,6 +21,7 @@
   --page-padding-extra-large: 100px 300px 50px;
   --page-padding-small: 32px;
   --page-padding-medium: 100px 140px 50px;
+  --font-poppins: 'Poppins';
   --survey-padding-mobile: 20px;
   --survey-padding-desktop: 50px;
 }

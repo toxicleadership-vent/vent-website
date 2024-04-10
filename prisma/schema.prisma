@@ -10,24 +10,25 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model Survey {
-  id          String  @id @default(cuid())
-  q1          String
-  q2          String
-  q3          String
-  q4          String
-  q5          String
-  q6          String
-  q7          String
-  q8          String
-  q9          String
-  q10         String
-  summary     String
-  age         String?
-  education   String?
-  ethnic      String?
-  location    String?
-  migrant     String?
-  orientation String?
-  feedback    String?
+model survey {
+  id           Int      @id @default(autoincrement())
+  q1           Int
+  q2           Int
+  q3           Int
+  q4           Int
+  q5           Int
+  q6           Int
+  q7           Int
+  q8           Int
+  q9           Int
+  q10          Int
+  summary      Int
+  age          String?
+  education    String?
+  ethnic       String?
+  location     String?
+  migrant      String?
+  orientation  String?
+  feedback     String?
+  feedbackLike Boolean?
 }

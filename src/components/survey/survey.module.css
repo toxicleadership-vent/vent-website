@@ -1,0 +1,152 @@
+.modalheader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  background-color: var(--background-green);
+  gap: 50px;
+}
+.modalheaderWrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.modalheaderTitle {
+  width: 100%;
+}
+
+.progressbar {
+  width: 100%;
+}
+
+.modalbody {
+  background-color: var(--background-green);
+  overflow-y: hidden;
+}
+
+.questioncardWrapper {
+  background-color: var(--background-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.question {
+  max-width: 500px;
+  background-color: var(--background-light-green);
+  padding: var(--survey-padding-desktop);
+  border-radius: 15px;
+}
+
+.form {
+  background-color: var(--background-light-green);
+  padding: var(--survey-padding-desktop);
+  border-radius: 15px;
+}
+
+.resultsCard {
+  width: 100%;
+  background-color: var(--background-light-green);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.results {
+  overflow: scroll;
+  max-height: 90vh;
+}
+
+.text {
+  margin-bottom: 15px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+/* survey entry */
+.surveyEntry {
+  background-color: var(--background-light-yellow);
+  border-radius: 50px;
+  padding: var(--survey-padding-desktop);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 15px 50px;
+  border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.spinner {
+  text-align: center;
+  padding: 25px;
+}
+
+.inlineButton {
+  margin-right: 16px;
+}
+
+.dropdownLabel {
+  display: block;
+  padding-top: 16px;
+}
+
+.dropdownSelect {
+  width: 65vw;
+}
+
+@media screen and (max-width: 768px) {
+  .questioncardWrapper {
+    padding: var(--page-padding-small);
+    height: calc(100vh - 92px);
+    align-items: baseline;
+  }
+
+  .modalheader {
+    gap: 14px;
+    flex-shrink: 0;
+    align-items: flex-start;
+  }
+
+  .modalheaderWrapper {
+    flex-direction: column;
+  }
+
+  .modalheaderTitle {
+    flex-shrink: 0;
+    padding-bottom: 20px;
+  }
+
+  .modalheaderButton {
+    align-self: flex-end;
+  }
+
+  .question {
+    padding: var(--survey-padding-mobile);
+  }
+
+  .dropdownSelect {
+    width: calc(100vw - 72px);
+  }
+  .resultsCard {
+    padding: var(--survey-padding-mobile);
+  }
+  .surveyEntry {
+    padding: var(--survey-padding-mobile);
+  }
+
+  .form {
+    padding: var(--survey-padding-mobile);
+  }
+}

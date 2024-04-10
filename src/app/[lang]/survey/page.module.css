@@ -1,0 +1,15 @@
+.page {
+  background-color: var(--background-yellow);
+  font-family: var(--font-poppins);
+}
+
+.main {
+  margin-top: var(--header-margin-top);
+  padding: var(--page-padding-medium);
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: var(--page-padding-small);
+  }
+}

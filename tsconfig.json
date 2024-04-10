@@ -30,7 +30,6 @@
     ".next/types/**/*.ts",
     "i18nConfig.js",
     "src/localization/i18n.js",
-    "src/types/global.d.ts"
   ],
   "exclude": ["node_modules"]
 }

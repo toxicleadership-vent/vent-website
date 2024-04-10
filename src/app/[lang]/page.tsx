@@ -14,6 +14,7 @@ import GettingInformedOverview from '@/components/getting-informed-overview/gett
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
 import { PollsContainer } from '@/components/polls/polls'
 import Link from 'next/link'
+import { Survey } from '@/components/survey/survey'
 
 export default async function Home({ params: { lang } }: PageProps) {
   const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
@@ -53,6 +54,12 @@ export default async function Home({ params: { lang } }: PageProps) {
             <PollsContainer lang={lang} />
           </Stack>
         </Container>
+        {/* <Container
+          fluid
+          className={`${styles.section} ${styles.sectionYellow}`}
+        >
+          <Survey lang={lang} />
+        </Container> */}
         <Container fluid className={styles.section}>
           <h1 className={styles.heading1}> {t('what_guides_us.title')}</h1>
           <div className={styles.subsection}>

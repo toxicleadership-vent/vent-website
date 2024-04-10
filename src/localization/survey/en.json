@@ -1,0 +1,132 @@
+{
+  "title": "Is your leader toxic?",
+  "intro": {
+    "text": "Are you unhappy and your work negatively impacts your personal life and health? Use our tool to assess whether you are working for a toxic leader or if the company/role is not the right fit for you.",
+    "button": {
+      "text": "START ASSESSMENT"
+    }
+  },
+  "thankyou": {
+    "text": "That's it for now! We hope it was helpful. As we are working on expanding this tool, each new step will add more information. Stay tuned for updates."
+  },
+  "done": "You have already completed the survey! Thanks.",
+  "modal": {
+    "title": "This tool is in development.",
+    "progress": "Your results being calculated...",
+    "calculating": "Our work is evidence-based and greatly depends on research. Are you happy to answer additional 6 questions to contribute to our database?",
+    "closingLoading": "Closing...",
+    "closingCTA": "Close Survey",
+    "result": {
+      "high": {
+        "title": "High (probability of toxic leadership)",
+        "text": "Your score suggests there is a high likelihood that the leader you are working for is toxic. When you find yourself in an unhealthy work environment impacting your well-being, performance and outlook on the future, there are several things you can consider before deciding how to deal with the situation. To gain some insights, visit our Support page and bare with us as we develop this assessment tool further to help you deal with toxic leadership."
+      },
+      "medium": {
+        "title": "Medium (probability of toxic leadership)",
+        "text": "Your score suggests there is a medium likelihood that the leader you are working for is toxic. This means that a more in-depth analysis will help determine the cause of your unhappiness or struggles at work. Bare with us we develop this tool further to help you. In the meantime, please visit our Support page where VENT’s experts and collaborators share tips on what to keep in mind and what to do when dealing with a toxic leader."
+      },
+      "low": {
+        "title": "Low (probability of toxic leadership)",
+        "text": "Your score suggests there is a low likelihood that the leader you are working for is toxic. What could potentially be more likely is that your values and interests are not aligned with the mission of the company or the purpose of our role. To help you understand the cause of your unhappiness or struggles at work, a more in-depth analysis is needed. Bare with us as we develop this tool further to help you."
+      }
+    },
+    "end": "If you wish to be notified when the next step in our assessment is developed and ready for testing, please use this <Link>form</Link> to share your contact details and we’ll keep you in the loop! ",
+    "feedback": {
+      "text": "Did you like the first part of our assessment tool?",
+      "yes": "Yes",
+      "no": "No",
+      "further": "Add feedback here. Thank you!"
+    },
+    "additionalInfo": {
+      "age": {
+        "description": "What is  your age bracket?",
+        "options": ["18-25", "26-35", "36-45", "46-55", "56-65", "66+"]
+      },
+      "ethnic": {
+        "description": "What is your ethnic background?",
+        "options": [
+          "Caucasian/White",
+          "Black/African/Caribbean",
+          "Hispanic/Latino/Latinx",
+          "Asian (e.g., Chinese, Indian, Japanese, Korean)",
+          "Indigenous/Native/First Nations",
+          "Pacific Islander/Melanesian/Polynesian",
+          "Middle Eastern/Arab",
+          "Mixed/Multi-ethnic"
+        ]
+      },
+      "orientation": {
+        "description": "What is your sexual orientation?",
+        "options": [
+          "Heterosexual/Straight",
+          "Homosexual/Gay/Lesbian",
+          "Bisexual/Pansexual",
+          "Asexual/Aromantic",
+          "Queer",
+          "Questioning/Uncertain",
+          "Other (please specify)"
+        ]
+      },
+      "location": {
+        "description": "Where are you located?",
+        "options": [
+          "North America",
+          "South America",
+          "Europe",
+          "Asia",
+          "Africa",
+          "Oceania/Australia"
+        ]
+      },
+      "education": {
+        "description": "What is your education level?",
+        "options": [
+          "No formal education",
+          "Primary education",
+          "Secondary education",
+          "Vocational/Technical training",
+          "Bachelor's degree",
+          "Master's degree",
+          "Doctoral degree"
+        ]
+      },
+      "migrant": {
+        "description": "Do you or your primary care-giver have migration background?",
+        "options": ["yes", "no"]
+      }
+    }
+  },
+  "questions": [
+    {
+      "question": "Do you perceive a lack of support within your work environment?"
+    },
+    {
+      "question": "Are you comparing yourself to your colleagues?"
+    },
+    {
+      "question": "Are you sufficiently trained to perform your current responsibilities?"
+    },
+    {
+      "question": "Have you experienced rapid changes in the organization?"
+    },
+    {
+      "question": "Do you feel job insecurity within your current position?"
+    },
+    {
+      "question": "Are expectations unreasonable?"
+    },
+    {
+      "question": "Do you feel undervalued within your current role?"
+    },
+    {
+      "question": "Have you faced resistance from leadership when proposing changes?"
+    },
+    {
+      "question": "Do you feel aligned with the mission of the company?"
+    },
+    {
+      "question": "Are you finding it difficult to mentally disconnect from work?"
+    }
+  ],
+  "answers": ["Yes", "No", "Not Sure"]
+}
