@@ -32,6 +32,12 @@
           "position": "Developer",
           "image": "/images/about/team/judith.jpg",
           "cv": "Judith is a former sound engineer turned software developer holding a Bachelor of Computer Engineering. She works as a developer at Maschenfein. Judith is also Eva's mentee and joined the team of VENT to combine her passion for technology and advancing women in tech."
+        },
+        {
+          "name": "Najma Hussaini",
+          "position": "Developer",
+          "image": "/images/about/team/najma.jpg",
+          "cv": "Najma is a software developer and former programming lecturer. She obtained her BSc in Computer Science in 2014 from a university in Afghanistan and an MSc from TU Berlin in 2018. Najma is a former student of Eva. They met back in 2012 when Eva worked in Afghanistan as a lecturer and researcher. As a working professional with years of experience in a toxic workplace, Najma is motivated to contribute to reducing the impact of toxic leadership and helping people around the world by applying her technical knowledge to this vital project."
         }
       ]
     },
