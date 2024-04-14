@@ -32,9 +32,30 @@ export default async function About({ params: { lang } }: PageProps) {
               {t('team.title')}
             </h3>
             <Row>
-              {copy.about.team?.members.map((teamMember, index) => {
+              {copy.about.team?.members.slice(0, 2).map((teamMember, index) => {
                 return (
                   <Col md={6} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`team.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`team.members.${index}.name`)}</h4>
+                        <h4>{t(`team.members.${index}.position`)}</h4>
+                      </CardHeader>
+                      <CardBody>{t(`team.members.${index}.cv`)}</CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+            <Row>
+              {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
+                index = index + 2;
+                return (
+                  <Col md={4} key={index}>
                     <Card bsPrefix="myCard" className={styles.myCard}>
                       <CardImg
                         className={styles.cardImg}
