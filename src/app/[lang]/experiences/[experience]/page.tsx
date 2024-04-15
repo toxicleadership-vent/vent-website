@@ -34,7 +34,7 @@ export default async function Experience({
       categoryIndex = 0
       articleIndex = 1
       break
-    case 'failed_by_the_system':
+    case 'speak_up_become_the_next_target':
       categoryIndex = 0
       articleIndex = 0
       break
@@ -110,7 +110,7 @@ export default async function Experience({
 
 export async function generateStaticParams() {
   return [
-    { id: 'failed_by_the_system' },
+    { id: 'speak_up_become_the_next_target' },
     { id: 'fake_investigation' },
     { id: 'friend_to_foes' },
     { id: 'growth_over_culture' },
