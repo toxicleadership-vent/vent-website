@@ -62,7 +62,7 @@ export default function ExperiencesArticle({
       case 'fake_investigation':
         return [0, 2]
       case 'just_move_him':
-      case 'failed_by_the_system':
+      case 'speak_up_become_the_next_target':
         return [1, 2]
     }
     return [0, 2]
