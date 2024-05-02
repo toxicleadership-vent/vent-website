@@ -1,0 +1,80 @@
+.myCard {
+  background-color: var(--background-light-blue);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.myCard:hover {
+  border-radius: 150px;
+}
+
+.text {
+  padding: var(--page-padding-medium);
+}
+
+.paragraph {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.myCardTitle {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sectionOrange {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--background-orange);
+  padding: 100px;
+}
+
+.subsection {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.heading1 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  padding-bottom: 100px;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 15px 50px;
+  border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionOrange {
+    padding: 32px;
+  }
+
+  .heading1 {
+    padding-bottom: 32px;
+  }
+  .text {
+    padding: 0;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
+  }
+}
