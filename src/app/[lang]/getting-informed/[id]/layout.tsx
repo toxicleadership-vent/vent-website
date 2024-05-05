@@ -1,12 +1,13 @@
 import { Header } from '@/components/header/header'
 import styles from './page.module.css'
-import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 import { getTranslation } from '@/localization/i18n'
 import { ResolvingMetadata, Metadata } from 'next'
+import GettingInformedReadMore from '@/components/getting-informed-readmore/getting-informed-readmore';
+
 
 export type PageParams = {
   lang: string
-  id?: string
+  id: string
 }
 
 export async function generateMetadata(
@@ -60,7 +61,7 @@ export default function GettingInformedLayout({
         lightColor={!params?.id ? '#f7b7a3' : '#408CFF'}
       />
       <section className={`${styles.page}`}>{children}</section>
-      <GettingInformedOverview lang={params.lang} />
+      <GettingInformedReadMore lang={ params.lang } id={ params.id } />
     </>
   )
 }
