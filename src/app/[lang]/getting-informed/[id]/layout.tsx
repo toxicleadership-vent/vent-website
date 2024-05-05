@@ -7,7 +7,7 @@ import GettingInformedReadMore from '@/components/getting-informed-readmore/gett
 
 export type PageParams = {
   lang: string
-  id?: string
+  id: string
 }
 
 export async function generateMetadata(
