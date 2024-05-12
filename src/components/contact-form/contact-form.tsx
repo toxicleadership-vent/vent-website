@@ -1,11 +1,14 @@
 'use client'
 
 import { useCallback, useState } from 'react'
+import Select from 'react-select'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
+//import { options } from '../../localization/contact/en.json'
+
 
 type Inputs = {
   firstName: string
@@ -13,6 +16,21 @@ type Inputs = {
   email: string
   subject: string
   message: string
+}
+
+//or in a separate file ?
+const customStyles = {
+  control: (provided: any, state: any) => ({
+    ...provided,
+    padding: '10px',
+    borderRadius: '50px',
+    borderStyle: 'solid',
+    margin: '10px',
+    width: '100%',
+    border: 'none',
+    fontSize: '12px',
+    textTransform: 'uppercase',
+  }),
 }
 
 export const ContactForm = ({ lang }: { lang: string }) => {
@@ -37,6 +55,16 @@ export const ContactForm = ({ lang }: { lang: string }) => {
   const [success, setSuccess] = useState(false)
   const [failed, setFailed] = useState(false)
   const [subject, setSubject] = useState<string>()
+
+  const options = [
+    { value: t('contact.form.subject.options.0') , label: t('contact.form.subject.options.0').toUpperCase() },
+    { value: t('contact.form.subject.options.1') , label: t('contact.form.subject.options.1').toUpperCase() },
+    { value:t('contact.form.subject.options.2') , label: t('contact.form.subject.options.2').toUpperCase()  },
+    { value: t('contact.form.subject.options.3') , label: t('contact.form.subject.options.3').toUpperCase() },
+    { value: t('contact.form.subject.options.4') , label: t('contact.form.subject.options.4').toUpperCase()  },
+  ]
+
+
   // const { executeRecaptcha } = useGoogleReCaptcha()
   // console.log('RECAPTCHA', executeRecaptcha)
   const updateContactFormData = useCallback(async () => {
@@ -178,22 +206,16 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                 name="subject"
                 control={control}
                 render={({ field: { onChange, ...rest } }) => (
-                  <select
+                  <Select
                     {...rest}
-                    onChange={(e) => {
-                      setSubject(e.target.value)
-                      onChange(e)
+                    onChange={(option: any) => {
+                      //TODO: fix types
+                      setSubject(option?.value)
                     }}
-                    className={styles.input}
-                  >
-                    <option>
-                      {t(`contact.form.subject.options.0`) ?? 'Collaborate'}
-                    </option>
-                    <option>{t(`contact.form.subject.options.1`)}</option>
-                    <option>{t(`contact.form.subject.options.2`)}</option>
-                    <option>{t(`contact.form.subject.options.3`)}</option>
-                    <option>{t(`contact.form.subject.options.4`)}</option>
-                  </select>
+                    styles={customStyles}
+                    options={options}
+                    placeholder={t('contact.form.subject.name')}
+                 />
                 )}
               />
             </Col>
