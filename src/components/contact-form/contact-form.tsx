@@ -1,18 +1,41 @@
 'use client'
 
 import { useCallback, useState } from 'react'
+import Select from 'react-select'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
+//import { options } from '../../localization/contact/en.json'
 
+const options = [
+  { value: 'contact.form.subject.options.1' },
+  { value: 'contact.form.subject.options.2' },
+  { value: 'contact.form.subject.options.3' },
+  { value: 'contact.form.subject.options.4' },
+]
 type Inputs = {
   firstName: string
   lastName: string
   email: string
   subject: string
   message: string
+}
+
+//or in a separate file ?
+const customStyles = {
+  control: (provided, state) => ({
+    ...provided,
+    padding: '10px',
+    borderRadius: '50px',
+    borderStyle: 'solid',
+    margin: '10px',
+    width: '100%',
+    border: 'none',
+    fontSize: '12px',
+    textTransform: 'uppercase',
+  }),
 }
 
 export const ContactForm = ({ lang }: { lang: string }) => {
@@ -178,22 +201,24 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                 name="subject"
                 control={control}
                 render={({ field: { onChange, ...rest } }) => (
-                  <select
+                  <Select
                     {...rest}
                     onChange={(e) => {
                       setSubject(e.target.value)
                       onChange(e)
                     }}
-                    className={styles.input}
+                    //className={styles.input}
+                    styles={customStyles}
+                    options={options}
                   >
-                    <option>
+                    {/* <option>
                       {t(`contact.form.subject.options.0`) ?? 'Collaborate'}
                     </option>
                     <option>{t(`contact.form.subject.options.1`)}</option>
                     <option>{t(`contact.form.subject.options.2`)}</option>
                     <option>{t(`contact.form.subject.options.3`)}</option>
-                    <option>{t(`contact.form.subject.options.4`)}</option>
-                  </select>
+                    <option>{t(`contact.form.subject.options.4`)}</option> */}
+                  </Select>
                 )}
               />
             </Col>
