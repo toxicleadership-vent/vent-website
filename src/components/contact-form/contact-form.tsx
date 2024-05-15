@@ -1,14 +1,18 @@
 'use client'
 
 import { useCallback, useState } from 'react'
-import Select from 'react-select'
+import Select, { ValueType } from 'react-select'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
-//import { options } from '../../localization/contact/en.json'
 
+//to avoid using any type for option
+interface Option {
+  value: string
+  label: string
+}
 
 type Inputs = {
   firstName: string
@@ -56,14 +60,33 @@ export const ContactForm = ({ lang }: { lang: string }) => {
   const [failed, setFailed] = useState(false)
   const [subject, setSubject] = useState<string>()
 
-  const options = [
-    { value: t('contact.form.subject.options.0') , label: t('contact.form.subject.options.0').toUpperCase() },
-    { value: t('contact.form.subject.options.1') , label: t('contact.form.subject.options.1').toUpperCase() },
-    { value:t('contact.form.subject.options.2') , label: t('contact.form.subject.options.2').toUpperCase()  },
-    { value: t('contact.form.subject.options.3') , label: t('contact.form.subject.options.3').toUpperCase() },
-    { value: t('contact.form.subject.options.4') , label: t('contact.form.subject.options.4').toUpperCase()  },
-  ]
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null)
 
+  const options = [
+    {
+      value: t('contact.form.subject.options.0'),
+      label: t('contact.form.subject.options.0').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.1'),
+      label: t('contact.form.subject.options.1').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.2'),
+      label: t('contact.form.subject.options.2').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.3'),
+      label: t('contact.form.subject.options.3').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.4'),
+      label: t('contact.form.subject.options.4').toUpperCase(),
+    },
+  ]
+  const handleChange = (selectedOption: ValueType<Option, false>) => {
+    setSelectedOption(selectedOption as Option)
+  }
 
   // const { executeRecaptcha } = useGoogleReCaptcha()
   // console.log('RECAPTCHA', executeRecaptcha)
@@ -135,7 +158,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
           <Row>
             <Col sm={12} md={6}>
               <Controller
-                name="firstName"
+                name="First Name"
                 control={control}
                 rules={{
                   required: t('contact.form.first_name.rules.required'),
@@ -159,7 +182,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
             </Col>
             <Col sm={12} md={6}>
               <Controller
-                name="lastName"
+                name="Last Name"
                 control={control}
                 rules={{
                   required: t('contact.form.last_name.rules.required'),
@@ -208,14 +231,16 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                 render={({ field: { onChange, ...rest } }) => (
                   <Select
                     {...rest}
-                    onChange={(option: any) => {
-                      //TODO: fix types
-                      setSubject(option?.value)
-                    }}
+                    // onChange={(option: any) => {
+                    //   //TODO: fix types
+                    //   setSubject(option?.value)
+                    // }}
+                    value={selectedOption}
+                    onChange={handleChange}
                     styles={customStyles}
                     options={options}
                     placeholder={t('contact.form.subject.name')}
-                 />
+                  />
                 )}
               />
             </Col>
