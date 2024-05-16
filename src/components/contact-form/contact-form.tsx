@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useState } from 'react'
-import Select, { ValueType } from 'react-select'
+import Select, { SingleValue } from 'react-select'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
@@ -58,7 +58,6 @@ export const ContactForm = ({ lang }: { lang: string }) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [failed, setFailed] = useState(false)
-  const [subject, setSubject] = useState<string>()
 
   const [selectedOption, setSelectedOption] = useState<Option | null>(null)
 
@@ -84,8 +83,13 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       label: t('contact.form.subject.options.4').toUpperCase(),
     },
   ]
-  const handleChange = (selectedOption: ValueType<Option, false>) => {
-    setSelectedOption(selectedOption as Option)
+
+
+  const placeHolderFields = {
+    firstName: t('contact.form.first_name.name'),
+    lastName: t('contact.form.last_name.name'),
+    email: t('contact.form.email.name'),
+    subject: t('contact.form.subject.name'),
   }
 
   // const { executeRecaptcha } = useGoogleReCaptcha()
@@ -158,7 +162,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
           <Row>
             <Col sm={12} md={6}>
               <Controller
-                name="First Name"
+                name="firstName"
                 control={control}
                 rules={{
                   required: t('contact.form.first_name.rules.required'),
@@ -173,7 +177,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                     <input
                       {...field}
                       className={styles.input}
-                      placeholder={field.name}
+                      placeholder={placeHolderFields[field.name]}
                       aria-invalid={errors.firstName ? 'true' : 'false'}
                     />
                   </>
@@ -182,7 +186,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
             </Col>
             <Col sm={12} md={6}>
               <Controller
-                name="Last Name"
+                name="lastName"
                 control={control}
                 rules={{
                   required: t('contact.form.last_name.rules.required'),
@@ -195,7 +199,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                   <input
                     {...field}
                     className={styles.input}
-                    placeholder={field.name}
+                    placeholder={placeHolderFields[field.name]}
                     aria-invalid={errors.lastName ? 'true' : 'false'}
                   />
                 )}
@@ -218,7 +222,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                   <input
                     {...field}
                     className={styles.input}
-                    placeholder={field.name}
+                    placeholder={placeHolderFields[field.name]}
                     aria-invalid={errors.email ? 'true' : 'false'}
                   />
                 )}
@@ -231,15 +235,14 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                 render={({ field: { onChange, ...rest } }) => (
                   <Select
                     {...rest}
-                    // onChange={(option: any) => {
-                    //   //TODO: fix types
-                    //   setSubject(option?.value)
-                    // }}
                     value={selectedOption}
-                    onChange={handleChange}
+                    onChange={(option: SingleValue<Option>) => {
+                      setSelectedOption(option as Option)
+                      onChange(option?.label)
+                    }}
                     styles={customStyles}
                     options={options}
-                    placeholder={t('contact.form.subject.name')}
+                    placeholder={placeHolderFields['subject']}
                   />
                 )}
               />
@@ -264,7 +267,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                       className={styles.textarea}
                       rows={10}
                       placeholder={t(
-                        `contact.form.message.${subject ?? 'collaborate'}.text`
+                        `contact.form.message.${selectedOption?.value ?? 'collaborate'}.text`
                       )}
                     />
                     <small className={styles.textCounter}>
