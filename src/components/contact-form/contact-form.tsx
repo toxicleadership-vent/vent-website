@@ -1,14 +1,18 @@
 'use client'
 
 import { useCallback, useState } from 'react'
-import Select from 'react-select'
+import Select, { SingleValue } from 'react-select'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Col, Row, Stack } from '../bootstrap/bootstrap'
 import styles from './contact-form.module.css'
 import { mapContactForm } from '@/utils/mapContactForm'
 import { useTranslation } from '@/localization/i18n-client'
-//import { options } from '../../localization/contact/en.json'
 
+//to avoid using any type for option
+interface Option {
+  value: string
+  label: string
+}
 
 type Inputs = {
   firstName: string
@@ -54,16 +58,39 @@ export const ContactForm = ({ lang }: { lang: string }) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [failed, setFailed] = useState(false)
-  const [subject, setSubject] = useState<string>()
+
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null)
 
   const options = [
-    { value: t('contact.form.subject.options.0') , label: t('contact.form.subject.options.0').toUpperCase() },
-    { value: t('contact.form.subject.options.1') , label: t('contact.form.subject.options.1').toUpperCase() },
-    { value:t('contact.form.subject.options.2') , label: t('contact.form.subject.options.2').toUpperCase()  },
-    { value: t('contact.form.subject.options.3') , label: t('contact.form.subject.options.3').toUpperCase() },
-    { value: t('contact.form.subject.options.4') , label: t('contact.form.subject.options.4').toUpperCase()  },
+    {
+      value: t('contact.form.subject.options.0'),
+      label: t('contact.form.subject.options.0').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.1'),
+      label: t('contact.form.subject.options.1').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.2'),
+      label: t('contact.form.subject.options.2').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.3'),
+      label: t('contact.form.subject.options.3').toUpperCase(),
+    },
+    {
+      value: t('contact.form.subject.options.4'),
+      label: t('contact.form.subject.options.4').toUpperCase(),
+    },
   ]
 
+
+  const placeHolderFields = {
+    firstName: t('contact.form.first_name.name'),
+    lastName: t('contact.form.last_name.name'),
+    email: t('contact.form.email.name'),
+    subject: t('contact.form.subject.name'),
+  }
 
   // const { executeRecaptcha } = useGoogleReCaptcha()
   // console.log('RECAPTCHA', executeRecaptcha)
@@ -150,7 +177,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                     <input
                       {...field}
                       className={styles.input}
-                      placeholder={field.name}
+                      placeholder={placeHolderFields[field.name]}
                       aria-invalid={errors.firstName ? 'true' : 'false'}
                     />
                   </>
@@ -172,7 +199,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                   <input
                     {...field}
                     className={styles.input}
-                    placeholder={field.name}
+                    placeholder={placeHolderFields[field.name]}
                     aria-invalid={errors.lastName ? 'true' : 'false'}
                   />
                 )}
@@ -195,7 +222,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                   <input
                     {...field}
                     className={styles.input}
-                    placeholder={field.name}
+                    placeholder={placeHolderFields[field.name]}
                     aria-invalid={errors.email ? 'true' : 'false'}
                   />
                 )}
@@ -208,14 +235,15 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                 render={({ field: { onChange, ...rest } }) => (
                   <Select
                     {...rest}
-                    onChange={(option: any) => {
-                      //TODO: fix types
-                      setSubject(option?.value)
+                    value={selectedOption}
+                    onChange={(option: SingleValue<Option>) => {
+                      setSelectedOption(option as Option)
+                      onChange(option?.label)
                     }}
                     styles={customStyles}
                     options={options}
-                    placeholder={t('contact.form.subject.name')}
-                 />
+                    placeholder={placeHolderFields['subject']}
+                  />
                 )}
               />
             </Col>
@@ -239,7 +267,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                       className={styles.textarea}
                       rows={10}
                       placeholder={t(
-                        `contact.form.message.${subject ?? 'collaborate'}.text`
+                        `contact.form.message.${selectedOption?.value ?? 'collaborate'}.text`
                       )}
                     />
                     <small className={styles.textCounter}>
