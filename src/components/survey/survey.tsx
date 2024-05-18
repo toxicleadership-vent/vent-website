@@ -185,7 +185,7 @@ const CalculatingScreen = ({
               {t('answers.0')}
             </Button>
             <Button value={'false'} onClick={scrollIntoView} variant="light">
-            {t('answers.1')}
+              {t('answers.1')}
             </Button>
           </div>
         </div>
@@ -477,7 +477,7 @@ const CalculatingScreen = ({
               onClick={!isLoading ? closeSurvey : undefined}
               variant="light"
             >
-              {isLoading ? t('modal.closingLoading'): t('modal.closingCTA')}
+              {isLoading ? t('modal.closingLoading') : t('modal.closingCTA')}
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import {
   Dispatch,
+  MutableRefObject,
   SetStateAction,
   useCallback,
   useEffect,
@@ -34,6 +35,7 @@ export const Question = ({
     const firstButton = firstSlide?.querySelector('button')
     if (isActive) {
       firstButton?.focus()
+      setActiveButtonIndex(0)
     }
   }, [isActive, questionIndex])
 
@@ -48,6 +50,7 @@ export const Question = ({
       const value = event.currentTarget.value
       let nextSlide = document.getElementById(`question-${questionIndex + 1}`)
       buttonsRef.current[0].focus()
+      setActiveButtonIndex(0)
 
       if (questionIndex === 9) {
         nextSlide = document.getElementById('calculation')
@@ -68,22 +71,40 @@ export const Question = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     if (
-      event.key === 'ArrowRight' ||
-      event.key === 'ArrowDown' ||
-      (!event.shiftKey && event.key === 'Tab' && activeButtonIndex < 2)
+      activeButtonIndex < 2 &&
+      (event.key === 'ArrowRight' || event.key === 'ArrowDown')
+    ) {
+      setActiveButtonIndex((prevIndex) => (prevIndex + 1) % 3)
+      ;(document?.activeElement?.nextElementSibling as HTMLElement)?.focus()
+    } else if (
+      !event.shiftKey &&
+      event.key === 'Tab' &&
+      activeButtonIndex < 2
     ) {
       setActiveButtonIndex((prevIndex) => (prevIndex + 1) % 3)
     } else if (
-      event.key === 'ArrowLeft' ||
-      event.key === 'ArrowUp' ||
-      (event.shiftKey && event.key === 'Tab' && activeButtonIndex > 0)
+      (event.key === 'ArrowLeft' || event.key === 'ArrowUp') &&
+      activeButtonIndex > 0
     ) {
       setActiveButtonIndex((prevIndex) => (prevIndex + 2) % 3)
-    } else if (event.key === 'Tab' && activeButtonIndex === 2) {
+      ;(document?.activeElement?.previousElementSibling as HTMLElement)?.focus()
+    } else if (event.shiftKey && event.key === 'Tab' && activeButtonIndex > 0) {
+      setActiveButtonIndex((prevIndex) => (prevIndex + 2) % 3)
+    } else if (
+      (event.key === 'Tab' ||
+        event.key === 'ArrowRight' ||
+        event.key === 'ArrowDown') &&
+      activeButtonIndex === 2
+    ) {
       event.preventDefault()
       buttonsRef.current[0].focus()
       setActiveButtonIndex(0)
-    } else if (event.key === 'Tab' && activeButtonIndex === 0) {
+    } else if (
+      ((event.shiftKey && event.key === 'Tab') ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowUp') &&
+      activeButtonIndex === 0
+    ) {
       event.preventDefault()
       buttonsRef.current[2].focus()
       setActiveButtonIndex(2)
@@ -111,6 +132,16 @@ export const Question = ({
               value={questionsMap[questionIndex][answerIndex]}
               onClick={scrollIntoView}
               onKeyDown={handleKeyDown}
+              onFocus={() => {
+                console.log(
+                  'ON FOCUS',
+                  'ACTIVE INCDEX',
+                  activeButtonIndex,
+                  document.activeElement?.innerHTML,
+                  activeButtonIndex === answerIndex && isActive
+                )
+                // setActiveButtonIndex(activeButtonIndex+1%3)
+              }}
               variant="light"
               key={answerIndex}
               className={styles.answerButton}

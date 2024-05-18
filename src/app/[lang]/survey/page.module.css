@@ -4,12 +4,17 @@
 }
 
 .main {
-  margin-top: var(--header-margin-top);
-  padding: var(--page-padding-medium);
+  margin: var(--header-margin-top) auto;
+  /* padding: var(--page-padding-medium); */
+  max-width: var(--page-max-width);
 }
 
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);
   }
+}
+
+.title {
+  text-align: center;
 }

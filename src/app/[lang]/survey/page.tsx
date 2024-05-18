@@ -14,7 +14,7 @@ export default async function Contact({ params }: { params: PageParams }) {
     <main className={styles.main}>
       {!isSurveyDone ? (
         <>
-          <h1>{t('title')}</h1>
+          <h1 className={styles.title}>{t('title')}</h1>
           <Survey lang={params.lang} />
         </>
       ) : (

@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "i18nConfig.js",
-    "src/localization/i18n.js",
+    "src/localization/i18n.js"
   ],
   "exclude": ["node_modules"]
 }
