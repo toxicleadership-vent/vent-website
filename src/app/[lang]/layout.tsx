@@ -4,6 +4,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
 import Footer from '@/components/footer/footer'
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
@@ -17,7 +18,14 @@ const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   display: 'swap',
-  weight: ['400', '600'],
+  weight: ['400', '600', '700'],
+})
+
+const worksans = Work_Sans({
+  subsets: ['latin'],
+  variable: '--font-worksans',
+  display: 'swap',
+  weight: ['400', '600', '700'],
 })
 
 export type PageParams = {
@@ -163,7 +171,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={`${poppins.variable}`}>
+      <body className={`${poppins.variable} ${worksans.variable}`}>
         {children}
         <Footer lang={params.lang} />
         <div className={styles.logo}>

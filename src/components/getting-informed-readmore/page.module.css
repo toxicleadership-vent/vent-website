@@ -1,13 +1,14 @@
 .myCard {
   background-color: var(--background-light-blue);
   border-radius: var(--border-radius);
-  padding: 40px;
+  padding: 30px;
   cursor: pointer;
   transition: all 0.3 ease;
 }
 
 .myCard:hover {
-  border-radius: 150px;
+  /* box-shadow: 8px 8px 8px lightblue; */
+  transform:scale(1.03);
 }
 
 .text {
@@ -15,7 +16,8 @@
 }
 
 .paragraph {
-  font-size: 2rem;
+  font-size: 20px;
+  line-height: 26px;
   text-align: left;
 }
 
