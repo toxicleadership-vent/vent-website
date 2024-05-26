@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import rootStyles from './rootStyles.module.css';
 import {
   Col,
   Container,
@@ -37,55 +38,53 @@ export default async function Home({ params: { lang } }: PageProps) {
             </Col>
           </Row>
         </Container>
-        <Container fluid className={styles.section}>
-          <h1 className={styles.heading1}> {t('what_we_do.title')}</h1>
-          <div className={`${styles.subsection} `}>
-            <p className={`${styles.paragraph} ${styles.whatwedo}`}>
+        <Container fluid className={`${styles.sectionLightBlue} ${rootStyles.section}`}>
+          <div className={rootStyles.sectionContainer}>
+          <h1> {t('what_we_do.title')}</h1>
+            <p className={`sectionIntro`}>
               {t('what_we_do.text')}
             </p>
           </div>
         </Container>
         <Container
           fluid
-          className={`${styles.section} ${styles.sectionOrange}`}
+          className={`${styles.sectionOrange} ${rootStyles.section}`}
         >
-          <h1 className={styles.heading1}> {t('polls.title')}</h1>
-          <Stack className={styles.poll}>
-            <PollsContainer lang={lang} />
-          </Stack>
-        </Container>
-        {/* <Container
-          fluid
-          className={`${styles.section} ${styles.sectionYellow}`}
-        >
-          <Survey lang={lang} />
-        </Container> */}
-        <Container fluid className={styles.section}>
-          <h1 className={styles.heading1}> {t('what_guides_us.title')}</h1>
-          <div className={styles.subsection}>
-            <Row>
-              {copy.home.what_guides_us.sections.map((_section, index) => (
-                <Col sm={12} md={4} key={index}>
-                  <div className={styles.principleImage}>
-                    <BootstrapImage
-                      src={t(`what_guides_us.sections.${index}.image`)}
-                      alt={t(`what_guides_us.sections.${index}.title`)}
-                      height="80%"
-                      width="80%"
-                    />
-                  </div>
-                  <h3 className={styles.heading3}>
-                    {t(`what_guides_us.sections.${index}.title`)}
-                  </h3>
-                  <p className={styles.paragraph}>
-                    {t(`what_guides_us.sections.${index}.text`)}
-                  </p>
-                </Col>
-              ))}
-            </Row>
+          <div className={rootStyles.sectionContainer}>
+            <h1> {t('polls.title')}</h1>
+            <Stack className={styles.poll}>
+              <PollsContainer lang={lang} />
+            </Stack>
           </div>
+        </Container>
+        <Container fluid className={`${styles.sectionLightBlue} ${rootStyles.section}`}>
+          <div className={rootStyles.sectionContainer}>
+            <h1> {t('what_guides_us.title')}</h1>
+            <div>
+              <Row>
+                {copy.home.what_guides_us.sections.map((_section, index) => (
+                  <Col xs={12} sm={4} key={index}>
+                    <div className={styles.principleImage}>
+                      <BootstrapImage
+                        src={t(`what_guides_us.sections.${index}.image`)}
+                        alt={t(`what_guides_us.sections.${index}.title`)}
+                        height="80%"
+                        width="80%"
+                      />
+                    </div>
+                    <h3>
+                      {t(`what_guides_us.sections.${index}.title`)}
+                    </h3>
+                    <p>
+                      {t(`what_guides_us.sections.${index}.text`)}
+                    </p>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+            </div>
           <Link href={t('what_guides_us.button.href')}>
-            <button className={styles.button}>
+            <button className={rootStyles.button}>
               {t('what_guides_us.button.text')}
             </button>
           </Link>
