@@ -50,7 +50,7 @@ h1 {
 h2 {
   font-family: var(--font-poppins);
   font-weight: 600;
-    font-size: 30px;
+  font-size: 30px;
   line-height: 38px;
   padding-bottom: 20px;
 }
@@ -78,7 +78,7 @@ p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
- /*max-width: 600px; TODO: check if that is intended to do*/
+  /*max-width: 600px; TODO: check if that is intended to do*/
 }
 
 iframe {
@@ -97,46 +97,72 @@ iframe {
 }
 
 .textIntro {
-    font-family: var(--font-workSans);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    padding-bottom: 40px;
-
+  font-family: var(--font-workSans);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  padding-bottom: 40px;
 }
 
 .small {
   font-family: var(--font-workSans);
   font-weight: 400;
-    font-size: 13px;
+  font-size: 13px;
   line-height: 16px;
 }
 
 .smallBold {
-    font-family: var(--font-workSans);
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+  font-family: var(--font-workSans);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
   text-transform: uppercase;
 }
 
 .buttonText {
   font-family: var(--font-poppins);
-    font-weight: 600;
+  font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .textLink {
-    font-family: var(--workSans);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
-    padding-top: 20px;
+  font-family: var(--workSans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  padding-top: 20px;
 }
+//Size XS<576
+@media screen and (max-width: 576px) {
+  .header-headline {
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  h1 {
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    padding: 40px 0;
+  }
+  h2 {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  h3 {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
 
-@media screen and (max-width:576px) {
-  
   .sectionIntro {
     font-size: 16px;
     line-height: 24px;
@@ -145,44 +171,194 @@ iframe {
     font-weight: 400;
     text-align: left;
   }
-
+  .textIntro {
+    font-family: var(--font-workSans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 40px;
+  }
 }
+//Size S >= 576
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .header-headline {
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  h1 {
+    font-family: var(--font-poppins);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 48px 0;
+  }
+  h2 {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  h3 {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
 
-@media screen and (max-width: 768px) {
-  
   .sectionIntro {
     font-size: 20px;
     line-height: 26px;
-    padding-bottom: 50px;
+    padding-bottom: 48px;
     font-family: var(--font-workSans);
     font-weight: 400;
     text-align: left;
   }
-
+  .textIntro {
+    font-family: var(--font-workSans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 224px;
+    padding-bottom: 40px;
+  }
 }
+//Size M >=768
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header-headline {
+    font-family: var(--font-poppins);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h1 {
+    font-family: var(--font-poppins);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 64px 0;
+  }
+  h2 {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  h3 {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
 
-@media screen and (max-width: 992px) {
-  
   .sectionIntro {
     font-size: 20px;
     line-height: 26px;
-    padding-bottom: 60px;
+    padding-bottom: 64px;
     font-family: var(--font-workSans);
     font-weight: 400;
     text-align: left;
   }
-
+  .textIntro {
+    font-family: var(--font-workSans);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    padding-bottom: 40px;
+  }
 }
-
-@media screen and (max-width: 1200px) {
-  
+//Size L >= 992
+@media screen and (max-width: 1199px) {
+  .header-headline {
+    font-family: var(--font-poppins);
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 600px;
+  }
+  h1 {
+    font-family: var(--font-poppins);
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    padding: 72px 0;
+  }
+  h2 {
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+  h3 {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
   .sectionIntro {
     font-size: 24px;
     line-height: 32px;
-    padding-bottom: 70px;
+    padding-bottom: 72px;
     font-family: var(--font-workSans);
     font-weight: 400;
     text-align: left;
   }
-  
+  .textIntro {
+    font-family: var(--font-workSans);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 40px;
+  }
+}
+//Size XL >= 1200
+@media screen and (min-width: 1200px) {
+  .header-headline {
+    font-family: var(--font-poppins);
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 65px;
+  }
+  h1 {
+    font-family: var(--font-poppins);
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    padding: 80px 0;
+  }
+  h2 {
+    font-family: var(--font-poppins);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
+
+  .sectionIntro {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 80px;
+    font-family: var(--font-workSans);
+    font-weight: 400;
+    text-align: left;
+  }
+  .textIntro {
+    font-family: var(--font-workSans);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 40px;
+  }
 }
