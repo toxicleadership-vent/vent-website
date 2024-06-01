@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import rootStyles from './rootStyles.module.css';
+import rootStyles from './rootStyles.module.css'
 import {
   Col,
   Container,
@@ -38,12 +38,13 @@ export default async function Home({ params: { lang } }: PageProps) {
             </Col>
           </Row>
         </Container>
-        <Container fluid className={`${styles.sectionLightBlue} ${rootStyles.section}`}>
-          <div className={rootStyles.sectionContainer}>
-          <h1> {t('what_we_do.title')}</h1>
-            <p className={`sectionIntro`}>
-              {t('what_we_do.text')}
-            </p>
+        <Container
+          fluid
+          className={`${styles.sectionLightBlue} ${rootStyles.section}`}
+        >
+          <div className={`${rootStyles.sectionContainer}`}>
+            <h1> {t('what_we_do.title')}</h1>
+            <p className={`sectionIntro`}>{t('what_we_do.text')}</p>
           </div>
         </Container>
         <Container
@@ -57,7 +58,10 @@ export default async function Home({ params: { lang } }: PageProps) {
             </Stack>
           </div>
         </Container>
-        <Container fluid className={`${styles.sectionLightBlue} ${rootStyles.section}`}>
+        <Container
+          fluid
+          className={`${styles.sectionLightBlue} ${rootStyles.section}`}
+        >
           <div className={rootStyles.sectionContainer}>
             <h1> {t('what_guides_us.title')}</h1>
             <div>
@@ -72,17 +76,13 @@ export default async function Home({ params: { lang } }: PageProps) {
                         width="80%"
                       />
                     </div>
-                    <h3>
-                      {t(`what_guides_us.sections.${index}.title`)}
-                    </h3>
-                    <p>
-                      {t(`what_guides_us.sections.${index}.text`)}
-                    </p>
+                    <h3>{t(`what_guides_us.sections.${index}.title`)}</h3>
+                    <p>{t(`what_guides_us.sections.${index}.text`)}</p>
                   </Col>
                 ))}
               </Row>
             </div>
-            </div>
+          </div>
           <Link href={t('what_guides_us.button.href')}>
             <button className={rootStyles.button}>
               {t('what_guides_us.button.text')}

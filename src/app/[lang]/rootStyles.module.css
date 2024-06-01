@@ -1,27 +1,32 @@
 .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sectionContainer {
-    width: var(--global-max-width);
+  width: var(--global-max-width);
 }
 
 .button {
-    margin: 80px;
-    background-color: transparent;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    border: 1px solid black;
-    transition: all 0.5s ease;
-    text-align: center;
+  margin: 80px;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  border: 1px solid black;
+  transition: all 0.5s ease;
+  text-align: center;
 }
 
 .button:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 /* media queries */
+@media screen and (max-width: 576px) {
+  /* .sectionContainer {
+    width: var (--global-xs-width);
+  } */
+}
