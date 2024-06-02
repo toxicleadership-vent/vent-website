@@ -9,8 +9,25 @@ on:
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: |
+          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
+          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+
+      - name: Hash branch name
+        id: hash_branch
+        uses: pplanel/hash-calculator-action@v1.3.1
+        with:
+          input: ${{ env.branch }}
+          method: MD5
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
@@ -18,4 +35,20 @@ jobs:
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        id: deploy
+        env:
+          META_TAG: ${{ steps.hash_branch.outputs.digest }}-${{ github.run_number }}-${{ github.run_attempt }}
+        run: |
+          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --meta base_hash=${{ env.META_TAG }}
+          vercel ls --token=${{secrets.VERCEL_TOKEN}} --meta base_hash=${{ env.META_TAG }} &> vercel-output
+          url=$(cat vercel-output | grep http | awk '{print $2}')
+          echo "\nNew preview URL: $url"
+          echo "META_TAG=$META_TAG"
+          echo "VERCEL_URL=$url" >> "$GITHUB_ENV"
+
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            Your build has completed!
+            [Preview deployment](${{ env.VERCEL_URL }})
+          
