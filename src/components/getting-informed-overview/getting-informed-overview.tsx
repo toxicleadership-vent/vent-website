@@ -21,8 +21,8 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
   return (
     <Container fluid className={styles.sectionOrange}>
       <div className={styles.text}>
-        <h1 className={styles.heading1}> {t('title')}</h1>
-        <p className={styles.paragraph}>{t('description')}</p>
+        <h1> {t('title')}</h1>
+        <p className={'sectionIntro'}>{t('description')}</p>
       </div>
       <div className={styles.subsection}>
         <Row className={`g-1 row-gap-4`} xs={1} sm={2} md={3}>

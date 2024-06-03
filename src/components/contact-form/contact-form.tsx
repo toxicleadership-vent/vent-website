@@ -84,7 +84,6 @@ export const ContactForm = ({ lang }: { lang: string }) => {
     },
   ]
 
-
   const placeHolderFields = {
     firstName: t('contact.form.first_name.name'),
     lastName: t('contact.form.last_name.name'),

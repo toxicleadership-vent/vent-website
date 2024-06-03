@@ -12,7 +12,7 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
     <Stack gap={5} className={styles.main}>
       <Stack className={styles.text}>
         <h1 className={styles.title}>{t('title')}</h1>
-        <p className={styles.paragraph}>{t('abstract')}</p>
+        <p className={'sectionIntro'}>{t('abstract')}</p>
         <p className={styles.paragraphSmall}>{t('note')}</p>
       </Stack>
       <Row className={`align-items-start`}>

@@ -11,7 +11,7 @@ export default async function Articles({ params }: { params: PageParams }) {
     <main className={styles.main}>
       <Stack className={styles.text}>
         <h1 className={styles.title}>{t('title')}</h1>
-        <p className={styles.paragraph}>{t('abstract')}</p>
+        <p className="sectionIntro">{t('abstract')}</p>
         <p className={styles.paragraphSmall}>{t('note')}</p>
       </Stack>
       <ExperienceLarge lang={params.lang} categories={[0, 1, 2]} />
