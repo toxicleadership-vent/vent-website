@@ -58,7 +58,7 @@
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "prisma": "^5.11.0",
-    "storybook": "^7.6.17",
+    "storybook": "^8.1.6",
     "storybook-css-modules": "^1.0.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"

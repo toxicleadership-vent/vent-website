@@ -170,10 +170,6 @@ const CalculatingScreen = ({
         className={styles.questioncardWrapper}
       >
         <div className={styles.question}>
-          <div className={styles.spinner}>
-            <Spinner />
-          </div>
-          <div className={styles.text}>{t('modal.progress')}</div>
           <div className={styles.text}>{t('modal.calculating')}</div>
           <div>
             <Button
