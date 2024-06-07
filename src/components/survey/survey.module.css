@@ -73,7 +73,7 @@
 /* survey entry */
 .surveyEntry {
   background-color: var(--background-light-yellow);
-  border-radius: 50px;
+  border-radius: var(--border-radius);
   padding: var(--survey-padding-desktop);
   max-width: 700px;
   display: flex;
@@ -88,11 +88,6 @@
   padding: 15px 50px;
   border: 1px solid black;
   transition: all 0.5s ease;
-}
-
-.spinner {
-  text-align: center;
-  padding: 25px;
 }
 
 .inlineButton {

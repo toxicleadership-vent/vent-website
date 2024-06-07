@@ -80,7 +80,8 @@ p {
   font-size: 16px;
   line-height: 24px;
   /*max-width: 600px; TODO: check if that is intended to do*/
-  max-with: 600px;
+  max-width: 600px;
+  text-align: left;
 }
 
 iframe {

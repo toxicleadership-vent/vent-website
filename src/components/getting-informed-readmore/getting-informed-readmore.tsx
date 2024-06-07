@@ -32,7 +32,7 @@ const GettingInformedReadMore = async ({
     <Container fluid className={styles.sectionOrange}>
       <div className={styles.text}>
         <h1 className={styles.heading1}> {t('title')}</h1>
-        <p className={"sectionIntro"}>{t('description')}</p>
+        <p className={'sectionIntro'}>{t('description')}</p>
       </div>
       <div className={styles.subsection}>
         <Row className={`row-gap-4 gx-1 gy-1`} xs={1} md={2}>
@@ -44,10 +44,11 @@ const GettingInformedReadMore = async ({
                   href={t(`sections.${index}.link.href`)}
                 >
                   <Card bsPrefix="myCard" className={styles.myCard}>
-                    <img style={{marginBottom: 30}}
+                    <img
+                      style={{ marginBottom: 30 }}
                       src={t(`sections.${index}.image.src`)}
                       alt={t(`sections.${index}.image.alt`)}
-                      width={"173px"}
+                      width={'173px'}
                     />
                     <CardBody>
                       <CardTitle>

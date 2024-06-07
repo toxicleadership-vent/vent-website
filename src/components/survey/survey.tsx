@@ -170,10 +170,9 @@ const CalculatingScreen = ({
         className={styles.questioncardWrapper}
       >
         <div className={styles.question}>
-          <div className={styles.text}>{t('modal.calculating')}</div>
-          <div>
+          <p>{t('modal.calculating')}</p>
+          <div className={styles.buttonContainer}>
             <Button
-              className={styles.inlineButton}
               value={'true'}
               onClick={scrollIntoView}
               variant="light"
@@ -405,16 +404,18 @@ const CalculatingScreen = ({
             <p>{t(`modal.result.${probability}.text`)}</p>
           </div>
           <div>
+            <p>
             <Trans
               t={t}
               i18nKey={'modal.end'}
               components={{ Link: <Link target="_blank" href={'/contact'} /> }}
             />
+            </p>
           </div>
           <div>
-            {t('modal.feedback.text')}
+            <p>{t('modal.feedback.text')}</p>
             <form>
-              <div>
+              <div className={styles.buttonContainer}>
                 <ButtonGroup style={{ padding: '10px 0' }}>
                   <ToggleButton
                     key={1}
