@@ -24,6 +24,7 @@
 .modalbody {
   background-color: var(--background-green);
   overflow-y: hidden;
+  max-width: var(--global-max-width);
 }
 
 .questioncardWrapper {
@@ -48,10 +49,11 @@
   background-color: var(--background-light-green);
   padding: var(--survey-padding-desktop);
   border-radius: 15px;
+  max-width: var(--max-global-width);
 }
 
 .resultsCard {
-  width: 100%;
+  max-width: var(--global-max-width);
   background-color: var(--background-light-green);
   padding: 50px;
   border-radius: 15px;
@@ -100,7 +102,7 @@
 }
 
 .dropdownSelect {
-  width: 65vw;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
