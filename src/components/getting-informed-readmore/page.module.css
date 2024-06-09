@@ -8,7 +8,7 @@
 
 .myCard:hover {
   /* box-shadow: 8px 8px 8px lightblue; */
-  transform:scale(1.03);
+  transform: scale(1.03);
 }
 
 .text {

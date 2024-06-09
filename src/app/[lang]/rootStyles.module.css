@@ -6,7 +6,7 @@
 }
 
 .sectionContainer {
-  width: var(--global-max-width);
+  max-width: var(--global-max-width);
 }
 
 .button {

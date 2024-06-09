@@ -122,7 +122,7 @@ export const Question = ({
       className={styles.questioncardWrapper}
     >
       <div className={styles.question}>
-        <div className={styles.text}>{question}</div>
+        <p>{question}</p>
         <div className={styles.buttonContainer}>
           {answers.map((answer, answerIndex) => (
             <Button
@@ -132,19 +132,8 @@ export const Question = ({
               value={questionsMap[questionIndex][answerIndex]}
               onClick={scrollIntoView}
               onKeyDown={handleKeyDown}
-              onFocus={() => {
-                console.log(
-                  'ON FOCUS',
-                  'ACTIVE INCDEX',
-                  activeButtonIndex,
-                  document.activeElement?.innerHTML,
-                  activeButtonIndex === answerIndex && isActive
-                )
-                // setActiveButtonIndex(activeButtonIndex+1%3)
-              }}
               variant="light"
               key={answerIndex}
-              className={styles.answerButton}
               tabIndex={activeButtonIndex === answerIndex && isActive ? 0 : -1}
             >
               {answer}

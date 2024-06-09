@@ -53,7 +53,7 @@ export default async function About({ params: { lang } }: PageProps) {
             </Row>
             <Row>
               {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
-                index = index + 2;
+                index = index + 2
                 return (
                   <Col md={4} key={index}>
                     <Card bsPrefix="myCard" className={styles.myCard}>

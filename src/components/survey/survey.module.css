@@ -24,6 +24,7 @@
 .modalbody {
   background-color: var(--background-green);
   overflow-y: hidden;
+  max-width: var(--global-max-width);
 }
 
 .questioncardWrapper {
@@ -48,10 +49,11 @@
   background-color: var(--background-light-green);
   padding: var(--survey-padding-desktop);
   border-radius: 15px;
+  max-width: var(--max-global-width);
 }
 
 .resultsCard {
-  width: 100%;
+  max-width: var(--global-max-width);
   background-color: var(--background-light-green);
   padding: 50px;
   border-radius: 15px;
@@ -73,7 +75,7 @@
 /* survey entry */
 .surveyEntry {
   background-color: var(--background-light-yellow);
-  border-radius: 50px;
+  border-radius: var(--border-radius);
   padding: var(--survey-padding-desktop);
   max-width: 700px;
   display: flex;
@@ -90,11 +92,6 @@
   transition: all 0.5s ease;
 }
 
-.spinner {
-  text-align: center;
-  padding: 25px;
-}
-
 .inlineButton {
   margin-right: 16px;
 }
@@ -105,7 +102,7 @@
 }
 
 .dropdownSelect {
-  width: 65vw;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
