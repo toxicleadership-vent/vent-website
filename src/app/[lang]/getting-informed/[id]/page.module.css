@@ -15,10 +15,6 @@
   margin-top: var(--header-margin-top);
 }
 
-.sectionContainer {
-  padding-bottom: var(--padding-bottom-xl);
-}
-
 @media screen and (max-width: 768px) {
   .main {
     padding: var(--page-padding-small);

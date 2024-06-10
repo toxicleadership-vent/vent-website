@@ -23,7 +23,7 @@ export function useMDXComponents(components) {
         fluid
       />
     ),
-    // ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
+    ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
     hr: () => <hr className={styles.mdxHr}></hr>,
   }
 }

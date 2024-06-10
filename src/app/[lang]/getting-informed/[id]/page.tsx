@@ -18,7 +18,7 @@ export default function GettingInformedArticle({
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
       <div
-        className={` ${rootStyles.sectionContainer} ${styles.sectionContainer}`}
+        className={` ${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <ExperienceMdx />
       </div>
