@@ -3,14 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding: var(--page-padding-xl); */
 }
 
 .sectionContainer {
   max-width: var(--global-max-width);
 }
 
+.sectionContainerBottom {
+  padding-bottom: var(--padding-bottom-xl);
+}
+
 .button {
-  margin: 80px;
+  margin: var(--button-margin-xl);
   background-color: transparent;
   border-radius: var(--border-radius);
   padding: 10px 20px;
@@ -24,6 +29,42 @@
   color: white;
 }
 
-/* media queries */
+/* Size  L */
+@media screen and (max-width: 1200px) {
+  .section {
+    padding: var(--page-padding-l);
+  }
+  .button {
+    margin: var(--button-margin-l);
+  }
+}
+
+/* Size  M */
+@media screen and (max-width: 992px) {
+  .section {
+    padding: var(--page-padding-m);
+  }
+  .button {
+    margin: var(--button-margin-m);
+  }
+}
+
+/* Size  S */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: var(--page-padding-s);
+  }
+  .button {
+    margin: var(--button-margin-s);
+  }
+}
+
+/* Size  XS */
 @media screen and (max-width: 576px) {
+  .section {
+    padding: var(--page-padding-xs);
+  }
+  .button {
+    margin: var(--button-margin-xs);
+  }
 }

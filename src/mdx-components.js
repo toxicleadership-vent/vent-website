@@ -12,7 +12,7 @@ export function useMDXComponents(components) {
     // Allows customizing built-in components, e.g. to add styling.
     ...components,
     h1: ({ children }) => (
-      <h1 className={`${styles.heading1Mdx} ${styles.mdx}`}>{children}</h1>
+      <h1 className={`${styles.heading1Mdx}`}>{children}</h1>
     ),
     img: ({ src, alt, ...rest }) => (
       <Image
@@ -23,7 +23,7 @@ export function useMDXComponents(components) {
         fluid
       />
     ),
-    // ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
+    ul: ({ children }) => <ul className={`${styles.mdxUl}`}>{children}</ul>,
     hr: () => <hr className={styles.mdxHr}></hr>,
   }
 }

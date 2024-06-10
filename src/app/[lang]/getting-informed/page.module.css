@@ -1,27 +1,21 @@
 .page {
   background-color: var(--background-orange);
-  font-family: var(--font-poppins);
 }
 
 .main {
   margin-top: var(--header-margin-top);
-  padding: var(--page-padding-medium);
 }
 
-.text {
-  padding: var(--page-padding-small);
-}
-
-.title {
-  text-align: center;
-  font-size: 62px;
+.sectionContainer {
+  padding-bottom: var(--padding-bottom-xl);
 }
 
 .gettingInformed {
-  border-radius: 50px;
+  border-radius: var(--border-radius);
   padding: 30px;
   align-items: center;
   background-color: var(--background-light-blue);
+  margin: 0;
 }
 
 .link {
@@ -34,27 +28,42 @@
   font-weight: 600;
 }
 
-.sectionDescription {
-  font-size: 14px;
-  text-align: left;
-}
-
-.paragraph {
-  font-size: 1.4rem;
-  text-align: left;
-  padding-left: 4%;
-  padding-right: 4%;
-  font-weight: 400;
-  padding-bottom: 6%;
-}
-
 .cardText {
-  padding-left: 2em;
+  padding-left: 30px;
 }
 
+.cardImage {
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+/* Size L >= 992 <= 1200 */
+@media screen and (max-width: 1200px) {
+  .main {
+    padding: var(--page-padding-l);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-l);
+  }
+}
+
+/* Size M >=768 <=992 */
+@media screen and (max-width: 992px) {
+  .main {
+    padding: var(--page-padding-m);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-m);
+  }
+}
+
+/*Size S >= 576 <= 786 */
 @media screen and (max-width: 768px) {
   .main {
-    padding: var(--page-padding-small);
+    padding: var(--page-padding-s);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-s);
   }
   .paragraph {
     font-size: 1.5rem;
@@ -62,13 +71,28 @@
   .text {
     padding: 0;
   }
+
   .cardText {
-    padding-left: 1em;
+    padding-left: 0;
+  }
+
+  .cardImage {
+    width: 45%;
   }
 }
 
-@media screen and (min-width: 1400px) {
+/* Size XS<576 */
+@media screen and (max-width: 576px) {
   .main {
-    padding: var(--page-padding-large);
+    padding: var(--page-padding-xs);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-xs);
+  }
+  .cardText {
+    padding-left: 0;
+  }
+  .cardImage {
+    width: 70%;
   }
 }

@@ -1,6 +1,5 @@
 .page {
   background-color: var(--background-light-blue);
-  font-family: var(--font-poppins);
 }
 
 .page * > img {
@@ -13,7 +12,6 @@
 }
 
 .main {
-  padding: 100px 100px 20px;
   margin-top: var(--header-margin-top);
 }
 

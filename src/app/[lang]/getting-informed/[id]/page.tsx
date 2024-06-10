@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
-
 import styles from './page.module.css'
+import rootStyles from '../../rootStyles.module.css'
 
 export default function GettingInformedArticle({
   params,
@@ -16,8 +16,12 @@ export default function GettingInformedArticle({
     }
   )
   return (
-    <main className={styles.main}>
-      <ExperienceMdx />
+    <main className={`${rootStyles.section} ${styles.main}`}>
+      <div
+        className={` ${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
+      >
+        <ExperienceMdx />
+      </div>
     </main>
   )
 }

@@ -11,6 +11,7 @@ import {
 } from '../bootstrap/bootstrap'
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
+import rootStyles from '../../app/[lang]/rootStyles.module.css'
 import copyInformed from '@/localization/getting-informed/en.json'
 
 const GettingInformedOverview = async ({ lang }: { lang: string }) => {
@@ -19,9 +20,12 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
   })
 
   return (
-    <Container fluid className={styles.sectionOrange}>
+    <Container
+      fluid
+      className={`${styles.sectionOrange} ${rootStyles.section}`}
+    >
       <div className={styles.text}>
-        <h1> {t('title')}</h1>
+        <h1>{t('title')}</h1>
         <p className={'sectionIntro'}>{t('description')}</p>
       </div>
       <div className={styles.subsection}>

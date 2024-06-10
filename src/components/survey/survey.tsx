@@ -172,11 +172,7 @@ const CalculatingScreen = ({
         <div className={styles.question}>
           <p>{t('modal.calculating')}</p>
           <div className={styles.buttonContainer}>
-            <Button
-              value={'true'}
-              onClick={scrollIntoView}
-              variant="light"
-            >
+            <Button value={'true'} onClick={scrollIntoView} variant="light">
               {t('answers.0')}
             </Button>
             <Button value={'false'} onClick={scrollIntoView} variant="light">
@@ -405,11 +401,13 @@ const CalculatingScreen = ({
           </div>
           <div>
             <p>
-            <Trans
-              t={t}
-              i18nKey={'modal.end'}
-              components={{ Link: <Link target="_blank" href={'/contact'} /> }}
-            />
+              <Trans
+                t={t}
+                i18nKey={'modal.end'}
+                components={{
+                  Link: <Link target="_blank" href={'/contact'} />,
+                }}
+              />
             </p>
           </div>
           <div>

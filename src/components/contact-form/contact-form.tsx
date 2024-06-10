@@ -147,7 +147,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
       {success && <p className={styles.errorList}>{t('contact.success')}</p>}
       {failed && <p className={styles.errorList}>{t('contact.error')}</p>}
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form style={{ width: '100%' }} onSubmit={handleSubmit(onSubmit)}>
         <Stack style={{ paddingRight: 16 }}>
           <Row>
             {Object.keys(errors).length > 0 && (
