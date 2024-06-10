@@ -1,11 +1,9 @@
 .page {
   background-color: var(--background-orange);
-  font-family: var(--font-poppins);
 }
 
 .main {
   margin-top: var(--header-margin-top);
-  padding: var(--page-padding-medium);
 }
 
 .text {

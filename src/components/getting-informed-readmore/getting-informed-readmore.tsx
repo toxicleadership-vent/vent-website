@@ -11,6 +11,7 @@ import {
 } from '../bootstrap/bootstrap'
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
+import rootStyles from '../../app/[lang]/rootStyles.module.css'
 import copyInformed from '@/localization/getting-informed/en.json'
 
 const GettingInformedReadMore = async ({
@@ -29,12 +30,15 @@ const GettingInformedReadMore = async ({
   }
 
   return (
-    <Container fluid className={styles.sectionOrange}>
+    <Container
+      fluid
+      className={` ${rootStyles.sectionContainer} ${rootStyles.section}`}
+    >
       <div className={styles.text}>
-        <h1 className={styles.heading1}> {t('title')}</h1>
+        <h1> {t('title')}</h1>
         <p className={'sectionIntro'}>{t('description')}</p>
       </div>
-      <div className={styles.subsection}>
+      <div>
         <Row className={`row-gap-4 gx-1 gy-1`} xs={1} md={2}>
           {copyInformed['getting-informed'].sections
             .map((_section, index) => (
@@ -63,7 +67,7 @@ const GettingInformedReadMore = async ({
         </Row>
       </div>
       <Link href={t('button.href')}>
-        <button className={styles.button}>{t('button.text')}</button>
+        <button className={rootStyles.button}>{t('button.text')}</button>
       </Link>
     </Container>
   )
