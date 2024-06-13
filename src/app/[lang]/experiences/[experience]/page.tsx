@@ -2,6 +2,7 @@ import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import dynamic from 'next/dynamic'
 import copy from '@/localization/experiences/en.json'
+import rootStyles from '../../rootStyles.module.css'
 
 export default async function Experience({
   params,
@@ -52,58 +53,58 @@ export default async function Experience({
     }
   )
   return (
-    <main className={styles.main}>
-      <div style={{ textAlign: 'center' }}>
-        <p style={{ textTransform: 'uppercase' }}>{t('title')}</p>
-        <h1>
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}
-        </h1>
-        <p>
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.length`)}
-        </p>
-        <div
-          className={styles.articleImage}
-          style={{
-            backgroundImage: `url(${t(
-              `categories.${categoryIndex}.articles.${articleIndex}.image.href`
-            )})`,
-          }}
-        ></div>
-        <hr></hr>
-        <p
-          style={{
-            textAlign: 'left',
-            textTransform: 'uppercase',
-            fontSize: '0.9rem',
-          }}
-        >
-          <strong>{t(`companyType`)}</strong>
-          <br></br>
-          <span>{t(`categories.${categoryIndex}.title`)}</span>
-          <br></br>
-          <br></br>
-          <strong>
-            {t(
-              `categories.${categoryIndex}.articles.${articleIndex}.tag_title`
-            )}
-          </strong>
-          <br></br>
-          {copy.categories[categoryIndex].articles[articleIndex].tags.map(
-            (tag, index) => (
-              <>
-                <span>
-                  {t(
-                    `categories.${categoryIndex}.articles.${articleIndex}.tags.${index}`
-                  )}
-                </span>
-                <br></br>
-              </>
-            )
-          )}
-        </p>
-        <hr></hr>
+    <main className={`${rootStyles.section} ${styles.main}`}>
+      <div
+        className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
+      >
+        <div>
+          <p className={styles.h1Breadcrumb}>{t('title')}</p>
+          <h1 style={{ padding: 0 }}>
+            {t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}
+          </h1>
+          <span className="smallText">
+            {t(`categories.${categoryIndex}.articles.${articleIndex}.length`)}
+          </span>
+          <div
+            className={styles.articleImage}
+            style={{
+              backgroundImage: `url(${t(
+                `categories.${categoryIndex}.articles.${articleIndex}.image.href`
+              )})`,
+            }}
+          ></div>
+          <div className={styles.container}>
+            <p style={{ textTransform: 'uppercase' }} className="smallText">
+              <strong>{t(`companyType`)}</strong>
+              <br></br>
+              <span style={{ textTransform: 'none' }}>
+                {t(`categories.${categoryIndex}.title`)}
+              </span>
+              <br></br>
+              <br></br>
+              <strong>
+                {t(
+                  `categories.${categoryIndex}.articles.${articleIndex}.tag_title`
+                )}
+              </strong>
+              <br></br>
+              {copy.categories[categoryIndex].articles[articleIndex].tags.map(
+                (tag, index) => (
+                  <>
+                    <span style={{ textTransform: 'none' }}>
+                      {t(
+                        `categories.${categoryIndex}.articles.${articleIndex}.tags.${index}`
+                      )}
+                    </span>
+                    <br></br>
+                  </>
+                )
+              )}
+            </p>
+          </div>
+        </div>
+        <ExperienceMdx />
       </div>
-      <ExperienceMdx />
     </main>
   )
 }

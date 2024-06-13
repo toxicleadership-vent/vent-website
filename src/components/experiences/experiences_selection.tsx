@@ -31,12 +31,12 @@ export const ExperienceSelection = async ({
         fluid
         style={{ marginBottom: '1rem' }}
       />
-      <h4>{t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}</h4>
+      <h3>{t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}</h3>
       <div className={styles.tags}>
-        <h5>
+        <span className="smallBold">
           {t(`categories.${categoryIndex}.articles.${articleIndex}.tag_title`)}
-        </h5>
-        <ListGroup bsPrefix="list">
+        </span>
+        <ListGroup bsPrefix="list" className={`small`}>
           {copy.categories[categoryIndex].articles[articleIndex].tags.map(
             (tag, index) => {
               return (
@@ -50,12 +50,12 @@ export const ExperienceSelection = async ({
           )}
         </ListGroup>
       </div>
-      <p>
+      <p className="textIntro">
         {t(`categories.${categoryIndex}.articles.${articleIndex}.abstract`)}
       </p>
       {t(`categories.${categoryIndex}.articles.${articleIndex}.link.state`) ===
       'coming soon' ? (
-        <p>Coming soon</p>
+        <p className={styles.link}>Coming soon</p>
       ) : (
         <Link
           className={styles.link}

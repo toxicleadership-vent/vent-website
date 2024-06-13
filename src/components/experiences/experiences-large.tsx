@@ -2,6 +2,7 @@ import { Stack, Container, Row, Col } from '@/components/bootstrap/bootstrap'
 import copy from '@/localization/experiences/en.json'
 import { getTranslation } from '@/localization/i18n'
 import styles from './experiences.module.css'
+import rootStyles from '../../app/[lang]/rootStyles.module.css'
 import { ExperienceSelection } from './experiences_selection'
 
 export const ExperienceCategory = async ({
@@ -14,18 +15,16 @@ export const ExperienceCategory = async ({
   const { t } = await getTranslation(lang, 'experiences')
 
   return (
-    <Container key={categoryIndex} className={styles.section}>
-      <h3>{t(`categories.${categoryIndex}.title`)}</h3>
-      <p>{t(`categories.${categoryIndex}.description`)}</p>
+    <div key={categoryIndex} className={styles.section}>
+      <h2>{t(`categories.${categoryIndex}.title`)}</h2>
+      <p className="textIntro">
+        {t(`categories.${categoryIndex}.description`)}
+      </p>
       <div key={categoryIndex}>
-        <Row className={'align-items-start'}>
+        <Row>
           {copy.categories[categoryIndex].articles?.map(
             (article, articleIndex) => (
-              <Col
-                className={styles.experienceSelection}
-                key={articleIndex}
-                md={6}
-              >
+              <Col key={articleIndex} md={6} className={styles.bottom}>
                 <ExperienceSelection
                   key={`${categoryIndex}-${articleIndex}`}
                   lang={lang}
@@ -37,7 +36,7 @@ export const ExperienceCategory = async ({
           )}
         </Row>
       </div>
-    </Container>
+    </div>
   )
 }
 
@@ -74,19 +73,25 @@ export const ExperienceOverviewArticle = async ({
 }) => {
   const { t } = await getTranslation(lang, 'experiences')
   return (
-    <Stack gap={5} className={styles.main}>
-      <h1 className={styles.title}>{t('alternativeTitle')}</h1>
-      <Stack gap={5}>
-        {categories.map((category, categoryIndex) => {
-          return (
-            <ExperienceCategory
-              key={categoryIndex}
-              lang={lang}
-              categoryIndex={category}
-            />
-          )
-        })}
-      </Stack>
-    </Stack>
+    <section className={`${rootStyles.section} ${styles.main}`}>
+      <div
+        className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
+      >
+        <Stack>
+          <h1>{t('alternativeTitle')}</h1>
+          <Stack gap={5}>
+            {categories.map((category, categoryIndex) => {
+              return (
+                <ExperienceCategory
+                  key={categoryIndex}
+                  lang={lang}
+                  categoryIndex={category}
+                />
+              )
+            })}
+          </Stack>
+        </Stack>
+      </div>
+    </section>
   )
 }
