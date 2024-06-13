@@ -1,29 +1,5 @@
 .main {
   background-color: var(--background-green);
-  font-family: var(--font-poppins);
-  padding: 100px 100px;
-}
-.text {
-  padding: var(--page-padding-medium);
-}
-
-.title {
-  text-align: center;
-}
-
-.paragraph {
-  text-align: left;
-  font-size: 2rem;
-}
-
-.paragraphSmall {
-  font-size: 1.5rem;
-}
-
-.section {
-  background-color: var(--background-light-green);
-  border-radius: 25px;
-  padding: 50px 50px;
 }
 
 .link {
@@ -35,75 +11,40 @@
   font-weight: 600;
 }
 
-.myCard {
-  padding: 0;
-  border: 1px solid red;
-}
-
-.experience {
+.section {
   background-color: var(--background-light-green);
-}
-
-.articlesWrapper {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 15px;
-}
-
-.wrapper {
-  grid-column: span 2;
-  background: red;
-}
-.wrapper:nth-child(-n + 2) {
-  grid-column: span 3;
-}
-
-.background-light {
-  background-color: var(--background-light-green);
+  border-radius: 30px;
+  padding: 48px;
+  text-align: left;
 }
 
 .tags {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  margin: 1rem 0;
+  margin: 8px 0 24px;
+  padding: 10px 0;
 }
 
-.buttonWrapper {
-  text-align: center;
-}
-.button {
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  padding: 15px 50px;
-  border: 1px solid black;
-  transition: all 0.5s ease;
+@media screen and (max-width: 1200px) {
+  .section {
+    padding: 48px;
+  }
 }
 
-.button:hover {
-  background-color: black;
-  color: white;
+@media screen and (max-width: 992px) {
+  .section {
+    border-radius: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .main {
-    padding: 32px;
-  }
-
-  .text {
-    padding: 0;
-  }
-  .experienceSelection {
-    padding-bottom: 32px;
-  }
-  .paragraph {
-    font-size: 1.5rem;
-  }
   .section {
-    padding: 32px;
+    padding: 24px;
+  }
+  .bottom:first-child {
+    padding-bottom: 48px;
   }
 }
-@media screen and (min-width: 1400px) {
-  .text {
-    padding: var(--page-padding-large);
-  }
+
+@media screen and (max-width: 576) {
 }
