@@ -22,7 +22,7 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
   return (
     <Container
       fluid
-      className={`${styles.sectionOrange} ${rootStyles.section}`}
+      className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
     >
       <div className={styles.text}>
         <h1>{t('title')}</h1>

@@ -139,7 +139,7 @@ export default async function Contact({ params }: { params: PageParams }) {
               </AccordionItem>
             </Accordion>
             <div style={{ marginTop: 24 }}>
-              <h2 className={styles.linksTitle}>{t('support.link-title')}</h2>
+              <h2>{t('support.link-title')}</h2>
               <Row className={styles.linkWrapper}>
                 <Col md={6} className={styles.linkColumn}>
                   <div className={styles.linkWrapper}>

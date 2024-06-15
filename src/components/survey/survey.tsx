@@ -397,7 +397,16 @@ const CalculatingScreen = ({
         <div className={`${styles.resultsCard} `}>
           <div className={styles.text}>
             <h3>{t(`modal.result.${probability}.title`)}</h3>
-            <p>{t(`modal.result.${probability}.text`)}</p>
+            <p>
+              {' '}
+              <Trans
+                t={t}
+                i18nKey={`modal.result.${probability}.text`}
+                components={{
+                  Link: <Link target="_blank" href={'/support'} />,
+                }}
+              />
+            </p>
           </div>
           <div>
             <p>
