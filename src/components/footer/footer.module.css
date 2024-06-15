@@ -1,13 +1,13 @@
 .footerContainer {
-  background-color: #408cff;
-  padding-left: 10%;
-  padding-right: 10%;
+  background-color: #fffbf1;
+  padding: 24px 64px 16px 64px;
   align-items: center;
 }
 
 .footerNavigation {
   display: flex;
   justify-content: space-between;
+  margin: 0 -0.5rem;
 }
 
 .footerNavigation .link {
@@ -25,12 +25,29 @@
   align-items: center;
 }
 
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 48px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
 .logoContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 50px;
+  padding-top: 56px;
+}
+
+.logoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .subtitle {

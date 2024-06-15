@@ -7,12 +7,6 @@ import { Poppins } from 'next/font/google'
 import { Work_Sans } from 'next/font/google'
 import Footer from '@/components/footer/footer'
 import { getTranslation } from '@/localization/i18n'
-import styles from './page.module.css'
-import Image from 'next/image'
-import logo2 from '../../../public/images/home/eu_logo.jpeg'
-import logo4 from '../../../public/images/home/berlin_logo.png'
-import logo1 from '../../../public/images/home/hwr_sib_logo_1.jpg'
-import logo3 from '../../../public/images/home/esf_logo_land_berlin.png'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -174,12 +168,6 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${worksans.variable}`}>
         {children}
         <Footer lang={params.lang} />
-        <div className={styles.logo}>
-          <Image src={logo1} height={100} width={120} alt="logo SIB" />
-          <Image src={logo2} height={100} width={120} alt="logo EU" />
-          <Image src={logo3} height={100} width={120} alt="logo ESF Berlin" />
-          <Image src={logo4} height={100} width={120} alt="logo Berlin" />
-        </div>
         <Analytics />
       </body>
     </html>

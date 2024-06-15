@@ -88,6 +88,15 @@
             "title": "Connect on LinkedIn",
             "href": "https://www.linkedin.com/in/adenikeamoadebiyi/"
           }
+        },
+        {
+          "name": "Heather McDonnell",
+          "image": "/images/about/collaborators/heather.jpg",
+          "cv": "Heather is a Registered Nurse and Certified Case Manager with expertise in high-risk obstetric and neonatal care management. Her 23-year nursing career has been dedicated to caring for marginalized populations and advocating to address healthcare disparities in the US, particularly in underserved communities. At Vent, Heather is researching the impact of toxic workplaces on patient outcomes and the role of peer mentorship to support survivors of workplace abuse.",
+          "linkedin": {
+            "title": "Connect on LinkedIn",
+            "href": "https://www.linkedin.com/in/heather-mcdonnell-bsn-rn-ccm-7562204/"
+          }
         }
       ]
     },
