@@ -1,16 +1,31 @@
 import Link from 'next/link'
 import { getTranslation } from './../../localization/i18n'
 import styles from './footer.module.css'
-import { Nav, NavItem, NavLink } from '@/components/bootstrap/bootstrap'
+import { Nav, NavItem, NavLink,  Row, Col } from '@/components/bootstrap/bootstrap'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 import Image from 'next/image'
 import logo from '../../../public/images/logo_black.png'
+import logo2 from '../../../public/images/home/eu_logo.jpeg'
+import logo4 from '../../../public/images/home/berlin_logo.png'
+import logo1 from '../../../public/images/home/hwr_sib_logo_1.jpg'
+import logo3 from '../../../public/images/home/esf_logo_land_berlin.png'
+
+
 
 const Footer = async ({ lang }: { lang: string }) => {
   const { t } = await getTranslation(lang, 'general', { keyPrefix: 'footer' })
 
   return (
     <div className={styles.footerContainer}>
+      <div className={styles.logos}>
+        <p>Sponsored by</p>
+        <Row><Col>
+        <Image src={logo1} height={100} width={120} alt="logo SIB" /></Col><Col>
+<Image src={logo2} height={100} width={120} alt="logo EU" /></Col><Col>
+<Image src={logo3} height={100} width={120} alt="logo ESF Berlin" /></Col><Col>
+<Image src={logo4} height={100} width={120} alt="logo Berlin" /></Col>
+        </Row>
+      </div>
       <Nav
         className={`justify-content-between ${styles.footerNavigation}`}
         activeKey="/home"

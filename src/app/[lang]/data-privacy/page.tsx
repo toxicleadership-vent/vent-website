@@ -13,7 +13,6 @@ export default async function Imprint({ params }: { params: PageParams }) {
       <div
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
-        {' '}
         <Stack className={styles.text}>
           <PrivacyMdx></PrivacyMdx>
         </Stack>
