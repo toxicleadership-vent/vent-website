@@ -3,7 +3,7 @@
   border-radius: var(--border-radius);
   padding: 40px;
   cursor: pointer;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 .myCard:hover {
@@ -26,14 +26,6 @@
   color: black;
   cursor: pointer;
   text-decoration: none;
-}
-
-.sectionOrange {
-  font-family: var(--font-poppins);
-  font-weight: 600;
-  text-align: center;
-  background-color: var(--background-orange);
-  padding: 100px;
 }
 
 .subsection {

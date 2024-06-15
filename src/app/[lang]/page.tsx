@@ -89,8 +89,18 @@ export default async function Home({ params: { lang } }: PageProps) {
             </button>
           </Link>
         </Container>
-        <GettingInformedOverview lang={lang} />
-        <ExperienceOverview lang={lang} />
+        <Container
+          fluid
+          className={`${styles.sectionOrange} ${rootStyles.section}`}
+        >
+          <GettingInformedOverview lang={lang} />
+        </Container>
+        <Container
+          fluid
+          className={`${styles.sectionGreen} ${rootStyles.section}`}
+        >
+          <ExperienceOverview lang={lang} />
+        </Container>
       </Stack>
     </main>
   )

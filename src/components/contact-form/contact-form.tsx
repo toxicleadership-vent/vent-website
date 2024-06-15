@@ -27,13 +27,14 @@ const customStyles = {
   control: (provided: any, state: any) => ({
     ...provided,
     padding: '10px',
-    borderRadius: '50px',
+    borderRadius: '16px',
     borderStyle: 'solid',
     margin: '10px',
     width: '100%',
     border: 'none',
     fontSize: '12px',
     textTransform: 'uppercase',
+    textAlign: 'left',
   }),
 }
 

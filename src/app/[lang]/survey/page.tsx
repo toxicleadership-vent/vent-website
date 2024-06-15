@@ -3,7 +3,6 @@ import { PageParams } from '../layout'
 import { Survey } from '@/components/survey/survey'
 import styles from './page.module.css'
 import { cookies } from 'next/headers'
-import { useEffect } from 'react'
 
 export default async function Contact({ params }: { params: PageParams }) {
   const { t } = await getTranslation(params.lang, 'survey')

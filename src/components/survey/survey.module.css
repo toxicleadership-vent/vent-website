@@ -24,7 +24,6 @@
 .modalbody {
   background-color: var(--background-green);
   overflow-y: hidden;
-  max-width: var(--global-max-width);
 }
 
 .questioncardWrapper {
