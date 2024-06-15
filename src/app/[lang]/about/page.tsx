@@ -23,7 +23,6 @@ export default async function About({ params: { lang } }: PageProps) {
       <div
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
-        {' '}
         <div className={styles.topWrapper}>
           <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.paragraph}>{t('description')}</p>
