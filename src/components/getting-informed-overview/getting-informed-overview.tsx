@@ -20,44 +20,43 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
   })
 
   return (
-    <Container
-      fluid
+    <div
       className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
     >
-      <div className={styles.text}>
+      <div>
         <h1>{t('title')}</h1>
         <p className={'sectionIntro'}>{t('description')}</p>
       </div>
       <div className={styles.subsection}>
-        <Row className={`g-1 row-gap-4`} xs={1} sm={2} md={3}>
+        <Row className={`g-4`} xs={1} sm={2} md={3}>
           {copyInformed['getting-informed'].sections.map((_section, index) => (
-            <Container key={index}>
+            <div key={index}>
               <Link
                 className={styles.myCardTitle}
                 href={t(`sections.${index}.link.href`)}
               >
                 <Card bsPrefix="myCard" className={styles.myCard}>
-                  <CardImg
-                    variant="top"
+                  <img
+                    style={{ marginBottom: 30 }}
                     src={t(`sections.${index}.image.src`)}
                     alt={t(`sections.${index}.image.alt`)}
-                    width={100}
+                    width={'173px'}
                   />
                   <CardBody>
                     <CardTitle className={styles.myCardTitle}>
-                      {t(`sections.${index}.title`)}
+                      <h3>{t(`sections.${index}.title`)}</h3>
                     </CardTitle>
                   </CardBody>
                 </Card>
               </Link>
-            </Container>
+            </div>
           ))}
         </Row>
       </div>
       <Link href={t('button.href')}>
-        <button className={styles.button}>{t('button.text')}</button>
+        <button className={rootStyles.button}>{t('button.text')}</button>
       </Link>
-    </Container>
+    </div>
   )
 }
 
