@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: var(--page-padding-xl); */
+  padding: var(--page-padding-xl);
 }
 
 .sectionContainer {

@@ -1,58 +1,35 @@
 .page {
   background-color: var(--background-light-blue);
-  font-family: var(--font-poppins);
   white-space: initial;
 }
 
 .main {
   margin-top: 61px;
-  padding: var(--page-padding-medium);
 }
 
-.container {
-  margin-bottom: 50px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .midWrapper {
-  padding: 0 80px;
+  max-width: 600px;
 }
 
 .myCard {
   margin-bottom: 20px;
+  text-align: left;
+}
+
+.list {
+  text-align: left;
+  font-family: var(--font-workSans);
 }
 
 .cardImg {
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
-.button {
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  padding: 15px 50px;
-  border: 1px solid black;
-  transition: all 0.5s ease;
-}
-
-.button:hover {
-  background-color: black;
-  color: white;
-}
-
-.row {
-  display: flex;
-  margin-bottom: 2rem;
-}
-.col {
-  flex: 1;
-}
-
-.mdx {
-  padding: 2rem 0 0;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 50px;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .link {
@@ -64,56 +41,22 @@
   font-weight: 600;
 }
 
-.topWrapper {
-  padding: 0 80px;
-}
-
 .contactWrapper {
   text-align: center;
-  padding: 50px 0 80px;
+  max-width: 600px;
+}
+
+.column {
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    padding: var(--page-padding-small);
-  }
-
-  .title {
-    margin-bottom: 0;
-  }
-
-  .mdx {
-    padding: 0;
-  }
-  .experienceSelection {
-    padding-bottom: 32px;
-  }
-  .topWrapper {
-    padding: 0;
-  }
-  .midWrapper {
-    padding: 0;
-  }
-  .contactWrapper {
-    text-align: center;
-    padding: 0;
   }
 }
 
-.paragraph {
-  text-align: left;
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  .paragraph {
-    font-size: 1.5rem;
-    padding-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .main {
-    padding: var(--page-padding-large);
+@media screen and (max-width: 576px) {
+  .column {
+    margin-bottom: 40px;
   }
 }

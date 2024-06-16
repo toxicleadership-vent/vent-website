@@ -3,11 +3,10 @@
   border-radius: var(--border-radius);
   padding: 30px;
   cursor: pointer;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 .myCard:hover {
-  /* box-shadow: 8px 8px 8px lightblue; */
   transform: scale(1.03);
 }
 
