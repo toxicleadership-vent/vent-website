@@ -25,7 +25,7 @@ export default async function About({ params: { lang } }: PageProps) {
       >
         <div className={styles.wrapper}>
           <h1>{t('title')}</h1>
-          <p>{t('description')}</p>
+          <p className="sectionIntro">{t('description')}</p>
           <div className={styles.midWrapper}>
             <h2>{t('section.title')}</h2>
             <p>{t('section.paragraph')}</p>
