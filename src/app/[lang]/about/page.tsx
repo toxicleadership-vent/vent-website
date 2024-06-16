@@ -31,104 +31,100 @@ export default async function About({ params: { lang } }: PageProps) {
             <p>{t('section.paragraph')}</p>
             <p>{t('section.listHeading')}</p>
             <ul>
-              {[0,1,2,3].map((index) => (
-                <li className={styles.list} key={index}>{t(`section.list.${index}`)}</li>
+              {[0, 1, 2, 3].map((index) => (
+                <li className={styles.list} key={index}>
+                  {t(`section.list.${index}`)}
+                </li>
               ))}
             </ul>
             <div className={styles.mdx}>
               <MdxText />
             </div>
           </div>
-            <Container className={styles.container}>
-              <h1>
-                {t('team.title')}
-              </h1>
-              <Row>
-                {copy.about.team?.members
-                  .slice(0, 2)
-                  .map((teamMember, index) => {
-                    return (
-                      <Col md={6} key={index}>
-                        <Card bsPrefix="myCard" className={styles.myCard}>
-                          <CardImg
-                            className={styles.cardImg}
-                            variant="top"
-                            src={t(`team.members.${index}.image`)}
-                          />
-                          <CardHeader>
-                            <h4>{t(`team.members.${index}.name`)}</h4>
-                            <h4>{t(`team.members.${index}.position`)}</h4>
-                          </CardHeader>
-                          <CardBody><p>{t(`team.members.${index}.cv`)}</p></CardBody>
-                        </Card>
-                      </Col>
-                    )
-                  })}
-              </Row>
-              <Row>
-                {copy.about.team?.members
-                  .slice(2, 5)
-                  .map((teamMember, index) => {
-                    index = index + 2
-                    return (
-                      <Col md={4} key={index}>
-                        <Card bsPrefix="myCard" className={styles.myCard}>
-                          <CardImg
-                            className={styles.cardImg}
-                            variant="top"
-                            src={t(`team.members.${index}.image`)}
-                          />
-                          <CardHeader>
-                            <h4>{t(`team.members.${index}.name`)}</h4>
-                            <h4>{t(`team.members.${index}.position`)}</h4>
-                          </CardHeader>
-                          <CardBody><p>{t(`team.members.${index}.cv`)}</p></CardBody>
-                        </Card>
-                      </Col>
-                    )
-                  })}
-              </Row>
-            </Container>
-            <Container className={styles.container}>
-              <h1>
-                {t('collaborators.title')}
-              </h1>
-              <Row>
-                {copy.about.collaborators?.members.map((teamMember, index) => {
-                  return (
-                    <Col md={4} key={index}>
-                      <Card bsPrefix="myCard" className={styles.myCard}>
-                        <CardImg
-                          className={styles.cardImg}
-                          variant="top"
-                          src={t(`collaborators.members.${index}.image`)}
-                        />
-                        <CardHeader>
-                          <h4>{t(`collaborators.members.${index}.name`)}</h4>
-                        </CardHeader>
-                        <CardBody>
-                          <p>{t(`collaborators.members.${index}.cv`)}</p>
+          <Container className={styles.container}>
+            <h1>{t('team.title')}</h1>
+            <Row>
+              {copy.about.team?.members.slice(0, 2).map((teamMember, index) => {
+                return (
+                  <Col md={6} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`team.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`team.members.${index}.name`)}</h4>
+                        <h4>{t(`team.members.${index}.position`)}</h4>
+                      </CardHeader>
+                      <CardBody>
+                        <p>{t(`team.members.${index}.cv`)}</p>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+            <Row>
+              {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
+                index = index + 2
+                return (
+                  <Col md={4} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`team.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`team.members.${index}.name`)}</h4>
+                        <h4>{t(`team.members.${index}.position`)}</h4>
+                      </CardHeader>
+                      <CardBody>
+                        <p>{t(`team.members.${index}.cv`)}</p>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
+          <Container className={styles.container}>
+            <h1>{t('collaborators.title')}</h1>
+            <Row>
+              {copy.about.collaborators?.members.map((teamMember, index) => {
+                return (
+                  <Col md={4} key={index}>
+                    <Card bsPrefix="myCard" className={styles.myCard}>
+                      <CardImg
+                        className={styles.cardImg}
+                        variant="top"
+                        src={t(`collaborators.members.${index}.image`)}
+                      />
+                      <CardHeader>
+                        <h4>{t(`collaborators.members.${index}.name`)}</h4>
+                      </CardHeader>
+                      <CardBody>
+                        <p>{t(`collaborators.members.${index}.cv`)}</p>
 
-                          <Link
-                            className={styles.link}
-                            href={t(
-                              `collaborators.members.${index}.linkedin.href`
-                            )}
-                          >
-                            {t(`collaborators.members.${index}.linkedin.title`)}
-                          </Link>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  )
-                })}
-              </Row>
-            </Container>
+                        <Link
+                          className={styles.link}
+                          href={t(
+                            `collaborators.members.${index}.linkedin.href`
+                          )}
+                        >
+                          {t(`collaborators.members.${index}.linkedin.title`)}
+                        </Link>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
         </div>
         <Container>
-          <h1>
-            {t('media.title')}
-          </h1>
+          <h1>{t('media.title')}</h1>
         </Container>
         <Row>
           <Col xs={12} sm={6} md={4} className={styles.column}>
@@ -164,7 +160,8 @@ export default async function About({ params: { lang } }: PageProps) {
               bottom={t('media.video.1.bottom')}
             />
           </Col>
-        </Row><Row>
+        </Row>
+        <Row>
           <Col md={12} className={styles.column}>
             <iframe
               style={{ borderRadius: 12 }}
@@ -176,7 +173,8 @@ export default async function About({ params: { lang } }: PageProps) {
               id="spreaker-player-670167"
             ></iframe>
           </Col>
-      </Row><Row>
+        </Row>
+        <Row>
           <Col md={12} className={styles.column}>
             <iframe
               style={{ borderRadius: 12 }}
@@ -189,7 +187,8 @@ export default async function About({ params: { lang } }: PageProps) {
               loading="lazy"
             ></iframe>
           </Col>
-      </Row><Row>
+        </Row>
+        <Row>
           <Col md={12} className={styles.column}>
             <iframe
               style={{ borderRadius: 12 }}
@@ -204,9 +203,11 @@ export default async function About({ params: { lang } }: PageProps) {
           </Col>
         </Row>
         <Container className={styles.contactWrapper}>
-          <h3 style={{textAlign: 'left'}}>{t('contact')}</h3>
+          <h3 style={{ textAlign: 'left' }}>{t('contact')}</h3>
           <Link href={t('contactButton.href')}>
-            <button className={rootStyles.button}>{t('contactButton.text')}</button>
+            <button className={rootStyles.button}>
+              {t('contactButton.text')}
+            </button>
           </Link>
         </Container>
       </div>

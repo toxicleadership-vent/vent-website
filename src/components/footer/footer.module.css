@@ -59,7 +59,9 @@
   text-transform: uppercase;
 }
 
-.socials { align-items: center;}
+.socials {
+  align-items: center;
+}
 
 .social {
   color: black;
@@ -109,12 +111,7 @@
     width: 100%;
     margin-top: 56px;
   }
-
 }
-
-
 
 @media screen and (max-width: 576px) {
-
 }
-
