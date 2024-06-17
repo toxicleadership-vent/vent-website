@@ -10,7 +10,7 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
   const { t } = await getTranslation(lang, 'experiences')
 
   return (
-    <Stack gap={5} className={`${rootStyles.section}`}>
+    <section className={`${rootStyles.section}`}>
       <div
         className={` ${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
@@ -43,6 +43,6 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
           </Link>
         </Stack>
       </div>
-    </Stack>
+    </section>
   )
 }

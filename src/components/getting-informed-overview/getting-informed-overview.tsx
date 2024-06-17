@@ -20,6 +20,8 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
   })
 
   return (
+    <section className={`${rootStyles.section}`}>
+
     <div
       className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
     >
@@ -44,7 +46,7 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
                   />
                   <CardBody>
                     <CardTitle className={styles.myCardTitle}>
-                      <h3>{t(`sections.${index}.title`)}</h3>
+                      <h3 style={{textAlign: 'center'}}>{t(`sections.${index}.title`)}</h3>
                     </CardTitle>
                   </CardBody>
                 </Card>
@@ -57,6 +59,7 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
         <button className={rootStyles.button}>{t('button.text')}</button>
       </Link>
     </div>
+    </section>
   )
 }
 

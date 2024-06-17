@@ -24,20 +24,14 @@ export default async function Home({ params: { lang } }: PageProps) {
     <main className={styles.main}>
       <Header language={lang} color="#408CFF" lightColor="#98C1FF" />
       <Stack>
-        <Container fluid>
-          <Row className={`align-items-center ${styles.hero}`}>
-            <Col sm={6} md={6}>
-              <h1 className={styles.heroText}>{t('title')}</h1>
-            </Col>
-            <Col sm={6} md={6}>
-              <BootstrapImage
-                src="/images/home/hero.svg"
-                fluid
-                alt="hero image"
-              />
-            </Col>
-          </Row>
-        </Container>
+        <div
+          className={`${styles.sectionBlue} ${rootStyles.section}`}
+        >
+        <div className={styles.heroBanner}>
+          <div className={styles.heroText}><h1 style={{textAlign: 'left'}}>{t('title')}</h1></div>
+
+        </div>
+        </div>
         <Container
           fluid
           className={`${styles.sectionLightBlue} ${rootStyles.section}`}
@@ -89,18 +83,16 @@ export default async function Home({ params: { lang } }: PageProps) {
             </button>
           </Link>
         </Container>
-        <Container
-          fluid
-          className={`${styles.sectionOrange} ${rootStyles.section}`}
+        <div
+          className={`${styles.sectionOrange}`}
         >
           <GettingInformedOverview lang={lang} />
-        </Container>
-        <Container
-          fluid
-          className={`${styles.sectionGreen} ${rootStyles.section}`}
+        </div>
+        <div
+          className={`${styles.sectionGreen}`}
         >
           <ExperienceOverview lang={lang} />
-        </Container>
+        </div>
       </Stack>
     </main>
   )

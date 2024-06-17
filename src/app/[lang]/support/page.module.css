@@ -12,6 +12,7 @@
 
 .accordion {
   text-align: left;
+  margin-bottom: var(--padding-bottom-xl);
 }
 
 .accordionItem {
@@ -48,6 +49,11 @@
 .linkWrapper {
   padding-bottom: 24px;
 }
+
+.linkWrapper:first-child {
+  padding-top: 24px;
+}
+
 .plusIcon {
   display: flex;
   flex-direction: column;
@@ -62,29 +68,31 @@
   word-break: break-all;
 }
 
-@media screen and (min-width: 1200px) {
-}
-
-@media screen and (max-width: 700px) {
-  /* .main {
-    padding: var(--page-padding-small);
-  } */
-
-  .wrapper {
-    margin: unset;
+@media screen and (max-width: 1200px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-l);
   }
-
-  /* .link {
-    max-width: 100%;
-  } */
 }
 
+@media screen and (max-width: 992px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-m);
+  }
+}
+
+
+/*Size S >= 576 <= 786 */
 @media screen and (max-width: 768px) {
-  /* .main {
-    padding: var(--page-padding-small);
-  } */
-
-  /* .linkWrapper {
-    flex-direction: column;
-  } */
+  .accordion {
+    margin-bottom: var(--padding-bottom-s);
+  }
 }
+
+/* Size XS<576 */
+@media screen and (max-width: 576px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-xs);
+  }
+}
+
+

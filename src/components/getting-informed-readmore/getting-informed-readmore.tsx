@@ -6,13 +6,14 @@ import {
   CardTitle,
   Container,
   Row,
-  Card,
-  CardImg,
+Stack
 } from '../bootstrap/bootstrap'
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
+import parentStyles from '../../app/[lang]/getting-informed/page.module.css'
 import rootStyles from '../../app/[lang]/rootStyles.module.css'
-import copyInformed from '@/localization/getting-informed/en.json'
+import copy from '@/localization/getting-informed/en.json'
+import { Col, Image } from '@/components/bootstrap/bootstrap'
 
 const GettingInformedReadMore = async ({
   lang,
@@ -30,46 +31,51 @@ const GettingInformedReadMore = async ({
   }
 
   return (
-    <Container
-      fluid
-      className={` ${rootStyles.sectionContainer} ${rootStyles.section}`}
-    >
+    <section className={`${rootStyles.section} ${styles.main}`}>
+      <div
+        className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
+      >
       <div className={styles.text}>
-        <h1> {t('title')}</h1>
+        <h1>{t('titleMore')}</h1>
         <p className={'sectionIntro'}>{t('description')}</p>
       </div>
-      <div>
-        <Row className={`row-gap-4 gx-1 gy-1`} xs={1} md={2}>
-          {copyInformed['getting-informed'].sections
-            .map((_section, index) => (
-              <Container key={index}>
-                <Link
-                  className={styles.myCardTitle}
-                  href={t(`sections.${index}.link.href`)}
-                >
-                  <Card bsPrefix="myCard" className={styles.myCard}>
-                    <img
-                      style={{ marginBottom: 30 }}
-                      src={t(`sections.${index}.image.src`)}
-                      alt={t(`sections.${index}.image.alt`)}
-                      width={'173px'}
-                    />
-                    <CardBody>
-                      <CardTitle>
-                        <h3>{t(`sections.${index}.title`)}</h3>
-                      </CardTitle>
-                    </CardBody>
-                  </Card>
+      <        Stack gap={5}
+        >
+          {copy['getting-informed'].sections.map((_section, index) => (
+            <Row key={index} className={`${parentStyles.gettingInformed}`}>
+              <Col md={5} lg={4}>
+                <Link href={t(`sections.${index}.link.href`)}>
+                  <Image
+                    className={styles.cardImage}
+                    alt={t(`sections.${index}.image.alt`)}
+                    src={t(`sections.${index}.image.src`)}
+                  />
                 </Link>
-              </Container>
-            ))
-            .filter(filterArticle)}
-        </Row>
-      </div>
+              </Col>
+              <Col md={7} lg={8} className={parentStyles.cardText}>
+                <h2>{t(`sections.${index}.title`)}</h2>
+                <p>
+                  {t(`sections.${index}.description`, {
+                    defaultValue: '',
+                  })}
+                </p>
+                <p>
+                  <Link
+                    className={parentStyles.link}
+                    href={t(`sections.${index}.link.href`)}
+                  >
+                    {t(`sections.${index}.link.text`)}
+                  </Link>
+                </p>
+              </Col>
+            </Row>
+          )).filter(filterArticle)}
+      </Stack>
       <Link href={t('button.href')}>
         <button className={rootStyles.button}>{t('button.text')}</button>
       </Link>
-    </Container>
+        </div>
+    </section>
   )
 }
 
