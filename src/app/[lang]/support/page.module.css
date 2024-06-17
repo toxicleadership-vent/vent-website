@@ -80,7 +80,6 @@
   }
 }
 
-
 /*Size S >= 576 <= 786 */
 @media screen and (max-width: 768px) {
   .accordion {
@@ -94,5 +93,3 @@
     margin-bottom: var(--padding-bottom-xs);
   }
 }
-
-

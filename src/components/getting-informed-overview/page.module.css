@@ -10,7 +10,6 @@
   transform: scale(1.03);
 }
 
-
 .myCardTitle {
   font-family: var(--font-poppins);
   font-weight: 600;
@@ -29,7 +28,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
   .sectionContainer {
     padding-bottom: var(--padding-bottom-xs);
   }

@@ -30,11 +30,10 @@
 
 .heroText h1 {
   font-size: 55px;
-
 }
 
 .sectionBlue {
-    background-color: var(--background-blue);
+  background-color: var(--background-blue);
 }
 
 .sectionLightBlue {
@@ -212,5 +211,4 @@
     font-size: 24px;
     padding-top: 20px;
   }
-
 }

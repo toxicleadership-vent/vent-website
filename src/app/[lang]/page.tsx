@@ -24,13 +24,12 @@ export default async function Home({ params: { lang } }: PageProps) {
     <main className={styles.main}>
       <Header language={lang} color="#408CFF" lightColor="#98C1FF" />
       <Stack>
-        <div
-          className={`${styles.sectionBlue} ${rootStyles.section}`}
-        >
-        <div className={styles.heroBanner}>
-          <div className={styles.heroText}><h1 style={{textAlign: 'left'}}>{t('title')}</h1></div>
-
-        </div>
+        <div className={`${styles.sectionBlue} ${rootStyles.section}`}>
+          <div className={styles.heroBanner}>
+            <div className={styles.heroText}>
+              <h1 style={{ textAlign: 'left' }}>{t('title')}</h1>
+            </div>
+          </div>
         </div>
         <Container
           fluid
@@ -83,14 +82,10 @@ export default async function Home({ params: { lang } }: PageProps) {
             </button>
           </Link>
         </Container>
-        <div
-          className={`${styles.sectionOrange}`}
-        >
+        <div className={`${styles.sectionOrange}`}>
           <GettingInformedOverview lang={lang} />
         </div>
-        <div
-          className={`${styles.sectionGreen}`}
-        >
+        <div className={`${styles.sectionGreen}`}>
           <ExperienceOverview lang={lang} />
         </div>
       </Stack>
