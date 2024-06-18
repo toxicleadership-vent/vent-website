@@ -511,7 +511,27 @@ export const Survey = ({
   return (
     <>
       <div className={styles.surveyEntry}>
-        <p>{!isSurveyDone ? t('intro.text') : t('thankyou.text')}</p>
+        <p>
+          {isSurveyDone ? (
+            t('intro.text')
+          ) : (
+            <Trans
+              t={t}
+              i18nKey={'thankyou.text'}
+              components={{
+                Link1: (
+                  <Link
+                    href="https://www.youtube.com/@TOXIC_LEADERSHIP_VENT"
+                    target="_blank"
+                  />
+                ),
+                Link2: <Link href="/experiences" target="_blank" />,
+                Link3: <Link href="/getting-informed" target="_blank" />,
+                Link4: <Link href="/support" target="_blank" />,
+              }}
+            />
+          )}
+        </p>
         {!isSurveyDone && (
           <Button
             bsPrefix="button"

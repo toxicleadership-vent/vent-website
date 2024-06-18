@@ -5,6 +5,7 @@ import { getTranslation } from '@/localization/i18n'
 import styles from './experiences.module.css'
 import { ExperienceSelection } from './experiences_selection'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
+import { FaYoutube } from 'react-icons/fa6'
 
 export const ExperienceOverview = async ({ lang }: { lang: string }) => {
   const { t } = await getTranslation(lang, 'experiences')
@@ -17,7 +18,27 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
         <Stack className={``}>
           <h1>{t('title')}</h1>
           <p className={'sectionIntro'}>{t('abstract')}</p>
-          <p className={'sectionIntro'}>{t('note')}</p>
+        </Stack>
+        <Stack>
+          <div className={` ${styles.banner}`}>
+            <div className={styles.bannerImageWraper}>
+              <img
+                src={'/images/experiences/experiences_youtube.svg'}
+                className={styles.bannerImageWidth}
+              />
+            </div>
+            <div className={styles.text}>
+              <h2 style={{ textAlign: 'left' }}>{t('banner.title')}</h2>
+              <p>{t('banner.text')}</p>
+              <Link
+                className={styles.link}
+                target="_blank"
+                href={t('banner.link.href')}
+              >
+                <FaYoutube /> {t('banner.link.name')}
+              </Link>
+            </div>
+          </div>
         </Stack>
         <Row className={`align-items-start`}>
           {copy.categories.map((category, categoryIndex) => {
