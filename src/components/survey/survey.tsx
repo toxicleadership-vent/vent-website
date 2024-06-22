@@ -512,7 +512,7 @@ export const Survey = ({
     <>
       <div className={styles.surveyEntry}>
         <p>
-          {isSurveyDone ? (
+          {!isSurveyDone ? (
             t('intro.text')
           ) : (
             <Trans
