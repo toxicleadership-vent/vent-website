@@ -1,18 +1,9 @@
 .page {
   background-color: var(--background-yellow);
-  font-family: var(--font-poppins);
 }
 
 .main {
   margin: var(--header-margin-top) auto;
-  /* padding: var(--page-padding-medium); */
-  max-width: var(--page-max-width);
-}
-
-@media screen and (max-width: 768px) {
-  .main {
-    padding: var(--page-padding-small);
-  }
 }
 
 .title {

@@ -105,6 +105,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .modalbody {
+    padding: var(--page-padding-s);
+  }
   .questioncardWrapper {
     padding: var(--page-padding-small);
     height: calc(100vh - 92px);
@@ -146,5 +149,11 @@
 
   .form {
     padding: var(--survey-padding-mobile);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modalbody {
+    padding: var(--page-padding-xs);
   }
 }
