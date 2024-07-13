@@ -2,9 +2,6 @@
 
 import Link from 'next/link'
 import {
-  CardBody,
-  CardTitle,
-  Container,
   Row,
   Stack,
 } from '../bootstrap/bootstrap'
@@ -46,7 +43,7 @@ const GettingInformedReadMore = async ({
                 <Col md={5} lg={4}>
                   <Link href={t(`sections.${index}.link.href`)}>
                     <Image
-                      className={styles.cardImage}
+                      className={parentStyles.cardImage}
                       alt={t(`sections.${index}.image.alt`)}
                       src={t(`sections.${index}.image.src`)}
                     />

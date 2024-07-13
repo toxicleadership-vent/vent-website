@@ -15,14 +15,62 @@
   margin-top: var(--header-margin-top);
 }
 
-@media screen and (max-width: 768px) {
+/* Size L >= 992 <= 1200 */
+@media screen and (max-width: 1200px) {
   .main {
-    padding: var(--page-padding-small);
+    padding: var(--page-padding-l);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-l);
   }
 }
 
-@media screen and (min-width: 1400px) {
+/* Size M >=768 <=992 */
+@media screen and (max-width: 992px) {
   .main {
-    padding: var(--page-padding-large);
+    padding: var(--page-padding-m);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-m);
+  }
+}
+
+/*Size S >= 576 <= 786 */
+@media screen and (max-width: 768px) {
+  .main {
+    padding: var(--page-padding-s);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-s);
+  }
+  .paragraph {
+    font-size: 1.5rem;
+  }
+  .text {
+    padding: 0;
+  }
+
+  .cardText {
+    padding-left: 0;
+  }
+
+  .cardImage {
+    width: 45%;
+  }
+}
+
+/* Size XS<576 */
+@media screen and (max-width: 576px) {
+  .main {
+    padding: var(--page-padding-xs);
+  }
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-xs);
+  }
+  .cardText {
+    padding-left: 0;
+  }
+  .cardImage {
+    width: 70%;
   }
 }
