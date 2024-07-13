@@ -1,15 +1,3 @@
-.myCard {
-  background-color: var(--background-light-blue);
-  border-radius: var(--border-radius);
-  padding: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.myCard:hover {
-  transform: scale(1.03);
-}
-
 .text {
   padding: var(--page-padding-medium);
 }

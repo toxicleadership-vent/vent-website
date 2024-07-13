@@ -50,7 +50,7 @@ export const ExperienceSelection = async ({
           )}
         </ListGroup>
       </div>
-      <p className="textIntro">
+      <p>
         {t(`categories.${categoryIndex}.articles.${articleIndex}.abstract`)}
       </p>
       {t(`categories.${categoryIndex}.articles.${articleIndex}.link.state`) ===
