@@ -32,4 +32,5 @@ model survey {
   orientation  String?
   feedback     String?
   feedbackLike Boolean?
+  createdAt    DateTime @default(now())
 }
