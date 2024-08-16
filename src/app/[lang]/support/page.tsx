@@ -14,6 +14,7 @@ import {
   AccordionBody,
   AccordionHeader,
 } from '@/components/bootstrap/bootstrap'
+import copy from '../../../localization/support/en.json'
 
 export default async function Contact({ params }: { params: PageParams }) {
   const { t } = await getTranslation(params.lang, 'support')
@@ -138,6 +139,37 @@ export default async function Contact({ params }: { params: PageParams }) {
                 </AccordionBody>
               </AccordionItem>
             </Accordion>
+            <div className={styles.tipsSection}>
+              <h2>{t('support.tipsExperts.title')}</h2>
+              <Row>
+                {copy.support.tipsExperts.tips.map((_tip, i) => (
+                  <Col className={styles.linkColumn} key={i} sm={6} md={4}>
+                    <div className={`card ${styles.card}`}>
+                      <img
+                        alt={'author image'}
+                        src={t(`support.tipsExperts.tips.${i}.image`)}
+                      />
+                      <img
+                        className={styles.hand}
+                        alt={'infographic'}
+                        src={'/images/support/Hand.svg'}
+                      />
+                    </div>
+                    <h3>{t(`support.tipsExperts.tips.${i}.title`)}</h3>
+                    <p>{t(`support.tipsExperts.tips.${i}.author`)}</p>
+                    <p>
+                      <a
+                        target="_blank"
+                        className={`link ${styles.link}`}
+                        href={t(`support.tipsExperts.tips.${i}.link.href`)}
+                      >
+                        {t(`support.tipsExperts.tips.${i}.link.text`)}
+                      </a>
+                    </p>
+                  </Col>
+                ))}
+              </Row>
+            </div>
             <div>
               <h2 style={{ textAlign: 'left' }}>{t('support.link-title')}</h2>
               <Row className={styles.linkWrapper}>
