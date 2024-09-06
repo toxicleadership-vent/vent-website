@@ -151,6 +151,17 @@ iframe {
   padding-top: 20px;
 }
 
+.link {
+  color: black;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.link:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* Size L >= 992 <= 1200 */
 @media (max-width: 1200px) {
   h1 {

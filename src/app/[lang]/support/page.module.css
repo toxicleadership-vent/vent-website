@@ -68,6 +68,23 @@
   word-break: break-all;
 }
 
+.card {
+  position: relative;
+  background: transparent;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.hand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.tipsSection {
+  margin-bottom: 72px;
+}
+
 @media screen and (max-width: 1200px) {
   .accordion {
     margin-bottom: var(--padding-bottom-l);
@@ -78,10 +95,17 @@
   .accordion {
     margin-bottom: var(--padding-bottom-m);
   }
+  .link {
+    margin-bottom: 24px;
+  }
 }
 
 /*Size S >= 576 <= 786 */
 @media screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+  }
+
   .accordion {
     margin-bottom: var(--padding-bottom-s);
   }

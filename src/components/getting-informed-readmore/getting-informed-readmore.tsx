@@ -1,10 +1,7 @@
 'use server'
 
 import Link from 'next/link'
-import {
-  Row,
-  Stack,
-} from '../bootstrap/bootstrap'
+import { Row, Stack } from '../bootstrap/bootstrap'
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import parentStyles from '../../app/[lang]/getting-informed/page.module.css'

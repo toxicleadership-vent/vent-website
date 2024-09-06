@@ -107,7 +107,42 @@
         "title": "US",
         "href": "https://www.mhanational.org/resources/988"
       }
-    ]
+    ],
+    "tipsExperts": {
+      "title": "Tips from experts and peers",
+      "tips": [
+        {
+          "image": "/images/support/Tips_Heliana.png",
+          "title": "Wellness resources for toxic job survivors",
+          "author": "By Dr. Heliana Ramirez",
+          "summary": "",
+          "link": {
+            "text": "Download Pdf",
+            "href": "/pdfs/TIPS_FROM_EXPERTS_Wellness_resources_for_toxic_job_survivors.pdf"
+          }
+        },
+        {
+          "image": "/images/support/Tips_Nathalie.png",
+          "title": "What to expect when you leave a toxic boss",
+          "author": "By Dr. Nathalie Martinek",
+          "summary": "",
+          "link": {
+            "text": "Download Pdf",
+            "href": "/pdfs/TIPS_FROM_EXPERTS_What_to_expect_when_you_leave_a_toxicboss.pdf"
+          }
+        },
+        {
+          "image": "/images/support/Tips_Anna.png",
+          "title": "A guide to healing and empowerment with IFS and self-leadership",
+          "author": "by Anna Milaeva",
+          "summary": "",
+          "link": {
+            "text": "Download Pdf",
+            "href": "/pdfs/TIPS_FROM_EXPERTS_A_guide_to_healing_and_empowerment.pdf"
+          }
+        }
+      ]
+    }
   },
   "metadata": {
     "title": "Vent - Support",
