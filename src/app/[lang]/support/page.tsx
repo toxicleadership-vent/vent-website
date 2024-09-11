@@ -155,7 +155,7 @@ export default async function Contact({ params }: { params: PageParams }) {
                         src={'/images/support/Hand.svg'}
                       />
                     </div>
-                    <h3>{t(`support.tipsExperts.tips.${i}.title`)}</h3>
+                    <h3 style={{wordBreak: 'normal'}}>{t(`support.tipsExperts.tips.${i}.title`)}</h3>
                     <p>{t(`support.tipsExperts.tips.${i}.author`)}</p>
                     <p>
                       <a
