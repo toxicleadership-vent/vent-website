@@ -140,6 +140,16 @@
             "text": "Download Pdf",
             "href": "/pdfs/TIPS_FROM_EXPERTS_A_guide_to_healing_and_empowerment.pdf"
           }
+        },
+        {
+          "image": "/images/support/Tips_Mayuri.png",
+          "title": "Before and after the odds turn against you",
+          "author": "by Mayuri Reddy",
+          "summary": "",
+          "link": {
+            "text": "Download Pdf",
+            "href": "/pdfs/TIPS_FROM_PEERS_Before_and_after_the_odds_turn_against_you.pdf"
+          }
         }
       ]
     }
