@@ -1,6 +1,6 @@
 {
   "about": {
-    "title": "About",
+    "title": "About us",
     "description": "VENT is a collaboration hub developing solutions to reduce the impact of toxic leadership on individuals, communities, businesses and the environment.",
     "section": {
       "title": "VENT about the toxic boss Interviews",
@@ -132,9 +132,9 @@
     "contactButton": { "href": "/contact", "text": "Contact us" }
   },
   "metadata": {
-    "title": "Vent - About",
+    "title": "Vent - About us",
     "description": "VENT collects anonymous stories of people's experiences of incivility and exploitation in a work context. VENT brings together multidisciplinary experts to collaborate on developing solutions and tools, which help reduce the impact and normalization of toxic leadership.",
-    "siteName": "Vent - about the toxic boss - About the project",
+    "siteName": "Vent - about the toxic boss - About us",
     "image": "/images/favicon/8.png"
   }
 }
