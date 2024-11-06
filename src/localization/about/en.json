@@ -99,6 +99,24 @@
             "title": "Connect on LinkedIn",
             "href": "https://www.linkedin.com/in/heather-mcdonnell-bsn-rn-ccm-7562204/"
           }
+        },
+        {
+          "name": "Harassment Support Network",
+          "image": "/images/about/collaborators/HSN_Isotipo-Invertido.png",
+          "cv": "Harassment Support Network (HSN) is a Brussels-based organisation that gives individual and needed support to people who have experienced physical, sexual or psychological harassment in the workplace. They offer free-of-charge services in the areas of psycho-social, pre-legal and career support to people working in Brussels.",
+          "linkedin": {
+            "title": "Visit the HSN website",
+            "href": "https://harassmentsupportnetwork.eu/"
+          }
+        },
+        {
+          "name": "Hostile Workplace Recovery ",
+          "image": "/images/about/collaborators/hostile_workplace_recovery_logo.png",
+          "cv": "Hostile Workplace Recovery is an informational, community-building website providing online support for toxic job survivors. An anti-racist and LGBT-affirming recovery space by and for workplace abuse survivors where you can learn about workplace abuse, connect with people who understand workplace trauma, and access self-help resources to support your personal recovery journey.",
+          "linkedin": {
+            "title": "Visit the Hostile Workplace Recovery website",
+            "href": "https://www.hostileworkplacerecovery.com/"
+          }
         }
       ]
     },
