@@ -121,7 +121,7 @@ export default async function About({ params: { lang } }: PageProps) {
           <Container className={styles.container}>
             <h1>{t('team.title')}</h1>
             <Row>
-              {copy.about.team?.members.slice(0, 2).map((teamMember, index) => {
+              {copy.about.team?.members.map((teamMember, index) => {
                 return (
                   <Col md={6} key={index}>
                     <Card bsPrefix="myCard" className={styles.myCard}>
@@ -142,7 +142,7 @@ export default async function About({ params: { lang } }: PageProps) {
                 )
               })}
             </Row>
-            <Row>
+{/*             <Row>
               {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
                 index = index + 2
                 return (
@@ -164,7 +164,7 @@ export default async function About({ params: { lang } }: PageProps) {
                   </Col>
                 )
               })}
-            </Row>
+            </Row> */}
           </Container>
           <Container className={styles.container}>
             <h1>{t('collaborators.title')}</h1>
