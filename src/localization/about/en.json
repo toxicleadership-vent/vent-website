@@ -1,18 +1,6 @@
 {
   "about": {
     "title": "About us",
-    "description": "VENT is a collaboration hub developing solutions to reduce the impact of toxic leadership on individuals, communities, businesses and the environment.",
-    "section": {
-      "title": "VENT about the toxic boss Interviews",
-      "paragraph": "Through anonymous interviews, VENT collects stories of people's experiences of incivility and exploitation in a work context.",
-      "listHeading": "Our goals are:",
-      "list": [
-        "To give people a safe space to talk about what they went through.",
-        "To transform traumatic experiences into valuable contributions co-creating awareness and informing development of solutions.",
-        "To research experiences and impact of toxic leadership.",
-        "To create awareness and reduce normalization of violence and harassment at work."
-      ]
-    },
     "team": {
       "title": "The team",
       "members": [
