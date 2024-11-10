@@ -25,26 +25,96 @@ export default async function About({ params: { lang } }: PageProps) {
       >
         <div className={styles.wrapper}>
           <h1>{t('title')}</h1>
-          <p className="sectionIntro">{t('description')}</p>
           <div className={styles.midWrapper}>
-            <h2>{t('section.title')}</h2>
-            <p>{t('section.paragraph')}</p>
-            <p>{t('section.listHeading')}</p>
-            <ul>
-              {[0, 1, 2, 3].map((index) => (
-                <li className={styles.list} key={index}>
-                  {t(`section.list.${index}`)}
-                </li>
-              ))}
-            </ul>
             <div className={styles.mdx}>
               <MdxText />
             </div>
           </div>
+          <Container>
+            <h1>{t('media.title')}</h1>
+          </Container>
+          <Row>
+            <Col xs={12} sm={6} md={4} className={styles.column}>
+              <Media
+                iframeProps={{
+                  src: t('media.video.0.src'),
+                  title: t('media.video.0.title'),
+                }}
+                top={t('media.video.0.show')}
+                middle={t('media.video.0.episode')}
+                bottom={t('media.video.0.bottom')}
+              />
+            </Col>
+            <Col xs={12} sm={6} md={4} className={styles.column}>
+              <Media
+                iframeProps={{
+                  src: t('media.video.2.src'),
+                  title: t('media.video.2.title'),
+                }}
+                top={t('media.video.2.show')}
+                middle={t('media.video.2.episode')}
+                bottom={t('media.video.2.bottom')}
+              />
+            </Col>
+            <Col xs={12} sm={6} md={4} className={styles.column}>
+              <Media
+                iframeProps={{
+                  src: t('media.video.1.src'),
+                  title: t('media.video.1.title'),
+                }}
+                top={t('media.video.1.show')}
+                middle={t('media.video.1.episode')}
+                bottom={t('media.video.1.bottom')}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12} className={styles.column}>
+              <iframe
+                style={{ borderRadius: 12 }}
+                src="https://widget.spreaker.com/player?episode_id=56631452&amp;theme=light&amp;playlist=false&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=true&amp;hide-comments=true&amp;hide-sharing=false&amp;hide-logo=true&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false"
+                width="100%"
+                height="200px"
+                frameBorder="0"
+                className="spreaker-player"
+                id="spreaker-player-670167"
+              ></iframe>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12} className={styles.column}>
+              <iframe
+                style={{ borderRadius: 12 }}
+                src="https://open.spotify.com/embed/episode/4z4pO13UWHszxn9QPvaKTT/video?utm_source=generator"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12} className={styles.column}>
+              <iframe
+                style={{ borderRadius: 12 }}
+                src="https://open.spotify.com/embed/episode/1LkHLMOU4gVbmDA6g3fIH0?utm_source=generator"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </Col>
+          </Row>
+         
+
           <Container className={styles.container}>
             <h1>{t('team.title')}</h1>
             <Row>
-              {copy.about.team?.members.slice(0, 2).map((teamMember, index) => {
+              {copy.about.team?.members.map((teamMember, index) => {
                 return (
                   <Col md={6} key={index}>
                     <Card bsPrefix="myCard" className={styles.myCard}>
@@ -65,7 +135,7 @@ export default async function About({ params: { lang } }: PageProps) {
                 )
               })}
             </Row>
-            <Row>
+{/*             <Row>
               {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
                 index = index + 2
                 return (
@@ -87,7 +157,7 @@ export default async function About({ params: { lang } }: PageProps) {
                   </Col>
                 )
               })}
-            </Row>
+            </Row> */}
           </Container>
           <Container className={styles.container}>
             <h1>{t('collaborators.title')}</h1>
@@ -123,93 +193,6 @@ export default async function About({ params: { lang } }: PageProps) {
             </Row>
           </Container>
         </div>
-        <Container>
-          <h1>{t('media.title')}</h1>
-        </Container>
-        <Row>
-          <Col xs={12} sm={6} md={4} className={styles.column}>
-            <Media
-              iframeProps={{
-                src: t('media.video.0.src'),
-                title: t('media.video.0.title'),
-              }}
-              top={t('media.video.0.show')}
-              middle={t('media.video.0.episode')}
-              bottom={t('media.video.0.bottom')}
-            />
-          </Col>
-          <Col xs={12} sm={6} md={4} className={styles.column}>
-            <Media
-              iframeProps={{
-                src: t('media.video.2.src'),
-                title: t('media.video.2.title'),
-              }}
-              top={t('media.video.2.show')}
-              middle={t('media.video.2.episode')}
-              bottom={t('media.video.2.bottom')}
-            />
-          </Col>
-          <Col xs={12} sm={6} md={4} className={styles.column}>
-            <Media
-              iframeProps={{
-                src: t('media.video.1.src'),
-                title: t('media.video.1.title'),
-              }}
-              top={t('media.video.1.show')}
-              middle={t('media.video.1.episode')}
-              bottom={t('media.video.1.bottom')}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} className={styles.column}>
-            <iframe
-              style={{ borderRadius: 12 }}
-              src="https://widget.spreaker.com/player?episode_id=56631452&amp;theme=light&amp;playlist=false&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=true&amp;hide-comments=true&amp;hide-sharing=false&amp;hide-logo=true&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false"
-              width="100%"
-              height="200px"
-              frameBorder="0"
-              className="spreaker-player"
-              id="spreaker-player-670167"
-            ></iframe>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} className={styles.column}>
-            <iframe
-              style={{ borderRadius: 12 }}
-              src="https://open.spotify.com/embed/episode/4z4pO13UWHszxn9QPvaKTT/video?utm_source=generator"
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} className={styles.column}>
-            <iframe
-              style={{ borderRadius: 12 }}
-              src="https://open.spotify.com/embed/episode/1LkHLMOU4gVbmDA6g3fIH0?utm_source=generator"
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </Col>
-        </Row>
-        <Container className={styles.contactWrapper}>
-          <h3 style={{ textAlign: 'left' }}>{t('contact')}</h3>
-          <Link href={t('contactButton.href')}>
-            <button className={rootStyles.button}>
-              {t('contactButton.text')}
-            </button>
-          </Link>
-        </Container>
       </div>
     </main>
   )

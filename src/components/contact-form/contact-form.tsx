@@ -74,15 +74,7 @@ export const ContactForm = ({ lang }: { lang: string }) => {
     {
       value: t('contact.form.subject.options.2'),
       label: t('contact.form.subject.options.2').toUpperCase(),
-    },
-    {
-      value: t('contact.form.subject.options.3'),
-      label: t('contact.form.subject.options.3').toUpperCase(),
-    },
-    {
-      value: t('contact.form.subject.options.4'),
-      label: t('contact.form.subject.options.4').toUpperCase(),
-    },
+    }
   ]
 
   const placeHolderFields = {

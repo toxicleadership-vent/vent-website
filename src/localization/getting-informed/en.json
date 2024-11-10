@@ -1,6 +1,6 @@
 {
   "getting-informed": {
-    "title": "Getting informed",
+    "title": "Get Informed",
     "titleMore": "Learn more about toxic leadership",
     "description": "Toxic leadership, often kept secret, affects millions globally. Get informed to protect yourself and others, reducing the normalization and acceptance of workplace dysfunction and abuse.",
     "sections": [
@@ -53,9 +53,9 @@
     "button": { "text": "READ ALL ARTICLES", "href": "/getting-informed" }
   },
   "metadata": {
-    "title": "VENT - Getting Informed",
+    "title": "VENT - Get Informed",
     "description": "VENT - Toxic leadership affects 750 mln people globally. Get informed to protect yourself and others!",
-    "siteName": "VENT - about the toxic boss - Getting Informed",
+    "siteName": "VENT - about the toxic boss - Get Informed",
     "image": "/images/favicon/4.png"
   }
 }

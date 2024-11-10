@@ -3,10 +3,10 @@
     "title": "Vent",
     "subtitle": "about the toxic boss",
     "navbar": [
-      { "href": "/getting-informed", "link": "Getting Informed" },
-      { "href": "/experiences", "link": "Experiences" },
-      { "href": "/support", "link": "Support" },
-      { "href": "/about", "link": "About" },
+      { "href": "/getting-informed", "link": "Get Informed" },
+      { "href": "/experiences", "link": "Real Stories" },
+      { "href": "/support", "link": "Self Help" },
+      { "href": "/about", "link": "About us" },
       { "href": "/contact", "link": "Contact" }
     ],
     "metadata": {
@@ -19,10 +19,10 @@
   "footer": {
     "description": "about the toxic boss",
     "links": [
-      { "href": "/getting-informed", "link": "Getting Informed" },
-      { "href": "/experiences", "link": "Experiences" },
-      { "href": "/support", "link": "Support" },
-      { "href": "/about", "link": "About the project" },
+      { "href": "/getting-informed", "link": "Get Informed" },
+      { "href": "/experiences", "link": "Real Stories" },
+      { "href": "/support", "link": "Self Help" },
+      { "href": "/about", "link": "About us" },
       { "href": "/contact", "link": "Contact" },
       { "href": "/data-privacy", "link": "Data Privacy" },
       { "href": "/imprint", "link": "Imprint" },
