@@ -103,6 +103,7 @@
   line-height: 0.9;
   margin-bottom: 16px;
   list-style: inside;
+  font-family: var(--font-workSans);
 }
 
 .mdxUl li {
