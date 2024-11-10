@@ -109,14 +109,7 @@ export default async function About({ params: { lang } }: PageProps) {
               ></iframe>
             </Col>
           </Row>
-          <Container className={styles.contactWrapper}>
-            <h3 style={{ textAlign: 'left' }}>{t('contact')}</h3>
-            <Link href={t('contactButton.href')}>
-              <button className={rootStyles.button}>
-                {t('contactButton.text')}
-              </button>
-            </Link>
-          </Container>
+          
 
           <Container className={styles.container}>
             <h1>{t('team.title')}</h1>
