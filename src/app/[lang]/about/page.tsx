@@ -15,6 +15,8 @@ import {
 import Link from 'next/link'
 import { Media } from '@/components/media/media'
 import rootStyles from '../rootStyles.module.css'
+import { Trans } from 'react-i18next/TransWithoutContext'
+
 export default async function About({ params: { lang } }: PageProps) {
   const { t } = await getTranslation(lang, 'about', { keyPrefix: 'about' })
 
@@ -115,6 +117,7 @@ export default async function About({ params: { lang } }: PageProps) {
             <h1>{t('team.title')}</h1>
             <Row>
               {copy.about.team?.members.map((teamMember, index) => {
+                // @ts-ignore
                 return (
                   <Col md={6} key={index}>
                     <Card bsPrefix="myCard" className={styles.myCard}>
@@ -128,7 +131,10 @@ export default async function About({ params: { lang } }: PageProps) {
                         <h4>{t(`team.members.${index}.position`)}</h4>
                       </CardHeader>
                       <CardBody>
-                        <p>{t(`team.members.${index}.cv`)}</p>
+                        {/** @ts-ignore next-line*/}
+                        <Trans t={t} components={{ Link: <Link></Link> }}>
+                          <p>{t(`team.members.${index}.cv`)}</p>
+                        </Trans>
                       </CardBody>
                     </Card>
                   </Col>
