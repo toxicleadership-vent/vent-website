@@ -258,9 +258,9 @@ export const ContactForm = ({ lang }: { lang: string }) => {
                       {...field}
                       className={styles.textarea}
                       rows={10}
-                      placeholder={t(
+                      /* placeholder={t(
                         `contact.form.message.${selectedOption?.value ?? 'collaborate'}.text`
-                      )}
+                      )} */
                     />
                     <small className={styles.textCounter}>
                       <span>{field.value.length}/250</span>
