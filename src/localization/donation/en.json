@@ -1,0 +1,22 @@
+{
+  "donation": {
+    "title": "Support Our Mission",
+    "description": "VENT is a passion-driven project dedicated to creating a safe space for individuals to share their experiences of toxic workplaces and leadership. Every donation directly supports:",
+    "list": {
+      "1": 
+      "The development and maintenance of our platform, including backend coding and tools to ensure it remains accessible and secure.",
+      "2":
+      "The creation of educational materials like flyers and campaigns aimed at raising awareness and promoting healthier work environments."
+    },
+    "contribution": "As a non-profit initiative, we rely on community support to expand our impact. Your contribution, no matter the size, helps us continue our mission of fostering change and amplifying voices.",
+    "thanks": "Thank you for supporting VENT!",
+    "donationButtonPaypal": "Donate via Paypal",
+    "donationButtonBetterplace": "Donate via Betterplace"
+  },
+  "metadata": {
+    "title": "VENT - Get Informed",
+    "description": "VENT - Toxic leadership affects 750 mln people globally. Get informed to protect yourself and others!",
+    "siteName": "VENT - about the toxic boss - Get Informed",
+    "image": "/images/favicon/4.png"
+  }
+}

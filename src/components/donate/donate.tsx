@@ -1,0 +1,39 @@
+'use server'
+import { getTranslation } from '@/localization/i18n'
+import styles from './donate.module.css'
+import rootStyles from '../../app/[lang]/rootStyles.module.css'
+import Paypal from '@/components/paypal/paypal'
+
+const isUserInNorthAmerica = (countryCode: string) => {
+  const northAmericaCountries = ['US', 'CA']
+  return northAmericaCountries.includes(countryCode)
+}
+
+const Donation = async ({ lang, countryCode }: { lang: string, countryCode: string }) => {
+  const { t } = await getTranslation(lang, 'donation', {
+    keyPrefix: 'donation',
+  })
+
+  return (
+    <section className={`${rootStyles.section}`}>
+      <div>
+        <h1>{t('title')}</h1>
+        <p className={styles.sectionIntro}>{t('description')}</p>
+        <ul className={styles.ul}>
+          <li>{t('list.1')}</li>
+          <li>{t('list.2')}</li>
+        </ul>
+        <div id="donate-button"></div>
+        {isUserInNorthAmerica(countryCode) ? (
+           <Paypal/> ) : (
+          <button className={rootStyles.button}>{t('donationButtonBetterplace')}</button>
+        )}
+        <p className={styles.sectionIntro}>{t('contribution')}</p>
+        <p className={styles.sectionIntro}>{t('thanks')}</p>
+       
+      </div>
+    </section>
+  )
+}
+
+export default Donation

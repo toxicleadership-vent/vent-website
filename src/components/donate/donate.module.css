@@ -1,0 +1,35 @@
+@media screen and (max-width: 576px) {
+  .sectionContainer {
+    padding-bottom: var(--padding-bottom-xs);
+  }
+  .cardText {
+    padding-left: 0;
+  }
+  .cardImage {
+    width: 70%;
+  }
+}
+
+.ul {
+  text-align: left;  
+  font-size: 25px;
+  margin-top: 30px;
+
+}
+
+.sectionIntro{
+  font-size: 30px;
+  line-height: 40px;
+  padding-bottom: 40px;
+  font-family: var(--font-workSans);
+  font-weight: 400;
+  text-align: left;
+}
+
+.buttonPaypal{
+  background-color: aqua;
+}
+
+.buttonBetterplace{
+  background-color: #e40050;
+}
