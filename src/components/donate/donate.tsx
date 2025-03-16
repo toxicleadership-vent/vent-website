@@ -22,6 +22,7 @@ const Donation = async ({ lang, countryCode }: { lang: string, countryCode: stri
         <ul className={styles.ul}>
           <li>{t('list.1')}</li>
           <li>{t('list.2')}</li>
+          <li>{t('list.3')}</li>
         </ul>
         <div id="donate-button"></div>
         {isUserInNorthAmerica(countryCode) ? (

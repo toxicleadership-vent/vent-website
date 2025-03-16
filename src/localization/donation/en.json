@@ -1,12 +1,14 @@
 {
   "donation": {
     "title": "Support Our Mission",
-    "description": "VENT is a passion-driven project dedicated to creating a safe space for individuals to share their experiences of toxic workplaces and leadership. Every donation directly supports:",
+    "description": "As a non-profit initiative, we rely on community support to expand our impact. Your contribution helps us continue our mission of fostering change and amplifying voices. Every donation directly supports:",
     "list": {
       "1": 
-      "The development and maintenance of our platform, including backend coding and tools to ensure it remains accessible and secure.",
+      "Research and development of first-aid tools and programs for survivors of disfunctional workplaces where toxic leaders thrive.",
       "2":
-      "The creation of educational materials like flyers and campaigns aimed at raising awareness and promoting healthier work environments."
+      "The creation of educational materials and campaigns raising awareness and promoting healthier work environments.",
+      "3":
+      "The development and maintenance of our website, including backend coding and tools to ensure it remains accessible and secure."
     },
     "contribution": "As a non-profit initiative, we rely on community support to expand our impact. Your contribution, no matter the size, helps us continue our mission of fostering change and amplifying voices.",
     "thanks": "Thank you for supporting VENT!",
