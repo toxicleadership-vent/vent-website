@@ -21,7 +21,7 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname = `/en/under-construction`
     return NextResponse.rewrite(req.nextUrl)
   }
-
+  const country = req.headers.get("x-vercel-ip-country") || "Unknown"
   const password = req.nextUrl.searchParams.get('password')
   const hasCookie = req.cookies.has('password')
   const url = req.nextUrl.clone()
@@ -34,6 +34,10 @@ export async function middleware(req: NextRequest) {
       req.nextUrl.pathname = `/en/404`
       return NextResponse.rewrite(req.nextUrl)
     }
+  }
+
+  if(country){
+    response.cookies.set("country", country, { path: "/", maxAge: 86400 }); // 1 Tag gültig
   }
 
   let lng
@@ -66,3 +70,5 @@ export async function middleware(req: NextRequest) {
 
   return NextResponse.next()
 }
+
+
