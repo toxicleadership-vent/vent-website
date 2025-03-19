@@ -12,6 +12,25 @@ export const config = {
 acceptLanguage.languages(languages)
 
 export async function middleware(req: NextRequest) {
+  // Standard Response erstellen
+  const res = NextResponse.next();
+
+  const countryHeader = req.headers.get("x-vercel-ip-country");
+  const countryCookie = req.cookies.get("country")?.value;
+
+  let country = countryHeader || countryCookie || "Unkown_to_vent";
+
+  // Cookie setzen, falls kein Cookie vorhanden ist
+  if (!countryCookie) {
+    res.cookies.set("country", country, {
+          path: "/",
+          maxAge: 86400, // 1 Tag gültig
+          secure: false, // Sicherstellen, dass der Cookie auch lokal funktioniert (für lokale Entwicklung)
+          sameSite: "lax" // Sicherstellen, dass der Cookie auch bei Cross-Site-Anfragen gesendet wird
+        });
+  }
+
+  // under construction site for english version
   const isProdReady = process.env.IS_PRODUCTION_READY
   //TODO: take out
   const allowedDomain =
