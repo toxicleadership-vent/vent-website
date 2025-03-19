@@ -34,7 +34,7 @@ export default function PayPalDonate() {
         env:'production',
         hosted_button_id:'W9B22CQYEYCS4',
         image: {
-        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
         alt:'Donate with PayPal button',
         title:'PayPal - The safer, easier way to pay online!',
         }
@@ -48,8 +48,8 @@ export default function PayPalDonate() {
         src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
         onLoad={() => setPaypal(true)}
       />
-      <div id="donate-button-container">
-        <div id="donate-button"></div>
+      <div id="donate-button-container" style={{ marginTop: "40px" }}>
+        <div id="donate-button" ></div>
       </div>
     </>
   );
