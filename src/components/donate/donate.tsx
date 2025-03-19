@@ -4,6 +4,7 @@ import { getTranslation } from '@/localization/i18n'
 import styles from './donate.module.css'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 import Paypal from '@/components/paypal/paypal'
+import Betterplace from '../betterplace/betterplace'
 
 
 const isUserInNorthAmerica = (countryCode: string) => {
@@ -31,7 +32,7 @@ const Donation = async ({ lang }: { lang: string }) => {
         <div id="donate-button"></div>
         {isUserInNorthAmerica(countryCode) ? (
            <Paypal/> ) : (
-          <button className={rootStyles.button}>{t('donationButtonBetterplace')}</button>
+          <Betterplace />
         )}
         <p className={'sectionIntro'}>{t('contribution')}</p>
         <p className={'sectionIntro'}>{t('thanks')}</p>
