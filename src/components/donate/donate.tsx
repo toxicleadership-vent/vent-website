@@ -1,8 +1,9 @@
 'use server'
 import { getTranslation } from '@/localization/i18n'
 import styles from './donate.module.css'
-import rootStyles from '../../app/[lang]/rootStyles.module.css'
+import rootStyles from '@/app/[lang]/rootStyles.module.css'
 import Paypal from '@/components/paypal/paypal'
+
 
 const isUserInNorthAmerica = (countryCode: string) => {
   const northAmericaCountries = ['US', 'CA']
@@ -18,8 +19,8 @@ const Donation = async ({ lang, countryCode }: { lang: string, countryCode: stri
     <section className={`${rootStyles.section}`}>
       <div>
         <h1>{t('title')}</h1>
-        <p className={styles.sectionIntro}>{t('description')}</p>
-        <ul className={styles.ul}>
+        <p className={'sectionIntro'}>{t('description')}</p>
+        <ul className={`${styles.ul} ${rootStyles.textIntro}`}>
           <li>{t('list.1')}</li>
           <li>{t('list.2')}</li>
           <li>{t('list.3')}</li>
@@ -29,8 +30,8 @@ const Donation = async ({ lang, countryCode }: { lang: string, countryCode: stri
            <Paypal/> ) : (
           <button className={rootStyles.button}>{t('donationButtonBetterplace')}</button>
         )}
-        <p className={styles.sectionIntro}>{t('contribution')}</p>
-        <p className={styles.sectionIntro}>{t('thanks')}</p>
+        <p className={'sectionIntro'}>{t('contribution')}</p>
+        <p className={'sectionIntro'}>{t('thanks')}</p>
        
       </div>
     </section>
