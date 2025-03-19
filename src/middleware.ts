@@ -40,7 +40,8 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname = `/en/under-construction`
     return NextResponse.rewrite(req.nextUrl)
   }
-  const country = req.headers.get("x-vercel-ip-country") || "Unknown"
+
+  // Survey with password protection
   const password = req.nextUrl.searchParams.get('password')
   const hasCookie = req.cookies.has('password')
   const url = req.nextUrl.clone()
@@ -55,10 +56,7 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  if(country){
-    response.cookies.set("country", country, { path: "/", maxAge: 86400 }); // 1 Tag gültig
-  }
-
+  // Set language
   let lng
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
@@ -77,17 +75,15 @@ export async function middleware(req: NextRequest) {
     )
   }
 
+  // Set language from referer
   if (req.headers.has('referer')) {
     const refererUrl = new URL(req.headers?.get('referer') ?? '')
     const lngInReferer = languages.find((l) =>
       refererUrl.pathname.startsWith(`/${l}`)
     )
-    const response = NextResponse.next()
-    if (lngInReferer) response.cookies.set(cookieName, lngInReferer)
-    return response
+    if (lngInReferer) res.cookies.set(cookieName, lngInReferer)
   }
-
-  return NextResponse.next()
+  return res;
 }
 
 
