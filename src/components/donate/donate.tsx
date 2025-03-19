@@ -1,4 +1,5 @@
 'use server'
+import { cookies } from 'next/headers'
 import { getTranslation } from '@/localization/i18n'
 import styles from './donate.module.css'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
@@ -10,7 +11,9 @@ const isUserInNorthAmerica = (countryCode: string) => {
   return northAmericaCountries.includes(countryCode)
 }
 
-const Donation = async ({ lang, countryCode }: { lang: string, countryCode: string }) => {
+const Donation = async ({ lang }: { lang: string }) => {
+  // 📌 `countryCode` aus den Cookies abrufen
+  const countryCode = cookies().get('country')?.value || 'Unknown'
   const { t } = await getTranslation(lang, 'donation', {
     keyPrefix: 'donation',
   })
@@ -32,7 +35,6 @@ const Donation = async ({ lang, countryCode }: { lang: string, countryCode: stri
         )}
         <p className={'sectionIntro'}>{t('contribution')}</p>
         <p className={'sectionIntro'}>{t('thanks')}</p>
-       
       </div>
     </section>
   )
