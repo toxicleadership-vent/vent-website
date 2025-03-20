@@ -9,7 +9,7 @@ const Betterplace = () => {
 
   return (
     <button className={rootStyles.button} onClick={handleClick}>
-      Spenden über Betterplace
+      Donate via Betterplace
     </button>
   )
 }
