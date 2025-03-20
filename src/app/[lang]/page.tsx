@@ -90,7 +90,7 @@ export default async function Home({ params: { lang } }: PageProps) {
           <ExperienceOverview lang={lang} />
         </div>
         <div>
-          <Donate lang={lang} countryCode="US"/>
+          <Donate lang={lang}  />
         </div>
       </Stack>
     </main>
