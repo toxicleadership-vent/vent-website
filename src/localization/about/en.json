@@ -31,73 +31,15 @@
           "position": "Developer",
           "image": "/images/about/team/najma.jpg",
           "cv": "Najma is a software developer and former programming lecturer. She obtained her BSc in Computer Science in 2014 from a university in Afghanistan and an MSc from TU Berlin in 2018. Najma is a former student of Eva. They met back in 2012 when Eva worked in Afghanistan as a lecturer and researcher. As a working professional with years of experience in a toxic workplace, Najma is motivated to contribute to reducing the impact of toxic leadership and helping people around the world by applying her technical knowledge to this vital project."
-        }
-      ]
-    },
-    "collaborators": {
-      "title": "Consulting experts and collaborators",
-      "members": [
+        },
         {
           "name": "Cynthia Mathieu, PhD",
+          "position": "Collaborator",
           "image": "/images/about/collaborators/cynthia.jpg",
-          "cv": "Cynthia is a psychologist and professor of Organizational Behavior. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace.",
+          "cv": "Cynthia collaborates with VENT as a consulting expert working together to develop tools supporting victims of workplace harassment. She is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being.",
           "linkedin": {
             "title": "Connect on LinkedIn",
             "href": "https://www.linkedin.com/in/cynthiamathieu/"
-          }
-        },
-        {
-          "name": "Nathalie Martinek, PhD",
-          "image": "/images/about/collaborators/nathalie.jpg",
-          "cv": "Nathalie is an ex-systems biologist and cancer researcher turned consultant, group facilitator & independent medical culture researcher.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/nathalie-martinek"
-          }
-        },
-        {
-          "name": "Heliana Ramirez, PhD",
-          "image": "/images/about/collaborators/heliana.jpg",
-          "cv": "Heliana is a researcher and social work clinician addressing racial and LGBTQ-related workplace trauma with civilian and military personnel.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/heliana-ramirez/"
-          }
-        },
-        {
-          "name": "Nikki Adebiyi",
-          "image": "/images/about/collaborators/nikki.jpg",
-          "cv": "Nikki is a writer, speaker, advisor, trauma-informed life coach, and social entrepreneur whose work spans racial equity, mental health, and social mobility.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/adenikeamoadebiyi/"
-          }
-        },
-        {
-          "name": "Heather McDonnell",
-          "image": "/images/about/collaborators/heather.jpg",
-          "cv": "Heather is a Registered Nurse and Certified Case Manager with expertise in high-risk obstetric and neonatal care management. researching the impact of toxic workplaces on patient outcomes.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/heather-mcdonnell-bsn-rn-ccm-7562204/"
-          }
-        },
-        {
-          "name": "Harassment Support Network",
-          "image": "/images/about/collaborators/HSN_Isotipo-Invertido.png",
-          "cv": "Harassment Support Network (HSN) is a Brussels-based organisation that gives individual and needed support to people who have experienced physical, sexual or psychological harassment in the workplace. They offer free-of-charge services in the areas of psycho-social, pre-legal and career support to people working in Brussels.",
-          "linkedin": {
-            "title": "Visit the HSN website",
-            "href": "https://harassmentsupportnetwork.eu/"
-          }
-        },
-        {
-          "name": "Hostile Workplace Recovery ",
-          "image": "/images/about/collaborators/hostile_workplace_recovery_logo.png",
-          "cv": "Hostile Workplace Recovery is an informational, community-building website providing online support for toxic job survivors. An anti-racist and LGBT-affirming recovery space by and for workplace abuse survivors where you can learn about workplace abuse, connect with people who understand workplace trauma, and access self-help resources to support your personal recovery journey.",
-          "linkedin": {
-            "title": "Visit the Hostile Workplace Recovery website",
-            "href": "https://www.hostileworkplacerecovery.com/"
           }
         }
       ]
