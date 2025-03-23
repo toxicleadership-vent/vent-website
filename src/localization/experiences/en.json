@@ -28,7 +28,7 @@
           "link": {
             "href": "/experiences/failed_by_the_systems",
             "name": "Read story",
-            "state": "Read article"
+            "state": "Read story"
           },
           "image": {
             "href": "/images/experiences/speak_up_become_the_next_target.png",
@@ -49,7 +49,7 @@
           "link": {
             "href": "/experiences/just_move_him",
             "name": "Read story",
-            "state": "Read article"
+            "state": "Read story"
           },
           "image": {
             "href": "/images/experiences/just_move_him.png",
