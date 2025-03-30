@@ -3,14 +3,15 @@
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 
 const Betterplace = () => {
-  const handleClick = () => {
-    window.location.href = 'https://www.goodcrowd.org/toxic-leadership-vent'
-  }
-
   return (
-    <button className={rootStyles.button} onClick={handleClick}>
+    <a 
+      href="https://www.goodcrowd.org/toxic-leadership-vent" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className={rootStyles.button}
+    >
       Donate via Betterplace
-    </button>
+    </a>
   )
 }
 
