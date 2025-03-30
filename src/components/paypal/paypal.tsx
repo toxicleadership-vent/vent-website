@@ -1,56 +1,22 @@
-"use client";
+'use client';
 
-// Declare the PayPal property on the window object
-declare global {
-  interface Window {
-    PayPal: {
-      Donation: {
-        Button: (options: {
-          env: string;
-          hosted_button_id: string;
-          image: {
-            src: string;
-            alt: string;
-            title: string;
-          };
-        }) => {
-          render: (selector: string) => void;
-        };
-      };
-    };
-  }
-}
+import styles from './paypal.module.css';
 
-import Script from "next/script";
-import { useEffect, useState } from "react";
-
-export default function PayPalDonate() {
-  const [paypal, setPaypal] = useState(false);
-
-  useEffect(() => {
-    if (paypal) {
-      console.log("PayPal SDK loaded");
-      window.PayPal.Donation.Button({
-        env:'production',
-        hosted_button_id:'W9B22CQYEYCS4',
-        image: {
-        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-        alt:'Donate with PayPal button',
-        title:'PayPal - The safer, easier way to pay online!',
-        }
-        }).render('#donate-button');        
-    }
-  }, [paypal]);
-
+const PayPalDonationButton = () => {
   return (
-    <>
-      <Script
-        src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
-        onLoad={() => setPaypal(true)}
+    <a
+      href="https://www.paypal.com/donate?business=judithlippold@gmx.net&currency_code=EUR"
+      target="_blank"
+      rel="noopener noreferrer"
+      
+    >
+      <img
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+        alt="Donate with PayPal"
+        className={styles.paypalButton}
       />
-      <div id="donate-button-container" style={{ marginTop: "40px" }}>
-        <div id="donate-button" ></div>
-      </div>
-    </>
+    </a>
   );
-}
+};
+
+export default PayPalDonationButton;
