@@ -89,7 +89,7 @@ export default async function Home({ params: { lang } }: PageProps) {
         <div className={`${styles.sectionGreen}`}>
           <ExperienceOverview lang={lang} />
         </div>
-        <div>
+        <div className={`${styles.sectionLightYellow}`}>
           <Donate lang={lang}  />
         </div>
       </Stack>
