@@ -5,7 +5,7 @@ import styles from './paypal.module.css';
 const PayPalDonationButton = () => {
   return (
     <a
-      href="https://www.paypal.com/donate?business=judithlippold@gmx.net&currency_code=EUR"
+      href="https://www.paypal.com/donate?business=finance@toxicleadershipvent.com&currency_code=EUR"
       target="_blank"
       rel="noopener noreferrer"
       
