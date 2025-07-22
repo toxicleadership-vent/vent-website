@@ -53,8 +53,11 @@
     "webdesign": {
       "title": "Web design:",
       "text": "Julia Vogel",
-      "link": "https://www.juliaworks.com",
-      "href": "www.juliaworks.com"
+      "link": {
+        "title": "www.juliaworks.com",
+        "url": "https://www.juliaworks.com",
+        "target": "_blank"
+      }
     },
     "photos": {
       "title": "Photos",

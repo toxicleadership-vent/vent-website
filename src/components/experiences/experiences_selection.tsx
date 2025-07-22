@@ -24,7 +24,7 @@ export const ExperienceSelection = async ({
     <>
       <BootstrapImage
         src={t(
-          `categories.${categoryIndex}.articles.${articleIndex}.image.href`
+          `categories.${categoryIndex}.articles.${articleIndex}.image.url`
         )}
         alt={t(`categories.${categoryIndex}.image.alt`)}
         rounded
@@ -60,10 +60,10 @@ export const ExperienceSelection = async ({
         <Link
           className={styles.link}
           href={t(
-            `categories.${categoryIndex}.articles.${articleIndex}.link.href`
+            `categories.${categoryIndex}.articles.${articleIndex}.link.url`
           )}
         >
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.name`)}
+          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.title`)}
         </Link>
       )}
     </>

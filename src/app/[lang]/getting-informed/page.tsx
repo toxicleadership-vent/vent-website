@@ -30,7 +30,7 @@ export default async function GettingInformed({
           {copy['getting-informed'].sections.map((_section, index) => (
             <Row key={index} className={`${styles.gettingInformed}`}>
               <Col md={5} lg={4}>
-                <Link href={tInformed(`sections.${index}.link.href`)}>
+                <Link href={tInformed(`sections.${index}.link.url`)}>
                   <Image
                     className={styles.cardImage}
                     alt={tInformed(`sections.${index}.image.alt`)}
@@ -48,9 +48,9 @@ export default async function GettingInformed({
                 <p>
                   <Link
                     className={styles.link}
-                    href={tInformed(`sections.${index}.link.href`)}
+                    href={tInformed(`sections.${index}.link.url`)}
                   >
-                    {tInformed(`sections.${index}.link.text`)}
+                    {tInformed(`sections.${index}.link.title`)}
                   </Link>
                 </p>
               </Col>

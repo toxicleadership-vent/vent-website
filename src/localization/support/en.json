@@ -69,43 +69,43 @@
     "links": [
       {
         "title": "Australia",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-australia"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-australia"
       },
       {
         "title": "Canada",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-canada"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-canada"
       },
       {
         "title": "Denmark",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-denmark"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-denmark"
       },
       {
         "title": "Germany",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-germany"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-germany"
       },
       {
         "title": "India",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-india"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-india"
       },
       {
         "title": "The Netherlands",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-netherlands"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-netherlands"
       },
       {
         "title": "Poland",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-poland"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-poland"
       },
       {
         "title": "Sweden",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-sweden"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-sweden"
       },
       {
         "title": "UK",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-united-kingdom"
+        "url": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-united-kingdom"
       },
       {
         "title": "US",
-        "href": "https://www.mhanational.org/resources/988"
+        "url": "https://www.mhanational.org/resources/988"
       }
     ],
     "tipsExperts": {
@@ -117,8 +117,8 @@
           "author": "By Dr. Heliana Ramirez",
           "summary": "",
           "link": {
-            "text": "Download Pdf",
-            "href": "/pdfs/TIPS_FROM_EXPERTS_Wellness_resources_for_toxic_job_survivors.pdf"
+            "title": "Download Pdf",
+            "url": "/pdfs/TIPS_FROM_EXPERTS_Wellness_resources_for_toxic_job_survivors.pdf"
           }
         },
         {
@@ -127,8 +127,8 @@
           "author": "By Dr. Nathalie Martinek",
           "summary": "",
           "link": {
-            "text": "Download Pdf",
-            "href": "/pdfs/TIPS_FROM_EXPERTS_What_to_expect_when_you_leave_a_toxicboss.pdf"
+            "title": "Download Pdf",
+            "url": "/pdfs/TIPS_FROM_EXPERTS_What_to_expect_when_you_leave_a_toxicboss.pdf"
           }
         },
         {
@@ -137,8 +137,8 @@
           "author": "by Anna Milaeva",
           "summary": "",
           "link": {
-            "text": "Download Pdf",
-            "href": "/pdfs/TIPS_FROM_EXPERTS_A_guide_to_healing_and_empowerment.pdf"
+            "title": "Download Pdf",
+            "url": "/pdfs/TIPS_FROM_EXPERTS_A_guide_to_healing_and_empowerment.pdf"
           }
         },
         {
@@ -147,8 +147,8 @@
           "author": "by Mayuri Reddy",
           "summary": "",
           "link": {
-            "text": "Download Pdf",
-            "href": "/pdfs/TIPS_FROM_PEERS_Before_and_after_the_odds_turn_against_you.pdf"
+            "title": "Download Pdf",
+            "url": "/pdfs/TIPS_FROM_PEERS_Before_and_after_the_odds_turn_against_you.pdf"
           }
         }
       ]

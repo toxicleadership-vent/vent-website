@@ -7,7 +7,7 @@
     "title": "Watch VENT ABOUT THE TOXIC BOSS INTERVIEWS",
     "link": {
       "href": "https://www.youtube.com/@TOXIC_LEADERSHIP_VENT",
-      "name": "VISIT OUR YOUTUBE CHANNEL"
+      "title": "VISIT OUR YOUTUBE CHANNEL"
     },
     "text": "Watch our short cartoons and hear people's experiences of toxic leadership."
   },
@@ -20,18 +20,15 @@
           "title": "Failed by the systems",
           "length": "3 min read",
           "tag_title": "Toxic pattern",
-          "tags": [
-            "gaslighting",
-            "neglect"
-          ],
+          "tags": ["gaslighting", "neglect"],
           "abstract": "While being abused in the workplace, you reach out to trusted professionals and your employer, only to be met with silence and neglect. Vital information is withheld, and you are left to navigate bureaucratic barriers alone, which causes further injury to your well-being.",
           "link": {
-            "href": "/experiences/failed_by_the_systems",
-            "name": "Read story",
+            "url": "/experiences/failed_by_the_systems",
+            "title": "Read story",
             "state": "Read story"
           },
           "image": {
-            "href": "/images/experiences/speak_up_become_the_next_target.png",
+            "url": "/images/experiences/speak_up_become_the_next_target.png",
             "alt": "image"
           }
         },
@@ -47,12 +44,12 @@
             "favoritism"
           ],
           "link": {
-            "href": "/experiences/just_move_him",
-            "name": "Read story",
+            "url": "/experiences/just_move_him",
+            "title": "Read story",
             "state": "Read story"
           },
           "image": {
-            "href": "/images/experiences/just_move_him.png",
+            "url": "/images/experiences/just_move_him.png",
             "alt": "image"
           }
         }
@@ -70,11 +67,11 @@
           "tag_title": "Toxic pattern",
           "tags": ["exploitation", "overworking", "lack of support"],
           "link": {
-            "href": "/experiences/squeezed_to_the_last_drop",
-            "name": "Read story"
+            "url": "/experiences/squeezed_to_the_last_drop",
+            "title": "Read story"
           },
           "image": {
-            "href": "/images/experiences/squeezed_to_the_last_drop.png",
+            "url": "/images/experiences/squeezed_to_the_last_drop.png",
             "alt": "image"
           }
         },
@@ -85,11 +82,11 @@
           "tag_title": "Toxic pattern",
           "tags": ["gossip", "supporting bullying", "dishonesty"],
           "link": {
-            "href": "/experiences/fake_investigation",
-            "name": "Read story"
+            "url": "/experiences/fake_investigation",
+            "title": "Read story"
           },
           "image": {
-            "href": "/images/experiences/fake_investigation.png",
+            "url": "/images/experiences/fake_investigation.png",
             "alt": "image"
           }
         }
@@ -110,11 +107,11 @@
             "lack of accountability"
           ],
           "link": {
-            "href": "/experiences/growth_over_culture",
-            "name": "Read story"
+            "url": "/experiences/growth_over_culture",
+            "title": "Read story"
           },
           "image": {
-            "href": "/images/experiences/growth_over_culture.png",
+            "url": "/images/experiences/growth_over_culture.png",
             "alt": "image"
           }
         },
@@ -125,11 +122,11 @@
           "length": "2 min read",
           "tags": ["sabotage", "threats", "harassment"],
           "link": {
-            "href": "/experiences/friends_to_foes",
-            "name": "Read story"
+            "url": "/experiences/friends_to_foes",
+            "title": "Read story"
           },
           "image": {
-            "href": "/images/experiences/friends_to_foes.png",
+            "url": "/images/experiences/friends_to_foes.png",
             "alt": "image"
           }
         }
@@ -137,8 +134,8 @@
     }
   ],
   "button": {
-    "href": "/experiences",
-    "text": "Read all Real Stories"
+    "url": "/experiences",
+    "title": "Read all Real Stories"
   },
   "metadata": {
     "title": "VENT - Real stories",

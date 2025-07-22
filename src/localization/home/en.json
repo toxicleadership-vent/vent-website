@@ -25,7 +25,7 @@
           "image": "/images/home/collaboration.svg"
         }
       ],
-      "button": { "text": "LEARN MORE ABOUT THE PROJECT", "href": "/about" }
+      "button": { "title": "LEARN MORE ABOUT THE PROJECT", "url": "/about" }
     },
     "polls": {
       "title": "How aware are you?",
