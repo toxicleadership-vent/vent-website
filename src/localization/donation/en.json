@@ -1,0 +1,23 @@
+{
+  "donation": {
+    "title": "Support Our Mission",
+    "description": "As a non-profit initiative, we rely on community support to expand our impact. Your contribution helps us continue our mission of fostering change and amplifying voices. Every donation directly supports:",
+    "list": {
+      "1": 
+      "Research and development of first-aid tools and programs for survivors of disfunctional workplaces where toxic leaders thrive.",
+      "2":
+      "The creation of educational materials and campaigns raising awareness and promoting healthier work environments.",
+      "3":
+      "The development and maintenance of our website, including backend coding and tools to ensure it remains accessible and secure."
+    },
+    "thanks": "Thank you for supporting VENT!",
+    "donationButtonPaypal": "Donate via Paypal",
+    "donationButtonBetterplace": "Donate via Betterplace"
+  },
+  "metadata": {
+    "title": "VENT - Get Informed",
+    "description": "VENT - Toxic leadership affects 750 mln people globally. Get informed to protect yourself and others!",
+    "siteName": "VENT - about the toxic boss - Get Informed",
+    "image": "/images/favicon/4.png"
+  }
+}

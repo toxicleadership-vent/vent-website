@@ -24,6 +24,7 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
             <div className={styles.bannerImageWraper}>
               <img
                 src={'/images/experiences/experiences_youtube.svg'}
+                alt={'Youtube Video: Toxic Boss Interviews'}
                 className={styles.bannerImageWidth}
               />
             </div>
