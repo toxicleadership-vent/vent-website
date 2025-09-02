@@ -68,44 +68,653 @@
     "link-title": "Suicide hotlines and crisis lines",
     "links": [
       {
-        "title": "Australia",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-australia"
+        "header": "Europe",
+        "links": [
+          {
+            "title": "Albania",
+            "href": "https://findahelpline.com/countries/al"
+          },
+          {
+            "title": "Andorra",
+            "href": "https://findahelpline.com/countries/ad"
+          },
+          {
+            "title": "Austria",
+            "href": "https://findahelpline.com/countries/at"
+          },
+          {
+            "title": "Belarus",
+            "href": "https://findahelpline.com/countries/by"
+          },
+          {
+            "title": "Belgium",
+            "href": "https://findahelpline.com/countries/be"
+          },
+          {
+            "title": "Bosnia and Herzegovina",
+            "href": "https://findahelpline.com/countries/ba"
+          },
+          {
+            "title": "Bulgaria",
+            "href": "https://findahelpline.com/countries/bg"
+          },
+          {
+            "title": "Croatia",
+            "href": "https://findahelpline.com/countries/hr"
+          },
+          {
+            "title": "Czechia",
+            "href": "https://findahelpline.com/countries/cz"
+          },
+          {
+            "title": "Denmark",
+            "href": "https://findahelpline.com/countries/dk"
+          },
+          {
+            "title": "England",
+            "href": "https://findahelpline.com/countries/gb-eng"
+          },
+          {
+            "title": "Estonia",
+            "href": "https://findahelpline.com/countries/ee"
+          },
+          {
+            "title": "Faroe Islands",
+            "href": "https://findahelpline.com/countries/fo"
+          },
+          {
+            "title": "Finland",
+            "href": "https://findahelpline.com/countries/fi"
+          },
+          {
+            "title": "France",
+            "href": "https://findahelpline.com/countries/fr"
+          },
+          {
+            "title": "Germany",
+            "href": "https://findahelpline.com/countries/de"
+          },
+          {
+            "title": "Gibraltar",
+            "href": "https://findahelpline.com/countries/gi"
+          },
+          {
+            "title": "Greece",
+            "href": "https://findahelpline.com/countries/gr"
+          },
+          {
+            "title": "Guernsey",
+            "href": "https://findahelpline.com/countries/gg"
+          },
+          {
+            "title": "Hungary",
+            "href": "https://findahelpline.com/countries/hu"
+          },
+          {
+            "title": "Iceland",
+            "href": "https://findahelpline.com/countries/is"
+          },
+          {
+            "title": "Ireland",
+            "href": "https://findahelpline.com/countries/ie"
+          },
+          {
+            "title": "Isle of Man",
+            "href": "https://findahelpline.com/countries/im"
+          },
+          {
+            "title": "Italy",
+            "href": "https://findahelpline.com/countries/it"
+          },
+          {
+            "title": "Jersey",
+            "href": "https://findahelpline.com/countries/je"
+          },
+          {
+            "title": "Kosovo",
+            "href": "https://findahelpline.com/countries/xk"
+          },
+          {
+            "title": "Latvia",
+            "href": "https://findahelpline.com/countries/lv"
+          },
+          {
+            "title": "Liechtenstein",
+            "href": "https://findahelpline.com/countries/li"
+          },
+          {
+            "title": "Lithuania",
+            "href": "https://findahelpline.com/countries/lt"
+          },
+          {
+            "title": "Luxembourg",
+            "href": "https://findahelpline.com/countries/lu"
+          },
+          {
+            "title": "Malta",
+            "href": "https://findahelpline.com/countries/mt"
+          },
+          {
+            "title": "Moldova",
+            "href": "https://findahelpline.com/countries/md"
+          },
+          {
+            "title": "Monaco",
+            "href": "https://findahelpline.com/countries/mc"
+          },
+          {
+            "title": "Montenegro",
+            "href": "https://findahelpline.com/countries/me"
+          },
+          {
+            "title": "Netherlands",
+            "href": "https://findahelpline.com/countries/nl"
+          },
+          {
+            "title": "North Macedonia",
+            "href": "https://findahelpline.com/countries/mk"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "https://findahelpline.com/countries/gb-nir"
+          },
+          {
+            "title": "Norway",
+            "href": "https://findahelpline.com/countries/no"
+          },
+          {
+            "title": "Poland",
+            "href": "https://findahelpline.com/countries/pl"
+          },
+          {
+            "title": "Portugal",
+            "href": "https://findahelpline.com/countries/pt"
+          },
+          {
+            "title": "Romania",
+            "href": "https://findahelpline.com/countries/ro"
+          },
+          {
+            "title": "Russian Federation",
+            "href": "https://findahelpline.com/countries/ru"
+          },
+          {
+            "title": "Scotland",
+            "href": "https://findahelpline.com/countries/gb-sct"
+          },
+          {
+            "title": "Slovakia",
+            "href": "https://findahelpline.com/countries/sk"
+          },
+          {
+            "title": "Slovenia",
+            "href": "https://findahelpline.com/countries/si"
+          },
+          {
+            "title": "Spain",
+            "href": "https://findahelpline.com/countries/es"
+          },
+          {
+            "title": "Sweden",
+            "href": "https://findahelpline.com/countries/se"
+          },
+          {
+            "title": "Switzerland",
+            "href": "https://findahelpline.com/countries/ch"
+          },
+          {
+            "title": "Ukraine",
+            "href": "https://findahelpline.com/countries/ua"
+          },
+          {
+            "title": "United Kingdom",
+            "href": "https://findahelpline.com/countries/gb"
+          },
+          {
+            "title": "Wales",
+            "href": "https://findahelpline.com/countries/gb-wls"
+          }
+        ]
       },
       {
-        "title": "Canada",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-canada"
+        "header": "Americas",
+        "links": [
+          {
+            "title": "Antigua and Barbuda",
+            "href": "https://findahelpline.com/countries/ag"
+          },
+          {
+            "title": "Argentina",
+            "href": "https://findahelpline.com/countries/ar"
+          },
+          {
+            "title": "Aruba",
+            "href": "https://findahelpline.com/countries/aw"
+          },
+          {
+            "title": "Bahamas",
+            "href": "https://findahelpline.com/countries/bs"
+          },
+          {
+            "title": "Barbados",
+            "href": "https://findahelpline.com/countries/bb"
+          },
+          {
+            "title": "Bolivia",
+            "href": "https://findahelpline.com/countries/bo"
+          },
+          {
+            "title": "Brazil",
+            "href": "https://findahelpline.com/countries/br"
+          },
+          {
+            "title": "Canada",
+            "href": "https://findahelpline.com/countries/ca"
+          },
+          {
+            "title": "Cayman Islands",
+            "href": "https://findahelpline.com/countries/ky"
+          },
+          {
+            "title": "Chile",
+            "href": "https://findahelpline.com/countries/cl"
+          },
+          {
+            "title": "Colombia",
+            "href": "https://findahelpline.com/countries/co"
+          },
+          {
+            "title": "Costa Rica",
+            "href": "https://findahelpline.com/countries/cr"
+          },
+          { "title": "Cuba", "href": "https://findahelpline.com/countries/cu" },
+          {
+            "title": "Curaçao",
+            "href": "https://findahelpline.com/countries/cw"
+          },
+          {
+            "title": "Dominica",
+            "href": "https://findahelpline.com/countries/dm"
+          },
+          {
+            "title": "Dominican Republic",
+            "href": "https://findahelpline.com/countries/do"
+          },
+          {
+            "title": "Ecuador",
+            "href": "https://findahelpline.com/countries/ec"
+          },
+          {
+            "title": "El Salvador",
+            "href": "https://findahelpline.com/countries/sv"
+          },
+          {
+            "title": "Grenada",
+            "href": "https://findahelpline.com/countries/gd"
+          },
+          {
+            "title": "Greenland",
+            "href": "https://findahelpline.com/countries/gl"
+          },
+          {
+            "title": "Guatemala",
+            "href": "https://findahelpline.com/countries/gt"
+          },
+          {
+            "title": "Guyana",
+            "href": "https://findahelpline.com/countries/gy"
+          },
+          {
+            "title": "Haiti",
+            "href": "https://findahelpline.com/countries/ht"
+          },
+          {
+            "title": "Honduras",
+            "href": "https://findahelpline.com/countries/hn"
+          },
+          {
+            "title": "Jamaica",
+            "href": "https://findahelpline.com/countries/jm"
+          },
+          {
+            "title": "Mexico",
+            "href": "https://findahelpline.com/countries/mx"
+          },
+          {
+            "title": "Nicaragua",
+            "href": "https://findahelpline.com/countries/ni"
+          },
+          {
+            "title": "Panama",
+            "href": "https://findahelpline.com/countries/pa"
+          },
+          {
+            "title": "Paraguay",
+            "href": "https://findahelpline.com/countries/py"
+          },
+          { "title": "Peru", "href": "https://findahelpline.com/countries/pe" },
+          {
+            "title": "Puerto Rico",
+            "href": "https://findahelpline.com/countries/pr"
+          },
+          {
+            "title": "Suriname",
+            "href": "https://findahelpline.com/countries/sr"
+          },
+          {
+            "title": "Trinidad and Tobago",
+            "href": "https://findahelpline.com/countries/tt"
+          },
+          {
+            "title": "United States",
+            "href": "https://findahelpline.com/countries/us"
+          },
+          {
+            "title": "Uruguay",
+            "href": "https://findahelpline.com/countries/uy"
+          },
+          {
+            "title": "Venezuela",
+            "href": "https://findahelpline.com/countries/ve"
+          }
+        ]
       },
       {
-        "title": "Denmark",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-denmark"
+        "header": "Asia",
+        "links": [
+          {
+            "title": "Armenia",
+            "href": "https://findahelpline.com/countries/am"
+          },
+          {
+            "title": "Azerbaijan",
+            "href": "https://findahelpline.com/countries/az"
+          },
+          {
+            "title": "Bahrain",
+            "href": "https://findahelpline.com/countries/bh"
+          },
+          {
+            "title": "Bangladesh",
+            "href": "https://findahelpline.com/countries/bd"
+          },
+          {
+            "title": "Brunei Darussalam",
+            "href": "https://findahelpline.com/countries/bn"
+          },
+          {
+            "title": "Cambodia",
+            "href": "https://findahelpline.com/countries/kh"
+          },
+          {
+            "title": "China",
+            "href": "https://findahelpline.com/countries/cn"
+          },
+          {
+            "title": "Cyprus",
+            "href": "https://findahelpline.com/countries/cy"
+          },
+          {
+            "title": "Hong Kong",
+            "href": "https://findahelpline.com/countries/hk"
+          },
+          {
+            "title": "India",
+            "href": "https://findahelpline.com/countries/in"
+          },
+          {
+            "title": "Indonesia",
+            "href": "https://findahelpline.com/countries/id"
+          },
+          { "title": "Iran", "href": "https://findahelpline.com/countries/ir" },
+          {
+            "title": "Israel",
+            "href": "https://findahelpline.com/countries/il"
+          },
+          {
+            "title": "Japan",
+            "href": "https://findahelpline.com/countries/jp"
+          },
+          {
+            "title": "Jordan",
+            "href": "https://findahelpline.com/countries/jo"
+          },
+          {
+            "title": "Kazakhstan",
+            "href": "https://findahelpline.com/countries/kz"
+          },
+          {
+            "title": "Kuwait",
+            "href": "https://findahelpline.com/countries/kw"
+          },
+          {
+            "title": "Kyrgyzstan",
+            "href": "https://findahelpline.com/countries/kg"
+          },
+          {
+            "title": "Lebanon",
+            "href": "https://findahelpline.com/countries/lb"
+          },
+          {
+            "title": "Macao",
+            "href": "https://findahelpline.com/countries/mo"
+          },
+          {
+            "title": "Malaysia",
+            "href": "https://findahelpline.com/countries/my"
+          },
+          {
+            "title": "Maldives",
+            "href": "https://findahelpline.com/countries/mv"
+          },
+          {
+            "title": "Mongolia",
+            "href": "https://findahelpline.com/countries/mn"
+          },
+          {
+            "title": "Myanmar",
+            "href": "https://findahelpline.com/countries/mm"
+          },
+          {
+            "title": "Nepal",
+            "href": "https://findahelpline.com/countries/np"
+          },
+          { "title": "Oman", "href": "https://findahelpline.com/countries/om" },
+          {
+            "title": "Pakistan",
+            "href": "https://findahelpline.com/countries/pk"
+          },
+          {
+            "title": "Palestine, State of",
+            "href": "https://findahelpline.com/countries/ps"
+          },
+          {
+            "title": "Philippines",
+            "href": "https://findahelpline.com/countries/ph"
+          },
+          {
+            "title": "Qatar",
+            "href": "https://findahelpline.com/countries/qa"
+          },
+          {
+            "title": "Singapore",
+            "href": "https://findahelpline.com/countries/sg"
+          },
+          {
+            "title": "South Korea",
+            "href": "https://findahelpline.com/countries/kr"
+          },
+          {
+            "title": "Sri Lanka",
+            "href": "https://findahelpline.com/countries/lk"
+          },
+          {
+            "title": "Taiwan",
+            "href": "https://findahelpline.com/countries/tw"
+          },
+          {
+            "title": "Thailand",
+            "href": "https://findahelpline.com/countries/th"
+          },
+          {
+            "title": "Timor-Leste",
+            "href": "https://findahelpline.com/countries/tl"
+          },
+          {
+            "title": "Türkiye",
+            "href": "https://findahelpline.com/countries/tr"
+          },
+          {
+            "title": "United Arab Emirates",
+            "href": "https://findahelpline.com/countries/ae"
+          },
+          {
+            "title": "Vietnam",
+            "href": "https://findahelpline.com/countries/vn"
+          },
+          { "title": "Yemen", "href": "https://findahelpline.com/countries/ye" }
+        ]
       },
       {
-        "title": "Germany",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-germany"
+        "header": "Oceania",
+        "links": [
+          {
+            "title": "Australia",
+            "href": "https://findahelpline.com/countries/au"
+          },
+          {
+            "title": "Cook Islands",
+            "href": "https://findahelpline.com/countries/ck"
+          },
+          { "title": "Fiji", "href": "https://findahelpline.com/countries/fj" },
+          { "title": "Guam", "href": "https://findahelpline.com/countries/gu" },
+          {
+            "title": "New Caledonia",
+            "href": "https://findahelpline.com/countries/nc"
+          },
+          {
+            "title": "New Zealand",
+            "href": "https://findahelpline.com/countries/nz"
+          },
+          {
+            "title": "Papua New Guinea",
+            "href": "https://findahelpline.com/countries/pg"
+          },
+          {
+            "title": "Samoa",
+            "href": "https://findahelpline.com/countries/ws"
+          },
+          {
+            "title": "Solomon Islands",
+            "href": "https://findahelpline.com/countries/sb"
+          },
+          {
+            "title": "Tonga",
+            "href": "https://findahelpline.com/countries/to"
+          },
+          {
+            "title": "Vanuatu",
+            "href": "https://findahelpline.com/countries/vu"
+          }
+        ]
       },
       {
-        "title": "India",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-india"
-      },
-      {
-        "title": "The Netherlands",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-netherlands"
-      },
-      {
-        "title": "Poland",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-poland"
-      },
-      {
-        "title": "Sweden",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-sweden"
-      },
-      {
-        "title": "UK",
-        "href": "https://www.therapyroute.com/article/suicide-hotlines-and-crisis-lines-in-the-united-kingdom"
-      },
-      {
-        "title": "US",
-        "href": "https://www.mhanational.org/resources/988"
+        "header": "Africa",
+        "links": [
+          {
+            "title": "Algeria",
+            "href": "https://findahelpline.com/countries/dz"
+          },
+          {
+            "title": "Benin",
+            "href": "https://findahelpline.com/countries/bj"
+          },
+          {
+            "title": "Botswana",
+            "href": "https://findahelpline.com/countries/bw"
+          },
+          {
+            "title": "Burkina Faso",
+            "href": "https://findahelpline.com/countries/bf"
+          },
+          {
+            "title": "Burundi",
+            "href": "https://findahelpline.com/countries/bi"
+          },
+          {
+            "title": "Djibouti",
+            "href": "https://findahelpline.com/countries/dj"
+          },
+          {
+            "title": "Eswatini",
+            "href": "https://findahelpline.com/countries/sz"
+          },
+          {
+            "title": "Gambia",
+            "href": "https://findahelpline.com/countries/gm"
+          },
+          {
+            "title": "Kenya",
+            "href": "https://findahelpline.com/countries/ke"
+          },
+          {
+            "title": "Malawi",
+            "href": "https://findahelpline.com/countries/mw"
+          },
+          {
+            "title": "Mauritania",
+            "href": "https://findahelpline.com/countries/mr"
+          },
+          {
+            "title": "Mauritius",
+            "href": "https://findahelpline.com/countries/mu"
+          },
+          {
+            "title": "Morocco",
+            "href": "https://findahelpline.com/countries/ma"
+          },
+          {
+            "title": "Mozambique",
+            "href": "https://findahelpline.com/countries/mz"
+          },
+          {
+            "title": "Namibia",
+            "href": "https://findahelpline.com/countries/na"
+          },
+          {
+            "title": "Nigeria",
+            "href": "https://findahelpline.com/countries/ng"
+          },
+          {
+            "title": "Seychelles",
+            "href": "https://findahelpline.com/countries/sc"
+          },
+          {
+            "title": "South Africa",
+            "href": "https://findahelpline.com/countries/za"
+          },
+          {
+            "title": "South Sudan",
+            "href": "https://findahelpline.com/countries/ss"
+          },
+          {
+            "title": "Tanzania",
+            "href": "https://findahelpline.com/countries/tz"
+          },
+          { "title": "Togo", "href": "https://findahelpline.com/countries/tg" },
+          {
+            "title": "Uganda",
+            "href": "https://findahelpline.com/countries/ug"
+          },
+          {
+            "title": "Zambia",
+            "href": "https://findahelpline.com/countries/zm"
+          },
+          {
+            "title": "Zimbabwe",
+            "href": "https://findahelpline.com/countries/zw"
+          }
+        ]
       }
     ],
     "tipsExperts": {

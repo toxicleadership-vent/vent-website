@@ -1,0 +1,86 @@
+.accordion {
+  text-align: left;
+  margin-bottom: var(--padding-bottom-xl);
+}
+
+.accordionItem {
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+
+.accordion-button collapsed {
+  font-weight: 600;
+}
+
+.accordionHeader {
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.accordionSubtitle {
+  width: 100%;
+  font-weight: 600;
+}
+
+.accordionBody {
+  font-size: medium;
+}
+
+.linksTitle {
+  padding-top: 30px;
+}
+
+.hrefWrapper {
+  color: unset;
+}
+
+.linkWrapper {
+  padding-bottom: 24px;
+}
+
+.linkWrapper:first-child {
+  padding-top: 24px;
+}
+
+.plusIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.linkColumn {
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 1200px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-l);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-m);
+  }
+  .link {
+    margin-bottom: 24px;
+  }
+}
+
+/*Size S >= 576 <= 786 */
+@media screen and (max-width: 768px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-s);
+  }
+}
+
+/* Size XS<576 */
+@media screen and (max-width: 576px) {
+  .accordion {
+    margin-bottom: var(--padding-bottom-xs);
+  }
+}
