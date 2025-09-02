@@ -8,11 +8,7 @@
           "name": "Kasia Musur",
           "position": "Research and Communications",
           "image": "/images/about/team/kasia.jpg",
-          "cv": "Kasia founded VENT in the summer of 2022 after recognizing the destructive impact of toxic workplace environments and the recurring behavioral patterns among leaders who contribute to such cultures. Drawing on her educational background in Management, Social Anthropology, and Global Crime, along with over a decade of international experience in roles spanning social research, HR, and leadership development, Kasia created this platform to promote solidarity and mitigate the effects of toxic leadership through research and storytelling. In addition to her work with VENT, Kasia also leads <Link target=\"_blank\" href=\"https://www.lightup-movement.de/\">lightup Germany e.V.</Link>, an NGO dedicated to human trafficking prevention.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/katarzyna-kasia-musur/"
-          }
+          "cv": "Kasia founded VENT in the summer of 2022 after recognizing the destructive impact of toxic workplace environments and the recurring behavioral patterns among leaders who contribute to such cultures. Drawing on her educational background in Management, Social Anthropology, and Global Crime, along with over a decade of international experience in roles spanning social research, HR, and leadership development, Kasia created this platform to promote solidarity and mitigate the effects of toxic leadership through research and storytelling. In addition to her work with VENT, Kasia also leads <Link target=\"_blank\" href=\"https://www.lightup-movement.de/\">lightup Germany e.V.</Link>, an NGO dedicated to human trafficking prevention."
         },
         {
           "name": "Dr. Eva Hoffmann",
@@ -36,11 +32,7 @@
           "name": "Cynthia Mathieu, PhD",
           "position": "Collaborator",
           "image": "/images/about/collaborators/cynthia.jpg",
-          "cv": "Cynthia collaborates with VENT as a consulting expert working together to develop tools supporting victims of workplace harassment. She is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being.",
-          "linkedin": {
-            "title": "Connect on LinkedIn",
-            "href": "https://www.linkedin.com/in/cynthiamathieu/"
-          }
+          "cv": "Cynthia collaborates with VENT as a consulting expert working together to develop tools supporting victims of workplace harassment. She is a psychologist and professor of Organizational Behavior. She consults with organizations and teaches on topics relating to dark personalities in the workplace, employee selection, organizational fraud and leadership. She has published empirical research on leadership, employee selection, narcissism and psychopathy in the workplace, and employee well-being."
         }
       ]
     },
@@ -69,9 +61,7 @@
           "bottom": ""
         }
       ]
-    },
-    "contact": "Do you wish to tell your story and contribute to growing awareness of toxic leadership to make it less acceptable?",
-    "contactButton": { "href": "/contact", "text": "Contact us" }
+    }
   },
   "metadata": {
     "title": "Vent - About us",

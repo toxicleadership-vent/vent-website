@@ -77,9 +77,9 @@ export default async function Home({ params: { lang } }: PageProps) {
               </Row>
             </div>
           </div>
-          <Link href={t('what_guides_us.button.href')}>
+          <Link href={t('what_guides_us.button.url')}>
             <button className={rootStyles.button}>
-              {t('what_guides_us.button.text')}
+              {t('what_guides_us.button.title')}
             </button>
           </Link>
         </Container>

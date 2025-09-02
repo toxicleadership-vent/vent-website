@@ -9,7 +9,7 @@ export const config = {
   ],
 }
 
-acceptLanguage.languages(languages)
+acceptLanguage.languages(['en', 'de'])
 
 export async function middleware(req: NextRequest) {
   // Standard Response erstellen

@@ -34,9 +34,9 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
               <Link
                 className={styles.link}
                 target="_blank"
-                href={t('banner.link.href')}
+                href={t('banner.link.url')}
               >
-                <FaYoutube /> {t('banner.link.name')}
+                <FaYoutube /> {t('banner.link.title')}
               </Link>
             </div>
           </div>
@@ -60,8 +60,8 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
           })}
         </Row>
         <Stack gap={5} className={styles.buttonWrapper}>
-          <Link href={t('button.href')}>
-            <button className={rootStyles.button}>{t('button.text')}</button>
+          <Link href={t('button.url')}>
+            <button className={rootStyles.button}>{t('button.title')}</button>
           </Link>
         </Stack>
       </div>

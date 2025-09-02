@@ -7,8 +7,8 @@
     }
   },
   "thankyou": {
-    "text": "Thank you for testing our self-assessment tool. We hope it was helpful. Each new step will provide deeper insights into your situation.\n\nIn the meantime, watch our cartoons <Link1>here</Link1>, read people's stories <Link2>here</Link2>, get informed about the issue <Link3>here</Link3> and find support <Link4>here</Link4>.\n\nWe'll keep you posted about the updates!\n\nThe VENT Team",
-    "link": "https://www.youtube.com/@TOXIC_LEADERSHIP_VENT"
+    "title": "Thank you for testing our self-assessment tool. We hope it was helpful. Each new step will provide deeper insights into your situation.\n\nIn the meantime, watch our cartoons <Link1>here</Link1>, read people's stories <Link2>here</Link2>, get informed about the issue <Link3>here</Link3> and find support <Link4>here</Link4>.\n\nWe'll keep you posted about the updates!\n\nThe VENT Team",
+    "url": "https://www.youtube.com/@TOXIC_LEADERSHIP_VENT"
   },
   "done": "You have already completed the survey! Thanks.",
   "modal": {

@@ -517,7 +517,7 @@ export const Survey = ({
           ) : (
             <Trans
               t={t}
-              i18nKey={'thankyou.text'}
+              i18nKey={'thankyou.title'}
               components={{
                 Link1: (
                   <Link
