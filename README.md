@@ -31,3 +31,5 @@ npm run prettier
 ## PRISMA
 
 to update schema do
+
+test
