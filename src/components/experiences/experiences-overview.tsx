@@ -36,7 +36,7 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
                 target="_blank"
                 href={t('banner.link.href')}
               >
-                <FaYoutube /> {t('banner.link.name')}
+                <FaYoutube /> {t('banner.link.title')}
               </Link>
             </div>
           </div>

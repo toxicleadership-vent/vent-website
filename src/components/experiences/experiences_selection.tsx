@@ -63,7 +63,7 @@ export const ExperienceSelection = async ({
             `categories.${categoryIndex}.articles.${articleIndex}.link.href`
           )}
         >
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.name`)}
+          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.title`)}
         </Link>
       )}
     </>
