@@ -3,11 +3,11 @@
     "title": "Vent",
     "subtitle": "about the toxic boss",
     "navbar": [
-      { "href": "/getting-informed", "link": "Get Informed" },
-      { "href": "/experiences", "link": "Real Stories" },
-      { "href": "/support", "link": "Self Help" },
-      { "href": "/about", "link": "About us" },
-      { "href": "/contact", "link": "Contact" }
+      { "href": "/getting-informed", "title": "Get Informed" },
+      { "href": "/experiences", "title": "Real Stories" },
+      { "href": "/support", "title": "Self Help" },
+      { "href": "/about", "title": "About us" },
+      { "href": "/contact", "title": "Contact" }
     ],
     "metadata": {
       "title": "VENT",
@@ -19,28 +19,28 @@
   "footer": {
     "description": "about the toxic boss",
     "links": [
-      { "href": "/getting-informed", "link": "Get Informed" },
-      { "href": "/experiences", "link": "Real Stories" },
-      { "href": "/support", "link": "Self Help" },
-      { "href": "/about", "link": "About us" },
-      { "href": "/contact", "link": "Contact" },
-      { "href": "/data-privacy", "link": "Data Privacy" },
-      { "href": "/imprint", "link": "Imprint" },
+      { "href": "/getting-informed", "title": "Get Informed" },
+      { "href": "/experiences", "title": "Real Stories" },
+      { "href": "/support", "title": "Self Help" },
+      { "href": "/about", "title": "About us" },
+      { "href": "/contact", "title": "Contact" },
+      { "href": "/data-privacy", "title": "Data Privacy" },
+      { "href": "/imprint", "title": "Imprint" },
       {
         "href": "https://www.linkedin.com/company/toxicleadershipvent",
-        "link": "LinkedIn"
+        "title": "LinkedIn"
       },
       {
         "href": "https://www.instagram.com/toxic_leadership_vent/",
-        "link": "Instagram"
+        "title": "Instagram"
       },
       {
         "href": "https://www.facebook.com/people/Toxic-Leadership-Vent/61555735958454/",
-        "link": "Facebook"
+        "title": "Facebook"
       },
       {
         "href": "https://www.youtube.com/channel/UC9ZWcmfnH2RPyGfpovUCwZA",
-        "link": "Youtube"
+        "title": "Youtube"
       }
     ]
   },
@@ -53,7 +53,7 @@
     "webdesign": {
       "title": "Web design:",
       "text": "Julia Vogel",
-      "link": "https://www.juliaworks.com",
+      "d": "https://www.juliaworks.com",
       "href": "www.juliaworks.com"
     },
     "photos": {
@@ -61,5 +61,5 @@
       "text": "Experiences\n“Speak up - become the next target” ©halbergman from Getty Images via Canva.com\n“Just move him to another department” ©Karolina Grabowska from Pexels via Canva.com\n“Forced to run a fake investigation” ©Horsche from Getty Images via Canva.com\n“Friends to foes” ©Georgijevic from Getty Images Signature via Canva.com\n“Growth over culture” ©Mike Marchetti from baseimage via Canva.com\n“Squeezed to the last drop” ©kieferpix from Getty Images Pro via Canva.com"
     }
   },
-  "data-privacy": { "title": "Data Privacy" }
+  "dataPrivacy": { "title": "Data Privacy" }
 }
