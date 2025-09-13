@@ -13,8 +13,8 @@
       "7": "lose the sense of who you are",
       "8": "lose sight of your personal and professional goals"
     },
-    "inbetween-title": "There is no one-size-fits-all solution",
-    "inbetween-paragraph": "How a person deals with this challenge depends on many factors such as their financial security, family situation, work experience, and other career prospects. A lot depends on the level of privilege, types of limitations and what kind of support is available. \n\nBelow are some points to consider when deciding what steps to take when you find yourself in a toxic environment, and observe it having a negative impact on your wellbeing.",
+    "inbetweenTitle": "There is no one-size-fits-all solution",
+    "inbetweenParagraph": "How a person deals with this challenge depends on many factors such as their financial security, family situation, work experience, and other career prospects. A lot depends on the level of privilege, types of limitations and what kind of support is available. \n\nBelow are some points to consider when deciding what steps to take when you find yourself in a toxic environment, and observe it having a negative impact on your wellbeing.",
     "accordion": [
       {
         "subtitle": "CONSIDER IF YOU CAN LEAVE IMMEDIATELY",
@@ -65,7 +65,7 @@
         "second_text": ""
       }
     ],
-    "link-title": "Suicide hotlines and crisis lines",
+    "linkTitle": "Suicide hotlines and crisis lines",
     "links": [
       {
         "header": "EUROPE",
