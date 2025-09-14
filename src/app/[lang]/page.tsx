@@ -60,7 +60,7 @@ export default async function Home({ params: { lang } }: PageProps) {
             <h1> {t('what_guides_us.title')}</h1>
             <div>
               <Row>
-                {copy.home.what_guides_us.sections.map((_section, index) => (
+                {copy.home.whatGuidesUs.sections.map((_section, index) => (
                   <Col xs={12} sm={4} key={index}>
                     <div className={styles.principleImage}>
                       <BootstrapImage
