@@ -1,4 +1,4 @@
-import { PageProps } from '../layout'
+import { PageProps } from '../layout' //do we still need this?
 import styles from './page.module.css'
 import MdxText from './about.mdx'
 import {
