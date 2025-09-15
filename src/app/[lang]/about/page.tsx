@@ -1,8 +1,6 @@
-import { getTranslation } from '@/localization/i18n'
 import { PageProps } from '../layout'
 import styles from './page.module.css'
 import MdxText from './about.mdx'
-import copy from '@/localization/about/en.json'
 import {
   Card,
   CardBody,
@@ -18,7 +16,10 @@ import rootStyles from '../rootStyles.module.css'
 import { Trans } from 'react-i18next/TransWithoutContext'
 
 export default async function About({ params: { lang } }: PageProps) {
-  const { t } = await getTranslation(lang, 'about', { keyPrefix: 'about' })
+
+  const aboutCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/about?&populate[team][populate][members][populate]=image&populate[media][populate]=video&populate[metadata][populate]=*&populate[contactButton][populate]=*`
+  )
+  const {data : about} = await aboutCopy.json();
 
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
@@ -26,47 +27,47 @@ export default async function About({ params: { lang } }: PageProps) {
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <div className={styles.wrapper}>
-          <h1>{t('title')}</h1>
+          <h1>{about.title}</h1>
           <div className={styles.midWrapper}>
             <div className={styles.mdx}>
               <MdxText />
             </div>
           </div>
           <Container>
-            <h1>{t('media.title')}</h1>
+            <h1>{about.media.title}</h1>
           </Container>
           <Row>
             <Col xs={12} sm={6} md={4} className={styles.column}>
               <Media
                 iframeProps={{
-                  src: t('media.video.0.src'),
-                  title: t('media.video.0.title'),
+                  src: about.media?.video?.[0]?.src,
+                  title: about.media?.video?.[0]?.title,
                 }}
-                top={t('media.video.0.show')}
-                middle={t('media.video.0.episode')}
-                bottom={t('media.video.0.bottom')}
+                top={about.media?.video?.[0]?.show}
+                middle={about.media?.video?.[0]?.episode}
+                bottom={about.media?.video?.[0]?.bottom}
               />
             </Col>
             <Col xs={12} sm={6} md={4} className={styles.column}>
               <Media
                 iframeProps={{
-                  src: t('media.video.2.src'),
-                  title: t('media.video.2.title'),
+                  src: about.media?.video?.[2].src,
+                  title: about.media?.video?.[2].title,
                 }}
-                top={t('media.video.2.show')}
-                middle={t('media.video.2.episode')}
-                bottom={t('media.video.2.bottom')}
+                top={about.media?.video?.[2].show}
+                middle={about.media?.video?.[2].episode}
+                bottom={about.media?.video?.[2].bottom}
               />
             </Col>
             <Col xs={12} sm={6} md={4} className={styles.column}>
               <Media
                 iframeProps={{
-                  src: t('media.video.1.src'),
-                  title: t('media.video.1.title'),
+                  src: about.media?.video?.[1].src,
+                  title: about.media?.video?.[1].title,
                 }}
-                top={t('media.video.1.show')}
-                middle={t('media.video.1.episode')}
-                bottom={t('media.video.1.bottom')}
+                top={about.media?.video?.[1].show}
+                middle={about.media?.video?.[1].episode}
+                bottom={about.media?.video?.[1].bottom}
               />
             </Col>
           </Row>
@@ -114,9 +115,9 @@ export default async function About({ params: { lang } }: PageProps) {
          
 
           <Container className={styles.container}>
-            <h1>{t('team.title')}</h1>
+            <h1>{about.team.title}</h1>
             <Row>
-              {copy.about.team?.members.map((teamMember, index) => {
+              {about.team?.members.map((teamMember, index) => {
                 // @ts-ignore
                 return (
                   <Col md={6} key={index}>
@@ -124,16 +125,16 @@ export default async function About({ params: { lang } }: PageProps) {
                       <CardImg
                         className={styles.cardImg}
                         variant="top"
-                        src={t(`team.members.${index}.image`)}
+                        src={about.team?.members?.[index].image.formats.large.url}
                       />
                       <CardHeader>
-                        <h4>{t(`team.members.${index}.name`)}</h4>
-                        <h4>{t(`team.members.${index}.position`)}</h4>
+                        <h4>{about.team?.members?.[index].name}</h4>
+                        <h4>{about.team?.members?.[index].position}</h4>
                       </CardHeader>
                       <CardBody>
                         {/** @ts-ignore next-line*/}
-                        <Trans t={t} components={{ Link: <Link></Link> }}>
-                          <p>{t(`team.members.${index}.cv`)}</p>
+                        <Trans components={{ Link: <Link></Link> }}>
+                          <p>{about.team?.members?.[index].cv}</p>
                         </Trans>
                       </CardBody>
                     </Card>
