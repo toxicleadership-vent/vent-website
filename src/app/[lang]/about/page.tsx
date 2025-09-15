@@ -14,10 +14,11 @@ import Link from 'next/link'
 import { Media } from '@/components/media/media'
 import rootStyles from '../rootStyles.module.css'
 import { Trans } from 'react-i18next/TransWithoutContext'
+import { PageParams } from '../layout'
 
-export default async function About({ params: { lang } }: PageProps) {
+export default async function About({ params }: { params: PageParams }) {
 
-  const aboutCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/about?&populate[team][populate][members][populate]=image&populate[media][populate]=video&populate[metadata][populate]=*&populate[contactButton][populate]=*`
+  const aboutCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/about?locale=${params.lang}&populate[team][populate][members][populate]=image&populate[media][populate]=video&populate[metadata][populate]=*&populate[contactButton][populate]=*`
   )
   const {data : about} = await aboutCopy.json();
 
