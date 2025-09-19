@@ -26,6 +26,7 @@
     "@vercel/functions": "^2.0.0",
     "accept-language": "^3.0.20",
     "bootstrap": "^5.3.3",
+    "caniuse-lite": "^1.0.30001743",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "googleapis": "^128.0.0",
