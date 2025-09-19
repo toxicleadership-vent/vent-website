@@ -10,7 +10,7 @@ import {
 import { Header } from '@/components/header/header'
 import { PageProps } from './layout'
 import { getTranslation } from '@/localization/i18n'
-import copy from '@/localization/home/en.json'
+//import copy from '@/localization/home/en.json'
 import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 import Donate from '@/components/donate/donate'
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
@@ -19,8 +19,11 @@ import Link from 'next/link'
 import { Survey } from '@/components/survey/survey'
 
 export default async function Home({ params: { lang } }: PageProps) {
-  const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
 
+  const homeCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/home?locale=${lang}&populate[whatWeDo][populate]=*&populate[whatGuidesUs][populate][button][populate]=*&populate[polls][populate]=*&populate[metadata][populate]=*&populate[whatGuidesUs][populate][sections][populate]=*`
+  )
+  const {data : home} = await homeCopy.json();
+  console.log("title:",home.whatGuidesUs.sections?.[0].title);
   return (
     <main className={styles.main}>
       <Header language={lang} color="#408CFF" lightColor="#98C1FF" />
@@ -28,7 +31,7 @@ export default async function Home({ params: { lang } }: PageProps) {
         <div className={`${styles.sectionBlue} ${rootStyles.section}`}>
           <div className={styles.heroBanner}>
             <div className={styles.heroText}>
-              <h1 style={{ textAlign: 'left' }}>{t('title')}</h1>
+              <h1 style={{ textAlign: 'left' }}>{home.title}</h1>
             </div>
           </div>
         </div>
@@ -37,8 +40,8 @@ export default async function Home({ params: { lang } }: PageProps) {
           className={`${styles.sectionLightBlue} ${rootStyles.section}`}
         >
           <div className={`${rootStyles.sectionContainer}`}>
-            <h1> {t('what_we_do.title')}</h1>
-            <p className={`sectionIntro`}>{t('what_we_do.text')}</p>
+            <h1> {home.whatWeDo.title}</h1>
+            <p className={`sectionIntro`}>{home.whatWeDo.text}</p>
           </div>
         </Container>
         <Container
@@ -46,7 +49,7 @@ export default async function Home({ params: { lang } }: PageProps) {
           className={`${styles.sectionOrange} ${rootStyles.section}`}
         >
           <div className={rootStyles.sectionContainer}>
-            <h1> {t('polls.title')}</h1>
+            <h1> {home.polls.title}</h1>
             <Stack className={styles.poll}>
               <PollsContainer lang={lang} />
             </Stack>
@@ -57,29 +60,31 @@ export default async function Home({ params: { lang } }: PageProps) {
           className={`${styles.sectionLightBlue} ${rootStyles.section}`}
         >
           <div className={rootStyles.sectionContainer}>
-            <h1> {t('what_guides_us.title')}</h1>
+            <h1> {home.whatGuidesUs.title}</h1>
             <div>
               <Row>
-                {copy.home.whatGuidesUs.sections.map((_section, index) => (
+                {home.whatGuidesUs?.sections?.map((section: any, index: number) => {
+                  return (
                   <Col xs={12} sm={4} key={index}>
                     <div className={styles.principleImage}>
                       <BootstrapImage
-                        src={t(`what_guides_us.sections.${index}.image`)}
-                        alt={t(`what_guides_us.sections.${index}.title`)}
+                        src={section.image.href}
+                        alt={section.alt}
                         height="80%"
                         width="80%"
                       />
                     </div>
-                    <h3>{t(`what_guides_us.sections.${index}.title`)}</h3>
-                    <p>{t(`what_guides_us.sections.${index}.text`)}</p>
+                    <h3>{section.title}</h3>
+                    <p>{section.text}</p>
                   </Col>
-                ))}
+                  )
+                })} 
               </Row>
             </div>
           </div>
-          <Link href={t('what_guides_us.button.href')}>
+          <Link href={home?.whatGuidesUs?.button?.href}>
             <button className={rootStyles.button}>
-              {t('what_guides_us.button.text')}
+              {home?.whatGuidesUs?.button?.text}
             </button>
           </Link>
         </Container>
