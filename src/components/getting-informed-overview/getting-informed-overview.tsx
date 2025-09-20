@@ -9,15 +9,15 @@ import {
   Card,
   CardImg,
 } from '../bootstrap/bootstrap'
-import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import rootStyles from '../../app/[lang]/rootStyles.module.css'
-import copyInformed from '@/localization/getting-informed/en.json'
 
 const GettingInformedOverview = async ({ lang }: { lang: string }) => {
-  const { t } = await getTranslation(lang, 'getting-informed', {
-    keyPrefix: 'getting-informed',
-  })
+
+const GettingInformedOverviewCopy = await fetch
+  (`https://typical-dogs-185f9ff416.strapiapp.com/api/getting-informed?locale=en&populate[sections][populate]=*&populate[button][populate]=*`)
+
+const {data: gettingInformedOverview} = await GettingInformedOverviewCopy.json();
 
   return (
     <section className={`${rootStyles.section}`}>
@@ -25,29 +25,29 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <div>
-          <h1>{t('title')}</h1>
-          <p className={'sectionIntro'}>{t('description')}</p>
+          <h1>{gettingInformedOverview?.title}</h1>
+          <p className={'sectionIntro'}>{gettingInformedOverview?.description}</p>
         </div>
         <div className={styles.subsection}>
           <Row className={`g-4`} xs={1} sm={2} md={3}>
-            {copyInformed['getting-informed'].sections.map(
-              (_section, index) => (
+            {gettingInformedOverview?.sections?.map(
+              (section: any, index: number) => (
                 <div key={index}>
                   <Link
                     className={styles.myCardTitle}
-                    href={t(`sections.${index}.link.href`)}
+                    href={section?.link.href}
                   >
                     <Card bsPrefix="myCard" className={styles.myCard}>
                       <img
                         style={{ marginBottom: 30 }}
-                        src={t(`sections.${index}.image.src`)}
-                        alt={t(`sections.${index}.image.alt`)}
+                        src={section?.image.href}
+                        alt={section?.image.alt}
                         width={'173px'}
                       />
                       <CardBody>
                         <CardTitle className={styles.myCardTitle}>
                           <h3 style={{ textAlign: 'center' }}>
-                            {t(`sections.${index}.title`)}
+                            {section?.title}
                           </h3>
                         </CardTitle>
                       </CardBody>
@@ -58,8 +58,8 @@ const GettingInformedOverview = async ({ lang }: { lang: string }) => {
             )}
           </Row>
         </div>
-        <Link href={t('button.href')}>
-          <button className={rootStyles.button}>{t('button.text')}</button>
+        <Link href={gettingInformedOverview?.button.href}>
+          <button className={rootStyles.button}>{gettingInformedOverview?.button.text}</button>
         </Link>
       </div>
     </section>
