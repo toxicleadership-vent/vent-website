@@ -2,11 +2,9 @@
 
 import Link from 'next/link'
 import { Row, Stack } from '../bootstrap/bootstrap'
-import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import parentStyles from '../../app/[lang]/getting-informed/page.module.css'
 import rootStyles from '../../app/[lang]/rootStyles.module.css'
-import copy from '@/localization/getting-informed/en.json'
 import { Col, Image } from '@/components/bootstrap/bootstrap'
 
 const GettingInformedReadMore = async ({
@@ -16,9 +14,9 @@ const GettingInformedReadMore = async ({
   lang: string
   id: string
 }) => {
-  const { t } = await getTranslation(lang, 'getting-informed', {
-    keyPrefix: 'getting-informed',
-  })
+  const gettingInformedCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/getting-informed?locale=en&populate[sections][populate]=*&populate[button][populate]=*`)
+
+  const {data: gettingInformed} = await gettingInformedCopy.json();
 
   const filterArticle = (_section: object, index: number) => {
     return index + 1 !== parseInt(id)
@@ -30,35 +28,32 @@ const GettingInformedReadMore = async ({
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <div className={styles.text}>
-          <h1>{t('titleMore')}</h1>
-          <p className={'sectionIntro'}>{t('description')}</p>
+          <h1>{gettingInformed.titleMore}</h1>
+          <p className={'sectionIntro'}>{gettingInformed.description}</p>
         </div>
         <Stack gap={5}>
-          {copy['getting-informed'].sections
-            .map((_section, index) => (
+          {gettingInformed?.sections?.map((_section: any, index: number) => (
               <Row key={index} className={`${parentStyles.gettingInformed}`}>
                 <Col md={5} lg={4}>
-                  <Link href={t(`sections.${index}.link.href`)}>
+                  <Link href={_section.link.href}>
                     <Image
                       className={parentStyles.cardImage}
-                      alt={t(`sections.${index}.image.alt`)}
-                      src={t(`sections.${index}.image.src`)}
+                      alt={_section.image.alt}
+                      src={_section.image.href}
                     />
                   </Link>
                 </Col>
                 <Col md={7} lg={8} className={parentStyles.cardText}>
-                  <h2>{t(`sections.${index}.title`)}</h2>
+                  <h2>{_section.title}</h2>
                   <p>
-                    {t(`sections.${index}.description`, {
-                      defaultValue: '',
-                    })}
+                    {_section.description}
                   </p>
                   <p>
                     <Link
                       className={parentStyles.link}
-                      href={t(`sections.${index}.link.href`)}
+                      href={_section.link.href}
                     >
-                      {t(`sections.${index}.link.text`)}
+                      {_section.link.text}
                     </Link>
                   </p>
                 </Col>
@@ -66,8 +61,8 @@ const GettingInformedReadMore = async ({
             ))
             .filter(filterArticle)}
         </Stack>
-        <Link href={t('button.href')}>
-          <button className={rootStyles.button}>{t('button.text')}</button>
+        <Link href={gettingInformed.button.href}>
+          <button className={rootStyles.button}>{gettingInformed.button.text}</button>
         </Link>
       </div>
     </section>
