@@ -23,7 +23,7 @@ export default async function Home({ params: { lang } }: PageProps) {
   const homeCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/home?locale=${lang}&populate[whatWeDo][populate]=*&populate[whatGuidesUs][populate][button][populate]=*&populate[polls][populate]=*&populate[metadata][populate]=*&populate[whatGuidesUs][populate][sections][populate]=*`
   )
   const {data : home} = await homeCopy.json();
-  console.log("title:",home.whatGuidesUs.sections?.[0].title);
+  
   return (
     <main className={styles.main}>
       <Header language={lang} color="#408CFF" lightColor="#98C1FF" />
