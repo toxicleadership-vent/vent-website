@@ -45,13 +45,13 @@
     "react-select": "^5.8.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.20",
+    "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^7.6.20",
     "@storybook/addon-links": "^7.6.20",
-    "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/blocks": "^7.6.20",
-    "@storybook/nextjs": "^7.6.20",
-    "@storybook/react": "^7.6.20",
+    "@storybook/addon-onboarding": "^9.1.8",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/nextjs": "^9.1.8",
+    "@storybook/react": "^9.1.8",
     "@storybook/test": "^7.6.20",
     "@types/node": "^20.17.6",
     "encoding": "^0.1.13",
