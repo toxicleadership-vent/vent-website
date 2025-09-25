@@ -1,9 +1,7 @@
-import { getTranslation } from '@/localization/i18n'
 import { PageParams } from '../layout'
 import { Stack, Row, Col, Image } from '@/components/bootstrap/bootstrap'
 import styles from './page.module.css'
 import rootStyles from '../rootStyles.module.css'
-import copy from '@/localization/getting-informed/en.json'
 import Link from 'next/link'
 
 export default async function GettingInformed({
@@ -11,11 +9,8 @@ export default async function GettingInformed({
 }: {
   params: PageParams
 }) {
-  const { t: tInformed } = await getTranslation(
-    params.lang,
-    'getting-informed',
-    { keyPrefix: 'getting-informed' }
-  )
+  const GettingInformedCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/getting-informed?locale=${params.lang}&populate[sections][populate]=*&populate[button][populate]=*`);
+  const {data : gettingInformed} = await GettingInformedCopy.json();
 
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
@@ -23,34 +18,27 @@ export default async function GettingInformed({
         className={` ${rootStyles.sectionContainer} ${styles.sectionContainer}`}
       >
         <div>
-          <h1>{tInformed('title')}</h1>
-          <p className={'sectionIntro'}>{tInformed('description')}</p>
+          <h1>{gettingInformed.title}</h1>
+          <p className={'sectionIntro'}>{gettingInformed.description}</p>
         </div>
         <Stack gap={5}>
-          {copy['getting-informed'].sections.map((_section, index) => (
-            <Row key={index} className={`${styles.gettingInformed}`}>
+          {gettingInformed.sections?.map((section: any, index: number) => (
+            <Row key={section.id} className={styles.gettingInformed}>
               <Col md={5} lg={4}>
-                <Link href={tInformed(`sections.${index}.link.href`)}>
+                <Link href={section.link.href}>
                   <Image
                     className={styles.cardImage}
-                    alt={tInformed(`sections.${index}.image.alt`)}
-                    src={tInformed(`sections.${index}.image.src`)}
+                    alt={section.image.alt}
+                    src={section.image.href}
                   />
                 </Link>
               </Col>
               <Col md={7} lg={8} className={styles.cardText}>
-                <h2>{tInformed(`sections.${index}.title`)}</h2>
+                <h2>{section.title}</h2>
+                <p>{section.description}</p>
                 <p>
-                  {tInformed(`sections.${index}.description`, {
-                    defaultValue: '',
-                  })}
-                </p>
-                <p>
-                  <Link
-                    className={styles.link}
-                    href={tInformed(`sections.${index}.link.href`)}
-                  >
-                    {tInformed(`sections.${index}.link.text`)}
+                  <Link className={styles.link} href={section.link.href}>
+                    {section.link.text}
                   </Link>
                 </p>
               </Col>
