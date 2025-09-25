@@ -1,12 +1,13 @@
 import styles from './page.module.css'
 import { Stack } from '@/components/bootstrap/bootstrap'
 import { PageParams } from '../layout'
-import { getTranslation } from '@/localization/i18n'
 import { ExperienceLarge } from '@/components/experiences/experiences-large'
 import rootStyles from '../rootStyles.module.css'
 
 export default async function Articles({ params }: { params: PageParams }) {
-  const { t } = await getTranslation(params.lang, 'experiences')
+  const ArticlesCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${params.lang}`);
+  
+  const articles = await ArticlesCopy.json();
 
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
@@ -14,8 +15,8 @@ export default async function Articles({ params }: { params: PageParams }) {
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <Stack>
-          <h1>{t('title')}</h1>
-          <p className="sectionIntro">{t('abstract')}</p>
+          <h1>{articles.data.title}</h1>
+          <p className="sectionIntro">{articles.data.abstract}</p>
         </Stack>
         <ExperienceLarge lang={params.lang} categories={[0, 1, 2]} />
       </div>
