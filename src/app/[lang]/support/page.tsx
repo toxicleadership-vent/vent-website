@@ -1,10 +1,8 @@
 import styles from './page.module.css'
 import { PageParams } from '../layout'
-import { getTranslation } from '@/localization/i18n'
 import Link from 'next/link'
 import Image from 'next/image'
 import plus from '../../../../public/images/plus_icon.png'
-import { Trans } from 'react-i18next/TransWithoutContext'
 import rootStyles from '../rootStyles.module.css'
 import {
   Row,
@@ -14,11 +12,14 @@ import {
   AccordionBody,
   AccordionHeader,
 } from '@/components/bootstrap/bootstrap'
-import copy from '../../../localization/support/en.json'
 import { SupportLinks } from '@/components/support-links/support-links'
 
 export default async function Contact({ params }: { params: PageParams }) {
-  const { t } = await getTranslation(params.lang, 'support')
+  const { lang } = params;
+
+  const ContactCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/support?locale=${lang}&populate[accordion][populate]=*&populate[links][populate]=*&populate[tipsExperts][populate][tips][populate]=*`)
+
+  const {data : support} = await ContactCopy.json();
 
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
@@ -26,129 +27,79 @@ export default async function Contact({ params }: { params: PageParams }) {
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <div>
-          <h1>{t('support.title')}</h1>
+          <h1>{support.title}</h1>
           <div>
-            <h2>{t('support.subtitle')}</h2>
-            <p className="sectionIntro">{t('support.intro')}</p>
+            <h2>{support.subtitle}</h2>
+            {support.intro?.map((block: any, i: number) => (
+              <p className="sectionIntro" key={i}>
+                {block.children?.map((child: any, j: number) => child.text).join(' ')}
+              </p>
+            ))}
             <ul className={`${styles.ul} sectionIntro`}>
-              <li>{t('support.list.1')}</li>
-              <li>{t('support.list.2')}</li>
-              <li>{t('support.list.3')}</li>
-              <li>{t('support.list.4')}</li>
-              <li>{t('support.list.5')}</li>
-              <li>{t('support.list.6')}</li>
-              <li>{t('support.list.7')}</li>
-              <li>{t('support.list.8')}</li>
+              {support.accordion?.[0].list?.map((item: any, i: number) => (
+                <li key={item.id}>{item.text}</li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h2>{t('support.inbetween-title')}</h2>
-            <p className={'sectionIntro'}>{t('support.inbetween-paragraph')}</p>
-
+            <h2>{support.inbetweenTitle}</h2>
+          {support.inbetweenParagraph?.map((block: any, i: number) => (
+            <p className="sectionIntro" key={i}>
+              {block.children?.map((child: any) => child.text).join(' ')}
+            </p>
+          ))}
             <Accordion
               className={styles.accordion}
               bsPrefix="myAccordion"
               flush
             >
-              <AccordionItem className={styles.accordionItem} eventKey="0">
-                <AccordionHeader className={styles.accordionHeader}>
-                  <h3 className={styles.accordionSubtitle}>
-                    {t('support.accordion.0.subtitle')}
-                  </h3>
-                  <div className={styles.plusIcon}>
-                    <Image src={plus} alt="text" width="20" height="20" />
-                  </div>
-                </AccordionHeader>
-                <AccordionBody className={styles.accordionBody}>
-                  {t('support.accordion.0.first_text')}
-                  <ul>
-                    <li>{t('support.accordion.0.list.1')}</li>
-                    <li>{t('support.accordion.0.list.2')}</li>
-                    <li>{t('support.accordion.0.list.3')}</li>
-                    <li>{t('support.accordion.0.list.4')}</li>
-                    <li>{t('support.accordion.0.list.5')}</li>
-                    <li>{t('support.accordion.0.list.6')}</li>
-                  </ul>
-                  {t('support.accordion.0.second_text')}
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className={styles.accordionItem} eventKey="1">
-                <AccordionHeader className={styles.accordionHeader}>
-                  <h3 className={styles.accordionSubtitle}>
-                    {t('support.accordion.1.subtitle')}
-                  </h3>
-                  <div className={styles.plusIcon}>
-                    <Image src={plus} alt="text" width="20" height="20" />
-                  </div>
-                </AccordionHeader>
-                <AccordionBody className={styles.accordionBody}>
-                  {t('support.accordion.1.first_text')}
-                  <ul>
-                    <li>{t('support.accordion.1.list.1')}</li>
-                    <li>{t('support.accordion.1.list.2')}</li>
-                    <li>{t('support.accordion.1.list.3')}</li>
-                    <li>{t('support.accordion.1.list.4')}</li>
-                    <li>{t('support.accordion.1.list.5')}</li>
-                  </ul>
-                  {t('support.accordion.1.second_text')}
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className={styles.accordionItem} eventKey="2">
-                <AccordionHeader className={styles.accordionHeader}>
-                  <h3 className={styles.accordionSubtitle}>
-                    {t('support.accordion.2.subtitle')}
-                  </h3>
-                  <div className={styles.plusIcon}>
-                    <Image src={plus} alt="text" width="20" height="20" />
-                  </div>
-                </AccordionHeader>
-                <AccordionBody className={styles.accordionBody}>
-                  {t('support.accordion.2.first_text')}
-                  {t('support.accordion.2.second_text')}
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className={styles.accordionItem} eventKey="3">
-                <AccordionHeader className={styles.accordionHeader}>
-                  <h3 className={styles.accordionSubtitle}>
-                    {t('support.accordion.3.subtitle')}
-                  </h3>
-                  <div className={styles.plusIcon}>
-                    <Image src={plus} alt="text" width="20" height="20" />
-                  </div>
-                </AccordionHeader>
-                <AccordionBody className={styles.accordionBody}>
-                  {t('support.accordion.3.first_text')}
-                  {t('support.accordion.3.second_text')}
-                </AccordionBody>
-              </AccordionItem>
-              <AccordionItem className={styles.accordionItem} eventKey="4">
-                <AccordionHeader className={styles.accordionHeader}>
-                  <h3 className={styles.accordionSubtitle}>
-                    {t('support.accordion.4.subtitle')}
-                  </h3>
-                  <div className={styles.plusIcon}>
-                    <Image src={plus} alt="text" width="20" height="20" />
-                  </div>
-                </AccordionHeader>
-                <AccordionBody className={styles.accordionBody}>
-                  {/** @ts-ignore */}
-                  <Trans t={t} components={{ Link: <Link></Link> }}>
-                    {t('support.accordion.4.first_text')}
-                  </Trans>
-                  {t('support.accordion.4.second_text')}
-                </AccordionBody>
-              </AccordionItem>
+              {support.accordion?.map((item: any, idx: number) => (
+                <AccordionItem className={styles.accordionItem} eventKey={idx.toString()} key={idx}>
+                  <AccordionHeader className={styles.accordionHeader}>
+                    <h3 className={styles.accordionSubtitle}>
+                      {item.subtitle}
+                    </h3>
+                    <div className={styles.plusIcon}>
+                      <Image src={plus} alt="text" width="20" height="20" />
+                    </div>
+                  </AccordionHeader>
+                  <AccordionBody className={styles.accordionBody}>
+                    {/* Richtext für first_text */}
+                    {Array.isArray(item.first_text)
+                      ? item.first_text.map((block: any, i: number) => (
+                          <p key={i}>
+                            {block.children?.map((child: any) => child.text).join(' ')}
+                          </p>
+                        ))
+                      : item.first_text}
+                    {/* Liste */}
+                    <ul>
+                      {item.list?.map((listItem: any) => (
+                        <li key={listItem.id}>{listItem.text}</li>
+                      ))}
+                    </ul>
+                    {/* Richtext für second_text */}
+                    {Array.isArray(item.second_text)
+                      ? item.second_text.map((block: any, i: number) => (
+                          <p key={i}>
+                            {block.children?.map((child: any) => child.text).join(' ')}
+                          </p>
+                        ))
+                      : item.second_text}
+                  </AccordionBody>
+                </AccordionItem>
+              ))}
             </Accordion>
             <div className={styles.tipsSection}>
-              <h2>{t('support.tipsExperts.title')}</h2>
+              <h2>{support.tipsExperts.title}</h2>
               <Row>
-                {copy.support.tipsExperts.tips.map((_tip, i) => (
+                {support.tipsExperts.tips.map((_tip: any, i: number) => (
                   <Col className={styles.linkColumn} key={i} sm={6} md={4}>
                     <div className={`card ${styles.card}`}>
                       <img
                         alt={'author image'}
-                        src={t(`support.tipsExperts.tips.${i}.image`)}
+                        src={_tip.image}
                       />
                       <img
                         className={styles.hand}
@@ -157,16 +108,16 @@ export default async function Contact({ params }: { params: PageParams }) {
                       />
                     </div>
                     <h3 style={{ wordBreak: 'normal' }}>
-                      {t(`support.tipsExperts.tips.${i}.title`)}
+                      {_tip.title}
                     </h3>
-                    <p>{t(`support.tipsExperts.tips.${i}.author`)}</p>
+                    <p>{_tip.author}</p>
                     <p>
                       <a
                         target="_blank"
                         className={`link ${styles.link}`}
-                        href={t(`support.tipsExperts.tips.${i}.link.href`)}
+                        href={_tip.link.href}
                       >
-                        {t(`support.tipsExperts.tips.${i}.link.text`)}
+                        {_tip.link.text}
                       </a>
                     </p>
                   </Col>
@@ -174,7 +125,7 @@ export default async function Contact({ params }: { params: PageParams }) {
               </Row>
             </div>
             <div>
-              <h2 style={{ textAlign: 'left' }}>{t('support.link-title')}</h2>
+              <h2 style={{ textAlign: 'left' }}>{support.linkTitle}</h2>
               <SupportLinks lang={params.lang} />
             </div>
           </div>
@@ -183,5 +134,7 @@ export default async function Contact({ params }: { params: PageParams }) {
     </main>
   )
 }
+// TO DO: Richtext Elemente mappen
+
 
 /* TO DO: accordion header bold, restliche Texte einfügen, Pluszeichen zum aufklappen -> https://github.com/react-bootstrap/react-bootstrap/issues/4140#issuecomment-604130679,  */

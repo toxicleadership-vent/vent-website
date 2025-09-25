@@ -10,25 +10,23 @@ import {
 import Image from 'next/image'
 import plus from '../../../public/images/plus_icon.png'
 import styles from './accordion.module.css'
-import { getTranslation } from '@/localization/i18n'
-import copy from '../../localization/support/en.json'
 
 export const SupportLinks = async ({ lang }: { lang: string }) => {
-  const { t } = await getTranslation(lang, 'support', {
-    keyPrefix: 'support.links',
-  })
+  const SupportLinksCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/support?locale=${lang}&populate[tipsExperts][populate]=*&populate[links][populate]=*`)
 
-  const links = copy.support.links
+  const {data : support} = await SupportLinksCopy.json();
+  const links = support.links;
+
   return (
     <Accordion className={styles.accordion} bsPrefix="myAccordion" flush>
-      {links.map((continent, index) => (
+      {links.map((continent: any, index: number) => (
         <AccordionItem
           key={continent.header}
           eventKey={index.toString()}
           className={styles.accordionItem}
         >
           <AccordionHeader className={styles.accordionHeader}>
-            <h3 className={styles.accordionSubtitle}>{t(`${index}.header`)}</h3>
+            <h3 className={styles.accordionSubtitle}>{continent.header}</h3>
             <div className={styles.plusIcon}>
               <Image src={plus} alt="text" width="20" height="20" />
             </div>
@@ -36,15 +34,15 @@ export const SupportLinks = async ({ lang }: { lang: string }) => {
           <AccordionBody className={styles.accordionBody}>
             <div>
               <Row className={styles.linkWrapper}>
-                {continent.links.map((link, countryIndex) => (
+                {continent?.links?.map((link: any, countryIndex: any) => (
                   <Col key={countryIndex} md={6} className={styles.linkColumn}>
                     <div className={styles.linkWrapper}>
-                      <h5>{t(`${index}.links.${countryIndex}.title`)}</h5>
+                      <h5>{link.title}</h5>
                       <Link
                         className={styles.hrefWrapper}
-                        href={t(`${index}.links.${countryIndex}.href`)}
+                        href={link.href}
                       >
-                        {t(`${index}.links.${countryIndex}.href`)}
+                        {link.href}
                       </Link>
                     </div>
                   </Col>
