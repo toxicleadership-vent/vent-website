@@ -20,5 +20,8 @@ export const QuestionComp: Story = {
     question: 'Are you finding it difficult to mentally disconnect from work?',
     answers: ['Yes', 'No', 'Not sure'],
     index: 0,
+    setActiveQuestion: () => {},
+    dispatch: () => {},
+    isActive: true,
   },
 }

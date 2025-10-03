@@ -118,7 +118,7 @@ export default async function About({ params }: { params: PageParams }) {
           <Container className={styles.container}>
             <h1>{about.team.title}</h1>
             <Row>
-              {about.team?.members.map((teamMember, index) => {
+              {about.team?.members.map((teamMember: {image: {formats: {large: {url: string}}}, name: string, position: string, cv: string}, index: number) => {
                 // @ts-ignore
                 return (
                   <Col md={6} key={index}>
