@@ -126,16 +126,16 @@ export default async function About({ params }: { params: PageParams }) {
                       <CardImg
                         className={styles.cardImg}
                         variant="top"
-                        src={about.team?.members?.[index].image.formats.large.url}
+                        src={teamMember.image.formats.large.url}
                       />
                       <CardHeader>
-                        <h4>{about.team?.members?.[index].name}</h4>
-                        <h4>{about.team?.members?.[index].position}</h4>
+                        <h4>{teamMember.name}</h4>
+                        <h4>{teamMember.position}</h4>
                       </CardHeader>
                       <CardBody>
                         {/** @ts-ignore next-line*/}
                         <Trans components={{ Link: <Link></Link> }}>
-                          <p>{about.team?.members?.[index].cv}</p>
+                          <p>{teamMember.cv}</p>
                         </Trans>
                       </CardBody>
                     </Card>
