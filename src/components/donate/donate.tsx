@@ -1,6 +1,5 @@
 'use server'
 import { cookies } from 'next/headers'
-import { getTranslation } from '@/localization/i18n'
 import styles from './donate.module.css'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 import PayPalDonationButton from '@/components/paypal/paypal'
