@@ -6,7 +6,6 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { Work_Sans } from 'next/font/google'
 import Footer from '@/components/footer/footer'
-import { getTranslation } from '@/localization/i18n'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,9 +34,9 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { lang } = params
-  const { t } = await getTranslation(lang, 'home', {
-    keyPrefix: 'home.metadata',
-  })
+  const metadataCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/home?locale=${lang}&populate[metadata][populate]=*`)
+  
+  const {data : metadata} = await metadataCopy.json();
 
   return {
     metadataBase: new URL('https://www.toxicleadershipvent.com'),
@@ -47,8 +46,8 @@ export async function generateMetadata(
         en: '/en',
       },
     },
-    title: t('title'),
-    description: t('description'),
+    title: metadata.title,
+    description: metadata.description,
     robots: 'index, follow',
     icons: {
       icon: ['/images/favicon/favicon.ico'],
@@ -58,16 +57,16 @@ export async function generateMetadata(
     openGraph: {
       type: 'website',
       url: 'https://www.toxicleadershipvent.com',
-      description: t('description'),
-      siteName: t('siteName'),
-      images: t('image'),
+      description: metadata.description,
+      siteName: metadata.title,
+      images: metadata.image,
     },
     twitter: {
       card: 'summary_large_image',
       site: '@evandyou',
-      images: { url: t('image'), alt: t('siteName') },
-      title: t('siteName'),
-      description: t('description'),
+      images: { url: metadata.image, alt: metadata.title},
+      title: metadata.title,
+      description: metadata.description,
     },
     keywords: [
       'workplace',

@@ -9,8 +9,6 @@ import {
 } from '@/components/bootstrap/bootstrap'
 import { Header } from '@/components/header/header'
 import { PageProps } from './layout'
-import { getTranslation } from '@/localization/i18n'
-//import copy from '@/localization/home/en.json'
 import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
 import Donate from '@/components/donate/donate'
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
