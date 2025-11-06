@@ -10,7 +10,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { lang } = params
-  const { metadataCopy } = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/general?locale=${lang}&populate[metadata][populate]=*`);
+  const  metadataCopy  = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/general?locale=${lang}&populate[metadata][populate]=*`);
 
   const {data: metadata} = await metadataCopy.json();
 
