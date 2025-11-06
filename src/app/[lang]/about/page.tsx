@@ -11,9 +11,11 @@ import {
   Row,
 } from '@/components/bootstrap/bootstrap'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeSanitize from 'rehype-sanitize'
 import { Media } from '@/components/media/media'
 import rootStyles from '../rootStyles.module.css'
-import { Trans } from 'react-i18next/TransWithoutContext'
 import { PageParams } from '../layout'
 
 export default async function About({ params }: { params: PageParams }) {
@@ -133,10 +135,27 @@ export default async function About({ params }: { params: PageParams }) {
                         <h4>{teamMember.position}</h4>
                       </CardHeader>
                       <CardBody>
-                        {/** @ts-ignore next-line*/}
-                        <Trans components={{ Link: <Link></Link> }}>
-                          <p>{teamMember.cv}</p>
-                        </Trans>
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          rehypePlugins={[rehypeSanitize]}
+                          components={{
+                            a: ({ node, ...props }: any) => {
+                              const href = props.href as string | undefined
+                              const external = href && href.startsWith('http')
+                              return (
+                                <a
+                                  href={href}
+                                  target={external ? '_blank' : undefined}
+                                  rel={external ? 'noopener noreferrer' : undefined}
+                                >
+                                  {props.children}
+                                </a>
+                              )
+                            },
+                          }}
+                        >
+                          {teamMember.cv || ''}
+                        </ReactMarkdown>
                       </CardBody>
                     </Card>
                   </Col>
