@@ -7,7 +7,7 @@
     "title": "Watch VENT ABOUT THE TOXIC BOSS INTERVIEWS",
     "link": {
       "href": "https://www.youtube.com/@TOXIC_LEADERSHIP_VENT",
-      "name": "VISIT OUR YOUTUBE CHANNEL"
+      "title": "VISIT OUR YOUTUBE CHANNEL"
     },
     "text": "Watch our short cartoons and hear people's experiences of toxic leadership."
   },
@@ -27,7 +27,7 @@
           "abstract": "While being abused in the workplace, you reach out to trusted professionals and your employer, only to be met with silence and neglect. Vital information is withheld, and you are left to navigate bureaucratic barriers alone, which causes further injury to your well-being.",
           "link": {
             "href": "/experiences/failed_by_the_systems",
-            "name": "Read story",
+            "title": "Read story",
             "state": "Read story"
           },
           "image": {
@@ -48,7 +48,7 @@
           ],
           "link": {
             "href": "/experiences/just_move_him",
-            "name": "Read story",
+            "title": "Read story",
             "state": "Read story"
           },
           "image": {
@@ -71,7 +71,7 @@
           "tags": ["exploitation", "overworking", "lack of support"],
           "link": {
             "href": "/experiences/squeezed_to_the_last_drop",
-            "name": "Read story"
+            "title": "Read story"
           },
           "image": {
             "href": "/images/experiences/squeezed_to_the_last_drop.jpg",
@@ -86,7 +86,7 @@
           "tags": ["gossip", "supporting bullying", "dishonesty"],
           "link": {
             "href": "/experiences/fake_investigation",
-            "name": "Read story"
+            "title": "Read story"
           },
           "image": {
             "href": "/images/experiences/fake_investigation.jpg",
@@ -111,7 +111,7 @@
           ],
           "link": {
             "href": "/experiences/growth_over_culture",
-            "name": "Read story"
+            "title": "Read story"
           },
           "image": {
             "href": "/images/experiences/growth_over_culture.jpg",
@@ -126,7 +126,7 @@
           "tags": ["sabotage", "threats", "harassment"],
           "link": {
             "href": "/experiences/friends_to_foes",
-            "name": "Read story"
+            "title": "Read story"
           },
           "image": {
             "href": "/images/experiences/friends_to_foes.jpg",

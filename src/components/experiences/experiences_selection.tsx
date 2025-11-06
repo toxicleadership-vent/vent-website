@@ -1,5 +1,3 @@
-import copy from '@/localization/experiences/en.json'
-import { getTranslation } from '@/localization/i18n'
 import styles from './experiences.module.css'
 import {
   Col,
@@ -19,51 +17,38 @@ export const ExperienceSelection = async ({
   categoryIndex: number
   articleIndex: number
 }) => {
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(
+    `https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=*`
+  )
+  const { data: experience } = await res.json()
+
+  const category = experience.categories?.[categoryIndex]
+  const article = category?.articles?.[articleIndex]
+
   return (
     <>
       <BootstrapImage
-        src={t(
-          `categories.${categoryIndex}.articles.${articleIndex}.image.href`
-        )}
-        alt={t(`categories.${categoryIndex}.image.alt`)}
+        src={article?.image?.href}
+        alt={category?.image?.alt}
         rounded
         fluid
         style={{ marginBottom: '1rem' }}
       />
-      <h3>{t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}</h3>
+      <h3>{article?.title}</h3>
       <div className={styles.tags}>
-        <span className="smallBold">
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.tag_title`)}
-        </span>
+        <span className="smallBold">{article?.tag_title}</span>
         <ListGroup bsPrefix="list" className={`small`}>
-          {copy.categories[categoryIndex].articles[articleIndex].tags.map(
-            (tag, index) => {
-              return (
-                <ListGroupItem key={`tag-${index}`}>
-                  {t(
-                    `categories.${categoryIndex}.articles.${articleIndex}.tags.${index}`
-                  )}
-                </ListGroupItem>
-              )
-            }
-          )}
+          {article?.tags?.map((tag: any, index: number) => (
+            <ListGroupItem key={`tag-${tag.id ?? index}`}>{tag.value}</ListGroupItem>
+          ))}
         </ListGroup>
       </div>
-      <p>
-        {t(`categories.${categoryIndex}.articles.${articleIndex}.abstract`)}
-      </p>
-      {t(`categories.${categoryIndex}.articles.${articleIndex}.link.state`) ===
-      'coming soon' ? (
+      <p>{article?.abstract}</p>
+      {article?.link?.state === 'coming soon' ? (
         <p className={styles.link}>Coming soon</p>
       ) : (
-        <Link
-          className={styles.link}
-          href={t(
-            `categories.${categoryIndex}.articles.${articleIndex}.link.href`
-          )}
-        >
-          {t(`categories.${categoryIndex}.articles.${articleIndex}.link.name`)}
+        <Link className={styles.link} href={article?.link?.href}>
+          {article?.link?.title}
         </Link>
       )}
     </>

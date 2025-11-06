@@ -9,7 +9,7 @@
         "description": "The issue of toxic leadership is a worldwide, cross-industry, cross-generational and cross-gender problem. Its consequent negative impact destroys individuals’ mental and physical health. It also drains societies' capacities to support people unable to work or live healthy, balanced lives.",
         "link": { "href": "/getting-informed/1", "text": "Read article" },
         "image": {
-          "src": "/images/getting_informed/What_is_toxic_leadership.svg",
+          "href": "/images/getting_informed/What_is_toxic_leadership.svg",
           "alt": "What is toxic leadership?"
         }
       },
@@ -18,7 +18,7 @@
         "description": "When leadership takes a toxic turn, it can have far-reaching, damaging consequences for individuals, companies, communities, the environment, and the economy. Here are some common dysfunctional behaviors, which can help you identify whether you are dealing with a toxic leader.",
         "link": { "href": "/getting-informed/2", "text": "Read article" },
         "image": {
-          "src": "/images/getting_informed/How_to_spot_a_toxic_leader.svg",
+          "href": "/images/getting_informed/How_to_spot_a_toxic_leader.svg",
           "alt": "How to spot a toxic leader?"
         }
       },
@@ -27,7 +27,7 @@
         "description": "The longer you work in a toxic environment, the more time and money it will cost you to recover from psychological violence. The person(s), who caused the harm, either directly or by turning a blind eye, will not share in these expenses, even though you helped them build their careers and fortune.",
         "link": { "href": "/getting-informed/3", "text": "Read article" },
         "image": {
-          "src": "/images/getting_informed/What_impact_does_it_have.svg",
+          "href": "/images/getting_informed/What_impact_does_it_have.svg",
           "alt": "What impact does it have?"
         }
       },
@@ -36,7 +36,7 @@
         "description": "Toxic leadership is normalized for many reasons, from the allure of short-term success to the fear of retaliation and the perpetuation of harmful behaviors. Negative practices persist, without much recognition of their harmful impact, within organizational cultures which encourage negative behaviors.",
         "link": { "href": "/getting-informed/4", "text": "Read article" },
         "image": {
-          "src": "/images/getting_informed/Why_is_toxicity_normalized.svg",
+          "href": "/images/getting_informed/Why_is_toxicity_normalized.svg",
           "alt": "Why is toxicity normalized?"
         }
       },
@@ -45,7 +45,7 @@
         "description": "By sharing our experiences of harassment and violence at work, we can expose the extent of this problem and pave the way for change. Talking about toxic leadership builds solidarity and reduces the number of people who feel alone with this problem. A problem, which is systemic - not individual!",
         "link": { "href": "/getting-informed/5", "text": "Read article" },
         "image": {
-          "src": "/images/getting_informed/Why_we_should_talk_about_it.svg",
+          "href": "/images/getting_informed/Why_we_should_talk_about_it.svg",
           "alt": "Why should we talk about it?"
         }
       }

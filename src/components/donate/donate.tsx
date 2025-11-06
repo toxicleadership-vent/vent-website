@@ -1,6 +1,5 @@
 'use server'
 import { cookies } from 'next/headers'
-import { getTranslation } from '@/localization/i18n'
 import styles from './donate.module.css'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 import PayPalDonationButton from '@/components/paypal/paypal'
@@ -14,19 +13,19 @@ const isUserInNorthAmerica = (countryCode: string) => {
 const Donation = async ({ lang }: { lang: string }) => {
   // 📌 `countryCode` aus den Cookies abrufen
   const countryCode = cookies().get('country')?.value || 'Unknown'
-  const { t } = await getTranslation(lang, 'donation', {
-    keyPrefix: 'donation',
-  })
+  const DonationCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/donation?locale=en&populate=*`);
+  
+  const {data : donation} = await DonationCopy.json();
 
   return (
     <section className={`${rootStyles.section}`}>
       <div>
-        <h1>{t('title')}</h1>
-        <p className={'sectionIntro'}>{t('description')}</p>
+        <h1>{donation.title}</h1>
+        <p className={'sectionIntro'}>{donation.description}</p>
         <ul className={`${styles.ul} ${rootStyles.textIntro}`}>
-          <li>{t('list.1')}</li>
-          <li>{t('list.2')}</li>
-          <li>{t('list.3')}</li>
+          <li>{donation.list?.[0].text}</li>
+          <li>{donation.list?.[1].text}</li>
+          <li>{donation.list?.[2].text}</li>
         </ul>
         <div className={`${rootStyles.section}`}>
           {isUserInNorthAmerica(countryCode) ? (
@@ -36,7 +35,7 @@ const Donation = async ({ lang }: { lang: string }) => {
           )}
         </div>
 
-        <p className={'sectionIntro'}>{t('thanks')}</p>
+        <p className={'sectionIntro'}>{donation.thanks}</p>
       </div>
     </section>
   )

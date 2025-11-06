@@ -1,7 +1,5 @@
-import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import dynamic from 'next/dynamic'
-import copy from '@/localization/experiences/en.json'
 import rootStyles from '../../rootStyles.module.css'
 
 export default async function Experience({
@@ -11,7 +9,8 @@ export default async function Experience({
 }) {
   const { lang } = params
 
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=image`)
+  const { data: experienceData } = await res.json()
 
   let categoryIndex: number, articleIndex: number
   switch (params?.experience) {
@@ -45,61 +44,49 @@ export default async function Experience({
   }
 
   const ExperienceMdx = dynamic(
-    () => {
-      return import(`./${params.experience}.mdx`)
-    },
-    {
-      suspense: true,
-    }
+    () => import(`./${params.experience}.mdx`),
+    { suspense: true }
   )
+
+  // Hilfsvariablen für bessere Lesbarkeit
+  const category = experienceData.categories?.[categoryIndex]
+  const article = category?.articles?.[articleIndex]
+
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
-      <div
-        className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
-      >
+      <div className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}>
         <div>
-          <p className={styles.h1Breadcrumb}>{t('title')}</p>
+          <p className={styles.h1Breadcrumb}>{experienceData.title}</p>
           <h1 style={{ padding: 0 }}>
-            {t(`categories.${categoryIndex}.articles.${articleIndex}.title`)}
+            {article?.title}
           </h1>
           <span className="smallText">
-            {t(`categories.${categoryIndex}.articles.${articleIndex}.length`)}
+            {article?.length}
           </span>
           <div
             className={styles.articleImage}
             style={{
-              backgroundImage: `url(${t(
-                `categories.${categoryIndex}.articles.${articleIndex}.image.href`
-              )})`,
+              backgroundImage: `url(${article?.image?.href})`,
             }}
           ></div>
           <div className={styles.container}>
             <p style={{ textTransform: 'uppercase' }} className="smallText">
-              <strong>{t(`companyType`)}</strong>
-              <br></br>
+              <strong>{experienceData.companyType}</strong>
+              <br />
               <span style={{ textTransform: 'none' }}>
-                {t(`categories.${categoryIndex}.title`)}
+                {category?.title}
               </span>
-              <br></br>
-              <br></br>
+              <br /><br />
               <strong>
-                {t(
-                  `categories.${categoryIndex}.articles.${articleIndex}.tag_title`
-                )}
+                {article?.tag_title}
               </strong>
-              <br></br>
-              {copy.categories[categoryIndex].articles[articleIndex].tags.map(
-                (tag, index) => (
-                  <>
-                    <span style={{ textTransform: 'none' }}>
-                      {t(
-                        `categories.${categoryIndex}.articles.${articleIndex}.tags.${index}`
-                      )}
-                    </span>
-                    <br></br>
-                  </>
-                )
-              )}
+              <br />
+              {article?.tags?.map((tag: string, index: number) => (
+                <span key={index} style={{ textTransform: 'none' }}>
+                  {tag}
+                  <br />
+                </span>
+              ))}
             </p>
           </div>
         </div>

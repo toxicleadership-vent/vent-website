@@ -1,6 +1,4 @@
 import { Stack, Container, Row, Col } from '@/components/bootstrap/bootstrap'
-import copy from '@/localization/experiences/en.json'
-import { getTranslation } from '@/localization/i18n'
 import styles from './experiences.module.css'
 import rootStyles from '../../app/[lang]/rootStyles.module.css'
 import { ExperienceSelection } from './experiences_selection'
@@ -12,28 +10,28 @@ export const ExperienceCategory = async ({
   lang: string
   categoryIndex: number
 }) => {
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(
+    `https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=*`
+  )
+  const { data: experience } = await res.json()
+  const category = experience.categories?.[categoryIndex]
 
   return (
     <div key={categoryIndex} className={styles.section}>
-      <h2>{t(`categories.${categoryIndex}.title`)}</h2>
-      <p className="textIntro">
-        {t(`categories.${categoryIndex}.description`)}
-      </p>
-      <div key={categoryIndex}>
+      <h2>{category?.title}</h2>
+      <p className="textIntro">{category?.description}</p>
+      <div>
         <Row>
-          {copy.categories[categoryIndex].articles?.map(
-            (article, articleIndex) => (
-              <Col key={articleIndex} md={6} className={styles.bottom}>
-                <ExperienceSelection
-                  key={`${categoryIndex}-${articleIndex}`}
-                  lang={lang}
-                  categoryIndex={categoryIndex}
-                  articleIndex={articleIndex}
-                />
-              </Col>
-            )
-          )}
+          {category?.articles?.map((article: any, articleIndex: number) => (
+            <Col key={articleIndex} md={6} className={styles.bottom}>
+              <ExperienceSelection
+                key={`${categoryIndex}-${articleIndex}`}
+                lang={lang}
+                categoryIndex={categoryIndex}
+                articleIndex={articleIndex}
+              />
+            </Col>
+          ))}
         </Row>
       </div>
     </div>
@@ -47,19 +45,20 @@ export const ExperienceLarge = async ({
   lang: string
   categories: number[]
 }) => {
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(
+    `https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=*`
+  )
+  const { data: experience } = await res.json()
 
   return (
     <Stack gap={5}>
-      {categories.map((category, categoryIndex) => {
-        return (
-          <ExperienceCategory
-            key={categoryIndex}
-            lang={lang}
-            categoryIndex={categoryIndex}
-          />
-        )
-      })}
+      {categories.map((categoryIndex) => (
+        <ExperienceCategory
+          key={categoryIndex}
+          lang={lang}
+          categoryIndex={categoryIndex}
+        />
+      ))}
     </Stack>
   )
 }
@@ -71,24 +70,26 @@ export const ExperienceOverviewArticle = async ({
   lang: string
   categories: number[]
 }) => {
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(
+    `https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=*`
+  )
+  const { data: experience } = await res.json()
+
   return (
     <section className={`${rootStyles.section} ${styles.main}`}>
       <div
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <Stack>
-          <h1>{t('alternativeTitle')}</h1>
+          <h1>{experience.alternativeTitle}</h1>
           <Stack gap={5}>
-            {categories.map((category, categoryIndex) => {
-              return (
-                <ExperienceCategory
-                  key={categoryIndex}
-                  lang={lang}
-                  categoryIndex={category}
-                />
-              )
-            })}
+            {categories.map((categoryIndex) => (
+              <ExperienceCategory
+                key={categoryIndex}
+                lang={lang}
+                categoryIndex={categoryIndex}
+              />
+            ))}
           </Stack>
         </Stack>
       </div>

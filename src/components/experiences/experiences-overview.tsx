@@ -1,26 +1,25 @@
 import Link from 'next/link'
 import { Stack, Row, Col } from '@/components/bootstrap/bootstrap'
-import copy from '@/localization/experiences/en.json'
-import { getTranslation } from '@/localization/i18n'
 import styles from './experiences.module.css'
 import { ExperienceSelection } from './experiences_selection'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 import { FaYoutube } from 'react-icons/fa6'
 
 export const ExperienceOverview = async ({ lang }: { lang: string }) => {
-  const { t } = await getTranslation(lang, 'experiences')
+  const res = await fetch(
+    `https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[categories][populate][articles][populate]=*&populate[banner][populate]=*&populate[button][populate]=*`
+  )
+  const { data: experience } = await res.json()
 
   return (
     <section className={`${rootStyles.section}`}>
-      <div
-        className={` ${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
-      >
-        <Stack className={``}>
-          <h1>{t('title')}</h1>
-          <p className={'sectionIntro'}>{t('abstract')}</p>
+      <div className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}>
+        <Stack>
+          <h1>{experience.title}</h1>
+          <p className={'sectionIntro'}>{experience.abstract}</p>
         </Stack>
         <Stack>
-          <div className={` ${styles.banner}`}>
+          <div className={styles.banner}>
             <div className={styles.bannerImageWraper}>
               <img
                 src={'/images/experiences/experiences_youtube.svg'}
@@ -29,39 +28,36 @@ export const ExperienceOverview = async ({ lang }: { lang: string }) => {
               />
             </div>
             <div className={styles.text}>
-              <h2 style={{ textAlign: 'left' }}>{t('banner.title')}</h2>
-              <p>{t('banner.text')}</p>
+              <h2 style={{ textAlign: 'left' }}>{experience.banner?.title}</h2>
+              <p>{experience.banner?.text}</p>
               <Link
                 className={styles.link}
                 target="_blank"
-                href={t('banner.link.href')}
+                href={experience.banner?.link?.href}
               >
-                <FaYoutube /> {t('banner.link.name')}
+                <FaYoutube /> {experience.banner?.link?.title}
               </Link>
             </div>
           </div>
         </Stack>
-        <Row className={`align-items-start`}>
-          {copy.categories.map((category, categoryIndex) => {
-            return (
-              <Col
-                className={styles.experienceSelection}
-                key={categoryIndex}
-                md={4}
-              >
-                <ExperienceSelection
-                  key={`${categoryIndex}-${1}`}
-                  lang={lang}
-                  categoryIndex={categoryIndex}
-                  articleIndex={categoryIndex === 0 ? 0 : 1}
-                />
-              </Col>
-            )
-          })}
+        <Row className="align-items-start">
+          {experience.categories?.map((category: any, categoryIndex: number) => (
+            <Col
+              className={styles.experienceSelection}
+              key={category.id ?? categoryIndex}
+              md={4}
+            >
+              <ExperienceSelection
+                lang={lang}
+                categoryIndex={categoryIndex}
+                articleIndex={categoryIndex === 0 ? 0 : 1}
+              />
+            </Col>
+          ))}
         </Row>
         <Stack gap={5} className={styles.buttonWrapper}>
-          <Link href={t('button.href')}>
-            <button className={rootStyles.button}>{t('button.text')}</button>
+          <Link href={experience.button?.href}>
+            <button className={rootStyles.button}>{experience.button?.text}</button>
           </Link>
         </Stack>
       </div>

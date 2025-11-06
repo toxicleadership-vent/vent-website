@@ -2,8 +2,8 @@ import { Header } from '@/components/header/header'
 import styles from './page.module.css'
 import { ExperienceOverviewArticle } from '@/components/experiences/experiences-large'
 import { useMemo } from 'react'
-import { getTranslation } from '@/localization/i18n'
 import { ResolvingMetadata, Metadata } from 'next'
+import meta from '@/components/survey/question.stories'
 
 export type PageParams = {
   lang: string
@@ -15,32 +15,31 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { lang } = params
-  const { t } = await getTranslation(lang, 'experiences', {
-    keyPrefix: 'metadata',
-  })
+  const metadataCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/experience?locale=${lang}&populate[metadata][populate]=*`)
+  const {data : metadata} = await metadataCopy.json();
 
   const robots = (await parent).robots?.basic
   const icons = (await parent).icons
   const keywords = (await parent).keywords
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: metadata.title,
+    description: metadata.description,
     robots,
     icons,
     openGraph: {
       type: 'website',
       url: 'https://www.toxicleadershipvent.com/experiences',
-      description: t('description'),
-      siteName: t('siteName'),
-      images: t('image'),
+      description: metadata.description,
+      siteName: metadata.siteName,
+      images: metadata.image,
     },
     twitter: {
       card: 'summary_large_image',
       site: '@evandyou',
-      images: { url: t('image'), alt: t('siteName') },
-      title: t('siteName'),
-      description: t('description'),
+      images: { url: metadata.image, alt: metadata.siteName },
+      title: metadata.siteName,
+      description: metadata.description,
     },
     keywords,
   }

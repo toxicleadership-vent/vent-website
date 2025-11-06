@@ -1,4 +1,3 @@
-import { getTranslation } from './../../localization/i18n'
 import {
   Navbar,
   NavbarBrand,
@@ -11,7 +10,6 @@ import {
   OffcanvasTitle,
   NavbarOffcanvas,
 } from '../bootstrap/bootstrap'
-import copy from '@/localization/general/en.json'
 import styles from './header.module.css'
 import Link from 'next/link'
 
@@ -29,9 +27,9 @@ export const Header = async (
     lightColor: 'transparent',
   }
 ) => {
-  const { t } = await getTranslation(language, 'general', {
-    keyPrefix: 'general',
-  })
+  const headerCopy = await fetch (`https://typical-dogs-185f9ff416.strapiapp.com/api/general?locale=${language}&[populate]=*`)
+
+  const {data : header} = await headerCopy.json();
 
   return (
     <Navbar
@@ -51,7 +49,7 @@ export const Header = async (
           </div>
         </NavbarBrand>
         <div>
-          <span className={styles.subtitle}>about the toxic boss</span>
+          <span className={styles.subtitle}>{header.subtitle}</span>
         </div>
         <div style={{ width: 100, textAlign: 'right' }}>
           <NavbarToggle
@@ -81,7 +79,7 @@ export const Header = async (
           </OffcanvasHeader>
           <OffcanvasBody>
             <Nav>
-              {copy.general.navbar.map((navitem, index) => (
+              {header.navbar.map((navitem: any, index: number) => (
                 <NavItem
                   as="li"
                   key={index}
@@ -89,7 +87,7 @@ export const Header = async (
                   className={styles.link}
                 >
                   <NavLink href={navitem.href}>
-                    {t(`navbar.${index}.link`)}
+                    {navitem.title}
                   </NavLink>
                 </NavItem>
               ))}

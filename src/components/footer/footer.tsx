@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { getTranslation } from './../../localization/i18n'
 import styles from './footer.module.css'
 import rootStyles from '../../app/[lang]/rootStyles.module.css'
 import { Nav, NavItem, NavLink } from '@/components/bootstrap/bootstrap'
@@ -12,8 +11,13 @@ import logo1 from '../../../public/images/home/footer1.svg'
 import logo3 from '../../../public/images/home/footer3.svg'
 import logo5 from '../../../public/images/home/footer5.svg'
 
-const Footer = async ({ lang }: { lang: string }) => {
-  const { t } = await getTranslation(lang, 'general', { keyPrefix: 'footer' })
+type FooterProps = { lang: string };
+
+const Footer = async ({ lang }: FooterProps) => {
+ 
+  const footerCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/footer?locale=${lang}&populate=*`
+  )
+  const {data : footer} = await footerCopy.json();
 
   return (
     <div className={`${rootStyles.section} ${styles.footerContainer}`}>
@@ -44,46 +48,46 @@ const Footer = async ({ lang }: { lang: string }) => {
         </div>
         <Nav className={`${styles.footerNavigation}`} activeKey="/home">
           <NavItem>
-            <NavLink className={styles.link} href={t('links.0.href')}>
-              {t('links.0.link')}
+            <NavLink className={styles.link} href={footer?.links?.[0]?.href }>
+              {footer?.links[0]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.1.href')}>
-              {t('links.1.link')}
+            <NavLink className={styles.link} href={footer?.links[1]?.href }>
+              {footer?.links[1]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.3.href')}>
-              {t('links.3.link')}
+            <NavLink className={styles.link} href={footer?.links?.[3]?.href }>
+              {footer?.links?.[3]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.2.href')}>
-              {t('links.2.link')}
+            <NavLink className={styles.link} href={footer?.links?.[2]?.href }>
+              {footer?.links?.[2]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.4.href')}>
-              {t('links.4.link')}
+            <NavLink className={styles.link} href={footer?.links?.[4]?.href }>
+              {footer?.links?.[4]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.5.href')}>
-              {t('links.5.link')}
+            <NavLink className={styles.link} href={footer?.links?.[5]?.href }>
+              {footer?.links?.[5]?.title }
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={styles.link} href={t('links.6.href')}>
-              {t('links.6.link')}
+            <NavLink className={styles.link} href={footer?.links?.[6]?.href }>
+              {footer?.links?.[6]?.title  }
             </NavLink>
           </NavItem>
         </Nav>
         <div className={styles.footerLogoSmall}>
-          <FooterLogos lang={lang} size={'small'} />
+          <FooterLogosCopy lang={lang} size={'small'} />
         </div>
         <div className={styles.footerLogoLarge}>
-          <FooterLogos lang={lang} size={'large'} />
+          <FooterLogosCopy lang={lang} size={'large'} />
         </div>
       </div>
     </div>
@@ -92,8 +96,12 @@ const Footer = async ({ lang }: { lang: string }) => {
 
 export default Footer
 
-const FooterLogos = async ({ lang, size }: { lang: string; size: string }) => {
-  const { t } = await getTranslation(lang, 'general', { keyPrefix: 'footer' })
+const FooterLogosCopy = async ({ lang, size }: { lang: string; size: string }) => {
+  
+  const footerLogosCopy = await fetch(`https://typical-dogs-185f9ff416.strapiapp.com/api/footer?locale=${lang}&[populate]=*`
+  )
+
+  const {data : footer} = await footerLogosCopy.json();
 
   if (size === 'small') {
     return (
@@ -101,28 +109,28 @@ const FooterLogos = async ({ lang, size }: { lang: string; size: string }) => {
         <div className={styles.socials}>
           <Link
             className={styles.social}
-            href={t('links.7.href')}
+            href={footer?.links?.[7]?.href  }
             target="_blank"
           >
             <FaLinkedin />
           </Link>
           <Link
             className={styles.social}
-            href={t('links.8.href')}
+            href={footer?.links?.[8]?.href }
             target="_blank"
           >
             <FaInstagram />
           </Link>
           <Link
             className={styles.social}
-            href={t('links.9.href')}
+            href={footer?.links?.[9]?.href}
             target="_blank"
           >
             <FaFacebook />
           </Link>
           <Link
             className={styles.social}
-            href={t('links.10.href')}
+            href={footer?.links?.[10]?.href}
             target="_blank"
           >
             <FaYoutube />
@@ -136,7 +144,7 @@ const FooterLogos = async ({ lang, size }: { lang: string; size: string }) => {
             width={100}
             height={35}
           />
-          <span className={styles.subtitle}>{t('description')}</span>
+          <span className={styles.subtitle}>{footer?.description  }</span>
         </div>
       </div>
     )
@@ -151,32 +159,32 @@ const FooterLogos = async ({ lang, size }: { lang: string; size: string }) => {
         width={100}
         height={35}
       />
-      <span className={styles.subtitle}>{t('description')}</span>
+      <span className={styles.subtitle}>{footer?.description}</span>
       <div className={styles.socials}>
         <Link
           className={styles.social}
-          href={t('links.7.href')}
+          href={footer?.links?.[7]?.href }
           target="_blank"
         >
           <FaLinkedin />
         </Link>
         <Link
           className={styles.social}
-          href={t('links.8.href')}
+          href={footer?.links?.[8]?.href }
           target="_blank"
         >
           <FaInstagram />
         </Link>
         <Link
           className={styles.social}
-          href={t('links.9.href')}
+          href={footer?.links?.[9]?.href }
           target="_blank"
         >
           <FaFacebook />
         </Link>
         <Link
           className={styles.social}
-          href={t('links.10.href')}
+          href={footer?.links?.[10]?.href }
           target="_blank"
         >
           <FaYoutube />
