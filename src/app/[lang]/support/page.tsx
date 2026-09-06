@@ -17,7 +17,8 @@ import {
 import copy from '../../../localization/support/en.json'
 import { SupportLinks } from '@/components/support-links/support-links'
 
-export default async function Contact({ params }: { params: PageParams }) {
+export default async function Contact(props: { params: Promise<PageParams> }) {
+  const params = await props.params;
   const { t } = await getTranslation(params.lang, 'support')
 
   return (

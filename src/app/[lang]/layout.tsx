@@ -27,13 +27,11 @@ export type PageParams = {
 }
 
 export type PageProps = {
-  params: PageParams
+  params: Promise<PageParams>
 }
 
-export async function generateMetadata(
-  { params }: { params: { lang: string } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }, parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params
   const { t } = await getTranslation(lang, 'home', {
     keyPrefix: 'home.metadata',
@@ -156,13 +154,18 @@ export async function generateMetadata(
 //     'bystander',
 //     'victim',
 
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: { lang: string }
-}) {
+export default async function RootLayout(
+  props: {
+    children: React.ReactNode
+    params: Promise<{ lang: string }>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   return (
     <html lang={params.lang}>
       <body className={`${poppins.variable} ${worksans.variable}`}>

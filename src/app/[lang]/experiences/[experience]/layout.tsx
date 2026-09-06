@@ -1,7 +1,7 @@
 import { Header } from '@/components/header/header'
 import styles from './page.module.css'
 import { ExperienceOverviewArticle } from '@/components/experiences/experiences-large'
-import { useMemo } from 'react'
+import { useMemo, use } from 'react';
 import { getTranslation } from '@/localization/i18n'
 import { ResolvingMetadata, Metadata } from 'next'
 
@@ -10,10 +10,8 @@ export type PageParams = {
   experience?: string
 }
 
-export async function generateMetadata(
-  { params }: { params: PageParams },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<PageParams> }, parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params
   const { t } = await getTranslation(lang, 'experiences', {
     keyPrefix: 'metadata',
@@ -46,13 +44,18 @@ export async function generateMetadata(
   }
 }
 
-export default function ExperiencesArticle({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: PageParams
-}) {
+export default function ExperiencesArticle(
+  props: {
+    children: React.ReactNode
+    params: Promise<PageParams>
+  }
+) {
+  const params = use(props.params);
+
+  const {
+    children
+  } = props;
+
   const categories = useMemo(() => {
     switch (params?.experience) {
       case 'growth_over_culture':

@@ -1,26 +1,19 @@
-import dynamic from 'next/dynamic'
 import styles from './page.module.css'
 import rootStyles from '../../rootStyles.module.css'
+import MdxLoader from './mdx-loader'
 
-export default function GettingInformedArticle({
-  params,
-}: {
-  params: { id: string; lang: string }
-}) {
-  const ExperienceMdx = dynamic(
-    () => {
-      return import(`./getting-informed-${params.id}.mdx`)
-    },
-    {
-      suspense: true,
-    }
-  )
+export default async function GettingInformedArticle(
+  props: {
+    params: Promise<{ id: string; lang: string }>
+  }
+) {
+  const params = await props.params;
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
       <div
         className={` ${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
-        <ExperienceMdx />
+        <MdxLoader id={params.id} />
       </div>
     </main>
   )

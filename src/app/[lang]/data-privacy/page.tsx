@@ -2,10 +2,11 @@ import { getTranslation } from '@/localization/i18n'
 import { PageParams } from '../layout'
 import { Stack } from '@/components/bootstrap/bootstrap'
 import styles from './page.module.css'
-import PrivacyMdx from './data-privacty.mdx'
+import DataPrivacyContent from './data-privacy-content'
 import rootStyles from '../rootStyles.module.css'
 
-export default async function Imprint({ params }: { params: PageParams }) {
+export default async function Imprint(props: { params: Promise<PageParams> }) {
+  const params = await props.params;
   const { t } = await getTranslation(params.lang, 'general')
 
   return (
@@ -14,7 +15,7 @@ export default async function Imprint({ params }: { params: PageParams }) {
         className={`${rootStyles.sectionContainer} ${rootStyles.sectionContainerBottom}`}
       >
         <Stack className={styles.text}>
-          <PrivacyMdx></PrivacyMdx>
+          <DataPrivacyContent />
         </Stack>
       </div>
     </main>

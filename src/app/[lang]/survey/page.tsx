@@ -5,9 +5,10 @@ import styles from './page.module.css'
 import { cookies } from 'next/headers'
 import rootStyles from '@/app/[lang]/rootStyles.module.css'
 
-export default async function Contact({ params }: { params: PageParams }) {
+export default async function Contact(props: { params: Promise<PageParams> }) {
+  const params = await props.params;
   const { t } = await getTranslation(params.lang, 'survey')
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const isSurveyDone = cookieStore.get('survey')
 
   return (

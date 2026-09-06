@@ -5,7 +5,8 @@ import { getTranslation } from '@/localization/i18n'
 import { ExperienceLarge } from '@/components/experiences/experiences-large'
 import rootStyles from '../rootStyles.module.css'
 
-export default async function Articles({ params }: { params: PageParams }) {
+export default async function Articles(props: { params: Promise<PageParams> }) {
+  const params = await props.params;
   const { t } = await getTranslation(params.lang, 'experiences')
 
   return (

@@ -18,7 +18,13 @@ import { PollsContainer } from '@/components/polls/polls'
 import Link from 'next/link'
 import { Survey } from '@/components/survey/survey'
 
-export default async function Home({ params: { lang } }: PageProps) {
+export default async function Home(props: PageProps) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { t } = await getTranslation(lang, 'home', { keyPrefix: 'home' })
 
   return (

@@ -6,11 +6,12 @@ import rootStyles from '../rootStyles.module.css'
 import copy from '@/localization/getting-informed/en.json'
 import Link from 'next/link'
 
-export default async function GettingInformed({
-  params,
-}: {
-  params: PageParams
-}) {
+export default async function GettingInformed(
+  props: {
+    params: Promise<PageParams>
+  }
+) {
+  const params = await props.params;
   const { t: tInformed } = await getTranslation(
     params.lang,
     'getting-informed',
