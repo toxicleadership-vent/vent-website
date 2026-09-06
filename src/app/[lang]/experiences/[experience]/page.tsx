@@ -2,7 +2,21 @@ import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
 import copy from '@/localization/experiences/en.json'
 import rootStyles from '../../rootStyles.module.css'
-import MdxLoader from './mdx-loader'
+import FailedByTheSystemsContent from './failed_by_the_systems-content'
+import FakeInvestigationContent from './fake_investigation-content'
+import FriendsToFoesContent from './friends_to_foes-content'
+import GrowthOverCultureContent from './growth_over_culture-content'
+import JustMoveHimContent from './just_move_him-content'
+import SqueezedToTheLastDropContent from './squeezed_to_the_last_drop-content'
+
+const experienceContent: Record<string, React.ComponentType> = {
+  failed_by_the_systems: FailedByTheSystemsContent,
+  fake_investigation: FakeInvestigationContent,
+  friends_to_foes: FriendsToFoesContent,
+  growth_over_culture: GrowthOverCultureContent,
+  just_move_him: JustMoveHimContent,
+  squeezed_to_the_last_drop: SqueezedToTheLastDropContent,
+}
 
 export default async function Experience(
   props: {
@@ -13,6 +27,8 @@ export default async function Experience(
   const { lang } = params
 
   const { t } = await getTranslation(lang, 'experiences')
+
+  const ExperienceContent = experienceContent[params.experience]
 
   let categoryIndex: number, articleIndex: number
   switch (params?.experience) {
@@ -96,7 +112,7 @@ export default async function Experience(
             </p>
           </div>
         </div>
-        <MdxLoader experience={params.experience} />
+        {ExperienceContent ? <ExperienceContent /> : null}
       </div>
     </main>
   )
