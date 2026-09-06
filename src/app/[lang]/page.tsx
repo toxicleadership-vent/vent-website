@@ -12,7 +12,6 @@ import { PageProps } from './layout'
 import { getTranslation } from '@/localization/i18n'
 import copy from '@/localization/home/en.json'
 import GettingInformedOverview from '@/components/getting-informed-overview/getting-informed-overview'
-import Donate from '@/components/donate/donate'
 import { ExperienceOverview } from '@/components/experiences/experiences-overview'
 import { PollsContainer } from '@/components/polls/polls'
 import Link from 'next/link'
@@ -94,9 +93,6 @@ export default async function Home(props: PageProps) {
         </div>
         <div className={`${styles.sectionGreen}`}>
           <ExperienceOverview lang={lang} />
-        </div>
-        <div className={`${styles.sectionLightYellow}`}>
-          <Donate lang={lang}  />
         </div>
       </Stack>
     </main>

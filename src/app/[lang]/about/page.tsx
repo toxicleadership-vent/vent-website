@@ -2,20 +2,9 @@ import { getTranslation } from '@/localization/i18n'
 import { PageProps } from '../layout'
 import styles from './page.module.css'
 import AboutContent from './about-content'
-import copy from '@/localization/about/en.json'
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  CardImg,
-  Col,
-  Container,
-  Row,
-} from '@/components/bootstrap/bootstrap'
-import Link from 'next/link'
+import { Col, Container, Row } from '@/components/bootstrap/bootstrap'
 import { Media } from '@/components/media/media'
 import rootStyles from '../rootStyles.module.css'
-import { Trans } from 'react-i18next/TransWithoutContext'
 
 export default async function About(props: PageProps) {
   const params = await props.params;
@@ -117,60 +106,6 @@ export default async function About(props: PageProps) {
               ></iframe>
             </Col>
           </Row>
-         
-
-          <Container className={styles.container}>
-            <h1>{t('team.title')}</h1>
-            <Row>
-              {copy.about.team?.members.map((teamMember, index) => {
-                // @ts-ignore
-                return (
-                  <Col md={6} key={index}>
-                    <Card bsPrefix="myCard" className={styles.myCard}>
-                      <CardImg
-                        className={styles.cardImg}
-                        variant="top"
-                        src={t(`team.members.${index}.image`)}
-                      />
-                      <CardHeader>
-                        <h4>{t(`team.members.${index}.name`)}</h4>
-                        <h4>{t(`team.members.${index}.position`)}</h4>
-                      </CardHeader>
-                      <CardBody>
-                        {/** @ts-ignore next-line*/}
-                        <Trans t={t} components={{ Link: <Link></Link> }}>
-                          <p>{t(`team.members.${index}.cv`)}</p>
-                        </Trans>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                )
-              })}
-            </Row>
-{/*             <Row>
-              {copy.about.team?.members.slice(2, 5).map((teamMember, index) => {
-                index = index + 2
-                return (
-                  <Col md={4} key={index}>
-                    <Card bsPrefix="myCard" className={styles.myCard}>
-                      <CardImg
-                        className={styles.cardImg}
-                        variant="top"
-                        src={t(`team.members.${index}.image`)}
-                      />
-                      <CardHeader>
-                        <h4>{t(`team.members.${index}.name`)}</h4>
-                        <h4>{t(`team.members.${index}.position`)}</h4>
-                      </CardHeader>
-                      <CardBody>
-                        <p>{t(`team.members.${index}.cv`)}</p>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                )
-              })}
-            </Row> */}
-          </Container>
         </div>
       </div>
     </main>
