@@ -4,10 +4,8 @@ import styles from './page.module.css'
 import { getTranslation } from '@/localization/i18n'
 import { ResolvingMetadata, Metadata } from 'next'
 
-export async function generateMetadata(
-  { params }: { params: PageParams },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<PageParams> }, parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params
   const { t } = await getTranslation(lang, 'experiences', {
     keyPrefix: 'metadata',
@@ -40,13 +38,19 @@ export async function generateMetadata(
   }
 }
 
-export default function ExperienceLayout({
-  children, // will be a page or nested layout
-  params,
-}: {
-  children: React.ReactNode
-  params: PageParams
-}) {
+export default async function ExperienceLayout(
+  props: {
+    children: React.ReactNode
+    params: Promise<PageParams>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    // will be a page or nested layout
+    children
+  } = props;
+
   return (
     <>
       <Header language={params.lang} color="#3aa99c" lightColor="#a2e4dd" />

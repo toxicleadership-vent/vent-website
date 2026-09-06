@@ -13,7 +13,7 @@ const isUserInNorthAmerica = (countryCode: string) => {
 
 const Donation = async ({ lang }: { lang: string }) => {
   // 📌 `countryCode` aus den Cookies abrufen
-  const countryCode = cookies().get('country')?.value || 'Unknown'
+  const countryCode = (await cookies()).get('country')?.value || 'Unknown'
   const { t } = await getTranslation(lang, 'donation', {
     keyPrefix: 'donation',
   })

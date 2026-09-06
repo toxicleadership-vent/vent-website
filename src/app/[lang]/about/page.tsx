@@ -1,7 +1,7 @@
 import { getTranslation } from '@/localization/i18n'
 import { PageProps } from '../layout'
 import styles from './page.module.css'
-import MdxText from './about.mdx'
+import AboutContent from './about-content'
 import copy from '@/localization/about/en.json'
 import {
   Card,
@@ -17,7 +17,13 @@ import { Media } from '@/components/media/media'
 import rootStyles from '../rootStyles.module.css'
 import { Trans } from 'react-i18next/TransWithoutContext'
 
-export default async function About({ params: { lang } }: PageProps) {
+export default async function About(props: PageProps) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { t } = await getTranslation(lang, 'about', { keyPrefix: 'about' })
 
   return (
@@ -29,7 +35,7 @@ export default async function About({ params: { lang } }: PageProps) {
           <h1>{t('title')}</h1>
           <div className={styles.midWrapper}>
             <div className={styles.mdx}>
-              <MdxText />
+              <AboutContent />
             </div>
           </div>
           <Container>

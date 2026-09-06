@@ -5,7 +5,8 @@ import { Stack } from '@/components/bootstrap/bootstrap'
 import styles from './page.module.css'
 import rootStyles from '../rootStyles.module.css'
 
-export default async function Contact({ params }: { params: PageParams }) {
+export default async function Contact(props: { params: Promise<PageParams> }) {
+  const params = await props.params;
   const { t } = await getTranslation(params.lang, 'contact')
 
   return (

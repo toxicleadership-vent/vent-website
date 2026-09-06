@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import { PageParams } from '../layout'
 import styles from '../page.module.css'
 
-export default async function NotFound({
-  params,
-}: {
-  params: { params: PageParams }
-}) {
+export default async function NotFound() {
   return (
     <main className={styles.main}>
       <h2>Not Found</h2>

@@ -1,14 +1,15 @@
 import { getTranslation } from '@/localization/i18n'
 import styles from './page.module.css'
-import dynamic from 'next/dynamic'
 import copy from '@/localization/experiences/en.json'
 import rootStyles from '../../rootStyles.module.css'
+import MdxLoader from './mdx-loader'
 
-export default async function Experience({
-  params,
-}: {
-  params: { experience: string; lang: string }
-}) {
+export default async function Experience(
+  props: {
+    params: Promise<{ experience: string; lang: string }>
+  }
+) {
+  const params = await props.params;
   const { lang } = params
 
   const { t } = await getTranslation(lang, 'experiences')
@@ -44,14 +45,6 @@ export default async function Experience({
       articleIndex = 0
   }
 
-  const ExperienceMdx = dynamic(
-    () => {
-      return import(`./${params.experience}.mdx`)
-    },
-    {
-      suspense: true,
-    }
-  )
   return (
     <main className={`${rootStyles.section} ${styles.main}`}>
       <div
@@ -103,7 +96,7 @@ export default async function Experience({
             </p>
           </div>
         </div>
-        <ExperienceMdx />
+        <MdxLoader experience={params.experience} />
       </div>
     </main>
   )

@@ -41,13 +41,18 @@ import { ResolvingMetadata, Metadata } from 'next'
 //   }
 // }
 
-export default function SurveyLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: PageParams
-}) {
+export default async function SurveyLayout(
+  props: {
+    children: React.ReactNode
+    params: Promise<PageParams>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   return (
     <>
       <Header language={params.lang} color={'#f9ee8f'} lightColor={'#fdf9dd'} />
