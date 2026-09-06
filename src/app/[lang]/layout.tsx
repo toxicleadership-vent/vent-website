@@ -49,9 +49,13 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: t('description'),
     robots: 'index, follow',
     icons: {
-      icon: ['/images/favicon/favicon.ico'],
-      apple: ['/images/favicon/apple-touch-icon.png?v=4'],
-      shortcut: ['/images/favicons/apple-touch-icon.png'],
+      icon: [{ url: '/images/favicon/favicon.ico', rel: 'icon' }],
+      apple: [
+        { url: '/images/favicon/apple-touch-icon.png?v=4', rel: 'apple-touch-icon' },
+      ],
+      shortcut: [
+        { url: '/images/favicons/apple-touch-icon.png', rel: 'shortcut icon' },
+      ],
     },
     openGraph: {
       type: 'website',
