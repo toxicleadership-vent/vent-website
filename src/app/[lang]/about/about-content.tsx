@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from '../page.module.css'
 
 export default function AboutContent() {
   return (
@@ -16,7 +17,7 @@ export default function AboutContent() {
         systemic patterns of abuse across industries.
       </p>
       <h3>Our Goals</h3>
-      <ul>
+      <ul className={styles.mdxUl}>
         <li>Provide a safe space for individuals to share their experiences.</li>
         <li>Transform trauma into awareness and actionable solutions.</li>
         <li>Research the effects of toxic leadership.</li>
